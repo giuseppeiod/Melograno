@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-struct Season: Identifiable {
+/*struct Season: Identifiable {
     var id = UUID()
     var name: String
     var image: String
@@ -31,7 +31,7 @@ struct GameTwo: View {
             if !seasons.isEmpty {
                 Image(seasons[currentSeasonIndex].image)
                     .resizable()
-                    .scaledToFit()
+                    .scaledToFill()
                     .frame(width: 200, height: 200)
             } else {
                 Text("Congratulazioni! Hai abbinato tutte le stagioni!")
@@ -72,4 +72,4 @@ struct GameTwo_Previews: PreviewProvider {
         GameTwo()
     }
 }
-
+ */

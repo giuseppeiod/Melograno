@@ -17,6 +17,7 @@
 		0A6732B92A0B830400806FEA /* MelogranoProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6732B82A0B830400806FEA /* MelogranoProjectUITests.swift */; };
 		0A6732BB2A0B830400806FEA /* MelogranoProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6732BA2A0B830400806FEA /* MelogranoProjectUITestsLaunchTests.swift */; };
 		0ADA61832A0B84200022574C /* GameTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA61822A0B84200022574C /* GameTwo.swift */; };
+		0ADA61852A0C2A2D0022574C /* SeasonGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA61842A0C2A2D0022574C /* SeasonGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		0A6732B82A0B830400806FEA /* MelogranoProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelogranoProjectUITests.swift; sourceTree = "<group>"; };
 		0A6732BA2A0B830400806FEA /* MelogranoProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelogranoProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0ADA61822A0B84200022574C /* GameTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTwo.swift; sourceTree = "<group>"; };
+		0ADA61842A0C2A2D0022574C /* SeasonGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				0A6732982A0B830300806FEA /* MelogranoProjectApp.swift */,
 				0A67329A2A0B830300806FEA /* ContentView.swift */,
 				0ADA61822A0B84200022574C /* GameTwo.swift */,
+				0ADA61842A0C2A2D0022574C /* SeasonGame.swift */,
 				0A67329C2A0B830400806FEA /* Assets.xcassets */,
 				0A6732A12A0B830400806FEA /* Persistence.swift */,
 				0A6732A32A0B830400806FEA /* MelogranoProject.xcdatamodeld */,
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ADA61852A0C2A2D0022574C /* SeasonGame.swift in Sources */,
 				0A6732A52A0B830400806FEA /* MelogranoProject.xcdatamodeld in Sources */,
 				0A6732A22A0B830400806FEA /* Persistence.swift in Sources */,
 				0ADA61832A0B84200022574C /* GameTwo.swift in Sources */,
