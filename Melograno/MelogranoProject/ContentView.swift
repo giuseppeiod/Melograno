@@ -27,7 +27,7 @@ struct ContentView: View {
     var body: some View {
         
         if UserDefaults.standard.onboardingViewShown  {
-            MenuPage()
+            ContentView1()
         } else {
             OnBoardingManager()
         }

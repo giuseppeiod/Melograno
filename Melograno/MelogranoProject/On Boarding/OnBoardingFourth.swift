@@ -61,7 +61,7 @@ struct OnBoardingFourth: View {
 //            .offset(y: isAnimating ? 0 : 40)
 //            .animation(.easeOut(duration: 1), value: isAnimating)
             .fullScreenCover(isPresented: $isOnboardingComplete) {
-                MenuPage()
+                ContentView()
             }
         }
         .onAppear {

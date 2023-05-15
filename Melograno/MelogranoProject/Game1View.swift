@@ -43,7 +43,7 @@ struct Game1View: View {
         
         
         if isGameFinishedButton{
-            MenuPage()
+            ContentView()
         }else{
             VStack(spacing: 15){
                 NavBar()

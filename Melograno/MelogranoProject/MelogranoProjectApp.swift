@@ -13,7 +13,8 @@ struct MelogranoProjectApp: App {
 
     var body: some Scene {
         WindowGroup {
-            Associa()
+            
+            ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
