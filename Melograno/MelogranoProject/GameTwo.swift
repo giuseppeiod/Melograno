@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-/*struct Season: Identifiable {
+struct Season: Identifiable {
     var id = UUID()
     var name: String
     var image: String
@@ -14,17 +14,17 @@ import SwiftUI
 
 struct GameTwo: View {
     @State private var seasons: [Season] = [
-        Season(name: "Spring", image: "Spring"),
-        Season(name: "Summer", image: "Summer"),
-        Season(name: "Autumn", image: "Autumn"),
-        Season(name: "Winter", image: "Winter")
+        Season(name: "Spring", image: "spring"),
+        Season(name: "Summer", image: "summer"),
+        Season(name: "Autumn", image: "autumn"),
+        Season(name: "Winter", image: "winter")
     ].shuffled()
     
     @State private var currentSeasonIndex = 0
     
     var body: some View {
         VStack {
-            Text("Abbinare l'immagine alla stagione corretta")
+            Text("Cosa Raffigura l'immagine")
                 .font(.headline)
                 .padding(.bottom, 50)
             
@@ -34,7 +34,7 @@ struct GameTwo: View {
                     .scaledToFill()
                     .frame(width: 200, height: 200)
             } else {
-                Text("Congratulazioni! Hai abbinato tutte le stagioni!")
+                Text("Bravo")
                     .font(.headline)
             }
             
@@ -72,4 +72,4 @@ struct GameTwo_Previews: PreviewProvider {
         GameTwo()
     }
 }
- */
+

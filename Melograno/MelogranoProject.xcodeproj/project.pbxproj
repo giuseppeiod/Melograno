@@ -16,9 +16,10 @@
 		0A6732AF2A0B830400806FEA /* MelogranoProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6732AE2A0B830400806FEA /* MelogranoProjectTests.swift */; };
 		0A6732B92A0B830400806FEA /* MelogranoProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6732B82A0B830400806FEA /* MelogranoProjectUITests.swift */; };
 		0A6732BB2A0B830400806FEA /* MelogranoProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6732BA2A0B830400806FEA /* MelogranoProjectUITestsLaunchTests.swift */; };
+		0A7C69552A12400C004298C0 /* AMaronn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C69542A12400C004298C0 /* AMaronn.swift */; };
+		0A7C69572A1240AC004298C0 /* Card1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C69562A1240AC004298C0 /* Card1.swift */; };
 		0AB896FE2A0E256F0074A56A /* Associa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB896FD2A0E256F0074A56A /* Associa.swift */; };
 		0ADA61832A0B84200022574C /* GameTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA61822A0B84200022574C /* GameTwo.swift */; };
-		1365D2E22A0E50B700FD5BB1 /* Giocoassocia.json in Sources */ = {isa = PBXBuildFile; fileRef = 1365D2E12A0E50B700FD5BB1 /* Giocoassocia.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,9 +52,10 @@
 		0A6732B42A0B830400806FEA /* MelogranoProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MelogranoProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6732B82A0B830400806FEA /* MelogranoProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelogranoProjectUITests.swift; sourceTree = "<group>"; };
 		0A6732BA2A0B830400806FEA /* MelogranoProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelogranoProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0A7C69542A12400C004298C0 /* AMaronn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMaronn.swift; sourceTree = "<group>"; };
+		0A7C69562A1240AC004298C0 /* Card1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card1.swift; sourceTree = "<group>"; };
 		0AB896FD2A0E256F0074A56A /* Associa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Associa.swift; sourceTree = "<group>"; };
 		0ADA61822A0B84200022574C /* GameTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTwo.swift; sourceTree = "<group>"; };
-		1365D2E12A0E50B700FD5BB1 /* Giocoassocia.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Giocoassocia.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,12 +107,13 @@
 			isa = PBXGroup;
 			children = (
 				0A6732982A0B830300806FEA /* MelogranoProjectApp.swift */,
+				0ADA61822A0B84200022574C /* GameTwo.swift */,
 				0A67329A2A0B830300806FEA /* ContentView.swift */,
 				0AB896FD2A0E256F0074A56A /* Associa.swift */,
-				0ADA61822A0B84200022574C /* GameTwo.swift */,
+				0A7C69542A12400C004298C0 /* AMaronn.swift */,
+				0A7C69562A1240AC004298C0 /* Card1.swift */,
 				0A6732A12A0B830400806FEA /* Persistence.swift */,
 				0A67329C2A0B830400806FEA /* Assets.xcassets */,
-				1365D2E52A0E511400FD5BB1 /* Json file */,
 				0A6732A32A0B830400806FEA /* MelogranoProject.xcdatamodeld */,
 				0A67329E2A0B830400806FEA /* Preview Content */,
 			);
@@ -140,14 +143,6 @@
 				0A6732BA2A0B830400806FEA /* MelogranoProjectUITestsLaunchTests.swift */,
 			);
 			path = MelogranoProjectUITests;
-			sourceTree = "<group>";
-		};
-		1365D2E52A0E511400FD5BB1 /* Json file */ = {
-			isa = PBXGroup;
-			children = (
-				1365D2E12A0E50B700FD5BB1 /* Giocoassocia.json */,
-			);
-			path = "Json file";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,12 +276,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A6732A52A0B830400806FEA /* MelogranoProject.xcdatamodeld in Sources */,
+				0A7C69572A1240AC004298C0 /* Card1.swift in Sources */,
 				0A6732A22A0B830400806FEA /* Persistence.swift in Sources */,
 				0ADA61832A0B84200022574C /* GameTwo.swift in Sources */,
+				0A7C69552A12400C004298C0 /* AMaronn.swift in Sources */,
 				0A67329B2A0B830300806FEA /* ContentView.swift in Sources */,
 				0A6732992A0B830300806FEA /* MelogranoProjectApp.swift in Sources */,
 				0AB896FE2A0E256F0074A56A /* Associa.swift in Sources */,
-				1365D2E22A0E50B700FD5BB1 /* Giocoassocia.json in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
