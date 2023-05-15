@@ -1,10 +1,11 @@
 //
-//  AMaronn.swift
+//  Game1View.swift
 //  MelogranoProject
 //
 //  Created by Giuseppe Iodice on 15/05/23.
 //
 
+import SwiftUI
 
 
 import SwiftUI
@@ -12,7 +13,12 @@ import CoreData
 import UniformTypeIdentifiers
 import MobileCoreServices
 
-struct AMaronn: View {
+extension Array {
+    subscript(safe index: Index) -> Element? {
+        return indices ~= index ? self[index] : nil
+    }
+}
+struct Game1View: View {
     
     @State private var isGameFinishedButton = false
     @State var progress: CGFloat = 0
@@ -37,12 +43,12 @@ struct AMaronn: View {
         
         
         if isGameFinishedButton{
-            ContentView()
+            MenuPage()
         }else{
             VStack(spacing: 15){
                 NavBar()
                 
-                Text("Associa Immagini a parole")
+                Text("Order this images sequence")
                     .font(.title)
                     .fontWeight(.bold)
                 
@@ -148,8 +154,6 @@ struct AMaronn: View {
             
             // Remove dragged cards from cardsToDrag
             cardsToDrag.removeAll { $0.correctIndex == draggedCard.correctIndex }
-            cardsToDrop.removeAll { $0.correctIndex == draggedCard.correctIndex }
-
             
             // Increment the progress bar
             progress += 0.25
@@ -210,8 +214,8 @@ struct AMaronn: View {
 }
 
 
-struct AMaronn_Previews: PreviewProvider {
+struct Game1View_Previews: PreviewProvider {
     static var previews: some View {
-        AMaronn()
+        Game1View()
     }
 }
