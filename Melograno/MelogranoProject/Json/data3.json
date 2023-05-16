@@ -1,0 +1,96 @@
+//
+//  data3.swift
+//  MelogranoProject
+//
+//  Created by Francesco on 16/05/23.
+//
+
+import Foundation
+{
+  "questions": [
+    {
+      "image": "melaim",
+      "options": [
+        {
+          "word": "Mela",
+          "isCorrect": true
+        },
+        {
+          "word": "Banana",
+          "isCorrect": false
+        },
+        {
+          "word": "Arancia",
+          "isCorrect": false
+        },
+        {
+          "word": "Limone",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "image": "gattoim",
+      "options": [
+        {
+          "word": "Cane",
+          "isCorrect": false
+        },
+        {
+          "word": "Gatto",
+          "isCorrect": true
+        },
+        {
+          "word": "Uccello",
+          "isCorrect": false
+        },
+        {
+          "word": "Pesce",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "image": "automobileim",
+      "options": [
+        {
+          "word": "Autobus",
+          "isCorrect": false
+        },
+        {
+          "word": "Automobile",
+          "isCorrect": true
+        },
+        {
+          "word": "Scooter",
+          "isCorrect": false
+        },
+        {
+          "word": "Nave",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "image": "chitarraim",
+      "options": [
+        {
+          "word": "Tromba",
+          "isCorrect": false
+        },
+        {
+          "word": "Chitarra",
+          "isCorrect": true
+        },
+        {
+          "word": "Tamburo",
+          "isCorrect": false
+        },
+        {
+          "word": "Piatti",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

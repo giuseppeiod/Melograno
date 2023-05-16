@@ -41,16 +41,16 @@ struct AMaronn: View {
         }else{
             VStack(spacing: 15){
                 NavBar()
-                
+         
                 Text("Associa Immagini a parole")
                     .font(.title)
                     .fontWeight(.bold)
-                
+                Spacer()
                 dragArea()
                 dropArea()
                 
                 
-                
+                Spacer()
                 
                 
                 if isGameFinished() {

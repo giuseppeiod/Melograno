@@ -1,0 +1,30 @@
+//
+//  data2.swift
+//  MelogranoProject
+//
+//  Created by Francesco on 16/05/23.
+//
+
+import Foundation
+
+{
+  "wordAssets": [
+    {
+      "word": "gallina",
+      "asset": "gallinaim"
+    },
+    {
+      "word": "uovo",
+      "asset": "uovoim"
+    },
+    {
+      "word": "pulcino",
+      "asset": "pulcinoim"
+    },
+    {
+      "word": "papera",
+      "asset": "paperaim"
+    },
+    
+  ]
+}
