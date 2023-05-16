@@ -34,3 +34,4 @@ Melograno/DerivedData/MelogranoProject/Logs/Build/LogStoreManifest.plist
 *.plist
 Melograno/DerivedData/MelogranoProject/info.plist
 Melograno/DerivedData/*
+.DS_Store
