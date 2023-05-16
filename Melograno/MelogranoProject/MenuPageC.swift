@@ -21,6 +21,8 @@ struct ContentView1: View {
             Game1View()
         case "Gioco 2":
             AMaronn()
+        case "Gioco 3":
+            CardsMemoryGameView()
         default:
             MenuPageC(gameSelection: gameSelection)
         }
@@ -29,7 +31,7 @@ struct ContentView1: View {
 
 struct MenuPageC: View {
     @ObservedObject var gameSelection: GameSelection
-    let games = ["Gioco 1", "Gioco 2"]
+    let games = ["Gioco 1", "Gioco 2", "Gioco 3"]
 
     var body: some View {
         VStack {
@@ -64,6 +66,12 @@ struct Game1ViewC: View {
 struct Game2ViewC: View {
     var body: some View {
         Text("Sei ora nel Gioco 2!")
+            .font(.largeTitle)
+    }
+}
+struct Game3ViewC: View {
+    var body: some View {
+        Text("Sei ora nel Gioco 3!")
             .font(.largeTitle)
     }
 }

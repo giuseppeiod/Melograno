@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A5A4CDC2A13873300D7396D /* GameMemoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A4CDB2A13873300D7396D /* GameMemoryModel.swift */; };
+		0A5A4CDE2A13876800D7396D /* CardMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A4CDD2A13876800D7396D /* CardMemoryGameView.swift */; };
+		0A5A4CE12A13881F00D7396D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A4CE02A13881F00D7396D /* CardView.swift */; };
+		0A5A4CE32A13894500D7396D /* CardMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A4CE22A13894500D7396D /* CardMemory.swift */; };
 		0A6732992A0B830300806FEA /* MelogranoProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6732982A0B830300806FEA /* MelogranoProjectApp.swift */; };
 		0A67329B2A0B830300806FEA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67329A2A0B830300806FEA /* ContentView.swift */; };
 		0A67329D2A0B830400806FEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A67329C2A0B830400806FEA /* Assets.xcassets */; };
@@ -53,6 +57,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A5A4CDB2A13873300D7396D /* GameMemoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMemoryModel.swift; sourceTree = "<group>"; };
+		0A5A4CDD2A13876800D7396D /* CardMemoryGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMemoryGameView.swift; sourceTree = "<group>"; };
+		0A5A4CE02A13881F00D7396D /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		0A5A4CE22A13894500D7396D /* CardMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMemory.swift; sourceTree = "<group>"; };
 		0A6732952A0B830300806FEA /* MelogranoProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MelogranoProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6732982A0B830300806FEA /* MelogranoProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelogranoProjectApp.swift; sourceTree = "<group>"; };
 		0A67329A2A0B830300806FEA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,6 +117,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A5A4CDF2A1387A800D7396D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0AEC85602A128BFD0051DAC4 /* GridView.swift */,
+				0A7C69562A1240AC004298C0 /* Card1.swift */,
+				0A5A4CDB2A13873300D7396D /* GameMemoryModel.swift */,
+				0A5A4CE22A13894500D7396D /* CardMemory.swift */,
+				0A5A4CE02A13881F00D7396D /* CardView.swift */,
+				0AEC856F2A128FF80051DAC4 /* PageControl.swift */,
+				0A6732A12A0B830400806FEA /* Persistence.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0A67328C2A0B830300806FEA = {
 			isa = PBXGroup;
 			children = (
@@ -133,16 +155,17 @@
 			isa = PBXGroup;
 			children = (
 				0A6732982A0B830300806FEA /* MelogranoProjectApp.swift */,
-				0ADA61822A0B84200022574C /* GameTwo.swift */,
-				0AEC85792A12990A0051DAC4 /* MenuPageC.swift */,
-				0AEC85602A128BFD0051DAC4 /* GridView.swift */,
 				0A67329A2A0B830300806FEA /* ContentView.swift */,
-				0AEC85642A128CE80051DAC4 /* Game1View.swift */,
-				0AB896FD2A0E256F0074A56A /* Associa.swift */,
+				0AEC85792A12990A0051DAC4 /* MenuPageC.swift */,
 				0A7C69542A12400C004298C0 /* AMaronn.swift */,
 				13FD071F2A13784F0023539C /* Json */,
 				0A7C69562A1240AC004298C0 /* Card1.swift */,
 				0A6732A12A0B830400806FEA /* Persistence.swift */,
+				0AEC85642A128CE80051DAC4 /* Game1View.swift */,
+				0A5A4CDD2A13876800D7396D /* CardMemoryGameView.swift */,
+				0ADA61822A0B84200022574C /* GameTwo.swift */,
+				0AB896FD2A0E256F0074A56A /* Associa.swift */,
+				0A5A4CDF2A1387A800D7396D /* Model */,
 				0AEC856C2A128FCE0051DAC4 /* On Boarding */,
 				0A67329C2A0B830400806FEA /* Assets.xcassets */,
 				0A6732A32A0B830400806FEA /* MelogranoProject.xcdatamodeld */,
@@ -179,12 +202,11 @@
 		0AEC856C2A128FCE0051DAC4 /* On Boarding */ = {
 			isa = PBXGroup;
 			children = (
-				0AEC856D2A128FE60051DAC4 /* OnBoardingSecond.swift */,
-				0AEC856F2A128FF80051DAC4 /* PageControl.swift */,
-				0AEC85712A1290110051DAC4 /* OnBoardingThird.swift */,
-				0AEC85732A1290210051DAC4 /* OnBoardingFourth.swift */,
 				0AEC85752A1290350051DAC4 /* OnBoardingManager.swift */,
 				0AEC85772A12904A0051DAC4 /* OnBoardingFirst.swift */,
+				0AEC856D2A128FE60051DAC4 /* OnBoardingSecond.swift */,
+				0AEC85712A1290110051DAC4 /* OnBoardingThird.swift */,
+				0AEC85732A1290210051DAC4 /* OnBoardingFourth.swift */,
 			);
 			path = "On Boarding";
 			sourceTree = "<group>";
@@ -336,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AEC856E2A128FE60051DAC4 /* OnBoardingSecond.swift in Sources */,
+				0A5A4CDE2A13876800D7396D /* CardMemoryGameView.swift in Sources */,
 				0A6732A52A0B830400806FEA /* MelogranoProject.xcdatamodeld in Sources */,
 				0A7C69572A1240AC004298C0 /* Card1.swift in Sources */,
 				13FD07252A1382F00023539C /* data2.json in Sources */,
@@ -350,9 +373,12 @@
 				0AEC85782A12904A0051DAC4 /* OnBoardingFirst.swift in Sources */,
 				0A6732992A0B830300806FEA /* MelogranoProjectApp.swift in Sources */,
 				0AEC85742A1290210051DAC4 /* OnBoardingFourth.swift in Sources */,
+				0A5A4CE12A13881F00D7396D /* CardView.swift in Sources */,
 				0AEC85612A128BFD0051DAC4 /* GridView.swift in Sources */,
+				0A5A4CDC2A13873300D7396D /* GameMemoryModel.swift in Sources */,
 				0AB896FE2A0E256F0074A56A /* Associa.swift in Sources */,
 				0AEC85762A1290350051DAC4 /* OnBoardingManager.swift in Sources */,
+				0A5A4CE32A13894500D7396D /* CardMemory.swift in Sources */,
 				0AEC857A2A12990A0051DAC4 /* MenuPageC.swift in Sources */,
 				13FD07272A138A3D0023539C /* data3.json in Sources */,
 			);
