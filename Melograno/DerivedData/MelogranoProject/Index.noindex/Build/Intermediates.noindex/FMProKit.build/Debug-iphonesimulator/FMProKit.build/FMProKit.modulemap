@@ -1,0 +1,4 @@
+module FMProKit {
+header "FMProKit-Swift.h"
+export *
+}

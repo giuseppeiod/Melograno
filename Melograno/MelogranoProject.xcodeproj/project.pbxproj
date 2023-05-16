@@ -37,6 +37,7 @@
 		13FD07232A13795F0023539C /* data.json in Sources */ = {isa = PBXBuildFile; fileRef = 13FD07222A13795F0023539C /* data.json */; };
 		13FD07252A1382F00023539C /* data2.json in Sources */ = {isa = PBXBuildFile; fileRef = 13FD07242A1382F00023539C /* data2.json */; };
 		13FD07272A138A3D0023539C /* data3.json in Sources */ = {isa = PBXBuildFile; fileRef = 13FD07262A138A3D0023539C /* data3.json */; };
+		C99F31992A1391D100174728 /* prova.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99F31982A1391D100174728 /* prova.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		13FD07222A13795F0023539C /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		13FD07242A1382F00023539C /* data2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data2.json; sourceTree = "<group>"; };
 		13FD07262A138A3D0023539C /* data3.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data3.json; sourceTree = "<group>"; };
+		C99F31982A1391D100174728 /* prova.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prova.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				0A7C69542A12400C004298C0 /* AMaronn.swift */,
 				13FD071F2A13784F0023539C /* Json */,
 				0AEC85642A128CE80051DAC4 /* Game1View.swift */,
+				C99F31982A1391D100174728 /* prova.swift */,
 				0A5A4CDD2A13876800D7396D /* CardMemoryGameView.swift */,
 				0ADA61822A0B84200022574C /* GameTwo.swift */,
 				0AB896FD2A0E256F0074A56A /* Associa.swift */,
@@ -377,6 +380,7 @@
 				0AB896FE2A0E256F0074A56A /* Associa.swift in Sources */,
 				0AEC85762A1290350051DAC4 /* OnBoardingManager.swift in Sources */,
 				0A5A4CE32A13894500D7396D /* CardMemory.swift in Sources */,
+				C99F31992A1391D100174728 /* prova.swift in Sources */,
 				0AEC857A2A12990A0051DAC4 /* MenuPageC.swift in Sources */,
 				13FD07272A138A3D0023539C /* data3.json in Sources */,
 			);
