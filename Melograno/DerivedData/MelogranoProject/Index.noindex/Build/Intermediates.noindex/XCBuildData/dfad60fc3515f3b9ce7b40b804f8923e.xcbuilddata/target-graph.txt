@@ -1,0 +1,11 @@
+Target dependency graph (6 targets)
+FMProKit in FMProKit, no dependencies
+FMProKit in FMProKit, depends on:
+FMProKit in FMProKit (explicit)
+MelogranoProject in MelogranoProject, depends on:
+FMProKit in FMProKit (explicit)
+FMProKit in FMProKit, no dependencies
+FMProKit in FMProKit, depends on:
+FMProKit in FMProKit (explicit)
+MelogranoProject in MelogranoProject, depends on:
+FMProKit in FMProKit (explicit)
