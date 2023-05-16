@@ -7,6 +7,9 @@ xcuserdata/
 Melograno/DerivedData
 Melograno/MelogranProjectTests
 Melograno/MelogranProjectUITests
+/Melograno/DerivedData
+/Melograno/MelogranProjectTests
+/Melograno/MelogranProjectUITests
 
 ## Xcode 8 and earlier
 *.xcscmblueprint
