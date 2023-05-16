@@ -120,13 +120,13 @@
 		0A5A4CDF2A1387A800D7396D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0AEC85602A128BFD0051DAC4 /* GridView.swift */,
+				0A6732A12A0B830400806FEA /* Persistence.swift */,
 				0A7C69562A1240AC004298C0 /* Card1.swift */,
+				0AEC85602A128BFD0051DAC4 /* GridView.swift */,
 				0A5A4CDB2A13873300D7396D /* GameMemoryModel.swift */,
 				0A5A4CE22A13894500D7396D /* CardMemory.swift */,
 				0A5A4CE02A13881F00D7396D /* CardView.swift */,
 				0AEC856F2A128FF80051DAC4 /* PageControl.swift */,
-				0A6732A12A0B830400806FEA /* Persistence.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -159,8 +159,6 @@
 				0AEC85792A12990A0051DAC4 /* MenuPageC.swift */,
 				0A7C69542A12400C004298C0 /* AMaronn.swift */,
 				13FD071F2A13784F0023539C /* Json */,
-				0A7C69562A1240AC004298C0 /* Card1.swift */,
-				0A6732A12A0B830400806FEA /* Persistence.swift */,
 				0AEC85642A128CE80051DAC4 /* Game1View.swift */,
 				0A5A4CDD2A13876800D7396D /* CardMemoryGameView.swift */,
 				0ADA61822A0B84200022574C /* GameTwo.swift */,
