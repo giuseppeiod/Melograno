@@ -4,7 +4,7 @@
 ### Xcode ###
 ## User settings
 xcuserdata/
-Melograno/DerivedData
+
 Melograno/MelogranProjectTests
 Melograno/MelogranProjectUITests
 /Melograno/DerivedData
@@ -25,3 +25,12 @@ Melograno/MelogranProjectUITests
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.toptal.com/developers/gitignore/api/xcode
+Melograno/MelogranoProject.xcodeproj/project.xcworkspace/xcuserdata/ritamarrano.xcuserdatad/UserInterfaceState.xcuserstate
+Melograno/DerivedData/SDKStatCaches.noindex/iphonesimulator16.4-20E238-.sdkstatcache
+Melograno/DerivedData/ModuleCache.noindex/Session.modulevalidation
+Melograno/DerivedData/MelogranoProject/Logs/Notices/LogStoreManifest.plist
+Melograno/DerivedData/MelogranoProject/Logs/Launch/LogStoreManifest.plist
+Melograno/DerivedData/MelogranoProject/Logs/Build/LogStoreManifest.plist
+*.plist
+Melograno/DerivedData/MelogranoProject/info.plist
+Melograno/DerivedData/*
