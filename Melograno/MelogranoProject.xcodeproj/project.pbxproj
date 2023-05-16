@@ -37,6 +37,8 @@
 		13FD07232A13795F0023539C /* data.json in Sources */ = {isa = PBXBuildFile; fileRef = 13FD07222A13795F0023539C /* data.json */; };
 		13FD07252A1382F00023539C /* data2.json in Sources */ = {isa = PBXBuildFile; fileRef = 13FD07242A1382F00023539C /* data2.json */; };
 		13FD07272A138A3D0023539C /* data3.json in Sources */ = {isa = PBXBuildFile; fileRef = 13FD07262A138A3D0023539C /* data3.json */; };
+		C91DC2922A13C65800FA8329 /* BallsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DC2912A13C65800FA8329 /* BallsContentView.swift */; };
+		C91DC2942A13C66C00FA8329 /* BallsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DC2932A13C66C00FA8329 /* BallsView.swift */; };
 		C99F31992A1391D100174728 /* prova.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99F31982A1391D100174728 /* prova.swift */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +92,8 @@
 		13FD07222A13795F0023539C /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		13FD07242A1382F00023539C /* data2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data2.json; sourceTree = "<group>"; };
 		13FD07262A138A3D0023539C /* data3.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data3.json; sourceTree = "<group>"; };
+		C91DC2912A13C65800FA8329 /* BallsContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallsContentView.swift; sourceTree = "<group>"; };
+		C91DC2932A13C66C00FA8329 /* BallsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallsView.swift; sourceTree = "<group>"; };
 		C99F31982A1391D100174728 /* prova.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prova.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				0A6732A12A0B830400806FEA /* Persistence.swift */,
+				C91DC2932A13C66C00FA8329 /* BallsView.swift */,
+				0AEC85602A128BFD0051DAC4 /* GridView.swift */,
 				0A7C69562A1240AC004298C0 /* Card1.swift */,
 				0AEC85602A128BFD0051DAC4 /* GridView.swift */,
 				0A5A4CDB2A13873300D7396D /* GameMemoryModel.swift */,
@@ -159,6 +165,7 @@
 				0A6732982A0B830300806FEA /* MelogranoProjectApp.swift */,
 				0A67329A2A0B830300806FEA /* ContentView.swift */,
 				0AEC85792A12990A0051DAC4 /* MenuPageC.swift */,
+				C91DC2912A13C65800FA8329 /* BallsContentView.swift */,
 				0A7C69542A12400C004298C0 /* AMaronn.swift */,
 				13FD071F2A13784F0023539C /* Json */,
 				0AEC85642A128CE80051DAC4 /* Game1View.swift */,
@@ -372,12 +379,14 @@
 				0AEC85702A128FF80051DAC4 /* PageControl.swift in Sources */,
 				0A67329B2A0B830300806FEA /* ContentView.swift in Sources */,
 				0AEC85782A12904A0051DAC4 /* OnBoardingFirst.swift in Sources */,
+				C91DC2922A13C65800FA8329 /* BallsContentView.swift in Sources */,
 				0A6732992A0B830300806FEA /* MelogranoProjectApp.swift in Sources */,
 				0AEC85742A1290210051DAC4 /* OnBoardingFourth.swift in Sources */,
 				0A5A4CE12A13881F00D7396D /* CardView.swift in Sources */,
 				0AEC85612A128BFD0051DAC4 /* GridView.swift in Sources */,
 				0A5A4CDC2A13873300D7396D /* GameMemoryModel.swift in Sources */,
 				0AB896FE2A0E256F0074A56A /* Associa.swift in Sources */,
+				C91DC2942A13C66C00FA8329 /* BallsView.swift in Sources */,
 				0AEC85762A1290350051DAC4 /* OnBoardingManager.swift in Sources */,
 				0A5A4CE32A13894500D7396D /* CardMemory.swift in Sources */,
 				C99F31992A1391D100174728 /* prova.swift in Sources */,
@@ -541,7 +550,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MelogranoProject/Preview Content\"";
-				DEVELOPMENT_TEAM = 4LS82UK5QS;
+				DEVELOPMENT_TEAM = 7UYK6M3ATF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -549,7 +558,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationLandscapeLeft;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -574,7 +583,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MelogranoProject/Preview Content\"";
-				DEVELOPMENT_TEAM = 4LS82UK5QS;
+				DEVELOPMENT_TEAM = 7UYK6M3ATF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -582,7 +591,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationLandscapeLeft;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

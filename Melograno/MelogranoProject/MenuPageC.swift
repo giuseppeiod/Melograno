@@ -23,6 +23,8 @@ struct ContentView1: View {
             AMaronn()
         case "Gioco 3":
             CardsMemoryGameView()
+        case "Gioco 4":
+            BallsContentView()
         default:
             MenuPageC(gameSelection: gameSelection)
         }
@@ -31,7 +33,7 @@ struct ContentView1: View {
 
 struct MenuPageC: View {
     @ObservedObject var gameSelection: GameSelection
-    let games = ["Gioco 1", "Gioco 2", "Gioco 3"]
+    let games = ["Gioco 1", "Gioco 2", "Gioco 3", "Gioco 4"]
 
     var body: some View {
         VStack {
