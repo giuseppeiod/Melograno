@@ -32,79 +32,87 @@ struct CardsMemoryGameView: View {
     }
     var body: some View {
         
-        ZStack{
-            VStack(alignment: .center){
-                
-                Text("Match the cards")
-                    .font(.largeTitle)
-                
-                
-                NavBar()
-                
-                LazyVGrid(columns: col, spacing: 3){
-                    ForEach(game.cards){ card in
-                        
-                        CardView(card: card, onCardTap: {
-                            
-                            game.choose(card)
-                            
-                        })
-                        
-                        
-                        
-                    }
-                }
-                
-                if game.isGameFinished {
-                    Text("Congratulations! You matched all the cards!")
-                        .font(.headline)
-                        .foregroundColor(.green)
+        
+        if isGameFinishedButton{
+            ContentView()
+        }else{
+            ZStack{
+                VStack(alignment: .center){
                     
-                    Button(action: {
-                        restartGame()
-                    }, label: {
-                        Text("Restart Game")
+                    Text("Match the cards")
+                        .font(.largeTitle)
+                    
+                    
+                    NavBar()
+                    
+                    LazyVGrid(columns: col, spacing: 3){
+                        ForEach(game.cards){ card in
+                            
+                            CardView(card: card, onCardTap: {
+                                
+                                game.choose(card)
+                                
+                            })
+                            
+                            
+                            
+                        }
+                    }
+                    
+                    if game.isGameFinished {
+                        Text("Congratulations! You matched all the cards!")
                             .font(.headline)
-                            .foregroundColor(.white)
-                            .padding()
-                            .background(Color.blue)
-                            .cornerRadius(10)
-                    })
+                            .foregroundColor(.green)
+                        
+                        Button(action: {
+                            restartGame()
+                        }, label: {
+                            Text("Restart Game")
+                                .font(.headline)
+                                .foregroundColor(.white)
+                                .padding()
+                                .background(Color.blue)
+                                .cornerRadius(10)
+                        })
+                    }
+                    
                 }
-
+                
+                //            if game.isGameFinished {
+                //                Text("Congratulations! You matched all the cards!")
+                //                    .font(.headline)
+                //                    .foregroundColor(.green)
+                //
+                //                Button(action: {
+                //                    restartGame()
+                //                }, label: {
+                //                    Text("Restart Game")
+                //                        .font(.headline)
+                //                        .foregroundColor(.white)
+                //                        .padding()
+                //                        .background(Color.blue)
+                //                        .cornerRadius(10)
+                //                })
+                //            }
+                
             }
-            
-//            if game.isGameFinished {
-//                Text("Congratulations! You matched all the cards!")
-//                    .font(.headline)
-//                    .foregroundColor(.green)
-//
-//                Button(action: {
-//                    restartGame()
-//                }, label: {
-//                    Text("Restart Game")
-//                        .font(.headline)
-//                        .foregroundColor(.white)
-//                        .padding()
-//                        .background(Color.blue)
-//                        .cornerRadius(10)
-//                })
-//            }
-            
         }
+        
     }
-    
-    
     
     
     @ViewBuilder
     func NavBar() -> some View {
+        
+        
         HStack(spacing: 18) {
             Button(action: {
  
                 isGameFinishedButton = true
                 
                 print("Button pressed")
+                
+   
             }) {
                 Image(systemName: "xmark")
                     .font(.title)
@@ -146,5 +154,6 @@ struct CardsMemoryGameView_Previews: PreviewProvider {
         CardsMemoryGameView()
     }
 }
+
 
 
