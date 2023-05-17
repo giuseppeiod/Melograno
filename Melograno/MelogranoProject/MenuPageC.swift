@@ -22,7 +22,7 @@ struct ContentView1: View {
         case "Gioco 2":
             AMaronn()
         case "Gioco 3":
-            CardsMemoryGameView()
+            CardMemoryGameView()
         case "Gioco 4":
             BallsContentView()
         default:

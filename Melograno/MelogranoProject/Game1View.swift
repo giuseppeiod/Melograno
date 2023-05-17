@@ -6,9 +6,6 @@
 //
 
 import SwiftUI
-
-
-import SwiftUI
 import CoreData
 import UniformTypeIdentifiers
 import MobileCoreServices
@@ -21,23 +18,19 @@ extension Array {
 struct Game1View: View {
     
     @State private var isGameFinishedButton = false
+    
     @State var progress: CGFloat = 0
     
+    @State var combinations: [[Card1]] = []
     
-    @State var cardsToDrag: [Card1] = [
-        Card1(correctIndex: "1", imageName: "uno"),
-        Card1(correctIndex: "2", imageName: "due"),
-        Card1(correctIndex: "3", imageName: "tre"),
-        Card1(correctIndex: "4", imageName: "quattro")
-    ].shuffled()
     
-    @State var cardsToDrop: [Card1] = [
-        Card1(correctIndex: "1", imageName: "1"),
-        Card1(correctIndex: "2", imageName: "2"),
-        Card1(correctIndex: "3", imageName: "3"),
-        Card1(correctIndex: "4", imageName: "4")
-    ]
+    @State var cardsToDrag: [Card1] = []
+    @State var cardsToDrop: [Card1] = []
     
+    
+    
+
+        
     var body: some View {
         
         
@@ -46,6 +39,10 @@ struct Game1View: View {
             ContentView()
         }else{
             VStack(spacing: 15){
+                
+
+                
+                
                 NavBar()
                 
                 Text("Order this images sequence")
@@ -74,27 +71,32 @@ struct Game1View: View {
                 }
             }
             .padding()
-            .navigationBarHidden(true)}
-        
+            .onAppear {
+                // Load combinations from JSON and populate the drag and drop cards
+                let combinations = loadCombinationsFromJSON()
+                if let firstCombination = combinations.first {
+                    cardsToDrag = firstCombination.shuffled()
+                    cardsToDrop = firstCombination
+                }
+            }
+            
+        }
     }
     
     // PROGRESS BAR
-    
     @ViewBuilder
-    func NavBar() -> some View {
-        HStack(spacing: 18) {
-            Button(action: {
- 
+    func NavBar()->some View{
+        
+        HStack(spacing: 18){
+            Button {
                 isGameFinishedButton = true
-                
-                print("Button pressed")
-            }) {
-                Image(systemName: "xmark")
+            } label: {
+                Image(systemName:  "xmark")
                     .font(.title)
                     .foregroundColor(.gray)
             }
             
-            GeometryReader { proxy in
+            GeometryReader{ proxy in
                 ZStack(alignment: .leading) {
                     Capsule()
                         .fill(.gray.opacity(0.25))
@@ -103,16 +105,18 @@ struct Game1View: View {
                         .fill(.green.opacity(0.25))
                         .frame(width: proxy.size.width * progress)
                 }
-            }
-            .frame(height: 40)
+                
+            }.frame(height: 40)
             
             Button {
-                // Handle button action here
+                
             } label: {
                 Image(systemName: "suit.heart.fill")
                     .font(.title)
                     .foregroundColor(.red)
+                
             }
+            
         }
     }
     
@@ -122,7 +126,7 @@ struct Game1View: View {
         HStack(spacing: 20){
             
             ForEach(cardsToDrag) { item in
-                CardView(card: item)
+                Card1View(card: item)
                     .onDrag {
                         print(item)
                         return  .init(contentsOf: URL(string: item.imageName))!
@@ -131,17 +135,17 @@ struct Game1View: View {
             }
         }
     }
-    struct CardView: View {
-        let card: Card1
-        
-        var body: some View {
-            Image(card.imageName)
-                .resizable()
-                .frame(width: 100, height: 100)
-                .background(Color.green)
-                .cornerRadius(10)
-        }
-    }
+//    struct CardView: View {
+//        let card: Card
+//
+//        var body: some View {
+//            Image(card.imageName)
+//                .resizable()
+//                .frame(width: 100, height: 100)
+//                .background(Color.green)
+//                .cornerRadius(10)
+//        }
+//    }
     
     
     
@@ -170,7 +174,7 @@ struct Game1View: View {
         HStack(spacing: 20) {
             ForEach(cardsToDrop.indices, id: \.self) { index in
                 if let droppedCard = cardsToDrop[safe: index] {
-                    CardView(card: droppedCard)
+                    Card1View(card: droppedCard)
                         .onDrop(of: [.url], isTargeted: .constant(false)) { providers in
                             if let item = providers.first {
                                 item.loadObject(ofClass: URL.self) { value, error in
@@ -198,21 +202,36 @@ struct Game1View: View {
 
     func restartGame() {
         progress = 0
-        cardsToDrag = [
-            Card1(correctIndex: "1", imageName: "uno"),
-            Card1(correctIndex: "2", imageName: "due"),
-            Card1(correctIndex: "3", imageName: "tre"),
-            Card1(correctIndex: "4", imageName: "quattro")
-        ].shuffled()
-        cardsToDrop = [
-            Card1(correctIndex: "1", imageName: "1"),
-            Card1(correctIndex: "2", imageName: "2"),
-            Card1(correctIndex: "3", imageName: "3"),
-            Card1(correctIndex: "4", imageName: "4")
-        ]
+        
+        // Load combinations from JSON
+        let combinations = loadCombinationsFromJSON()
+        
+        // Shuffle and assign the drag cards
+        if let firstCombination = combinations.first {
+            cardsToDrag = firstCombination.shuffled()
+        }
+        
+        // Assign the drop cards
+        if let firstCombination = combinations.first {
+            cardsToDrop = firstCombination
+        }
+    }
+    
+    
+    
+    func loadCombinationsFromJSON() -> [[Card1]] {
+        if let url = Bundle.main.url(forResource: "Game2", withExtension: "geojson"),
+           let data = try? Data(contentsOf: url) {
+            let decoder = JSONDecoder()
+            if let combinations = try? decoder.decode([[Card1]].self, from: data) {
+                return combinations.map { combination in
+                    combination.map { Card1(correctIndex: $0.correctIndex, imageName: $0.imageName) }
+                }
+            }
+        }
+        return []
     }
 }
-
 
 struct Game1View_Previews: PreviewProvider {
     static var previews: some View {

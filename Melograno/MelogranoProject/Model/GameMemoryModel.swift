@@ -4,10 +4,13 @@
 //
 //  Created by Giuseppe Iodice on 16/05/23.
 //
+
 import Foundation
 
+
+
 class GameMemoryModel: ObservableObject {
-    var model = CardMemory.createCardList()
+    @Published var model: [CardMemory] = []
     @Published var progress: CGFloat = 0
     var cards: [CardMemory] {
         model
@@ -19,6 +22,17 @@ class GameMemoryModel: ObservableObject {
     @Published var isGameFinished: Bool = false
     
     var chosenCards: [CardMemory] = []
+    
+    
+    
+    
+    
+    init() {
+        if let newCards = loadCardsFromJSON() {
+            model = newCards
+        }
+    }
+    
     
     
     func choose(_ card: CardMemory) {
@@ -73,23 +87,31 @@ class GameMemoryModel: ObservableObject {
         chosenCards.removeAll()
     }
     
-    
     func resetGame() {
-        model = CardMemory.createCardList()
-        isGameFinished = false
-        progress = 0
-        chosenCards.removeAll()
-    
+        if let newCards = loadCardsFromJSON() {
+            model = newCards
+            isGameFinished = false
+        }
     }
     
-     func areAllCardsMatched() -> Bool {
-         
+    func areAllCardsMatched() -> Bool {
         return cards.allSatisfy { $0.isMatched }
     }
-
+    
+    func loadCardsFromJSON() -> [CardMemory]? {
+        if let url = Bundle.main.url(forResource: "MemoryCards", withExtension: "geojson"),
+           let data = try? Data(contentsOf: url) {
+            let decoder = JSONDecoder()
+            if let cardData = try? decoder.decode([CardData].self, from: data) {
+                let selectedCards = Array(cardData.prefix(3))
+                let duplicatedCards = selectedCards.flatMap { [$0, $0] }
+                return duplicatedCards.map { CardMemory(imageName: $0.imageName) }
+            }
+        }
+        return nil
+    }
+    
 }
-
-
 
 extension Array {
     var oneAndOnly: Element? {
@@ -101,3 +123,7 @@ extension Array {
     }
 }
 
+struct CardData: Codable {
+    let id: Int
+    let imageName: String
+}

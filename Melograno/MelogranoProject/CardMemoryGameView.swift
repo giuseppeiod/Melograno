@@ -6,7 +6,8 @@
 //
 
 import SwiftUI
-struct CardsMemoryGameView: View {
+
+struct CardMemoryGameView: View {
     
     @State private var isGameFinishedButton = false
 
@@ -31,6 +32,8 @@ struct CardsMemoryGameView: View {
         return game.progress
     }
     var body: some View {
+        
+        
         
         
         if isGameFinishedButton{
@@ -78,41 +81,22 @@ struct CardsMemoryGameView: View {
                     
                 }
                 
-                //            if game.isGameFinished {
-                //                Text("Congratulations! You matched all the cards!")
-                //                    .font(.headline)
-                //                    .foregroundColor(.green)
-                //
-                //                Button(action: {
-                //                    restartGame()
-                //                }, label: {
-                //                    Text("Restart Game")
-                //                        .font(.headline)
-                //                        .foregroundColor(.white)
-                //                        .padding()
-                //                        .background(Color.blue)
-                //                        .cornerRadius(10)
-                //                })
-                //            }
+                
                 
             }
         }
         
+        
     }
-    
     
     @ViewBuilder
     func NavBar() -> some View {
-        
-        
         HStack(spacing: 18) {
             Button(action: {
  
                 isGameFinishedButton = true
                 
                 print("Button pressed")
-                
-   
             }) {
                 Image(systemName: "xmark")
                     .font(.title)
@@ -149,11 +133,8 @@ struct CardsMemoryGameView: View {
     }
 }
 
-struct CardsMemoryGameView_Previews: PreviewProvider {
+struct CardMemoryGameView_Previews: PreviewProvider {
     static var previews: some View {
-        CardsMemoryGameView()
+        CardMemoryGameView()
     }
 }
-
-
-

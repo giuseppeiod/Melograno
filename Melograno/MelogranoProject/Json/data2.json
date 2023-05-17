@@ -5,26 +5,19 @@
 //  Created by Francesco on 16/05/23.
 //
 
-import Foundation
 
-{
-  "wordAssets": [
-    {
-      "word": "gallina",
-      "asset": "gallinaim"
-    },
-    {
-      "word": "uovo",
-      "asset": "uovoim"
-    },
-    {
-      "word": "pulcino",
-      "asset": "pulcinoim"
-    },
-    {
-      "word": "papera",
-      "asset": "paperaim"
-    },
-    
+
+[
+  [
+    {"correctIndex": "1", "imageName": "telefono"},
+    {"correctIndex": "2", "imageName": "due"},
+    {"correctIndex": "3", "imageName": "tre"},
+    {"correctIndex": "4", "imageName": "quattro"}
+  ],
+  [
+    {"correctIndex": "1", "imageName": "uno"},
+    {"correctIndex": "2", "imageName": "due"},
+    {"correctIndex": "3", "imageName": "tre"},
+    {"correctIndex": "4", "imageName": "telefono"}
   ]
-}
+]
