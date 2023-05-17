@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 @main
 struct MelogranoProjectApp: App {
     let persistenceController = PersistenceController.shared

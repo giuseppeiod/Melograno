@@ -14,7 +14,7 @@ struct CardView: View {
     var body: some View {
         ZStack {
             if card.isMatched {
-                RoundedRectangle(cornerRadius: 6)
+                RoundedRectangle(cornerRadius: 16)
                     .fill(Color.green)
                     .frame(width: 200, height: 300)
             } else if card.isFaceUp {
@@ -22,9 +22,9 @@ struct CardView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 200, height: 300)
-                    .cornerRadius(6)
+                    .cornerRadius(16)
             } else {
-                RoundedRectangle(cornerRadius: 6)
+                RoundedRectangle(cornerRadius: 16)
                     .fill(Color.orange)
                     .frame(width: 200, height: 300)
                     .onTapGesture(perform: onCardTap)

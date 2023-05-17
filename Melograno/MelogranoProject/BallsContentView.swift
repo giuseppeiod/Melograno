@@ -15,27 +15,34 @@ struct BallsContentView: View {
     
     @State private var isGameFinishedButton = false
     
-    @State private var sequence = generateRandomSequence(dim: Int.random(in: 3...7))
+    @State private var sequence = generateRandomSequence(dim: 1)
     @State private var highlight = [false, false, false]
+    
     @State private var playerSequence: [String] = []
     @State private var isPlayerTurn = false
     @State private var isAnimating = false
+    
     @State private var gameResult: String = ""
-
+    
+    @State private var currentSequenceIndex = 0
+    @State private var correctSequences = 0
+    
+    
     var body: some View {
         
         if isGameFinishedButton{
             ContentView()
         }else{
-            VStack {
+            
+            VStack(alignment: .center, spacing: 70 ){
                 
                 Button(action: {
-     
+                    
                     isGameFinishedButton = true
                     
                     print("Button pressed")
                     
-       
+                    
                 }) {
                     Image(systemName: "xmark")
                         .font(.title)
@@ -43,69 +50,110 @@ struct BallsContentView: View {
                 }
                 
                 
-                BallsView(isHighlighted: $highlight[0], color: .red)
-                    .onTapGesture {
-                        if !isAnimating {
-                            circleTapped("r")
+                HStack {
+                    BallsView(isHighlighted: $highlight[0], color: .red)
+                        .onTapGesture {
+                            if !isAnimating && isPlayerTurn {
+                                circleTapped("r")
+                            }
                         }
-                    }
-                BallsView(isHighlighted: $highlight[1], color: .green)
-                    .onTapGesture {
-                        if !isAnimating {
-                            circleTapped("g")
+                    BallsView(isHighlighted: $highlight[1], color: .green)
+                        .onTapGesture {
+                            if !isAnimating && isPlayerTurn {
+                                circleTapped("g")
+                            }
                         }
-                    }
-                BallsView(isHighlighted: $highlight[2], color: .blue)
-                    .onTapGesture {
-                        if !isAnimating {
-                            circleTapped("b")
+                    BallsView(isHighlighted: $highlight[2], color: .blue)
+                        .onTapGesture {
+                            if !isAnimating && isPlayerTurn {
+                                circleTapped("b")
+                            }
                         }
-                    }
-                Text(gameResult)
+                    Text(gameResult)
+                }
+                
                 Button(action: restartGame) {
                     Text("Restart Game")
                 }
             }
             .onAppear(perform: animateCircles)
         }}
-
+    
     func animateCircles() {
         print(sequence)
         isAnimating = true
-        for i in 0..<sequence.count {
-            DispatchQueue.main.asyncAfter(deadline: .now() + Double(i * 2)) {
-                let index = getColorIndex(from: sequence[i])
-                highlight[index] = true
+        var index = 0
+        Timer.scheduledTimer(withTimeInterval: 1.5, repeats: true) { timer in
+            if index < sequence.count {
+                let color = sequence[index]
+                let colorIndex = getColorIndex(from: color)
+                highlight[colorIndex] = true
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    highlight[colorIndex] = false
+                    index += 1
+                }
+            } else {
+                timer.invalidate()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                    highlight[index] = false
-                    if i == sequence.count - 1 {
-                        isPlayerTurn = true
-                        isAnimating = false
+                    isPlayerTurn = true
+                    isAnimating = false
+                }
+            }
+        }
+    }
+    
+    
+    
+    
+    func circleTapped(_ color: String) {
+        if isPlayerTurn && !isAnimating {
+            let expectedColorIndex = playerSequence.count
+            if expectedColorIndex < sequence.count {
+                let expectedColor = sequence[expectedColorIndex]
+                if color == expectedColor {
+                    let index = getColorIndex(from: color)
+                    highlight[index] = true
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        highlight[index] = false
+                        playerSequence.append(color)
+                        if playerSequence.count == sequence.count {
+                            if currentSequenceIndex == 6 {
+                                gameResult = "Hai vinto!"
+                                isPlayerTurn = false
+                            } else {
+                                gameResult = "Sequenza completata. Continua!"
+                                isPlayerTurn = false
+                                playerSequence = []
+                                currentSequenceIndex += 1
+                                sequence = generateRandomSequence(dim: currentSequenceIndex + 1)
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                                    animateCircles()
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    gameResult = "Hai perso. Riprova!"
+                    isPlayerTurn = false
+                    playerSequence = []
+                    currentSequenceIndex = 0
+                    sequence = generateRandomSequence(dim: 1)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                        animateCircles()
                     }
                 }
+            } else {
+                print("Errore: Indice out of range")
             }
         }
     }
 
-    func circleTapped(_ color: String) {
-        if isPlayerTurn {
-            let index = getColorIndex(from: color)
-            highlight[index] = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                highlight[index] = false
-            }
-            playerSequence.append(color)
-            if playerSequence.count == sequence.count {
-                if playerSequence == sequence {
-                    gameResult = "Hai vinto!"
-                } else {
-                    gameResult = "Hai perso. Riprova!"
-                }
-                isPlayerTurn = false
-                playerSequence = []
-            }
-        }
-    }
+
+
+
+
+
+
 
     func getColorIndex(from char: String) -> Int {
         switch char {
@@ -121,7 +169,7 @@ struct BallsContentView: View {
     }
 
     func restartGame() {
-        sequence = generateRandomSequence(dim: Int.random(in: 3...7))
+        sequence = generateRandomSequence(dim: 1)
         highlight = [false, false, false]
         playerSequence = []
         isPlayerTurn = false
@@ -133,7 +181,7 @@ struct BallsContentView: View {
 
 func generateRandomSequence(dim: Int) -> [String] {
     var sequence: [String] = []
-    for _ in 0..<dim {
+    for i in 0..<dim {
         let randomColor = Int.random(in: 0...2)
         switch randomColor {
         case 0:
@@ -144,6 +192,21 @@ func generateRandomSequence(dim: Int) -> [String] {
             sequence.append("b")
         default:
             break
+        }
+        
+        // Aggiungi un colore extra alla sequenza ogni volta che la lunghezza corrente raggiunge un multiplo di 2
+        if (i + 1) % 2 == 0 {
+            let randomColor = Int.random(in: 0...2)
+            switch randomColor {
+            case 0:
+                sequence.append("r")
+            case 1:
+                sequence.append("g")
+            case 2:
+                sequence.append("b")
+            default:
+                break
+            }
         }
     }
     return sequence

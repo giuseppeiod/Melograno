@@ -18,6 +18,7 @@ struct BallsView: View {
         
        Circle()
             .fill(color)
+            .frame(width: 150, height: 150)
             .opacity(isHighlighted ? 1.0 : 0.2)
             .animation(.default)
     }

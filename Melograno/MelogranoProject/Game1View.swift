@@ -72,13 +72,21 @@ struct Game1View: View {
             }
             .padding()
             .onAppear {
-                // Load combinations from JSON and populate the drag and drop cards
-                let combinations = loadCombinationsFromJSON()
-                if let firstCombination = combinations.first {
-                    cardsToDrag = firstCombination.shuffled()
-                    cardsToDrop = firstCombination
+                // Load combinations from JSON
+                let combinations = loadCombinationsFromJSON().shuffled()
+                
+                // Check if there are any combinations available
+                guard let firstCombination = combinations.first else {
+                    return
                 }
+                
+                // Shuffle and assign the drag cards
+                cardsToDrag = firstCombination.shuffled()
+                
+                // Initialize the drop cards with the same correctIndex as cardsToDrag and empty imageName
+                cardsToDrop = firstCombination.map { Card1(correctIndex: $0.correctIndex, imageName: "") }
             }
+
             
         }
     }
@@ -211,10 +219,12 @@ struct Game1View: View {
             cardsToDrag = firstCombination.shuffled()
         }
         
-        // Assign the drop cards
-        if let firstCombination = combinations.first {
-            cardsToDrop = firstCombination
-        }
+//        // Assign the drop cards
+//        if let firstCombination = combinations.first {
+//            cardsToDrop = firstCombination
+//        }
+        
+        cardsToDrop = cardsToDrag.map { Card1(correctIndex: $0.correctIndex, imageName: "") }
     }
     
     

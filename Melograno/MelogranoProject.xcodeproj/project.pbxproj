@@ -91,8 +91,6 @@
 		13FD072A2A14C22E0023539C /* AMaronn1.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = AMaronn1.geojson; sourceTree = "<group>"; };
 		13FD072B2A14C2550023539C /* AMaronn2.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = AMaronn2.geojson; sourceTree = "<group>"; };
 		13FD072C2A14C26A0023539C /* AMaronn3.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = AMaronn3.geojson; sourceTree = "<group>"; };
-		13FD072D2A14C28F0023539C /* MemoryCards2.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = MemoryCards2.geojson; sourceTree = "<group>"; };
-		13FD072E2A14C2A00023539C /* Memorycards3.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Memorycards3.geojson; sourceTree = "<group>"; };
 		13FD072F2A14C2BC0023539C /* Game2.2.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Game2.2.geojson; sourceTree = "<group>"; };
 		13FD07302A14C2CC0023539C /* Game2.3.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Game2.3.geojson; sourceTree = "<group>"; };
 		C91DC2912A13C65800FA8329 /* BallsContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallsContentView.swift; sourceTree = "<group>"; };
@@ -227,8 +225,6 @@
 			isa = PBXGroup;
 			children = (
 				C950A9302A14A4C8005DFE2D /* MemoryCards.geojson */,
-				13FD072D2A14C28F0023539C /* MemoryCards2.geojson */,
-				13FD072E2A14C2A00023539C /* Memorycards3.geojson */,
 				C950A92C2A149FFF005DFE2D /* Game2.geojson */,
 				13FD072F2A14C2BC0023539C /* Game2.2.geojson */,
 				13FD07302A14C2CC0023539C /* Game2.3.geojson */,

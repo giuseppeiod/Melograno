@@ -34,13 +34,13 @@ struct CardMemoryGameView: View {
     var body: some View {
         
         
-        
-        
         if isGameFinishedButton{
             ContentView()
         }else{
             ZStack{
-                VStack(alignment: .center){
+                
+                
+                VStack(alignment: .center, spacing: 20){
                     
                     Text("Match the cards")
                         .font(.largeTitle)
@@ -48,7 +48,7 @@ struct CardMemoryGameView: View {
                     
                     NavBar()
                     
-                    LazyVGrid(columns: col, spacing: 3){
+                    LazyVGrid(columns: col, spacing: 2){
                         ForEach(game.cards){ card in
                             
                             CardView(card: card, onCardTap: {
@@ -85,9 +85,10 @@ struct CardMemoryGameView: View {
                 
             }
         }
-        
-        
     }
+    
+    
+    
     
     @ViewBuilder
     func NavBar() -> some View {
@@ -113,7 +114,7 @@ struct CardMemoryGameView: View {
                         .frame(width: proxy.size.width * progress)
                 }
             }
-            .frame(height: 40)
+            .frame(width: 730, height: 40)
             
             Button {
                 // Handle button action here

@@ -16,7 +16,7 @@ struct Card1View: View {
             .resizable()
             .frame(width: 100, height: 100)
             .background(Color.green)
-            .cornerRadius(10)
+            .cornerRadius(16)
     }
 }
 
