@@ -1,6 +1,20 @@
-{
-    "type": "MultiPolygon",
-    "coordinates": [
-        
-    ]
-}
+[
+  [
+    {"correctIndex": "1", "imageName": "telefono"},
+    {"correctIndex": "2", "imageName": "due"},
+    {"correctIndex": "3", "imageName": "tre"},
+    {"correctIndex": "4", "imageName": "quattro"}
+  ],
+  [
+    {"correctIndex": "1", "imageName": "uno"},
+    {"correctIndex": "2", "imageName": "due"},
+    {"correctIndex": "3", "imageName": "tre"},
+    {"correctIndex": "4", "imageName": "telefono"}
+  ],
+  [
+    {"correctIndex": "1", "imageName": "uno"},
+    {"correctIndex": "2", "imageName": "due"},
+    {"correctIndex": "3", "imageName": "tre"},
+    {"correctIndex": "4", "imageName": "telefono"}
+  ]
+]

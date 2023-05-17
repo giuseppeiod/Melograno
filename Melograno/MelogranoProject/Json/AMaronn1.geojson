@@ -1,6 +1,23 @@
-{
-    "type": "MultiPolygon",
-    "coordinates": [
-        
-    ]
-}
+[
+  
+    {"correctIndex": "Cane", "imageName": "caneim"},
+    {"correctIndex": "Mela", "imageName": "melaim"},
+    {"correctIndex": "Telefono", "imageName": "telefono"},
+    {"correctIndex": "Camicia", "imageName": "camiciaim"},
+  
+    {"correctIndex": "Gallina", "imageName": "gallinaim"},
+    {"correctIndex": "Pera", "imageName": "peraim"},
+    {"correctIndex": "Pantofole", "imageName": "pantofoleim"},
+    {"correctIndex": "Arancia", "imageName": "aranciaim"},
+    
+    {"correctIndex": "Pulcino", "imageName": "pulcinoim"},
+    {"correctIndex": "Occhiali", "imageName": "occhialiim"},
+    {"correctIndex": "Banana", "imageName": "Bananaim"},
+    {"correctIndex": "Frigorifero", "imageName": "frigoriferoim"},
+    
+    {"correctIndex": "Gatto", "imageName": "gattoim"},
+    {"correctIndex": "Televisore", "imageName": "televisoreim"},
+    {"correctIndex": "Asciugacapelli", "imageName": "asciugacapellim"},
+    {"correctIndex": "Scarpe", "imageName": "Scarpeim"},
+    
+]
