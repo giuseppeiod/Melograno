@@ -81,4 +81,4 @@ struct Game3ViewC: View {
 //   static var previews: some View {
 //       MenuPageC()
 //   }
-// }
+//}

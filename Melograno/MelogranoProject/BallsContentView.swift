@@ -29,12 +29,17 @@ struct BallsContentView: View {
     
     
     var body: some View {
-        
+       
         if isGameFinishedButton{
             ContentView()
         }else{
             
-            VStack(alignment: .center, spacing: 70 ){
+            VStack(alignment: .center, spacing: 100 ){
+                
+                
+                
+                
+                
                 
                 Button(action: {
                     
@@ -49,24 +54,30 @@ struct BallsContentView: View {
                         .foregroundColor(.gray)
                 }
                 
-                
+        
                 HStack {
+                    
+                    
+                    
                     BallsView(isHighlighted: $highlight[0], color: .red)
                         .onTapGesture {
                             if !isAnimating && isPlayerTurn {
                                 circleTapped("r")
+                                provideHapticFeedback()
                             }
                         }
                     BallsView(isHighlighted: $highlight[1], color: .green)
                         .onTapGesture {
                             if !isAnimating && isPlayerTurn {
                                 circleTapped("g")
+                                provideHapticFeedback()
                             }
                         }
                     BallsView(isHighlighted: $highlight[2], color: .blue)
                         .onTapGesture {
                             if !isAnimating && isPlayerTurn {
                                 circleTapped("b")
+                                provideHapticFeedback()
                             }
                         }
                     Text(gameResult)
@@ -211,6 +222,12 @@ func generateRandomSequence(dim: Int) -> [String] {
     }
     return sequence
 }
+private func provideHapticFeedback() {
+        let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .medium)
+        impactFeedbackgenerator.prepare()
+        impactFeedbackgenerator.impactOccurred()
+    }
+
 
 
 struct BallsContentView_Previews: PreviewProvider {

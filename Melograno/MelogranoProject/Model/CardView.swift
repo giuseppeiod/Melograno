@@ -25,7 +25,9 @@ struct CardView: View {
                     .cornerRadius(16)
             } else {
                 RoundedRectangle(cornerRadius: 16)
-                    .fill(Color.orange)
+                    .fill(
+                            ImagePaint(image: Image("retrocarta"))
+                        )
                     .frame(width: 200, height: 300)
                     .onTapGesture(perform: onCardTap)
             }

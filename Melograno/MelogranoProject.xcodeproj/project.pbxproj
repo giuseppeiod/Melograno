@@ -34,6 +34,7 @@
 		0AEC85762A1290350051DAC4 /* OnBoardingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC85752A1290350051DAC4 /* OnBoardingManager.swift */; };
 		0AEC85782A12904A0051DAC4 /* OnBoardingFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC85772A12904A0051DAC4 /* OnBoardingFirst.swift */; };
 		0AEC857A2A12990A0051DAC4 /* MenuPageC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC85792A12990A0051DAC4 /* MenuPageC.swift */; };
+		5DE6C1EF2A16341D0029C309 /* notifica.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5DE6C1EE2A16341D0029C309 /* notifica.wav */; };
 		C91DC2922A13C65800FA8329 /* BallsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DC2912A13C65800FA8329 /* BallsContentView.swift */; };
 		C91DC2942A13C66C00FA8329 /* BallsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DC2932A13C66C00FA8329 /* BallsView.swift */; };
 		C950A92D2A149FFF005DFE2D /* Game2.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C950A92C2A149FFF005DFE2D /* Game2.geojson */; };
@@ -93,6 +94,7 @@
 		13FD072C2A14C26A0023539C /* AMaronn3.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = AMaronn3.geojson; sourceTree = "<group>"; };
 		13FD072F2A14C2BC0023539C /* Game2.2.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Game2.2.geojson; sourceTree = "<group>"; };
 		13FD07302A14C2CC0023539C /* Game2.3.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Game2.3.geojson; sourceTree = "<group>"; };
+		5DE6C1EE2A16341D0029C309 /* notifica.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = notifica.wav; path = ../../../../../../../Downloads/notifica.wav; sourceTree = "<group>"; };
 		C91DC2912A13C65800FA8329 /* BallsContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallsContentView.swift; sourceTree = "<group>"; };
 		C91DC2932A13C66C00FA8329 /* BallsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallsView.swift; sourceTree = "<group>"; };
 		C950A92C2A149FFF005DFE2D /* Game2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game2.geojson; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				0AEC85602A128BFD0051DAC4 /* GridView.swift */,
 				0A5A4CDB2A13873300D7396D /* GameMemoryModel.swift */,
 				0A5A4CE22A13894500D7396D /* CardMemory.swift */,
+				5DE6C1ED2A16327C0029C309 /* Sound */,
 				0A5A4CE02A13881F00D7396D /* CardView.swift */,
 				0AEC856F2A128FF80051DAC4 /* PageControl.swift */,
 			);
@@ -233,6 +236,14 @@
 				13FD072C2A14C26A0023539C /* AMaronn3.geojson */,
 			);
 			path = Json;
+			sourceTree = "<group>";
+		};
+		5DE6C1ED2A16327C0029C309 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				5DE6C1EE2A16341D0029C309 /* notifica.wav */,
+			);
+			path = Sound;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +359,7 @@
 				C950A9312A14A4CD005DFE2D /* MemoryCards.geojson in Resources */,
 				C950A92D2A149FFF005DFE2D /* Game2.geojson in Resources */,
 				0A6732A02A0B830400806FEA /* Preview Assets.xcassets in Resources */,
+				5DE6C1EF2A16341D0029C309 /* notifica.wav in Resources */,
 				0A67329D2A0B830400806FEA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,7 +567,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MelogranoProject/Preview Content\"";
-				DEVELOPMENT_TEAM = 7UYK6M3ATF;
+				DEVELOPMENT_TEAM = 4Z5579WF6W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -576,7 +588,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -588,7 +600,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MelogranoProject/Preview Content\"";
-				DEVELOPMENT_TEAM = 7UYK6M3ATF;
+				DEVELOPMENT_TEAM = 4Z5579WF6W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -609,7 +621,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

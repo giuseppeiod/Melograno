@@ -1,15 +1,17 @@
 [
   [
-    {"correctIndex": "1", "imageName": "telefono"},
-    {"correctIndex": "2", "imageName": "due"},
-    {"correctIndex": "3", "imageName": "tre"},
-    {"correctIndex": "4", "imageName": "quattro"}
+    {"correctIndex": "1", "imageName": "caffe1"},
+    {"correctIndex": "2", "imageName": "caffe2"},
+    {"correctIndex": "3", "imageName": "caffe3"},
+    {"correctIndex": "4", "imageName": "caffe4"},
+    {"correctIndex": "5", "imageName": "caffe5"}
   ],
   [
-    {"correctIndex": "1", "imageName": "uno"},
-    {"correctIndex": "2", "imageName": "due"},
-    {"correctIndex": "3", "imageName": "tre"},
-    {"correctIndex": "4", "imageName": "telefono"}
+    {"correctIndex": "1", "imageName": "persona1"},
+    {"correctIndex": "2", "imageName": "persona2"},
+    {"correctIndex": "3", "imageName": "persona3"},
+    {"correctIndex": "4", "imageName": "persona4"},
+    {"correctIndex": "5", "imageName": "persona5"},
   ],
   [
     {"correctIndex": "1", "imageName": "uno"},

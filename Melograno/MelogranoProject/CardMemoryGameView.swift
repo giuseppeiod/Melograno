@@ -44,10 +44,12 @@ struct CardMemoryGameView: View {
                     
                     Text("Match the cards")
                         .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .multilineTextAlignment(.center)
                     
                     
                     NavBar()
-                    
+                    Spacer()
                     LazyVGrid(columns: col, spacing: 2){
                         ForEach(game.cards){ card in
                             
@@ -56,7 +58,7 @@ struct CardMemoryGameView: View {
                                 game.choose(card)
                                 
                             })
-                            
+                        
                             
                             
                         }
@@ -78,7 +80,7 @@ struct CardMemoryGameView: View {
                                 .cornerRadius(10)
                         })
                     }
-                    
+                    Spacer()
                 }
                 
                 
@@ -112,8 +114,11 @@ struct CardMemoryGameView: View {
                     Capsule()
                         .fill(.green.opacity(0.25))
                         .frame(width: proxy.size.width * progress)
+                    
                 }
+               
             }
+            
             .frame(width: 730, height: 40)
             
             Button {
