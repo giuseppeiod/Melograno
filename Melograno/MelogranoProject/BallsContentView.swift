@@ -33,14 +33,9 @@ struct BallsContentView: View {
         if isGameFinishedButton{
             ContentView()
         }else{
-            
-            VStack(alignment: .center, spacing: 100 ){
-                
-                
-                
-                
-                
-                
+
+            VStack(alignment: .center, spacing: 70 ){
+              
                 Button(action: {
                     
                     isGameFinishedButton = true
@@ -53,8 +48,12 @@ struct BallsContentView: View {
                         .font(.title)
                         .foregroundColor(.gray)
                 }
+
+                Text("Tap the balls after they lit up ")
+                    .font(.title)
+                    .fontWeight(.semibold)
                 
-        
+
                 HStack {
                     
                     
@@ -80,8 +79,10 @@ struct BallsContentView: View {
                                 provideHapticFeedback()
                             }
                         }
-                    Text(gameResult)
                 }
+                //spostato la scritta
+                Text(gameResult)
+
                 
                 Button(action: restartGame) {
                     Text("Restart Game")
@@ -92,6 +93,8 @@ struct BallsContentView: View {
     
     func animateCircles() {
         print(sequence)
+        //gameresult è per far si che scompare la scritta quando ricomincio
+        gameResult = ""
         isAnimating = true
         var index = 0
         Timer.scheduledTimer(withTimeInterval: 1.5, repeats: true) { timer in

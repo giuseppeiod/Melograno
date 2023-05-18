@@ -50,6 +50,7 @@ struct CardMemoryGameView: View {
                     
                     NavBar()
                     Spacer()
+
                     LazyVGrid(columns: col, spacing: 2){
                         ForEach(game.cards){ card in
                             
@@ -58,9 +59,7 @@ struct CardMemoryGameView: View {
                                 game.choose(card)
                                 
                             })
-                        
-                            
-                            
+  
                         }
                     }
                     
@@ -80,7 +79,8 @@ struct CardMemoryGameView: View {
                                 .cornerRadius(10)
                         })
                     }
-                    Spacer()
+
+                   Spacer()
                 }
                 
                 

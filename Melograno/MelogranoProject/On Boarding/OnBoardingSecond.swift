@@ -14,8 +14,8 @@ struct OnBoardingSecond: View {
     var body: some View {
         
         VStack (alignment: .center) {
-            
-            Image("w2")
+            Spacer()
+            Image("gallinaim")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .padding()
