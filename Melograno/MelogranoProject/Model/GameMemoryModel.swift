@@ -7,11 +7,15 @@
 
 import Foundation
 
+import AVFoundation
+
 
 
 class GameMemoryModel: ObservableObject {
     @Published var model: [CardMemory] = []
     @Published var progress: CGFloat = 0
+    private var audioPlayer: AVAudioPlayer?
+
     var cards: [CardMemory] {
         model
     }
@@ -25,11 +29,15 @@ class GameMemoryModel: ObservableObject {
     
     
     
+
     
     
     init() {
         if let newCards = loadCardsFromJSON() {
             model = newCards
+            if let soundURL = Bundle.main.url(forResource: "notifica", withExtension: "wav") {
+                audioPlayer = try? AVAudioPlayer(contentsOf: soundURL)
+            }
         }
     }
     
@@ -58,12 +66,14 @@ class GameMemoryModel: ObservableObject {
                     }
                 }
             }
+            
         }
     }
     
     private func compareCards() {
         guard chosenCards.count == 2 else {
             fatalError("Invalid number of chosen cards")
+            
         }
         
         let firstCardIndex = cards.firstIndex(where: { $0.id == chosenCards[0].id })
@@ -77,6 +87,8 @@ class GameMemoryModel: ObservableObject {
             cards[firstIndex].isMatched = true
             cards[secondIndex].isMatched = true
             progress += 0.333
+            audioPlayer?.play()
+//non scompaiono più le carte una volta accoppiate ma il suono funziona 
         } else {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [self] in
                 cards[firstIndex].isFaceUp = false

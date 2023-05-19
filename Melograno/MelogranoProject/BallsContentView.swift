@@ -9,6 +9,8 @@ import SwiftUI
 
 import SwiftUI
 
+import AVFoundation
+
 struct BallsContentView: View {
     
     
@@ -26,7 +28,7 @@ struct BallsContentView: View {
     
     @State private var currentSequenceIndex = 0
     @State private var correctSequences = 0
-    
+    @State private var audioPlayer: AVAudioPlayer?
     
     var body: some View {
        
@@ -63,6 +65,7 @@ struct BallsContentView: View {
                             if !isAnimating && isPlayerTurn {
                                 circleTapped("r")
                                 provideHapticFeedback()
+                                audioPlayer?.play()
                             }
                         }
                     BallsView(isHighlighted: $highlight[1], color: .green)
@@ -70,6 +73,7 @@ struct BallsContentView: View {
                             if !isAnimating && isPlayerTurn {
                                 circleTapped("g")
                                 provideHapticFeedback()
+                                audioPlayer?.play()
                             }
                         }
                     BallsView(isHighlighted: $highlight[2], color: .blue)
@@ -77,6 +81,7 @@ struct BallsContentView: View {
                             if !isAnimating && isPlayerTurn {
                                 circleTapped("b")
                                 provideHapticFeedback()
+                                audioPlayer?.play()
                             }
                         }
                 }
@@ -89,6 +94,15 @@ struct BallsContentView: View {
                 }
             }
             .onAppear(perform: animateCircles)
+            .onAppear {
+                do {
+                    if let soundURL = Bundle.main.url(forResource: "notifica", withExtension: "wav") {
+                        audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+                    }
+                } catch {
+                    print("Failed to load sound file")
+                }
+            }
         }}
     
     func animateCircles() {
@@ -132,10 +146,10 @@ struct BallsContentView: View {
                         playerSequence.append(color)
                         if playerSequence.count == sequence.count {
                             if currentSequenceIndex == 6 {
-                                gameResult = "Hai vinto!"
+                                gameResult = "You won!"
                                 isPlayerTurn = false
                             } else {
-                                gameResult = "Sequenza completata. Continua!"
+                                gameResult = "Well done! Keep it going."
                                 isPlayerTurn = false
                                 playerSequence = []
                                 currentSequenceIndex += 1
@@ -147,7 +161,7 @@ struct BallsContentView: View {
                         }
                     }
                 } else {
-                    gameResult = "Hai perso. Riprova!"
+                    gameResult = "Game over, try again!"
                     isPlayerTurn = false
                     playerSequence = []
                     currentSequenceIndex = 0
