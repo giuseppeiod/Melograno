@@ -17,7 +17,7 @@ struct BallsContentView: View {
     
     @State private var isGameFinishedButton = false
     
-    @State private var sequence = generateRandomSequence(dim: 1)
+    @State private var sequence = generateRandomSequence(dim: 0)
     @State private var highlight = [false, false, false]
     
     @State private var playerSequence: [String] = []
@@ -153,7 +153,7 @@ struct BallsContentView: View {
                                 isPlayerTurn = false
                                 playerSequence = []
                                 currentSequenceIndex += 1
-                                sequence = generateRandomSequence(dim: currentSequenceIndex + 1)
+                                sequence = generateRandomSequence(dim: currentSequenceIndex )
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                                     animateCircles()
                                 }
@@ -165,7 +165,7 @@ struct BallsContentView: View {
                     isPlayerTurn = false
                     playerSequence = []
                     currentSequenceIndex = 0
-                    sequence = generateRandomSequence(dim: 1)
+                    sequence = generateRandomSequence(dim: 0)
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                         animateCircles()
                     }
@@ -221,24 +221,24 @@ func generateRandomSequence(dim: Int) -> [String] {
         default:
             break
         }
-        
-        // Aggiungi un colore extra alla sequenza ogni volta che la lunghezza corrente raggiunge un multiplo di 2
-        if (i + 1) % 2 == 0 {
-            let randomColor = Int.random(in: 0...2)
-            switch randomColor {
-            case 0:
-                sequence.append("r")
-            case 1:
-                sequence.append("g")
-            case 2:
-                sequence.append("b")
-            default:
-                break
-            }
-        }
     }
+    
+    // Aggiungi un colore extra alla fine della sequenza
+    let randomColor = Int.random(in: 0...2)
+    switch randomColor {
+    case 0:
+        sequence.append("r")
+    case 1:
+        sequence.append("g")
+    case 2:
+        sequence.append("b")
+    default:
+        break
+    }
+    
     return sequence
 }
+
 private func provideHapticFeedback() {
         let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .medium)
         impactFeedbackgenerator.prepare()
