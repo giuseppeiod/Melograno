@@ -20,7 +20,7 @@ struct ContentView1: View {
         case "Gioco 1":
             Game1View()
         case "Gioco 2":
-            Game1View()
+            Game2View()
         case "Gioco 3":
             CardMemoryGameView()
         case "Gioco 4":

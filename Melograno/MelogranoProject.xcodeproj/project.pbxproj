@@ -11,6 +11,12 @@
 		0A5A4CDE2A13876800D7396D /* CardMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A4CDD2A13876800D7396D /* CardMemoryGameView.swift */; };
 		0A5A4CE12A13881F00D7396D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A4CE02A13881F00D7396D /* CardView.swift */; };
 		0A5A4CE32A13894500D7396D /* CardMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A4CE22A13894500D7396D /* CardMemory.swift */; };
+		0A60CD642A1B69CA00711F77 /* CardView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A60CD632A1B69CA00711F77 /* CardView2.swift */; };
+		0A60CD662A1B6A0500711F77 /* Card2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A60CD652A1B6A0500711F77 /* Card2.swift */; };
+		0A60CD682A1B6A1F00711F77 /* WorldCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A60CD672A1B6A1F00711F77 /* WorldCard.swift */; };
+		0A60CD6A2A1B6A5800711F77 /* ViewModelGame2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A60CD692A1B6A5800711F77 /* ViewModelGame2.swift */; };
+		0A60CD6C2A1B6A8600711F77 /* CardOrderView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A60CD6B2A1B6A8600711F77 /* CardOrderView2.swift */; };
+		0A60CD6E2A1B6AA600711F77 /* Game2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A60CD6D2A1B6AA600711F77 /* Game2View.swift */; };
 		0A6732992A0B830300806FEA /* MelogranoProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6732982A0B830300806FEA /* MelogranoProjectApp.swift */; };
 		0A67329B2A0B830300806FEA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67329A2A0B830300806FEA /* ContentView.swift */; };
 		0A67329D2A0B830400806FEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A67329C2A0B830400806FEA /* Assets.xcassets */; };
@@ -65,6 +71,12 @@
 		0A5A4CDD2A13876800D7396D /* CardMemoryGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMemoryGameView.swift; sourceTree = "<group>"; };
 		0A5A4CE02A13881F00D7396D /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		0A5A4CE22A13894500D7396D /* CardMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMemory.swift; sourceTree = "<group>"; };
+		0A60CD632A1B69CA00711F77 /* CardView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView2.swift; sourceTree = "<group>"; };
+		0A60CD652A1B6A0500711F77 /* Card2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card2.swift; sourceTree = "<group>"; };
+		0A60CD672A1B6A1F00711F77 /* WorldCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCard.swift; sourceTree = "<group>"; };
+		0A60CD692A1B6A5800711F77 /* ViewModelGame2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelGame2.swift; sourceTree = "<group>"; };
+		0A60CD6B2A1B6A8600711F77 /* CardOrderView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOrderView2.swift; sourceTree = "<group>"; };
+		0A60CD6D2A1B6AA600711F77 /* Game2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game2View.swift; sourceTree = "<group>"; };
 		0A6732952A0B830300806FEA /* MelogranoProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MelogranoProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6732982A0B830300806FEA /* MelogranoProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelogranoProjectApp.swift; sourceTree = "<group>"; };
 		0A67329A2A0B830300806FEA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -144,6 +156,11 @@
 				0A5A4CE02A13881F00D7396D /* CardView.swift */,
 				C92CF2E72A1B5B8F00AAF385 /* CardViewGame1.swift */,
 				0AEC856F2A128FF80051DAC4 /* PageControl.swift */,
+				0A60CD6B2A1B6A8600711F77 /* CardOrderView2.swift */,
+				0A60CD692A1B6A5800711F77 /* ViewModelGame2.swift */,
+				0A60CD632A1B69CA00711F77 /* CardView2.swift */,
+				0A60CD652A1B6A0500711F77 /* Card2.swift */,
+				0A60CD672A1B6A1F00711F77 /* WorldCard.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,6 +194,7 @@
 				C91DC2912A13C65800FA8329 /* BallsContentView.swift */,
 				13FD071F2A13784F0023539C /* Json */,
 				0AEC85642A128CE80051DAC4 /* Game1View.swift */,
+				0A60CD6D2A1B6AA600711F77 /* Game2View.swift */,
 				0A5A4CDD2A13876800D7396D /* CardMemoryGameView.swift */,
 				0ADA61822A0B84200022574C /* GameTwo.swift */,
 				0AB896FD2A0E256F0074A56A /* Associa.swift */,
@@ -391,9 +409,11 @@
 			files = (
 				C950A92F2A14A1B8005DFE2D /* ViewModelGame1.swift in Sources */,
 				0AEC856E2A128FE60051DAC4 /* OnBoardingSecond.swift in Sources */,
+				0A60CD6A2A1B6A5800711F77 /* ViewModelGame2.swift in Sources */,
 				0A5A4CDE2A13876800D7396D /* CardMemoryGameView.swift in Sources */,
 				0A6732A52A0B830400806FEA /* MelogranoProject.xcdatamodeld in Sources */,
 				0A7C69572A1240AC004298C0 /* CardGame1.swift in Sources */,
+				0A60CD662A1B6A0500711F77 /* Card2.swift in Sources */,
 				0A6732A22A0B830400806FEA /* Persistence.swift in Sources */,
 				0ADA61832A0B84200022574C /* GameTwo.swift in Sources */,
 				0AEC85652A128CE80051DAC4 /* Game1View.swift in Sources */,
@@ -405,13 +425,17 @@
 				0A6732992A0B830300806FEA /* MelogranoProjectApp.swift in Sources */,
 				0AEC85742A1290210051DAC4 /* OnBoardingFourth.swift in Sources */,
 				0A5A4CE12A13881F00D7396D /* CardView.swift in Sources */,
+				0A60CD6C2A1B6A8600711F77 /* CardOrderView2.swift in Sources */,
 				0AEC85612A128BFD0051DAC4 /* GridView.swift in Sources */,
+				0A60CD642A1B69CA00711F77 /* CardView2.swift in Sources */,
 				0A5A4CDC2A13873300D7396D /* GameMemoryModel.swift in Sources */,
 				0AB896FE2A0E256F0074A56A /* Associa.swift in Sources */,
 				C91DC2942A13C66C00FA8329 /* BallsView.swift in Sources */,
 				0AEC85762A1290350051DAC4 /* OnBoardingManager.swift in Sources */,
 				0A5A4CE32A13894500D7396D /* CardMemory.swift in Sources */,
+				0A60CD682A1B6A1F00711F77 /* WorldCard.swift in Sources */,
 				0AEC857A2A12990A0051DAC4 /* MenuPageC.swift in Sources */,
+				0A60CD6E2A1B6AA600711F77 /* Game2View.swift in Sources */,
 				C92CF2E82A1B5B8F00AAF385 /* CardViewGame1.swift in Sources */,
 				C92CF2E62A1B5B5200AAF385 /* CardsOrderView.swift in Sources */,
 			);
