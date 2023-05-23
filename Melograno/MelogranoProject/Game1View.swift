@@ -47,14 +47,21 @@ struct Game1View: View {
             
             
             
-            HStack {
-                ForEach(model.cards, id: \.id) { card in
-                    CardViewGame1(card: card, hiddenCardIDs: $model.hiddenCardIDs)
-                        .onTapGesture {
-                            if !model.hiddenCardIDs.contains(card.id) {
-                                model.selectedCardIndex = card.id
-                                model.hiddenCardIDs.insert(card.id)
-                            }
+           HStack {
+               ForEach(0..<model.cards.count) { index in
+                   CardViewGame1(card: model.cards[index], hiddenCardIDs: $model.hiddenCardIDs)
+                       .onTapGesture {
+                           if !model.hiddenCardIDs.contains(model.cards[index].id) {
+                               model.selectedCardIndex = index
+                               model.hiddenCardIDs.insert(model.cards[index].id)
+                           }
+//                ForEach(model.cards, id: \.id) { card in
+//                    CardViewGame1(card: card, hiddenCardIDs: $model.hiddenCardIDs)
+//                        .onTapGesture {
+//                            if !model.hiddenCardIDs.contains(card.id) {
+//                                model.selectedCardIndex = card.id
+//                                model.hiddenCardIDs.insert(card.id)
+//                            }
                         }
                 }
             }

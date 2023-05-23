@@ -10,7 +10,7 @@ import SwiftUI
 import Foundation
 import SwiftUI
 
-struct Card2: Identifiable, Equatable {
+struct Card2: Identifiable, Equatable, Codable  {
     let id: Int
     var imageName: String
     var isHidden: Bool = false

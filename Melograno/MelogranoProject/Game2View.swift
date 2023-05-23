@@ -34,12 +34,12 @@ struct Game2View: View {
                 
                 
                 HStack {
-                    ForEach(model.cards, id: \.id) { card in
-                        CardView2(card: card, hiddenCardIDs: $model.hiddenCardIDs)
+                    ForEach(0..<model.cards.count) { index in
+                        CardView2(card: model.cards[index], hiddenCardIDs: $model.hiddenCardIDs)
                             .onTapGesture {
-                                if !model.hiddenCardIDs.contains(card.id) {
-                                    model.selectedCardIndex = card.id
-                                    model.hiddenCardIDs.insert(card.id)
+                                if !model.hiddenCardIDs.contains(model.cards[index].id) {
+                                    model.selectedCardIndex = index
+                                    model.hiddenCardIDs.insert(model.cards[index].id)
                                 }
                             }
                     }
@@ -58,8 +58,9 @@ struct Game2View: View {
                                     }
                                 }
                                 model.selectedCardToOrderIndex = index
-                                
-                                model.replaceCardImage()
+                                let card = model.cardsToOrder[index]
+//                                model.replaceCardImage()
+                                model.replaceCardImage(card: card,index:index)
                                 model.cardsToOrder = model.cardsToOrder
                             }
                         

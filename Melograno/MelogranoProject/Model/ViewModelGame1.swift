@@ -33,7 +33,7 @@ class ViewModelGame1: ObservableObject {
                 let randomCardsData = jsonData.randomElement() ?? []
 
                 // Converti i dati decodificati in CardGame1
-                self.cards = randomCardsData.map { CardGame1(id: $0.id, correctIndex: $0.correctIndex, imageName: $0.imageName) }
+                self.cards = randomCardsData.map { CardGame1(id: $0.id, correctIndex: $0.correctIndex, imageName: $0.imageName) }.shuffled()
                 
                 // Crea cardsToOrder con gli stessi elementi di cards ma con imageName vuoto e id differente
                 self.cardsToOrder = self.cards.enumerated().map {
