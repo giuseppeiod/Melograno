@@ -85,12 +85,12 @@ class ViewModelGame1: ObservableObject {
             cardsToOrder[index].imageName = ""
         }
     }
-
     func replaceCardImage() {
         guard let selectedIndex = selectedCardIndex,
               let selectedToOrderIndex = selectedCardToOrderIndex,
               selectedIndex >= 0 && selectedIndex < cards.count,
-              selectedToOrderIndex >= 0 && selectedToOrderIndex < cardsToOrder.count
+              selectedToOrderIndex >= 0 && selectedToOrderIndex < cardsToOrder.count,
+              cardsToOrder[selectedToOrderIndex].imageName.isEmpty // Aggiunta la condizione per verificare che la stringa sia vuota
         else {
             return
         }
@@ -107,6 +107,28 @@ class ViewModelGame1: ObservableObject {
         selectedCardIndex = nil
         selectedCardToOrderIndex = nil
     }
+
+//    func replaceCardImage() {
+//        guard let selectedIndex = selectedCardIndex,
+//              let selectedToOrderIndex = selectedCardToOrderIndex,
+//              selectedIndex >= 0 && selectedIndex < cards.count,
+//              selectedToOrderIndex >= 0 && selectedToOrderIndex < cardsToOrder.count
+//        else {
+//            return
+//        }
+//
+//        let selectedCard = cards[selectedIndex]
+//        var updateCards = cards
+//        updateCards[selectedIndex].isHidden.toggle()
+//
+//        var updatedCardsToOrder = cardsToOrder
+//        updatedCardsToOrder[selectedToOrderIndex].imageName = selectedCard.imageName
+//
+//        cardsToOrder = updatedCardsToOrder
+//
+//        selectedCardIndex = nil
+//        selectedCardToOrderIndex = nil
+//    }
 }
 
 /*class ViewModelGame1: ObservableObject{

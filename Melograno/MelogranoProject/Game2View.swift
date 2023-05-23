@@ -60,7 +60,7 @@ struct Game2View: View {
                                 model.selectedCardToOrderIndex = index
                                 let card = model.cardsToOrder[index]
 //                                model.replaceCardImage()
-                                model.replaceCardImage(card: card,index:index)
+                                model.replaceCardImage()
                                 model.cardsToOrder = model.cardsToOrder
                             }
                         

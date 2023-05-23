@@ -128,22 +128,22 @@ class ViewModelGame2: ObservableObject{
 //        selectedCardIndex = nil
 //        selectedCardToOrderIndex = nil
 //    }
-    func replaceCardImage(card:WorldCard,index:Int) {
+    func replaceCardImage() {
         guard let selectedIndex = selectedCardIndex,
               let selectedToOrderIndex = selectedCardToOrderIndex,
               selectedIndex >= 0 && selectedIndex < cards.count,
-              selectedToOrderIndex >= 0 && selectedToOrderIndex < cardsToOrder.count
+              selectedToOrderIndex >= 0 && selectedToOrderIndex < cardsToOrder.count,
+              cardsToOrder[selectedToOrderIndex].imageName.isEmpty // Aggiunta la condizione per verificare che la stringa sia vuota
         else {
             return
         }
 
-        let selectedCard = cards[selectedCardIndex!]
-//        print(selectedCard.imageName)
+        let selectedCard = cards[selectedIndex]
         var updateCards = cards
-        updateCards[index].isHidden.toggle()
-        
+        updateCards[selectedIndex].isHidden.toggle()
+
         var updatedCardsToOrder = cardsToOrder
-        updatedCardsToOrder[index].imageName = selectedCard.imageName
+        updatedCardsToOrder[selectedToOrderIndex].imageName = selectedCard.imageName
 
         cardsToOrder = updatedCardsToOrder
 
