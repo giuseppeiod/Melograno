@@ -1,10 +1,32 @@
 [
-  [
-    {"correctIndex": "1", "imageName": "pasta1"},
-    {"correctIndex": "2", "imageName": "pasta2"},
-    {"correctIndex": "3", "imageName": "pasta3"},
-    {"correctIndex": "4", "imageName": "pasta4"},
-    {"correctIndex": "5", "imageName": "pasta5"},
-    {"correctIndex": "5", "imageName": "pasta6"}
-  ]
+  
+    {"correctIndex": "Cane", "imageName": "caneim"},
+    {"correctIndex": "Occhiali", "imageName": "occhialiim"},
+    {"correctIndex": "Mela", "imageName": "melaim"},
+    {"correctIndex": "Pulcino", "imageName": "pulcinoim"},
+    {"correctIndex": "Sedia", "imageName": "sediaim"},
+    {"correctIndex": "Scarpe", "imageName": "scarpeim"},
+    
+    {"correctIndex": "Telefono", "imageName": "telefono"},
+    {"correctIndex": "Pera", "imageName": "peraim"},
+    {"correctIndex": "Scarpe", "imageName": "scarpeim"},
+    {"correctIndex": "Pulcino", "imageName": "pulcinoim"},
+    {"correctIndex": "Arancia", "imageName": "aranciaim"},
+    {"correctIndex": "Sedia", "imageName": "sediaim"},
+    
+    {"correctIndex": "Sedia", "imageName": "sediaim"},
+    {"correctIndex": "Camicia", "imageName": "camiciaim"},
+    {"correctIndex": "Occhiali", "imageName": "occhialiim"},
+    {"correctIndex": "Gatto", "imageName": "gattoim"},
+    {"correctIndex": "Televisore", "imageName": "televisoreim"},
+    {"correctIndex": "Scarpe", "imageName": "scarpeim"},
+    
+    {"correctIndex": "Telefono", "imageName": "telefono"},
+    {"correctIndex": "Pera", "imageName": "peraim"},
+    {"correctIndex": "Asciugacapelli", "imageName": "asciugacapellim"},
+    {"correctIndex": "Sedia", "imageName": "sediaim"},
+    {"correctIndex": "Pulcino", "imageName": "pulcinoim"},
+    {"correctIndex": "Scarpe", "imageName": "scarpeim"},
+    
 ]
+

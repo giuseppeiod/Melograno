@@ -1,0 +1,14 @@
+[
+  [
+    {"id": 0, "correctIndex": 1, "imageName": "sveglia", "isHidden": false},
+    {"id": 1, "correctIndex": 2, "imageName": "colazione", "isHidden": false},
+    {"id": 2, "correctIndex": 3, "imageName": "auto", "isHidden": false},
+    {"id": 3, "correctIndex": 4, "imageName": "lavoro", "isHidden": false}
+  ],
+  [
+    {"id": 0, "correctIndex": 1, "imageName": "semi", "isHidden": false},
+    {"id": 1, "correctIndex": 2, "imageName": "germoglio", "isHidden": false},
+    {"id": 2, "correctIndex": 3, "imageName": "piantina", "isHidden": false},
+    {"id": 3, "correctIndex": 4, "imageName": "albero", "isHidden": false}
+  ]
+]
