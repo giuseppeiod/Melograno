@@ -1,24 +1,18 @@
 //
-//  BallsContentView.swift
+//  ContentViewBallsLevel3.swift
 //  MelogranoProject
 //
-//  Created by Rita Marrano on 16/05/23.
+//  Created by Rita Marrano on 23/05/23.
 //
 
 import SwiftUI
 
-import SwiftUI
-
-import AVFoundation
-
-struct BallsContentView: View {
-    
-    
+struct ContentViewBallsLevel3: View {
     
     @State private var isGameFinishedButton = false
     
     @State private var sequence = generateRandomSequence(dim: 0)
-    @State private var highlight = [false, false, false]
+    @State private var highlight = [false, false, false, false, false]
     
     @State private var playerSequence: [String] = []
     @State private var isPlayerTurn = false
@@ -28,12 +22,12 @@ struct BallsContentView: View {
     
     @State private var currentSequenceIndex = 0
     @State private var correctSequences = 0
-    @State private var audioPlayer: AVAudioPlayer?
+//    @State private var audioPlayer: AVAudioPlayer?
     
     var body: some View {
        
         if isGameFinishedButton{
-            ContentView()
+            BallsGameMenuLevel()
         }else{
 
             VStack(alignment: .center, spacing: 70 ){
@@ -56,7 +50,36 @@ struct BallsContentView: View {
                     .fontWeight(.semibold)
                 
 
-                HStack {
+                
+                HStack(spacing: 60){
+                    
+                    BallsView(isHighlighted: $highlight[3], color: .purple)
+                        .onTapGesture {
+                            if !isAnimating && isPlayerTurn {
+                                circleTapped("p")
+                                provideHapticFeedback()
+//                                audioPlayer?.play()
+                            }
+                        }
+                    
+                    
+                    BallsView(isHighlighted: $highlight[4], color: .orange)
+                        .onTapGesture {
+                            if !isAnimating && isPlayerTurn {
+                                circleTapped("o")
+                                provideHapticFeedback()
+//                                audioPlayer?.play()
+                            }
+                        }
+                    
+                    
+                }
+                
+                
+                
+                
+                
+                HStack(spacing: 30) {
                     
                     
                     
@@ -65,7 +88,7 @@ struct BallsContentView: View {
                             if !isAnimating && isPlayerTurn {
                                 circleTapped("r")
                                 provideHapticFeedback()
-                                audioPlayer?.play()
+//                                audioPlayer?.play()
                             }
                         }
                     BallsView(isHighlighted: $highlight[1], color: .green)
@@ -73,7 +96,7 @@ struct BallsContentView: View {
                             if !isAnimating && isPlayerTurn {
                                 circleTapped("g")
                                 provideHapticFeedback()
-                                audioPlayer?.play()
+//                                audioPlayer?.play()
                             }
                         }
                     BallsView(isHighlighted: $highlight[2], color: .blue)
@@ -81,7 +104,7 @@ struct BallsContentView: View {
                             if !isAnimating && isPlayerTurn {
                                 circleTapped("b")
                                 provideHapticFeedback()
-                                audioPlayer?.play()
+//                                audioPlayer?.play()
                             }
                         }
                 }
@@ -94,15 +117,15 @@ struct BallsContentView: View {
                 }
             }
             .onAppear(perform: animateCircles)
-            .onAppear {
-                do {
-                    if let soundURL = Bundle.main.url(forResource: "notifica", withExtension: "wav") {
-                        audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
-                    }
-                } catch {
-                    print("Failed to load sound file")
-                }
-            }
+//            .onAppear {
+//                do {
+//                    if let soundURL = Bundle.main.url(forResource: "notifica", withExtension: "wav") {
+//                        audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+//                    }
+//                } catch {
+//                    print("Failed to load sound file")
+//                }
+//            }
         }}
     
     func animateCircles() {
@@ -191,6 +214,10 @@ struct BallsContentView: View {
             return 1
         case "b":
             return 2
+        case "p":
+            return 3
+        case "o":
+            return 4
         default:
             return -1
         }
@@ -198,7 +225,7 @@ struct BallsContentView: View {
 
     func restartGame() {
         sequence = generateRandomSequence(dim: 1)
-        highlight = [false, false, false]
+        highlight = [false, false, false, false, false]
         playerSequence = []
         isPlayerTurn = false
         isAnimating = false
@@ -207,10 +234,10 @@ struct BallsContentView: View {
     }
 }
 
-func generateRandomSequence(dim: Int) -> [String] {
+private func generateRandomSequence(dim: Int) -> [String] {
     var sequence: [String] = []
     for i in 0..<dim {
-        let randomColor = Int.random(in: 0...2)
+        let randomColor = Int.random(in: 0...4)
         switch randomColor {
         case 0:
             sequence.append("r")
@@ -218,13 +245,18 @@ func generateRandomSequence(dim: Int) -> [String] {
             sequence.append("g")
         case 2:
             sequence.append("b")
+        case 3:
+            sequence.append("p")
+        case 4:
+            sequence.append("o")
+
         default:
             break
         }
     }
     
     // Aggiungi un colore extra alla fine della sequenza
-    let randomColor = Int.random(in: 0...2)
+    let randomColor = Int.random(in: 0...4)
     switch randomColor {
     case 0:
         sequence.append("r")
@@ -232,6 +264,10 @@ func generateRandomSequence(dim: Int) -> [String] {
         sequence.append("g")
     case 2:
         sequence.append("b")
+    case 3:
+        sequence.append("p")
+    case 4:
+        sequence.append("o")
     default:
         break
     }
@@ -247,8 +283,8 @@ private func provideHapticFeedback() {
 
 
 
-struct BallsContentView_Previews: PreviewProvider {
+struct ContentViewBallsLevel3_Previews: PreviewProvider {
     static var previews: some View {
-        BallsContentView()
+        ContentViewBallsLevel3()
     }
 }

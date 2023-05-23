@@ -24,7 +24,7 @@ struct ContentView1: View {
         case "Gioco 3":
             CardMemoryGameView()
         case "Gioco 4":
-            BallsContentView()
+            BallsGameMenuLevel()
         default:
             MenuPageC(gameSelection: gameSelection)
         }

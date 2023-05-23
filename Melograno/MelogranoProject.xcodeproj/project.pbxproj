@@ -47,7 +47,7 @@
 		0AEC85762A1290350051DAC4 /* OnBoardingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC85752A1290350051DAC4 /* OnBoardingManager.swift */; };
 		0AEC85782A12904A0051DAC4 /* OnBoardingFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC85772A12904A0051DAC4 /* OnBoardingFirst.swift */; };
 		0AEC857A2A12990A0051DAC4 /* MenuPageC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC85792A12990A0051DAC4 /* MenuPageC.swift */; };
-		C91DC2922A13C65800FA8329 /* BallsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DC2912A13C65800FA8329 /* BallsContentView.swift */; };
+		C91DC2922A13C65800FA8329 /* ContentViewBallsLevel1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DC2912A13C65800FA8329 /* ContentViewBallsLevel1.swift */; };
 		C91DC2942A13C66C00FA8329 /* BallsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DC2932A13C66C00FA8329 /* BallsView.swift */; };
 		C92CF2E42A1B507000AAF385 /* notifica.wav in Resources */ = {isa = PBXBuildFile; fileRef = C92CF2E32A1B507000AAF385 /* notifica.wav */; };
 		C92CF2E62A1B5B5200AAF385 /* CardsOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92CF2E52A1B5B5200AAF385 /* CardsOrderView.swift */; };
@@ -55,6 +55,9 @@
 		C950A92D2A149FFF005DFE2D /* Game1.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C950A92C2A149FFF005DFE2D /* Game1.geojson */; };
 		C950A92F2A14A1B8005DFE2D /* ViewModelGame1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C950A92E2A14A1B8005DFE2D /* ViewModelGame1.swift */; };
 		C950A9312A14A4CD005DFE2D /* MemoryCards.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C950A9302A14A4C8005DFE2D /* MemoryCards.geojson */; };
+		C97DE1532A1D215000BB7298 /* ContentViewBallsLevel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97DE1522A1D215000BB7298 /* ContentViewBallsLevel2.swift */; };
+		C97DE1552A1D217E00BB7298 /* ContentViewBallsLevel3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97DE1542A1D217E00BB7298 /* ContentViewBallsLevel3.swift */; };
+		C97DE1572A1D21B000BB7298 /* BallsGameMenuLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97DE1562A1D21B000BB7298 /* BallsGameMenuLevel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,7 +120,7 @@
 		13FD072C2A14C26A0023539C /* Game2.3.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game2.3.geojson; sourceTree = "<group>"; };
 		13FD072F2A14C2BC0023539C /* Game1.2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game1.2.geojson; sourceTree = "<group>"; };
 		13FD07302A14C2CC0023539C /* Game1.3.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game1.3.geojson; sourceTree = "<group>"; };
-		C91DC2912A13C65800FA8329 /* BallsContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallsContentView.swift; sourceTree = "<group>"; };
+		C91DC2912A13C65800FA8329 /* ContentViewBallsLevel1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewBallsLevel1.swift; sourceTree = "<group>"; };
 		C91DC2932A13C66C00FA8329 /* BallsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallsView.swift; sourceTree = "<group>"; };
 		C92CF2E32A1B507000AAF385 /* notifica.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = notifica.wav; sourceTree = "<group>"; };
 		C92CF2E52A1B5B5200AAF385 /* CardsOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsOrderView.swift; sourceTree = "<group>"; };
@@ -125,6 +128,9 @@
 		C950A92C2A149FFF005DFE2D /* Game1.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game1.geojson; sourceTree = "<group>"; };
 		C950A92E2A14A1B8005DFE2D /* ViewModelGame1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelGame1.swift; sourceTree = "<group>"; };
 		C950A9302A14A4C8005DFE2D /* MemoryCards.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MemoryCards.geojson; sourceTree = "<group>"; };
+		C97DE1522A1D215000BB7298 /* ContentViewBallsLevel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewBallsLevel2.swift; sourceTree = "<group>"; };
+		C97DE1542A1D217E00BB7298 /* ContentViewBallsLevel3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewBallsLevel3.swift; sourceTree = "<group>"; };
+		C97DE1562A1D21B000BB7298 /* BallsGameMenuLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallsGameMenuLevel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,7 +208,7 @@
 				0A6732982A0B830300806FEA /* MelogranoProjectApp.swift */,
 				0A67329A2A0B830300806FEA /* ContentView.swift */,
 				0AEC85792A12990A0051DAC4 /* MenuPageC.swift */,
-				C91DC2912A13C65800FA8329 /* BallsContentView.swift */,
+				C97DE1582A1D231D00BB7298 /* BALLS GAME */,
 				13FD071F2A13784F0023539C /* Json */,
 				0AEC85642A128CE80051DAC4 /* Game1View.swift */,
 				0A60CD6D2A1B6AA600711F77 /* Game2View.swift */,
@@ -280,6 +286,17 @@
 			);
 			name = Sound;
 			path = "On Boarding/Sound";
+			sourceTree = "<group>";
+		};
+		C97DE1582A1D231D00BB7298 /* BALLS GAME */ = {
+			isa = PBXGroup;
+			children = (
+				C91DC2912A13C65800FA8329 /* ContentViewBallsLevel1.swift */,
+				C97DE1522A1D215000BB7298 /* ContentViewBallsLevel2.swift */,
+				C97DE1542A1D217E00BB7298 /* ContentViewBallsLevel3.swift */,
+				C97DE1562A1D21B000BB7298 /* BallsGameMenuLevel.swift */,
+			);
+			path = "BALLS GAME";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,11 +446,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C97DE1552A1D217E00BB7298 /* ContentViewBallsLevel3.swift in Sources */,
 				C950A92F2A14A1B8005DFE2D /* ViewModelGame1.swift in Sources */,
 				0AEC856E2A128FE60051DAC4 /* OnBoardingSecond.swift in Sources */,
 				0A60CD6A2A1B6A5800711F77 /* ViewModelGame2.swift in Sources */,
 				0A5A4CDE2A13876800D7396D /* CardMemoryGameView.swift in Sources */,
 				0A6732A52A0B830400806FEA /* MelogranoProject.xcdatamodeld in Sources */,
+				C97DE1532A1D215000BB7298 /* ContentViewBallsLevel2.swift in Sources */,
 				0A7C69572A1240AC004298C0 /* CardGame1.swift in Sources */,
 				0A60CD662A1B6A0500711F77 /* Card2.swift in Sources */,
 				0A6732A22A0B830400806FEA /* Persistence.swift in Sources */,
@@ -443,7 +462,7 @@
 				0AEC85702A128FF80051DAC4 /* PageControl.swift in Sources */,
 				0A67329B2A0B830300806FEA /* ContentView.swift in Sources */,
 				0AEC85782A12904A0051DAC4 /* OnBoardingFirst.swift in Sources */,
-				C91DC2922A13C65800FA8329 /* BallsContentView.swift in Sources */,
+				C91DC2922A13C65800FA8329 /* ContentViewBallsLevel1.swift in Sources */,
 				0A6732992A0B830300806FEA /* MelogranoProjectApp.swift in Sources */,
 				0AEC85742A1290210051DAC4 /* OnBoardingFourth.swift in Sources */,
 				0A5A4CE12A13881F00D7396D /* CardView.swift in Sources */,
@@ -457,6 +476,7 @@
 				0A5A4CE32A13894500D7396D /* CardMemory.swift in Sources */,
 				0A60CD682A1B6A1F00711F77 /* WorldCard.swift in Sources */,
 				0AEC857A2A12990A0051DAC4 /* MenuPageC.swift in Sources */,
+				C97DE1572A1D21B000BB7298 /* BallsGameMenuLevel.swift in Sources */,
 				0A60CD6E2A1B6AA600711F77 /* Game2View.swift in Sources */,
 				C92CF2E82A1B5B8F00AAF385 /* CardViewGame1.swift in Sources */,
 				C92CF2E62A1B5B5200AAF385 /* CardsOrderView.swift in Sources */,
