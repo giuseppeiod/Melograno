@@ -1,14 +1,14 @@
 [
   [
-    {"correctIndex": "1", "imageName": "sveglia"},
-    {"correctIndex": "2", "imageName": "colazione"},
-    {"correctIndex": "3", "imageName": "auto"},
-    {"correctIndex": "4", "imageName": "lavoro"}
+    {"id": 0, "correctIndex": 1, "imageName": "sveglia", "isHidden": false},
+    {"id": 1, "correctIndex": 2, "imageName": "colazione", "isHidden": false},
+    {"id": 2, "correctIndex": 3, "imageName": "auto", "isHidden": false},
+    {"id": 3, "correctIndex": 4, "imageName": "lavoro", "isHidden": false}
   ],
   [
-    {"correctIndex": "1", "imageName": "semi"},
-    {"correctIndex": "2", "imageName": "germoglio"},
-    {"correctIndex": "3", "imageName": "piantina"},
-    {"correctIndex": "4", "imageName": "albero"}
+    {"id": 4, "correctIndex": 1, "imageName": "semi", "isHidden": false},
+    {"id": 5, "correctIndex": 2, "imageName": "germoglio", "isHidden": false},
+    {"id": 6, "correctIndex": 3, "imageName": "piantina", "isHidden": false},
+    {"id": 7, "correctIndex": 4, "imageName": "albero", "isHidden": false}
   ]
 ]

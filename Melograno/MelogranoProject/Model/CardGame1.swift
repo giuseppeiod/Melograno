@@ -56,7 +56,8 @@ import Foundation
 //    }
 //}
 //
-struct CardGame1: Identifiable, Equatable {
+struct CardGame1: Identifiable, Equatable, Decodable {
+    
     let id: Int
     let correctIndex: Int
     var imageName: String
@@ -67,3 +68,8 @@ struct CardGame1: Identifiable, Equatable {
         return lhs.id == rhs.id && lhs.imageName == rhs.imageName
     }
 }
+//struct CardDataGame1: Codable {
+//    let id: Int
+//    let correctIndex: Int
+//    let imageName: String
+//}
