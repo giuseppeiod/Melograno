@@ -8,66 +8,58 @@
 import SwiftUI
 
 struct CardMemoryGameView: View {
-    
+
     @State private var isGameFinishedButton = false
+    @State private var flippedCardIndex: Int?
 
-    
-    var col = [ GridItem(.flexible()),
+    var col = [GridItem(.flexible()),
                 GridItem(.flexible()),
-                GridItem(.flexible()),
+                GridItem(.flexible())]
 
-    ]
-    
-    var row = [ GridItem(.flexible()),
-                GridItem(.flexible()),
-                GridItem(.flexible()),
-
-    ]
-    
     @StateObject private var game = GameMemoryModel()
-//    @State var cards = createCardList(dim: 3).shuffled()
 
-    
     var progress: CGFloat {
         return game.progress
     }
+
     var body: some View {
-        
-        
-        if isGameFinishedButton{
+        if isGameFinishedButton {
             ContentView()
-        }else{
-            ZStack{
-                
-                
-                VStack(alignment: .center, spacing: 20){
-                    
+        } else {
+            ZStack {
+                VStack(alignment: .center, spacing: 20) {
                     Text("Match the cards")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .multilineTextAlignment(.center)
-                    
-                    
+
                     NavBar()
                     Spacer()
 
-                    LazyVGrid(columns: col, spacing: 2){
-                        ForEach(game.cards){ card in
-                            
+                    LazyVGrid(columns: col, spacing: 2) {
+                        ForEach(game.cards.indices) { index in
+                            let card = game.cards[index]
+                            let isFlipped = flippedCardIndex == index
+
                             CardView(card: card, onCardTap: {
-                                
                                 game.choose(card)
-                                
+                                flipCard(index)
                             })
-  
+                            .rotation3DEffect(.degrees(isFlipped ? 180 : 0), axis: (x: 0, y: 1, z: 0))
+                            .animation(.easeInOut(duration: 0.5))
+                            .onTapGesture {
+                                withAnimation {
+                                    flipCard(index)
+                                }
+                            }
                         }
                     }
-                    
+
                     if game.isGameFinished {
                         Text("Congratulations! You matched all the cards!")
                             .font(.headline)
                             .foregroundColor(.green)
-                        
+
                         Button(action: {
                             restartGame()
                         }, label: {
@@ -80,47 +72,36 @@ struct CardMemoryGameView: View {
                         })
                     }
 
-                   Spacer()
+                    Spacer()
                 }
-                
-                
-                
             }
         }
     }
-    
-    
-    
-    
+
     @ViewBuilder
     func NavBar() -> some View {
         HStack(spacing: 18) {
             Button(action: {
- 
                 isGameFinishedButton = true
-                
                 print("Button pressed")
             }) {
                 Image(systemName: "xmark")
                     .font(.title)
                     .foregroundColor(.gray)
             }
-            
+
             GeometryReader { proxy in
                 ZStack(alignment: .leading) {
                     Capsule()
                         .fill(.gray.opacity(0.25))
-                    
+
                     Capsule()
                         .fill(.green.opacity(0.25))
                         .frame(width: proxy.size.width * progress)
-                    
                 }
-               
             }
-            
             .frame(width: 730, height: 40)
-            
+
             Button {
                 // Handle button action here
             } label: {
@@ -131,11 +112,18 @@ struct CardMemoryGameView: View {
         }
     }
 
-    
-    
+    func flipCard(_ index: Int) {
+        withAnimation {
+            if flippedCardIndex == index {
+                flippedCardIndex = nil
+            } else {
+                flippedCardIndex = index
+            }
+        }
+    }
+
     func restartGame() {
         game.resetGame()
-        
     }
 }
 

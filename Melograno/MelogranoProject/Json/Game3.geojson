@@ -10,6 +10,12 @@
     {"id": 5, "text": "Pera", "imageName": "", "isHidden": false},
     {"id": 6, "text": "Pantofole", "imageName": "", "isHidden": false},
     {"id": 7, "text": "Arancia", "imageName": "", "isHidden": false}
+    ],
+    [
+    {"id": 4, "text": "Papera", "imageName": "", "isHidden": false},
+    {"id": 5, "text": "Pera", "imageName": "", "isHidden": false},
+    {"id": 6, "text": "Chitarra", "imageName": "", "isHidden": false},
+    {"id": 7, "text": "Arancia", "imageName": "", "isHidden": false}
     ]
 ]
 
