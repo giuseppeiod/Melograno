@@ -31,7 +31,7 @@ struct Game2View: View {
                         .font(.title)
                         .foregroundColor(.gray)
                 }
-                
+                .padding(20)
                 
                 HStack {
                     ForEach(0..<model.cards.count) { index in

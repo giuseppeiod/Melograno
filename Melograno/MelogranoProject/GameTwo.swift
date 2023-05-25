@@ -59,6 +59,7 @@ struct GameTwo: View {
                     .background(Color.blue)
                     .foregroundColor(.white)
                     .cornerRadius(10)
+   
                 }
             }
             Spacer()

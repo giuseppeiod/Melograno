@@ -47,6 +47,7 @@
 		0AEC85762A1290350051DAC4 /* OnBoardingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC85752A1290350051DAC4 /* OnBoardingManager.swift */; };
 		0AEC85782A12904A0051DAC4 /* OnBoardingFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC85772A12904A0051DAC4 /* OnBoardingFirst.swift */; };
 		0AEC857A2A12990A0051DAC4 /* MenuPageC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC85792A12990A0051DAC4 /* MenuPageC.swift */; };
+		5D1CC1152A1F52B00038B712 /* menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5D1CC1142A1F52B00038B712 /* menu.mp3 */; };
 		C91DC2922A13C65800FA8329 /* ContentViewBallsLevel1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DC2912A13C65800FA8329 /* ContentViewBallsLevel1.swift */; };
 		C91DC2942A13C66C00FA8329 /* BallsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DC2932A13C66C00FA8329 /* BallsView.swift */; };
 		C92CF2E42A1B507000AAF385 /* notifica.wav in Resources */ = {isa = PBXBuildFile; fileRef = C92CF2E32A1B507000AAF385 /* notifica.wav */; };
@@ -120,6 +121,7 @@
 		13FD072C2A14C26A0023539C /* Game2.3.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game2.3.geojson; sourceTree = "<group>"; };
 		13FD072F2A14C2BC0023539C /* Game1.2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game1.2.geojson; sourceTree = "<group>"; };
 		13FD07302A14C2CC0023539C /* Game1.3.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game1.3.geojson; sourceTree = "<group>"; };
+		5D1CC1142A1F52B00038B712 /* menu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = menu.mp3; path = ../../../../../../../Downloads/menu.mp3; sourceTree = "<group>"; };
 		C91DC2912A13C65800FA8329 /* ContentViewBallsLevel1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewBallsLevel1.swift; sourceTree = "<group>"; };
 		C91DC2932A13C66C00FA8329 /* BallsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallsView.swift; sourceTree = "<group>"; };
 		C92CF2E32A1B507000AAF385 /* notifica.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = notifica.wav; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 		C92CF2E22A1B503B00AAF385 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				5D1CC1142A1F52B00038B712 /* menu.mp3 */,
 				C92CF2E32A1B507000AAF385 /* notifica.wav */,
 			);
 			name = Sound;
@@ -416,6 +419,7 @@
 				0ADDF0532A1CB8A4005BDE6A /* Game3.2.geojson in Resources */,
 				0ADDF0522A1CB85B005BDE6A /* Game3.geojson in Resources */,
 				C950A9312A14A4CD005DFE2D /* MemoryCards.geojson in Resources */,
+				5D1CC1152A1F52B00038B712 /* menu.mp3 in Resources */,
 				C950A92D2A149FFF005DFE2D /* Game1.geojson in Resources */,
 				0A6732A02A0B830400806FEA /* Preview Assets.xcassets in Resources */,
 				0ADDF0502A1CB852005BDE6A /* Game1.3.geojson in Resources */,
