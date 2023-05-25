@@ -23,13 +23,16 @@ struct CardsOrderView2: View {
                     .resizable()
                     .cornerRadius(3)
                     .frame(width: 100, height: 100)
-                    .background(.blue)
+                    .background(.white)
                 
-                
+                    .padding(20)
                 Text(card.text)
-                    .frame(width: 100, height: 20)
-                    .background(Color.green)
-                    .cornerRadius(3)
+                    .frame(width: 150, height: 70)
+                    
+                    .background(Color.purple.opacity(0.90))
+                    .foregroundColor(.white)
+                    .font(.title)
+                    .cornerRadius(10)
             }
         }
         }

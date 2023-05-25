@@ -20,13 +20,14 @@ struct CardView2: View {
             Image(card.imageName)
                 .resizable()
                 .frame(width: 100, height: 100)
-                .background(Color.green)
+                .background(Color.white)
                 .cornerRadius(10)
         } else {
             Image("")
                 .resizable()
                 .frame(width: 100, height: 100)
-                .background(Color.green)
+                .background(Color.blue)
+                .blur(radius: 100)
                 .cornerRadius(10)
         }
     }

@@ -34,6 +34,7 @@ struct Game2View: View {
                 
                 
                 HStack {
+                    
                     ForEach(0..<model.cards.count) { index in
                         CardView2(card: model.cards[index], hiddenCardIDs: $model.hiddenCardIDs)
                             .onTapGesture {
@@ -44,7 +45,7 @@ struct Game2View: View {
                             }
                     }
                 }
-                
+                .padding(20)
                 
                 HStack {
                     ForEach(model.cardsToOrder.indices, id: \.self) { index in
@@ -66,6 +67,7 @@ struct Game2View: View {
                         
                     }
                 }
+                
                         if model.allCardsPlaced {
                             
                             
