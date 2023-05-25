@@ -20,28 +20,77 @@ struct CardView: View {
     var body: some View {
         ZStack {
             if card.isMatched {
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(Color.green)
-                    .frame(width: 200, height: 300)
-
+                Image(card.imageName)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width:200, height: 250)
+                    .overlay(
+                        Image(systemName: "checkmark")
+                            .font(.system(size: 100))
+                            .foregroundColor(.green)
+                   )
+                    .cornerRadius(30)
+                    .background(
+                                Image("sfondo")
+                                    .resizable() // Rendi l'immagine di sfondo ridimensionabile
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 200, height: 280) // Imposta le dimensioni dell'immagine di sfondo
+                            )
+                
             } else if card.isFaceUp {
                 Image(card.imageName)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 200, height: 300)
-                    .cornerRadius(16)
-
+                    .frame(width: 200, height: 250)
+                    .cornerRadius(30)
+                    .background(
+                                Image("sfondo")
+                                    .resizable() // Rendi l'immagine di sfondo ridimensionabile
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 200, height: 280) // Imposta le dimensioni dell'immagine di sfondo
+                            )
             } else {
-                RoundedRectangle(cornerRadius: 16)
+                RoundedRectangle(cornerRadius: 30)
                     .fill(
-                            ImagePaint(image: Image("retrocarta"))
-                        )
-                    .frame(width: 200, height: 300)
+                        ImagePaint(image: Image("retrocarta"))
+                    )
+                    .frame(width: 200, height: 280)
                     .onTapGesture(perform: onCardTap)
-
             }
         }
     }
 }
+
+//struct CardView: View {
+//
+//    @ObservedObject var card: CardMemory
+//    var onCardTap: () -> Void
+//
+//    var body: some View {
+//        ZStack {
+//            if card.isMatched {
+//                RoundedRectangle(cornerRadius: 16)
+//                    .fill(Color.black)
+//                    .frame(width: 200, height: 300)
+//
+//            } else if card.isFaceUp {
+//                Image(card.imageName)
+//                    .resizable()
+//                    .aspectRatio(contentMode: .fit)
+//                    .frame(width: 200, height: 300)
+//                    .cornerRadius(16)
+//
+//            } else {
+//                RoundedRectangle(cornerRadius: 16)
+//                    .fill(
+//                            ImagePaint(image: Image("retrocarta"))
+//                        )
+//                    .frame(width: 200, height: 300)
+//                    .onTapGesture(perform: onCardTap)
+//
+//            }
+//        }
+//    }
+//}
 
 
