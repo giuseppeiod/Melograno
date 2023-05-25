@@ -17,7 +17,7 @@ struct CardsOrderView: View {
             Image(card.imageName)
                 .resizable()
                 .frame(width: 100, height: 100)
-                .background(Color.green)
+                .background(Color.purple)
                 .cornerRadius(10)
                 
 

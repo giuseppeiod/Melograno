@@ -59,40 +59,43 @@ struct Game2View: View {
                                 }
                                 model.selectedCardToOrderIndex = index
                                 let card = model.cardsToOrder[index]
-//                                model.replaceCardImage()
+                                //                                model.replaceCardImage()
                                 model.replaceCardImage()
                                 model.cardsToOrder = model.cardsToOrder
                             }
                         
                     }
-                    if model.allCardsPlaced {
-                        
-                        Button {
-                            //
-                        } label: {
+                }
+                        if model.allCardsPlaced {
                             
-                            ZStack{
+                            
+                            Button {
+                                //
+                            } label: {
                                 
-                                Rectangle()
-                                    .foregroundColor(.blue)
-                                    .frame(width: 150, height: 30)
+                                ZStack{
+                                    
+                                    Rectangle()
+                                        .foregroundColor(.blue)
+                                        .frame(width: 150, height: 30)
+                                    
+                                    
+                                    Text("FINISH")
+                                        .font(.body)
+                                        .foregroundColor(.white)
+                                }
                                 
-                                
-                                Text("FINISH")
-                                    .font(.body)
-                                    .foregroundColor(.white)
                             }
-                            
                         }
+                        
+                        
                         
                     }
                     
-                }
                 
             }
         }
     }
-}
 
 
 struct Game2View_Previews: PreviewProvider {
