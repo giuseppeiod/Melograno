@@ -34,7 +34,7 @@ struct CardMemoryGameView: View {
                         .fontWeight(.bold)
                         .multilineTextAlignment(.center)
 
-                   // NavBar()
+                    NavBar()
                     Spacer()
 
                     LazyVGrid(columns: col, spacing: 2) {
