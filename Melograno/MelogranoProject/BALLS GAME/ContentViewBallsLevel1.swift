@@ -24,6 +24,7 @@ struct ContentViewBallsLevel1: View {
     @State private var isPlayerTurn = false
     @State private var isAnimating = false
     
+    
     @State private var gameResult: String = ""
     
     @State private var currentSequenceIndex = 0
@@ -59,21 +60,28 @@ struct ContentViewBallsLevel1: View {
                 HStack {
                     
                     
-                    
                     BallsView(isHighlighted: $highlight[0], color: .red)
                         .onTapGesture {
                             if !isAnimating && isPlayerTurn {
                                 circleTapped("r")
                                 provideHapticFeedback()
-                                audioPlayer?.play()
+                                
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                    audioPlayer?.play()
+                                                    }
                             }
                         }
+                    
                     BallsView(isHighlighted: $highlight[1], color: .green)
                         .onTapGesture {
                             if !isAnimating && isPlayerTurn {
                                 circleTapped("g")
+                                
                                 provideHapticFeedback()
-                                audioPlayer?.play()
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                    audioPlayer?.play()
+                                            }
+                                
                             }
                         }
                     BallsView(isHighlighted: $highlight[2], color: .blue)
@@ -81,7 +89,9 @@ struct ContentViewBallsLevel1: View {
                             if !isAnimating && isPlayerTurn {
                                 circleTapped("b")
                                 provideHapticFeedback()
-                                audioPlayer?.play()
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                    audioPlayer?.play()
+                                            }
                             }
                         }
                 }
@@ -122,7 +132,7 @@ struct ContentViewBallsLevel1: View {
                 }
             } else {
                 timer.invalidate()
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
                     isPlayerTurn = true
                     isAnimating = false
                 }

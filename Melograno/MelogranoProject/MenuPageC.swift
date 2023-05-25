@@ -17,13 +17,13 @@ struct ContentView1: View {
 
     var body: some View {
         switch gameSelection.selectedGame {
-        case "Gioco 1":
+        case "Chronological Order \u{1F570}":
             Game1View()
-        case "Gioco 2":
+        case "Images-Words Association \u{1F4F7}":
             Game2View()
-        case "Gioco 3":
+        case "Memory Game \u{1F9E0}":
             CardMemoryGameView()
-        case "Gioco 4":
+        case "Balls Game \u{1F534}":
             BallsGameMenuLevel()
         default:
             MenuPageC(gameSelection: gameSelection)
@@ -33,31 +33,35 @@ struct ContentView1: View {
 
 struct MenuPageC: View {
     @ObservedObject var gameSelection: GameSelection
-    let games = ["Gioco 1", "Gioco 2", "Gioco 3", "Gioco 4"]
-
+    let games = ["Chronological Order \u{1F570}", "Images-Words Association \u{1F4F7}", "Memory Game \u{1F9E0}", "Balls Game \u{1F534}"]
+    
     var body: some View {
         VStack {
-            Text("Benvenuto nel menu!")
+            Text("Welcome!")
                 .font(.largeTitle)
-                .padding()
-
-            ForEach(games, id: \.self) { game in
-                Button(action: {
-                    self.gameSelection.selectedGame = game
-                }) {
-                    Text("Vai a \(game)")
-                        .font(.title)
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
+                .padding(50)
+            HStack{
+                ForEach(games, id: \.self) { game in
+                    Button(action: {
+                        withAnimation(.spring(response: 0.4)) {
+                            self.gameSelection.selectedGame = game
+                        }
+                    }) {
+                        Text("Go to \(game)")
+                            .font(.title)
+                            .bold()
+                            .padding()
+                            .frame(width: 250, height: 220)
+                            .background(Color.purple.opacity(0.90))
+                            .foregroundColor(.white)
+                            .cornerRadius(26)
+                    }
+                    .padding(.bottom, 10)
                 }
-                .padding(.bottom, 10)
             }
         }
     }
 }
-
 struct Game1ViewC: View {
     var body: some View {
         Text("Sei ora nel Gioco 1!")
@@ -77,8 +81,8 @@ struct Game3ViewC: View {
             .font(.largeTitle)
     }
 }
-//struct MenuPageC_Previews: PreviewProvider {
-//   static var previews: some View {
-//       MenuPageC()
-//   }
-//}
+struct MenuPageC_Previews: PreviewProvider {
+   static var previews: some View {
+       ContentView1()
+   }
+}
