@@ -11,7 +11,8 @@ class CardMemory: Identifiable, ObservableObject{
     let id = UUID()
     
     let imageName: String
-      
+    
+
     @Published var isFaceUp = false
     @Published var isMatched = false
     
@@ -23,6 +24,7 @@ class CardMemory: Identifiable, ObservableObject{
     }
     
     func turnOver(){
+       
         self.isFaceUp.toggle()
     }
     

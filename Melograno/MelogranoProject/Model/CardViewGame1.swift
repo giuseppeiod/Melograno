@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CardViewGame1: View {
+
     @State var card: CardGame1
     @Binding var hiddenCardIDs: Set<Int>
     
@@ -22,6 +23,7 @@ struct CardViewGame1: View {
                 .frame(width: 100, height: 100)
                 .background(Color.purple)
                 .cornerRadius(10)
+
         } else {
             Image("")
                 .resizable()
@@ -29,6 +31,7 @@ struct CardViewGame1: View {
                 .background(Color.blue)
                 .blur(radius: 100)
                 .cornerRadius(10)
+
         }
     }
 }

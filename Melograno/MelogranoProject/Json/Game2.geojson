@@ -9,6 +9,12 @@
     {"id": 5, "imageName": "peraim", "isHidden": false},
     {"id": 6, "imageName": "pantofoleim", "isHidden": false},
     {"id": 7, "imageName": "aranciaim", "isHidden": false}
+    ],
+    [
+    {"id": 4, "imageName": "paperaima", "isHidden": false},
+    {"id": 5, "imageName": "peraim", "isHidden": false},
+    {"id": 6, "imageName": "chitarra", "isHidden": false},
+    {"id": 7, "imageName": "aranciaim", "isHidden": false}
     ]
 ]
 

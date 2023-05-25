@@ -1,32 +1,27 @@
 [
-  
-    {"correctIndex": "Cane", "imageName": "caneim"},
-    {"correctIndex": "Occhiali", "imageName": "occhialiim"},
-    {"correctIndex": "Mela", "imageName": "melaim"},
-    {"correctIndex": "Pulcino", "imageName": "pulcinoim"},
-    {"correctIndex": "Sedia", "imageName": "sediaim"},
-    {"correctIndex": "Scarpe", "imageName": "scarpeim"},
-    
-    {"correctIndex": "Telefono", "imageName": "telefono"},
-    {"correctIndex": "Pera", "imageName": "peraim"},
-    {"correctIndex": "Scarpe", "imageName": "scarpeim"},
-    {"correctIndex": "Pulcino", "imageName": "pulcinoim"},
-    {"correctIndex": "Arancia", "imageName": "aranciaim"},
-    {"correctIndex": "Sedia", "imageName": "sediaim"},
-    
-    {"correctIndex": "Sedia", "imageName": "sediaim"},
-    {"correctIndex": "Camicia", "imageName": "camiciaim"},
-    {"correctIndex": "Occhiali", "imageName": "occhialiim"},
-    {"correctIndex": "Gatto", "imageName": "gattoim"},
-    {"correctIndex": "Televisore", "imageName": "televisoreim"},
-    {"correctIndex": "Scarpe", "imageName": "scarpeim"},
-    
-    {"correctIndex": "Telefono", "imageName": "telefono"},
-    {"correctIndex": "Pera", "imageName": "peraim"},
-    {"correctIndex": "Asciugacapelli", "imageName": "asciugacapellim"},
-    {"correctIndex": "Sedia", "imageName": "sediaim"},
-    {"correctIndex": "Pulcino", "imageName": "pulcinoim"},
-    {"correctIndex": "Scarpe", "imageName": "scarpeim"},
-    
+   [
+    {"id": 0, "imageName": "caneim", "isHidden": false},
+    {"id": 1, "imageName": "occhialiim", "isHidden": false},
+    {"id": 2, "imageName": "melaim", "isHidden": false},
+    {"id": 3, "imageName": "pulcinoim", "isHidden": false},
+    {"id": 4, "imageName": "sediaim", "isHidden": false},
+    {"id": 5, "imageName": "scarpeim", "isHidden": false}
+    ],
+    [
+    {"id": 6, "imageName": "telefono", "isHidden": false},
+    {"id": 7, "imageName": "peraim", "isHidden": false},
+    {"id": 8, "imageName": "pantofoleim", "isHidden": false},
+    {"id": 9, "imageName": "aranciaim", "isHidden": false},
+    {"id": 10, "imageName": "pulcinoim", "isHidden": false},
+    {"id": 11, "imageName": "occhialiim", "isHidden": false}
+    ],
+    [
+    {"id": 12, "imageName": "paperaima", "isHidden": false},
+    {"id": 13, "imageName": "televisoreim", "isHidden": false},
+    {"id": 14, "imageName": "asciugacapelli", "isHidden": false},
+    {"id": 15, "imageName": "aranciaim", "isHidden": false},
+    {"id": 16, "imageName": "telefono", "isHidden": false},
+    {"id": 17, "imageName": "occhialiim", "isHidden": false}
+    ]
 ]
 
