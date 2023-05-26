@@ -14,6 +14,27 @@
   {
     "id": 4,
     "imageName": "quattro"
+  },
+  {
+    "id": 5,
+    "imageName": "gatto"
+  },
+  {
+    "id": 6,
+    "imageName": "sedia"
+  },
+  {
+    "id": 7,
+    "imageName": "sveglia"
+  },
+  {
+    "id": 8,
+    "imageName": "automobile"
+  },
+  {
+    "id": 9,
+    "imageName": "girasole"
   }
+  
 ]
 
