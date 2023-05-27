@@ -37,16 +37,16 @@ let imagesName = ["uno", "due", "tre", "quattro"]
 let faceDownCard = CardMemory(imageName: " ")
 
 
-extension CardMemory {
-    
-    static func createCardList() -> [CardMemory] {
-        let imagesName = ["uno", "due", "tre"]
-        
-        var cards = [CardMemory]()
-        for imageName in imagesName {
-            cards.append(CardMemory(imageName: imageName))
-            cards.append(CardMemory(imageName: imageName))
-        }
-        return cards.shuffled()
-    }
-}
+//extension CardMemory {
+//    
+//    static func createCardList() -> [CardMemory] {
+//        let imagesName = ["uno", "due", "tre"]
+//        
+//        var cards = [CardMemory]()
+//        for imageName in imagesName {
+//            cards.append(CardMemory(imageName: imageName))
+//            cards.append(CardMemory(imageName: imageName))
+//        }
+//        return cards.shuffled()
+//    }
+//}

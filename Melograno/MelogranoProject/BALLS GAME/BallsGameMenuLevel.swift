@@ -36,7 +36,7 @@ struct BallsGameMenuLevelModel: View {
     @State private var turnBack = false
     
     let games = ["Level 1", "Level 2", "Level 3"]
-
+    var buttonImagesGame: [String] = ["level1", "level2", "level3", "level4"]
     var body: some View {
         
         
@@ -46,13 +46,6 @@ struct BallsGameMenuLevelModel: View {
         else{
             VStack {
                 
-                Text("BALLS GAME")
-                    .font(.largeTitle)
-                    .padding()
-
-                Text("GAME DESCRIPTION?")
-                    .font(.largeTitle)
-                    .padding()
                 
                 HStack{
                     
@@ -65,7 +58,7 @@ struct BallsGameMenuLevelModel: View {
                         
                         
                     }) {
-                        Image(systemName: "arrowshape.left.fill")
+                        Image(systemName: "arrowshape.turn.up.left.fill")
                             .font(.title)
                             .foregroundColor(.gray)
                     }
@@ -73,34 +66,54 @@ struct BallsGameMenuLevelModel: View {
                     Spacer()
                     
                 }.padding(30)
+
+                
+                
+                
+                
+                
+                Text("BALLSATHLON")
+                    
+                    .font(.system(size: 80))
+                    .padding()
+
+                Text("The balls will ligh up, remember the longest sequence of colors possible!")
+                    .font(.largeTitle)
+                    .padding()
+                
                 
                 Spacer()
                 
 
                 
                 HStack(spacing: 90){
-                ForEach(games, id: \.self) { game in
+                    ForEach(games.indices, id: \.self) { game in
                     Button(action: {
-                        self.gameSelection.selectedGame = game
+                        self.gameSelection.selectedGame = games[game]
                     }) {
-                        Text("\(game)")
-                            .font(.title)
-                            .padding()
-                            .frame(width: 140, height: 140)
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
+                        Image(buttonImagesGame[game])
+                        
+//
+//                                                Text("\(game)")
+//                                                    .font(.title)
+//                                                    .padding()
+//                                                    .frame(width: 140, height: 140)
+//                                                    .background(Color.blue)
+//                                                    .foregroundColor(.white)
+//                                                    .cornerRadius(10)
+                                            }
+                                            .padding(.bottom, 10)
+                        
+
                     }
-                    .padding(.bottom, 10)
-                    
-                    
                 }
+                Spacer()
             }
-            Spacer()
+            
         }
     }
-    }
 }
+
 
 struct BallsGameMenuLevel_Previews: PreviewProvider {
     static var previews: some View {

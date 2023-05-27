@@ -17,7 +17,7 @@ struct ContentViewBallsLevel1: View {
     
     @State private var isGameFinishedButton = false
     
-    @State private var sequence = generateRandomSequence(dim: 0)
+    @State private var sequence = generateRandomSequence(dim: 1, previousSequence: [])
     @State private var highlight = [false, false, false]
     
     @State private var playerSequence: [String] = []
@@ -38,27 +38,37 @@ struct ContentViewBallsLevel1: View {
         }else{
 
             VStack(alignment: .center, spacing: 70 ){
-              
-                Button(action: {
+                
+                VStack{
                     
-                    isGameFinishedButton = true
-                    
-                    print("Button pressed")
-                    
-                    
-                }) {
-                    Image(systemName: "xmark")
-                        .font(.title)
-                        .foregroundColor(.gray)
-                }
-
-                Text("Tap the balls after they lit up ")
+                HStack{
+                    Button(action: {
+                        
+                        isGameFinishedButton = true
+                        
+                        print("Button pressed")
+                        
+                        
+                    }) {
+                        Image(systemName: "arrowshape.left.fill")
+                            .font(.title)
+                            .foregroundColor(.gray)
+                    }
+                    Spacer()
+                }.padding()
+                
+                Text("Tap the balls sequence after they lit up ")
                     .font(.title)
                     .fontWeight(.semibold)
                 
-
-                HStack {
+                if !isAnimating && isPlayerTurn{
+                    Text("Your turn!")
+                }
+            }
+                
+                HStack(spacing: 60) {
                     
+
                     
                     BallsView(isHighlighted: $highlight[0], color: .red)
                         .onTapGesture {
@@ -75,6 +85,8 @@ struct ContentViewBallsLevel1: View {
                     BallsView(isHighlighted: $highlight[1], color: .green)
                         .onTapGesture {
                             if !isAnimating && isPlayerTurn {
+                                
+                                
                                 circleTapped("g")
                                 
                                 provideHapticFeedback()
@@ -96,12 +108,15 @@ struct ContentViewBallsLevel1: View {
                         }
                 }
                 //spostato la scritta
-                Text(gameResult)
-
                 
+                Text(gameResult)
+                
+                if !isPlayerTurn && !isAnimating && sequence.count == 6{
                 Button(action: restartGame) {
                     Text("Restart Game")
                 }
+            }
+                
             }
             .onAppear(perform: animateCircles)
             .onAppear {
@@ -121,6 +136,7 @@ struct ContentViewBallsLevel1: View {
         gameResult = ""
         isAnimating = true
         var index = 0
+//        sequence = generateRandomSequence(dim: currentSequenceIndex, previousSequence: [])
         Timer.scheduledTimer(withTimeInterval: 1.5, repeats: true) { timer in
             if index < sequence.count {
                 let color = sequence[index]
@@ -141,8 +157,9 @@ struct ContentViewBallsLevel1: View {
     }
     
     
-    
-    
+
+
+
     func circleTapped(_ color: String) {
         if isPlayerTurn && !isAnimating {
             let expectedColorIndex = playerSequence.count
@@ -155,15 +172,16 @@ struct ContentViewBallsLevel1: View {
                         highlight[index] = false
                         playerSequence.append(color)
                         if playerSequence.count == sequence.count {
-                            if currentSequenceIndex == 6 {
+                            if sequence.count == 6 {
                                 gameResult = "You won!"
                                 isPlayerTurn = false
                             } else {
                                 gameResult = "Well done! Keep it going."
                                 isPlayerTurn = false
-                                playerSequence = []
                                 currentSequenceIndex += 1
-                                sequence = generateRandomSequence(dim: currentSequenceIndex )
+                                playerSequence = []
+                                
+                                sequence = generateRandomSequence(dim: currentSequenceIndex, previousSequence: sequence)
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                                     animateCircles()
                                 }
@@ -175,7 +193,7 @@ struct ContentViewBallsLevel1: View {
                     isPlayerTurn = false
                     playerSequence = []
                     currentSequenceIndex = 0
-                    sequence = generateRandomSequence(dim: 0)
+                    sequence = generateRandomSequence(dim: 1, previousSequence: [])
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                         animateCircles()
                     }
@@ -185,9 +203,6 @@ struct ContentViewBallsLevel1: View {
             }
         }
     }
-
-
-
 
 
 
@@ -207,7 +222,8 @@ struct ContentViewBallsLevel1: View {
     }
 
     func restartGame() {
-        sequence = generateRandomSequence(dim: 1)
+        sequence = generateRandomSequence(dim: 1, previousSequence: [])
+                // ...
         highlight = [false, false, false]
         playerSequence = []
         isPlayerTurn = false
@@ -217,9 +233,13 @@ struct ContentViewBallsLevel1: View {
     }
 }
 
-private func generateRandomSequence(dim: Int) -> [String] {
-    var sequence: [String] = []
-    for i in 0..<dim {
+
+
+
+private func generateRandomSequence(dim: Int, previousSequence: [String]) -> [String] {
+    var sequence: [String] = previousSequence
+    
+    if dim >= sequence.count {
         let randomColor = Int.random(in: 0...2)
         switch randomColor {
         case 0:
@@ -233,21 +253,11 @@ private func generateRandomSequence(dim: Int) -> [String] {
         }
     }
     
-    // Aggiungi un colore extra alla fine della sequenza
-    let randomColor = Int.random(in: 0...2)
-    switch randomColor {
-    case 0:
-        sequence.append("r")
-    case 1:
-        sequence.append("g")
-    case 2:
-        sequence.append("b")
-    default:
-        break
-    }
-    
     return sequence
 }
+
+
+
 
 private func provideHapticFeedback() {
         let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .medium)

@@ -110,6 +110,8 @@ class GameMemoryModel: ObservableObject {
         return cards.allSatisfy { $0.isMatched }
     }
     
+    //NON SHUFFLED PER PRESENTAZIONE COSì SI VEDONO LE CARD BELLE 
+
     func loadCardsFromJSON() -> [CardMemory]? {
         if let url = Bundle.main.url(forResource: "MemoryCards", withExtension: "geojson"),
            let data = try? Data(contentsOf: url) {
@@ -122,6 +124,22 @@ class GameMemoryModel: ObservableObject {
         }
         return nil
     }
+    
+    //SHUFFLED
+//    func loadCardsFromJSON() -> [CardMemory]? {
+//        if let url = Bundle.main.url(forResource: "MemoryCards", withExtension: "geojson"),
+//           let data = try? Data(contentsOf: url) {
+//            let decoder = JSONDecoder()
+//            if let cardData = try? decoder.decode([CardData].self, from: data) {
+//                let shuffledCards = cardData.shuffled()
+//                let selectedCards = Array(shuffledCards.prefix(3))
+//                let duplicatedCards = selectedCards.flatMap { [$0, $0] }
+//                return duplicatedCards.map { CardMemory(imageName: $0.imageName) }
+//            }
+//        }
+//        return nil
+//    }
+
     
 }
 

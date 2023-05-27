@@ -28,22 +28,48 @@ struct CardMemoryGameView: View {
             ContentView()
         } else {
             ZStack {
-                VStack(alignment: .center, spacing: 20) {
-                    Text("Match the cards")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.center)
+                
 
-                    NavBar()
-                    Spacer()
+                VStack() {
+                    
+                    
+                    VStack{
+                      
+                    HStack{
+                        
+                        Button(action: {
+                            isGameFinishedButton = true
+                            print("Button pressed")
+                        }) {
+                            Image(systemName: "arrowshape.turn.up.left.fill")
+                                .font(.title)
+                                .foregroundColor(.gray)
+                                .padding(.bottom, -120)
+                        }
+                        .padding(.top, 80)
+                        .padding(.horizontal, 30)
+                        Spacer()
+                        
+                    }.padding(.top, 100)
+               
+                        Text("Match the cards")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .multilineTextAlignment(.center)
+                        
+            }
+                    
 
-                    LazyVGrid(columns: col, spacing: 2) {
+                    
+         
+                    ZStack{
+                    LazyVGrid(columns: col, spacing: 0) {
                         ForEach(game.cards.indices) { index in
                             let card = game.cards[index]
                             let isFlipped = flippedCards.contains(index)
                             let isWrong = flippedWrongCards.contains(index)
                             let shouldReset = shouldResetCards && isWrong
-
+                            
                             CardView(card: card, onCardTap: {
                                 game.choose(card)
                                 flipCard(index)
@@ -60,7 +86,12 @@ struct CardMemoryGameView: View {
                             }
                         }
                     }
-
+                        
+                        
+                    }.padding(.bottom, 120)
+                    
+              
+                  
                     if game.isGameFinished {
                         Spacer()
                         Text("Congratulations! You matched all the cards!")
@@ -80,6 +111,8 @@ struct CardMemoryGameView: View {
 
                     Spacer()
                 }
+                
+                
             }
             .onChange(of: shouldResetCards) { shouldReset in
                 if shouldReset {
@@ -92,39 +125,7 @@ struct CardMemoryGameView: View {
         }
     }
 
-    @ViewBuilder
-    func NavBar() -> some View {
-        HStack(spacing: 18) {
-            Button(action: {
-                isGameFinishedButton = true
-                print("Button pressed")
-            }) {
-                Image(systemName: "xmark")
-                    .font(.title)
-                    .foregroundColor(.gray)
-            }
 
-            GeometryReader { proxy in
-                ZStack(alignment: .leading) {
-                    Capsule()
-                        .fill(.green.opacity(0.25))
-
-                    Capsule()
-                        .fill(.gray.opacity(0.25))
-                        .frame(width: proxy.size.width * progress)
-                }
-            }
-            .frame(width: 730, height: 40)
-
-            Button {
-                // Handle button action here
-            } label: {
-                Image(systemName: "suit.heart.fill")
-                    .font(.title)
-                    .foregroundColor(.red)
-            }
-        }
-    }
 
     func flipCard(_ index: Int) {
         withAnimation {
