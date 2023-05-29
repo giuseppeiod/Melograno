@@ -19,13 +19,13 @@ struct CardView2: View {
         if !isHidden {
             Image(card.imageName)
                 .resizable()
-                .frame(width: 100, height: 100)
-                .background(Color.white)
+                .frame(width: 200, height: 180)
+                .background(Color.black)
                 .cornerRadius(10)
         } else {
             Image("")
                 .resizable()
-                .frame(width: 100, height: 100)
+                .frame(width: 200, height: 180)
                 .background(Color.blue)
                 .blur(radius: 100)
                 .cornerRadius(10)

@@ -80,7 +80,7 @@ struct Game2View: View {
                                     
                                     Rectangle()
                                         .foregroundColor(.blue)
-                                        .frame(width: 150, height: 30)
+                                        .frame(width: 250, height: 70)
                                     
                                     
                                     Text("FINISH")
