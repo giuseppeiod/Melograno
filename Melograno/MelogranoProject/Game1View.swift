@@ -31,11 +31,6 @@ struct Game1View: View {
             }else{
                 VStack {
                     
-                    Text ("Rearrange the following cards \n in chronological order")
-                        .font(.largeTitle)
-                        .multilineTextAlignment(.center)
-                        .bold()
-                        .padding(.bottom)
                     
                     Button(action: {
                         
@@ -45,13 +40,20 @@ struct Game1View: View {
                         
                         
                     }) {
-                        Image(systemName: "xmark")
+                        Image(systemName: "arrowshape.turn.up.left.fill")
                             .padding(.bottom)
                             .font(.title)
                             .foregroundColor(.gray)
                     }
                     
+
                     
+                    Text ("Rearrange the following cards \n in order")
+                        .font(.largeTitle)
+                        .multilineTextAlignment(.center)
+                        .bold()
+                        .padding(.bottom)
+
                     
                     
                     HStack {

@@ -163,15 +163,14 @@
 			isa = PBXGroup;
 			children = (
 				0A6732A12A0B830400806FEA /* Persistence.swift */,
-				C91DC2932A13C66C00FA8329 /* BallsView.swift */,
 				0A7C69562A1240AC004298C0 /* CardGame1.swift */,
+				C92CF2E72A1B5B8F00AAF385 /* CardViewGame1.swift */,
 				C92CF2E52A1B5B5200AAF385 /* CardsOrderView.swift */,
 				C950A92E2A14A1B8005DFE2D /* ViewModelGame1.swift */,
 				0AEC85602A128BFD0051DAC4 /* GridView.swift */,
 				0A5A4CDB2A13873300D7396D /* GameMemoryModel.swift */,
 				0A5A4CE22A13894500D7396D /* CardMemory.swift */,
 				0A5A4CE02A13881F00D7396D /* CardView.swift */,
-				C92CF2E72A1B5B8F00AAF385 /* CardViewGame1.swift */,
 				0AEC856F2A128FF80051DAC4 /* PageControl.swift */,
 				0A60CD6B2A1B6A8600711F77 /* CardOrderView2.swift */,
 				0A60CD692A1B6A5800711F77 /* ViewModelGame2.swift */,
@@ -291,6 +290,7 @@
 		C97DE1582A1D231D00BB7298 /* BALLS GAME */ = {
 			isa = PBXGroup;
 			children = (
+				C91DC2932A13C66C00FA8329 /* BallsView.swift */,
 				C91DC2912A13C65800FA8329 /* ContentViewBallsLevel1.swift */,
 				C97DE1522A1D215000BB7298 /* ContentViewBallsLevel2.swift */,
 				C97DE1542A1D217E00BB7298 /* ContentViewBallsLevel3.swift */,

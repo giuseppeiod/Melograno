@@ -16,9 +16,12 @@ struct CardsOrderView: View {
 
             Image(card.imageName)
                 .resizable()
-                .frame(width: 100, height: 100)
+                .frame(width: 200, height: 180)
                 .background(Color.purple)
-                .cornerRadius(10)
+                .cornerRadius(16).overlay(
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(Color.black, lineWidth: 2)
+                )
                
                 
 

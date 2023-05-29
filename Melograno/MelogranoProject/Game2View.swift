@@ -14,6 +14,7 @@ struct Game2View: View {
     
     
     var body: some View {
+        
         if isGameFinishedButton{
             ContentView()
         }else{
@@ -27,11 +28,11 @@ struct Game2View: View {
                     
                     
                 }) {
-                    Image(systemName: "xmark")
+                    Image(systemName: "arrowshape.turn.up.left.fill")
+                        .padding(.bottom)
                         .font(.title)
                         .foregroundColor(.gray)
                 }
-                .padding(20)
                 
                 HStack {
                     

@@ -45,7 +45,7 @@ struct ContentViewBallsLevel2: View {
                         
                         
                     }) {
-                        Image(systemName: "arrowshape.left.fill")
+                        Image(systemName: "arrowshape.turn.up.left.fill")
                             .font(.title)
                             .foregroundColor(.gray)
                     }

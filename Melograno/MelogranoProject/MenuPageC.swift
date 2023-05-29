@@ -46,7 +46,10 @@ struct MenuPageC: View {
 
     var body: some View {
         
+        ZStack{
+            
         VStack(alignment:.center) {
+            
             
             HStack(){
                 
@@ -55,7 +58,7 @@ struct MenuPageC: View {
                     .font(.largeTitle)
                     .padding()
                 
-                 Spacer()
+                Spacer()
             }.padding()
             
             Spacer()
@@ -73,37 +76,37 @@ struct MenuPageC: View {
                     }) {
                         
                         
-
-                            Image(buttonImagesGame[game])
-                            
-                            
-//                            RoundedRectangle(cornerRadius: 16)
-//                                .fill(Color.purple.opacity(0.7))
-//                                .overlay(
-//                                    RoundedRectangle(cornerRadius: 16)
-//                                        .stroke(Color.black, lineWidth: 2)
-//                                )
-//                                .frame(width: 230, height: 220)
-//
-//
-//                            RoundedRectangle(cornerRadius: 16)
-//                                .fill(Color.purple.opacity(0.9))
-//                                .overlay(
-//                                    RoundedRectangle(cornerRadius: 16)
-//                                        .stroke(Color.black, lineWidth: 2)
-//                                )
-//                                .frame(width: 230, height: 100)
-                            
-//                            Text("Go to \(game)")
-//                                .multilineTextAlignment(.center)
-//                                .font(.title)
-//                                .bold()
-//                                .foregroundColor(.black)
-//                                .frame(width: 200, height: 200)
+                        
+                        Image(buttonImagesGame[game])
                         
                         
-                }
-
+                        //                            RoundedRectangle(cornerRadius: 16)
+                        //                                .fill(Color.purple.opacity(0.7))
+                        //                                .overlay(
+                        //                                    RoundedRectangle(cornerRadius: 16)
+                        //                                        .stroke(Color.black, lineWidth: 2)
+                        //                                )
+                        //                                .frame(width: 230, height: 220)
+                        //
+                        //
+                        //                            RoundedRectangle(cornerRadius: 16)
+                        //                                .fill(Color.purple.opacity(0.9))
+                        //                                .overlay(
+                        //                                    RoundedRectangle(cornerRadius: 16)
+                        //                                        .stroke(Color.black, lineWidth: 2)
+                        //                                )
+                        //                                .frame(width: 230, height: 100)
+                        
+                        //                            Text("Go to \(game)")
+                        //                                .multilineTextAlignment(.center)
+                        //                                .font(.title)
+                        //                                .bold()
+                        //                                .foregroundColor(.black)
+                        //                                .frame(width: 200, height: 200)
+                        
+                        
+                    }
+                    
                     .onTapGesture {
                         let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .light)
                         impactFeedbackgenerator.prepare()
@@ -114,6 +117,7 @@ struct MenuPageC: View {
             
             Spacer()
         }
+        }.background(.brown.opacity(0.6))
         .onAppear {
             setupAudioPlayer() // Configura il player audio
         }

@@ -24,45 +24,46 @@ struct CardMemoryGameView: View {
     }
 
     var body: some View {
+        
         if isGameFinishedButton {
             ContentView()
         } else {
-            ZStack {
+            ZStack{
+            VStack() {
                 
-
-                VStack() {
+                
+                HStack{
                     
-                    
-                    VStack{
-                      
-                    HStack{
+                    Button(action: {
                         
-                        Button(action: {
-                            isGameFinishedButton = true
-                            print("Button pressed")
-                        }) {
-                            Image(systemName: "arrowshape.turn.up.left.fill")
-                                .font(.title)
-                                .foregroundColor(.gray)
-                                .padding(.bottom, -120)
-                        }
-                        .padding(.top, 80)
-                        .padding(.horizontal, 30)
-                        Spacer()
+                        isGameFinishedButton = true
                         
-                    }.padding(.top, 100)
-               
-                        Text("Match the cards")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                            .multilineTextAlignment(.center)
+                        print("Button pressed")
                         
-            }
+                        
+                    }) {
+                        Image(systemName: "arrowshape.turn.up.left.fill")
+                        
+                            .font(.title)
+                            .foregroundColor(.gray)
+                        
+                    }
                     
-
                     
-         
-                    ZStack{
+                    
+                    
+                    
+                    Text("Match the cards")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .multilineTextAlignment(.center)
+                    
+                    
+                }.padding(.top, 160)
+                
+                Spacer()
+                
+                ZStack{
                     LazyVGrid(columns: col, spacing: 0) {
                         ForEach(game.cards.indices) { index in
                             let card = game.cards[index]
@@ -86,34 +87,35 @@ struct CardMemoryGameView: View {
                             }
                         }
                     }
-                        
-                        
-                    }.padding(.bottom, 120)
                     
-              
-                  
-                    if game.isGameFinished {
-                        Spacer()
-                        Text("Congratulations! You matched all the cards!")
+                    
+                }.padding(.bottom, 120)
+                
+                
+                
+                if game.isGameFinished {
+                    
+                    
+                    Text("Congratulations! You matched all the cards!")
+                        .font(.custom("Arial", size: 30))
+                        .foregroundColor(.green)
+                    Button(action: {
+                        restartGame()
+                    }, label: {
+                        Text("Restart Game")
                             .font(.custom("Arial", size: 30))
-                                .foregroundColor(.green)
-                        Button(action: {
-                            restartGame()
-                        }, label: {
-                            Text("Restart Game")
-                                .font(.custom("Arial", size: 30))
-                                .foregroundColor(.white)
-                                .padding(10)
-                                .background(Color.blue)
-                                .cornerRadius(10)
-                        })
-                    }
-
-                    Spacer()
+                            .foregroundColor(.white)
+                            .padding(10)
+                            .background(Color.blue)
+                            .cornerRadius(10)
+                    })
                 }
                 
-                
+                Spacer()
             }
+            
+        }
+            
             .onChange(of: shouldResetCards) { shouldReset in
                 if shouldReset {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
