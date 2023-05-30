@@ -22,7 +22,7 @@ struct ContentView1: View {
     var body: some View {
         switch gameSelection.selectedGame {
         case "Chronological Order \u{1F570}":
-            Game1View()
+            GameOneView()
         case "Images-Words Association \u{1F4F7}":
             Game2View()
         case "Memory Game \u{1F9E0}":

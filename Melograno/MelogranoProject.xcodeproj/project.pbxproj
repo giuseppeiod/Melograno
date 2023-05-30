@@ -54,6 +54,11 @@
 		C92CF2E42A1B507000AAF385 /* notifica.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C92CF2E32A1B507000AAF385 /* notifica.mp3 */; };
 		C92CF2E62A1B5B5200AAF385 /* CardsOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92CF2E52A1B5B5200AAF385 /* CardsOrderView.swift */; };
 		C92CF2E82A1B5B8F00AAF385 /* CardViewGame1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92CF2E72A1B5B8F00AAF385 /* CardViewGame1.swift */; };
+		C94228002A265E590019A550 /* GameOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94227FF2A265E590019A550 /* GameOneView.swift */; };
+		C94228022A265E810019A550 /* CardGameOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94228012A265E810019A550 /* CardGameOne.swift */; };
+		C94228042A265EB10019A550 /* CardGameOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94228032A265EB10019A550 /* CardGameOneView.swift */; };
+		C94228062A265ED10019A550 /* ModelGameOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94228052A265ED10019A550 /* ModelGameOne.swift */; };
+		C94228082A265EF00019A550 /* CardOrderViewGameOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94228072A265EF00019A550 /* CardOrderViewGameOne.swift */; };
 		C950A92D2A149FFF005DFE2D /* Game1.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C950A92C2A149FFF005DFE2D /* Game1.geojson */; };
 		C950A92F2A14A1B8005DFE2D /* ViewModelGame1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C950A92E2A14A1B8005DFE2D /* ViewModelGame1.swift */; };
 		C950A9312A14A4CD005DFE2D /* MemoryCards.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C950A9302A14A4C8005DFE2D /* MemoryCards.geojson */; };
@@ -129,6 +134,11 @@
 		C92CF2E32A1B507000AAF385 /* notifica.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = notifica.mp3; path = ../../Sound/notifica.mp3; sourceTree = "<group>"; };
 		C92CF2E52A1B5B5200AAF385 /* CardsOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsOrderView.swift; sourceTree = "<group>"; };
 		C92CF2E72A1B5B8F00AAF385 /* CardViewGame1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewGame1.swift; sourceTree = "<group>"; };
+		C94227FF2A265E590019A550 /* GameOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOneView.swift; sourceTree = "<group>"; };
+		C94228012A265E810019A550 /* CardGameOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGameOne.swift; sourceTree = "<group>"; };
+		C94228032A265EB10019A550 /* CardGameOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGameOneView.swift; sourceTree = "<group>"; };
+		C94228052A265ED10019A550 /* ModelGameOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelGameOne.swift; sourceTree = "<group>"; };
+		C94228072A265EF00019A550 /* CardOrderViewGameOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOrderViewGameOne.swift; sourceTree = "<group>"; };
 		C950A92C2A149FFF005DFE2D /* Game1.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game1.geojson; sourceTree = "<group>"; };
 		C950A92E2A14A1B8005DFE2D /* ViewModelGame1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelGame1.swift; sourceTree = "<group>"; };
 		C950A9302A14A4C8005DFE2D /* MemoryCards.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MemoryCards.geojson; sourceTree = "<group>"; };
@@ -217,8 +227,9 @@
 				0A60CD6D2A1B6AA600711F77 /* Game2View.swift */,
 				0A5A4CDD2A13876800D7396D /* CardMemoryGameView.swift */,
 				0ADA61822A0B84200022574C /* GameTwo.swift */,
-				13ED4CA52A25FC3B009CF732 /* WelcomePage.swift */,
 				0AB896FD2A0E256F0074A56A /* Associa.swift */,
+				13ED4CA52A25FC3B009CF732 /* WelcomePage.swift */,
+				C94227FE2A265E390019A550 /* GameOne */,
 				0A5A4CDF2A1387A800D7396D /* Model */,
 				0AEC856C2A128FCE0051DAC4 /* On Boarding */,
 				0A67329C2A0B830400806FEA /* Assets.xcassets */,
@@ -291,6 +302,18 @@
 			);
 			name = Sound;
 			path = "On Boarding/Sound";
+			sourceTree = "<group>";
+		};
+		C94227FE2A265E390019A550 /* GameOne */ = {
+			isa = PBXGroup;
+			children = (
+				C94227FF2A265E590019A550 /* GameOneView.swift */,
+				C94228012A265E810019A550 /* CardGameOne.swift */,
+				C94228032A265EB10019A550 /* CardGameOneView.swift */,
+				C94228052A265ED10019A550 /* ModelGameOne.swift */,
+				C94228072A265EF00019A550 /* CardOrderViewGameOne.swift */,
+			);
+			name = GameOne;
 			sourceTree = "<group>";
 		};
 		C97DE1582A1D231D00BB7298 /* BALLS GAME */ = {
@@ -484,10 +507,15 @@
 				0A5A4CE32A13894500D7396D /* CardMemory.swift in Sources */,
 				0A60CD682A1B6A1F00711F77 /* WorldCard.swift in Sources */,
 				0AEC857A2A12990A0051DAC4 /* MenuPageC.swift in Sources */,
+				C94228062A265ED10019A550 /* ModelGameOne.swift in Sources */,
+				C94228002A265E590019A550 /* GameOneView.swift in Sources */,
+				C94228022A265E810019A550 /* CardGameOne.swift in Sources */,
+				C94228082A265EF00019A550 /* CardOrderViewGameOne.swift in Sources */,
 				C97DE1572A1D21B000BB7298 /* BallsGameMenuLevel.swift in Sources */,
 				0A60CD6E2A1B6AA600711F77 /* Game2View.swift in Sources */,
 				C92CF2E82A1B5B8F00AAF385 /* CardViewGame1.swift in Sources */,
 				C92CF2E62A1B5B5200AAF385 /* CardsOrderView.swift in Sources */,
+				C94228042A265EB10019A550 /* CardGameOneView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
