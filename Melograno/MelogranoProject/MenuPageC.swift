@@ -21,13 +21,13 @@ struct ContentView1: View {
     
     var body: some View {
         switch gameSelection.selectedGame {
-        case "Chronological Order \u{1F570}":
+        case "Game 1":
             GameOneView()
-        case "Images-Words Association \u{1F4F7}":
+        case "Game 2":
             Game2View()
-        case "Memory Game \u{1F9E0}":
+        case "Game 3":
             CardMemoryGameView()
-        case "Balls Game \u{1F534}":
+        case "Game 4":
             BallsGameMenuLevel()
         default:
             MenuPageC(gameSelection: gameSelection)
@@ -36,11 +36,12 @@ struct ContentView1: View {
 }
 
 struct MenuPageC: View {
-    @ObservedObject var gameSelection: GameSelection
-    let games = ["Chronological Order \u{1F570}", "Images-Words Association \u{1F4F7}", "Memory Game \u{1F9E0}", "Balls Game \u{1F534}"]
-    var buttonImagesGame: [String] = ["buttonGame1", "buttonGame2", "buttonGame3", "buttonGame4" ]
     
+    @ObservedObject var gameSelection: GameSelection
 
+    
+    let games = [Game(id: 1, title: "Game 1", image: "brain"), Game(id: 2, title: "Game 2", image: "brain"), Game(id: 3, title: "Game 3", image: "brain"), Game(id: 4, title: "Game 4", image: "brain") ]
+    
     // Aggiungi una variabile per il player audio
     @State private var audioPlayer: AVAudioPlayer?
 
@@ -64,46 +65,23 @@ struct MenuPageC: View {
             Spacer()
             
             HStack(spacing: 25) {
-                ForEach(games.indices, id: \.self) { game in
+                ForEach(games, id: \.self) { game in
                     
                     Button(action: {
                         withAnimation(.spring(response: 0.4)) {
-                            self.gameSelection.selectedGame = games[game]
+                            self.gameSelection.selectedGame = game.title
+                            
                             print("\(game)")
-                            print("\(buttonImagesGame[game])")
+
                         }
                         playSound() // Riproduci il suono al tap del pulsante
                     }) {
                         
                         
                         
-                        Image(buttonImagesGame[game])
+                        ButtonGameModelView(game: game)
                         
-                        
-                        //                            RoundedRectangle(cornerRadius: 16)
-                        //                                .fill(Color.purple.opacity(0.7))
-                        //                                .overlay(
-                        //                                    RoundedRectangle(cornerRadius: 16)
-                        //                                        .stroke(Color.black, lineWidth: 2)
-                        //                                )
-                        //                                .frame(width: 230, height: 220)
-                        //
-                        //
-                        //                            RoundedRectangle(cornerRadius: 16)
-                        //                                .fill(Color.purple.opacity(0.9))
-                        //                                .overlay(
-                        //                                    RoundedRectangle(cornerRadius: 16)
-                        //                                        .stroke(Color.black, lineWidth: 2)
-                        //                                )
-                        //                                .frame(width: 230, height: 100)
-                        
-                        //                            Text("Go to \(game)")
-                        //                                .multilineTextAlignment(.center)
-                        //                                .font(.title)
-                        //                                .bold()
-                        //                                .foregroundColor(.black)
-                        //                                .frame(width: 200, height: 200)
-                        
+
                         
                     }
                     
@@ -117,7 +95,7 @@ struct MenuPageC: View {
             
             Spacer()
         }
-        }.background(.brown.opacity(0.6))
+        }
         .onAppear {
             setupAudioPlayer() // Configura il player audio
         }
@@ -144,26 +122,7 @@ struct MenuPageC: View {
 
 }
 
-struct Game1ViewC: View {
-    var body: some View {
-        Text("Sei ora nel Gioco 1!")
-            .font(.largeTitle)
-    }
-}
 
-struct Game2ViewC: View {
-    var body: some View {
-        Text("Sei ora nel Gioco 2!")
-            .font(.largeTitle)
-    }
-}
-
-struct Game3ViewC: View {
-    var body: some View {
-        Text("Sei ora nel Gioco 3!")
-            .font(.largeTitle)
-    }
-}
 
 struct MenuPageC_Previews: PreviewProvider {
    static var previews: some View {

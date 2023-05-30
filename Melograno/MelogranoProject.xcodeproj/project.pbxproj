@@ -65,6 +65,8 @@
 		C97DE1532A1D215000BB7298 /* ContentViewBallsLevel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97DE1522A1D215000BB7298 /* ContentViewBallsLevel2.swift */; };
 		C97DE1552A1D217E00BB7298 /* ContentViewBallsLevel3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97DE1542A1D217E00BB7298 /* ContentViewBallsLevel3.swift */; };
 		C97DE1572A1D21B000BB7298 /* BallsGameMenuLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97DE1562A1D21B000BB7298 /* BallsGameMenuLevel.swift */; };
+		C9ABC23F2A267DAD00D5D6E9 /* ButtonGameModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ABC23E2A267DAD00D5D6E9 /* ButtonGameModelView.swift */; };
+		C9ABC2412A267DBE00D5D6E9 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ABC2402A267DBE00D5D6E9 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +147,8 @@
 		C97DE1522A1D215000BB7298 /* ContentViewBallsLevel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewBallsLevel2.swift; sourceTree = "<group>"; };
 		C97DE1542A1D217E00BB7298 /* ContentViewBallsLevel3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewBallsLevel3.swift; sourceTree = "<group>"; };
 		C97DE1562A1D21B000BB7298 /* BallsGameMenuLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallsGameMenuLevel.swift; sourceTree = "<group>"; };
+		C9ABC23E2A267DAD00D5D6E9 /* ButtonGameModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGameModelView.swift; sourceTree = "<group>"; };
+		C9ABC2402A267DBE00D5D6E9 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +225,9 @@
 				0A6732982A0B830300806FEA /* MelogranoProjectApp.swift */,
 				0A67329A2A0B830300806FEA /* ContentView.swift */,
 				0AEC85792A12990A0051DAC4 /* MenuPageC.swift */,
+				C9ABC23E2A267DAD00D5D6E9 /* ButtonGameModelView.swift */,
+				C9ABC2402A267DBE00D5D6E9 /* Game.swift */,
+				C94227FE2A265E390019A550 /* GameOne */,
 				C97DE1582A1D231D00BB7298 /* BALLS GAME */,
 				13FD071F2A13784F0023539C /* Json */,
 				0AEC85642A128CE80051DAC4 /* Game1View.swift */,
@@ -229,7 +236,6 @@
 				0ADA61822A0B84200022574C /* GameTwo.swift */,
 				0AB896FD2A0E256F0074A56A /* Associa.swift */,
 				13ED4CA52A25FC3B009CF732 /* WelcomePage.swift */,
-				C94227FE2A265E390019A550 /* GameOne */,
 				0A5A4CDF2A1387A800D7396D /* Model */,
 				0AEC856C2A128FCE0051DAC4 /* On Boarding */,
 				0A67329C2A0B830400806FEA /* Assets.xcassets */,
@@ -487,6 +493,7 @@
 				0A60CD662A1B6A0500711F77 /* Card2.swift in Sources */,
 				0A6732A22A0B830400806FEA /* Persistence.swift in Sources */,
 				0ADA61832A0B84200022574C /* GameTwo.swift in Sources */,
+				C9ABC23F2A267DAD00D5D6E9 /* ButtonGameModelView.swift in Sources */,
 				0AEC85652A128CE80051DAC4 /* Game1View.swift in Sources */,
 				0AEC85722A1290110051DAC4 /* OnBoardingThird.swift in Sources */,
 				0AEC85702A128FF80051DAC4 /* PageControl.swift in Sources */,
@@ -512,6 +519,7 @@
 				C94228022A265E810019A550 /* CardGameOne.swift in Sources */,
 				C94228082A265EF00019A550 /* CardOrderViewGameOne.swift in Sources */,
 				C97DE1572A1D21B000BB7298 /* BallsGameMenuLevel.swift in Sources */,
+				C9ABC2412A267DBE00D5D6E9 /* Game.swift in Sources */,
 				0A60CD6E2A1B6AA600711F77 /* Game2View.swift in Sources */,
 				C92CF2E82A1B5B8F00AAF385 /* CardViewGame1.swift in Sources */,
 				C92CF2E62A1B5B5200AAF385 /* CardsOrderView.swift in Sources */,
