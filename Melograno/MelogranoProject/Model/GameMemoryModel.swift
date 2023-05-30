@@ -35,7 +35,7 @@ class GameMemoryModel: ObservableObject {
     init() {
         if let newCards = loadCardsFromJSON() {
             model = newCards
-            if let soundURL = Bundle.main.url(forResource: "notifica", withExtension: "wav") {
+            if let soundURL = Bundle.main.url(forResource: "notifica", withExtension: "mp3") {
                 audioPlayer = try? AVAudioPlayer(contentsOf: soundURL)
             }
         }
