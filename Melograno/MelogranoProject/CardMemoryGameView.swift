@@ -31,35 +31,37 @@ struct CardMemoryGameView: View {
             ZStack{
             VStack() {
                 
-                
-                HStack{
-                    
+                HStack {
                     Button(action: {
-                        
                         isGameFinishedButton = true
-                        
                         print("Button pressed")
-                        
-                        
                     }) {
-                        Image(systemName: "arrowshape.turn.up.left.fill")
-                        
-                            .font(.title)
-                            .foregroundColor(.gray)
-                        
+                        HStack {
+                            Image(systemName: "chevron.left")
+                                .font(.title)
+                                .foregroundColor(.gray)
+                            Text("Back")
+                                .font(.headline)
+                                .foregroundColor(.gray)
+                        }
                     }
-                    
-                    
-                    
-                    
-                    
-                    Text("Match the cards")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.center)
-                    
-                    
-                }.padding(.top, 160)
+                    Spacer()
+                }
+                .padding()
+                
+                HStack {
+                    VStack(alignment: .leading) {
+                        
+                        Text("Match the cards")
+                            .font(.largeTitle)
+                            .multilineTextAlignment(.center)
+                            .bold()
+                            //.padding(.bottom)
+                            .padding()
+                    }
+                   Spacer()
+                        
+                }
                 
                 Spacer()
                 

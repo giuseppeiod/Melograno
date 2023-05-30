@@ -23,112 +23,99 @@ struct Game1View: View {
     
     
     var body: some View {
-        VStack{
+           VStack {
+               if isGameFinishedButton {
+                   ContentView()
+               } else {
+                   HStack {
+                       Button(action: {
+                           isGameFinishedButton = true
+                           print("Button pressed")
+                       }) {
+                           HStack {
+                               Image(systemName: "chevron.left")
+                                   .font(.title)
+                                   .foregroundColor(.gray)
+                               Text("Back")
+                                   .font(.headline)
+                                   .foregroundColor(.gray)
+                           }
+                       }
+                       Spacer()
+                   }
+                   .padding()
+                   
+                   HStack {
+                       
+                       VStack(alignment: .leading) {
+                           Text("Rearrange the following cards in order")
+                               .font(.largeTitle)
+                               .multilineTextAlignment(.center)
+                               .bold()
+                               .padding(.bottom)
+                      
+                       }
+                       Spacer()
+                   }
+                   .padding()
+                   Spacer()
+                   HStack {
+                       ForEach(0..<model.cards.count) { index in
+                           CardViewGame1(card: model.cards[index], hiddenCardIDs: $model.hiddenCardIDs)
+                               .onTapGesture {
+                                   if !model.hiddenCardIDs.contains(model.cards[index].id) {
+                                       model.selectedCardIndex = index
+                                       model.hiddenCardIDs.insert(model.cards[index].id)
+                                   }
+                               }
+                       }
+                   }
+                   Spacer()
+                   
+                   HStack {
+                       ForEach(model.cardsToOrder.indices, id: \.self) { index in
+                           CardsOrderView(card: model.cardsToOrder[index])
+                               .id(UUID())
+                               .onTapGesture {
+                                   if let selectedToOrderIndex = model.selectedCardToOrderIndex {
+                                       let selectedCardToOrder = model.cardsToOrder[selectedToOrderIndex]
+                                       if selectedCardToOrder.imageName != "" {
+                                           model.resetCardToOrderImage(at: selectedToOrderIndex)
+                                       }
+                                   }
+                                   model.selectedCardToOrderIndex = index
+                                   model.replaceCardImage()
+                                   model.cardsToOrder = model.cardsToOrder
+                               }
+                       }
+                   }
+                   Spacer()
+                   
+                   if model.allCardsPlaced {
+                       Button {
+                           // Handle Finish button action
+                       } label: {
+                           ZStack {
+                               Rectangle()
+                                   .foregroundColor(.blue)
+                                   .frame(width: 250, height: 70)
+                               Text("FINISH")
+                                   .font(.body)
+                                   .foregroundColor(.white)
+                           }
+                       }
+                   }
+               }
+           }
+       }
+   }
 
-            
-            if isGameFinishedButton{
-                ContentView()
-            }else{
-                VStack {
-                    
-                    
-                    Button(action: {
-                        
-                        isGameFinishedButton = true
-                        
-                        print("Button pressed")
-                        
-                        
-                    }) {
-                        Image(systemName: "arrowshape.turn.up.left.fill")
-                            .padding(.bottom)
-                            .font(.title)
-                            .foregroundColor(.gray)
-                    }
-                    
-
-                    
-                    Text ("Rearrange the following cards \n in order")
-                        .font(.largeTitle)
-                        .multilineTextAlignment(.center)
-                        .bold()
-                        .padding(.bottom)
-
-                    
-                    
-                    HStack {
-                        ForEach(0..<model.cards.count) { index in
-                            CardViewGame1(card: model.cards[index], hiddenCardIDs: $model.hiddenCardIDs)
-                                .onTapGesture {
-                                    if !model.hiddenCardIDs.contains(model.cards[index].id) {
-                                        model.selectedCardIndex = index
-                                        model.hiddenCardIDs.insert(model.cards[index].id)
-                                    }
-                                    //                ForEach(model.cards, id: \.id) { card in
-                                    //                    CardViewGame1(card: card, hiddenCardIDs: $model.hiddenCardIDs)
-                                    //                        .onTapGesture {
-                                    //                            if !model.hiddenCardIDs.contains(card.id) {
-                                    //                                model.selectedCardIndex = card.id
-                                    //                                model.hiddenCardIDs.insert(card.id)
-                                    //                            }
-                                }
-                        }
-                    }
-                    
-                    
-                    HStack {
-                        ForEach(model.cardsToOrder.indices, id: \.self) { index in
-                            CardsOrderView(card: model.cardsToOrder[index])
-                                .id(UUID())
-                                .onTapGesture {
-                                    if let selectedToOrderIndex = model.selectedCardToOrderIndex {
-                                        let selectedCardToOrder = model.cardsToOrder[selectedToOrderIndex]
-                                        if selectedCardToOrder.imageName != "" {
-                                            model.resetCardToOrderImage(at: selectedToOrderIndex)
-                                        }
-                                    }
-                                    model.selectedCardToOrderIndex = index
-                                    
-                                    model.replaceCardImage()
-                                    model.cardsToOrder = model.cardsToOrder
-                                }
-                            
-                        }
-                    }
-                    
-                    
-                    if model.allCardsPlaced {
-                        
-                        Button {
-                            //
-                        } label: {
-                            
-                            ZStack{
-                                
-                                Rectangle()
-                                    .foregroundColor(.blue)
-                                    .frame(width: 250, height: 70)
-                                
-                                
-                                Text("FINISH")
-                                    .font(.body)
-                                    .foregroundColor(.white)
-                            }
-                            
-                        }
-                        
-                    }
-                }
-            }
-        }
-    }
-    struct Game1View_Previews: PreviewProvider {
-        static var previews: some View {
-            Game1View()
-        }
-    }
-}
-
+   struct Game1View_Previews: PreviewProvider {
+       static var previews: some View {
+           Game1View()
+       }
+   }
+//--------------------------
 //func loadCombinationsFromJSON() -> [[Card1]] {
 //    if let url = Bundle.main.url(forResource: "Game2", withExtension: "geojson"),
 //       let data = try? Data(contentsOf: url) {

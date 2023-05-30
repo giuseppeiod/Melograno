@@ -58,8 +58,11 @@ struct BallsGameMenuLevelModel: View {
                         
                         
                     }) {
-                        Image(systemName: "arrowshape.turn.up.left.fill")
+                        Image(systemName: "chevron.left")
                             .font(.title)
+                            .foregroundColor(.gray)
+                        Text("Back")
+                            .font(.headline)
                             .foregroundColor(.gray)
                     }
                     

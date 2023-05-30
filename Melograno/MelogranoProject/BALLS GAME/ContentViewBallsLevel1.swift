@@ -38,37 +38,47 @@ struct ContentViewBallsLevel1: View {
         }else{
 
             VStack(alignment: .center, spacing: 70 ){
-                
                 VStack{
-                    
-                HStack{
-                    Button(action: {
+                    VStack{
                         
-                        isGameFinishedButton = true
-                        
-                        print("Button pressed")
-                        
-                        
-                    }) {
-                        Image(systemName: "arrowshape.turn.up.left.fill")
-                            .font(.title)
-                            .foregroundColor(.gray)
+                        HStack {
+                            Button(action: {
+                                isGameFinishedButton = true
+                                print("Button pressed")
+                            }) {
+                                HStack {
+                                    Image(systemName: "chevron.left")
+                                        .font(.title)
+                                        .foregroundColor(.gray)
+                                    Text("Back")
+                                        .font(.headline)
+                                        .foregroundColor(.gray)
+                                }
+                                Spacer()
+                            }
+                            
+                        }
+                        .padding()
+                        HStack{
+                            VStack(alignment: .leading){
+                                Text("Tap the balls sequence after they lit up ")
+                                    .font(.title)
+                                    .fontWeight(.semibold)
+                            }
+                            Spacer()
+                        }
+                        .padding()
                     }
-                    Spacer()
-                }.padding()
-                
-                Text("Tap the balls sequence after they lit up ")
-                    .font(.title)
-                    .fontWeight(.semibold)
-                
+                }
+               // Spacer()
                 if !isAnimating && isPlayerTurn{
                     Text("Your turn!")
                 }
-            }
-                
+                VStack{
+                    Spacer()
                 HStack(spacing: 60) {
                     
-
+                    
                     
                     BallsView(isHighlighted: $highlight[0], color: .red)
                         .onTapGesture {
@@ -78,7 +88,7 @@ struct ContentViewBallsLevel1: View {
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                                     audioPlayer?.play()
-                                                    }
+                                }
                             }
                         }
                     
@@ -92,7 +102,7 @@ struct ContentViewBallsLevel1: View {
                                 provideHapticFeedback()
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                                     audioPlayer?.play()
-                                            }
+                                }
                                 
                             }
                         }
@@ -103,10 +113,12 @@ struct ContentViewBallsLevel1: View {
                                 provideHapticFeedback()
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                                     audioPlayer?.play()
-                                            }
+                                }
                             }
                         }
                 }
+                    Spacer()
+            }
                 //spostato la scritta
                 
                 Text(gameResult)
@@ -128,6 +140,7 @@ struct ContentViewBallsLevel1: View {
                     print("Failed to load sound file")
                 }
             }
+            Spacer()
         }}
     
     func animateCircles() {

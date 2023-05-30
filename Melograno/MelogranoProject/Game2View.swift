@@ -6,36 +6,51 @@
 //
 
 import SwiftUI
-import SwiftUI
 
 struct Game2View: View {
     @ObservedObject var model = ViewModelGame2()
     @State private var isGameFinishedButton = false
     
-    
     var body: some View {
-        
-        if isGameFinishedButton{
+        if isGameFinishedButton {
             ContentView()
-        }else{
+        } else {
             VStack {
-                
-                Button(action: {
+                HStack {
+                    Button(action: {
+                        isGameFinishedButton = true
+                        print("Button pressed")
+                    }) {
+                        HStack {
+                            Image(systemName: "chevron.left")
+                                .font(.title)
+                                .foregroundColor(.gray)
+                            Text("Back")
+                                .font(.headline)
+                                .foregroundColor(.gray)
+                        }
+                    }
                     
-                    isGameFinishedButton = true
-                    
-                    print("Button pressed")
-                    
-                    
-                }) {
-                    Image(systemName: "arrowshape.turn.up.left.fill")
-                        .padding(.bottom)
-                        .font(.title)
-                        .foregroundColor(.gray)
+                    Spacer()
                 }
+                .padding()
+                HStack{
+                    VStack(alignment: .leading) {
+                        Text("Image-word association")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                        
+                        Text("Associate the picture with the corresponding word. Once completed, press")
+                            .font(.title3)
+                            .fontWeight(.bold)
+                    }
+                    Spacer()
+                }
+                .padding(.horizontal, 20)
+                
+                Spacer()
                 
                 HStack {
-                    
                     ForEach(0..<model.cards.count) { index in
                         CardView2(card: model.cards[index], hiddenCardIDs: $model.hiddenCardIDs)
                             .onTapGesture {
@@ -61,45 +76,33 @@ struct Game2View: View {
                                 }
                                 model.selectedCardToOrderIndex = index
                                 let card = model.cardsToOrder[index]
-                                //                                model.replaceCardImage()
                                 model.replaceCardImage()
                                 model.cardsToOrder = model.cardsToOrder
                             }
-                        
                     }
                 }
                 
-                        if model.allCardsPlaced {
+                if model.allCardsPlaced {
+                    Button {
+                        //
+                    } label: {
+                        ZStack{
+                            Rectangle()
+                                .foregroundColor(.blue)
+                                .frame(width: 250, height: 70)
                             
-                            
-                            Button {
-                                //
-                            } label: {
-                                
-                                ZStack{
-                                    
-                                    Rectangle()
-                                        .foregroundColor(.blue)
-                                        .frame(width: 250, height: 70)
-                                    
-                                    
-                                    Text("FINISH")
-                                        .font(.body)
-                                        .foregroundColor(.white)
-                                }
-                                
-                            }
+                            Text("FINISH")
+                                .font(.body)
+                                .foregroundColor(.white)
                         }
-                        
-                        
-                        
                     }
-                    
+                }
                 
+                Spacer()
             }
         }
     }
-
+}
 
 struct Game2View_Previews: PreviewProvider {
     static var previews: some View {

@@ -14,13 +14,15 @@ struct CardsOrderView: View {
     var body: some View {
         
 
-            Image(card.imageName)
-                .resizable()
-                .frame(width: 200, height: 180)
-                .background(Color.purple)
-                .cornerRadius(16).overlay(
-                    RoundedRectangle(cornerRadius: 16)
-                        .stroke(Color.black, lineWidth: 2)
+        Image(card.imageName)
+            .resizable()
+            .frame(width: 200, height: 180)
+            .background(Color.white) // Imposta il colore di sfondo come bianco
+            .cornerRadius(16)
+            .overlay(
+                RoundedRectangle(cornerRadius: 16)
+                    .stroke(Color.purple, lineWidth: 2) // Imposta il colore del bordo come viola
+            
                 )
                
                 

@@ -33,31 +33,39 @@ struct ContentViewBallsLevel3: View {
             VStack(alignment: .center, spacing: 70 ){
                 
                 VStack{
-                    
-                    HStack{
-                        Button(action: {
+                    VStack{
+                        
+                        HStack {
+                            Button(action: {
+                                isGameFinishedButton = true
+                                print("Button pressed")
+                            }) {
+                                HStack {
+                                    Image(systemName: "chevron.left")
+                                        .font(.title)
+                                        .foregroundColor(.gray)
+                                    Text("Back")
+                                        .font(.headline)
+                                        .foregroundColor(.gray)
+                                }
+                                Spacer()
+                            }
                             
-                            isGameFinishedButton = true
-                            
-                            print("Button pressed")
-                            
-                            
-                        }) {
-                            Image(systemName: "arrowshape.turn.up.left.fill")
-                                .font(.title)
-                                .foregroundColor(.gray)
                         }
-                        Spacer()
-                    }.padding()
-                    
-                    Text("Tap the balls sequence after they lit up ")
-                        .font(.title)
-                        .fontWeight(.semibold)
-                    
-                    if !isAnimating && isPlayerTurn{
-                        Text("Your turn!")
+                        .padding()
+                        HStack{
+                            VStack(alignment: .leading){
+                                Text("Tap the balls sequence after they lit up ")
+                                    .font(.title)
+                                    .fontWeight(.semibold)
+                            }
+                            Spacer()
+                        }
+                        .padding()
                     }
                 }
+                Spacer()
+
                 
                 
                 HStack(spacing: 60){
@@ -125,6 +133,7 @@ struct ContentViewBallsLevel3: View {
                     Text("Restart Game")
                 }
             }
+                Spacer()
             }
             .onAppear(perform: animateCircles)
 //            .onAppear {
