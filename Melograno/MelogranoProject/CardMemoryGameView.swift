@@ -118,14 +118,14 @@ struct CardMemoryGameView: View {
             
         }
             
-            .onChange(of: shouldResetCards) { shouldReset in
-                if shouldReset {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                        flippedWrongCards.removeAll()
-                        shouldResetCards = false
-                    }
-                }
-            }
+//            .onChange(of: shouldResetCards) { shouldReset in
+//                if shouldReset {
+//                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+//                        flippedWrongCards.removeAll()
+//                        shouldResetCards = false
+//                    }
+//                }
+//            }
         }
     }
 

@@ -25,7 +25,7 @@ struct OnBoardingManager: View {
                 OnBoardingThird()
                     .tag(2)
                 
-                OnBoardingFourth()
+                WelcomeView()
                     .tag(3)
             }
             .ignoresSafeArea()
