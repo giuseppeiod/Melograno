@@ -7,10 +7,11 @@
 
 import SwiftUI
 
-
+import AVFoundation
 
 class BallsGameLevelSelection: ObservableObject {
     @Published var selectedGame: String?
+    @State private var audioPlayer: AVAudioPlayer?
 }
 
 struct BallsGameMenuLevel: View {

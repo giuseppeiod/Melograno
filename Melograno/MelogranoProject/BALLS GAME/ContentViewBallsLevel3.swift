@@ -76,7 +76,10 @@ struct ContentViewBallsLevel3: View {
                             if !isAnimating && isPlayerTurn {
                                 circleTapped("p")
                                 provideHapticFeedback()
-                                                                audioPlayer?.play()
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                            audioPlayer?.currentTime = 0
+                                            audioPlayer?.play()
+                                        }
                             }
                         }
                     
@@ -86,7 +89,10 @@ struct ContentViewBallsLevel3: View {
                             if !isAnimating && isPlayerTurn {
                                 circleTapped("o")
                                 provideHapticFeedback()
-                                                                audioPlayer?.play()
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                            audioPlayer?.currentTime = 0
+                                            audioPlayer?.play()
+                                        }
                             }
                         }
                     
@@ -106,7 +112,10 @@ struct ContentViewBallsLevel3: View {
                             if !isAnimating && isPlayerTurn {
                                 circleTapped("r")
                                 provideHapticFeedback()
-                                                               audioPlayer?.play()
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                            audioPlayer?.currentTime = 0
+                                            audioPlayer?.play()
+                                        }
                             }
                         }
                     BallsView(isHighlighted: $highlight[1], color: .green)
@@ -114,7 +123,10 @@ struct ContentViewBallsLevel3: View {
                             if !isAnimating && isPlayerTurn {
                                 circleTapped("g")
                                 provideHapticFeedback()
-                                                                audioPlayer?.play()
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                            audioPlayer?.currentTime = 0
+                                            audioPlayer?.play()
+                                        }
                             }
                         }
                     BallsView(isHighlighted: $highlight[2], color: .blue)
@@ -122,7 +134,10 @@ struct ContentViewBallsLevel3: View {
                             if !isAnimating && isPlayerTurn {
                                 circleTapped("b")
                                 provideHapticFeedback()
-                                                               audioPlayer?.play()
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                            audioPlayer?.currentTime = 0
+                                            audioPlayer?.play()
+                                        }
                             }
                         }
                 }
