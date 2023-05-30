@@ -36,3 +36,4 @@ Melograno/DerivedData/MelogranoProject/Logs/Build/LogStoreManifest.plist
 Melograno/DerivedData/MelogranoProject/info.plist
 Melograno/DerivedData/*
 .DS_Store
+Melograno/MelogranoProject.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
