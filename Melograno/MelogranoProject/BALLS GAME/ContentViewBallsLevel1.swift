@@ -87,8 +87,9 @@ struct ContentViewBallsLevel1: View {
                                 provideHapticFeedback()
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                    audioPlayer?.play()
-                                }
+                                            audioPlayer?.currentTime = 0
+                                            audioPlayer?.play()
+                                        }
                             }
                         }
                     
@@ -101,8 +102,9 @@ struct ContentViewBallsLevel1: View {
                                 
                                 provideHapticFeedback()
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                    audioPlayer?.play()
-                                }
+                                            audioPlayer?.currentTime = 0
+                                            audioPlayer?.play()
+                                        }
                                 
                             }
                         }
@@ -112,8 +114,9 @@ struct ContentViewBallsLevel1: View {
                                 circleTapped("b")
                                 provideHapticFeedback()
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                    audioPlayer?.play()
-                                }
+                                            audioPlayer?.currentTime = 0
+                                            audioPlayer?.play()
+                                        }
                             }
                         }
                 }
@@ -133,7 +136,7 @@ struct ContentViewBallsLevel1: View {
             .onAppear(perform: animateCircles)
             .onAppear {
                 do {
-                    if let soundURL = Bundle.main.url(forResource: "notifica", withExtension: "wav") {
+                    if let soundURL = Bundle.main.url(forResource: "notifica", withExtension: "mp3") {
                         audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
                     }
                 } catch {

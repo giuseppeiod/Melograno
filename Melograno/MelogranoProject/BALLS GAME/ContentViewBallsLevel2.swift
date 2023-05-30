@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import AVFoundation
 struct ContentViewBallsLevel2: View {
     
     
@@ -24,7 +24,7 @@ struct ContentViewBallsLevel2: View {
     
     @State private var currentSequenceIndex = 0
     @State private var correctSequences = 0
-//    @State private var audioPlayer: AVAudioPlayer?
+    @State private var audioPlayer: AVAudioPlayer?
     
     var body: some View {
        
@@ -76,7 +76,10 @@ struct ContentViewBallsLevel2: View {
                             if !isAnimating && isPlayerTurn {
                                 circleTapped("p")
                                 provideHapticFeedback()
-//                                audioPlayer?.play()
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                            audioPlayer?.currentTime = 0
+                                            audioPlayer?.play()
+                                        }
                             }
                         }
                 
@@ -95,7 +98,10 @@ struct ContentViewBallsLevel2: View {
                             if !isAnimating && isPlayerTurn {
                                 circleTapped("r")
                                 provideHapticFeedback()
-//                                audioPlayer?.play()
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                            audioPlayer?.currentTime = 0
+                                            audioPlayer?.play()
+                                        }
                             }
                         }
                     BallsView(isHighlighted: $highlight[1], color: .green)
@@ -103,7 +109,10 @@ struct ContentViewBallsLevel2: View {
                             if !isAnimating && isPlayerTurn {
                                 circleTapped("g")
                                 provideHapticFeedback()
-//                                audioPlayer?.play()
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                            audioPlayer?.currentTime = 0
+                                            audioPlayer?.play()
+                                        }
                             }
                         }
                     BallsView(isHighlighted: $highlight[2], color: .blue)
@@ -111,7 +120,10 @@ struct ContentViewBallsLevel2: View {
                             if !isAnimating && isPlayerTurn {
                                 circleTapped("b")
                                 provideHapticFeedback()
-//                                audioPlayer?.play()
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                            audioPlayer?.currentTime = 0
+                                            audioPlayer?.play()
+                                        }
                             }
                         }
                 }
@@ -125,17 +137,16 @@ struct ContentViewBallsLevel2: View {
             }
                 Spacer()
             }
-          
             .onAppear(perform: animateCircles)
-//            .onAppear {
-//                do {
-//                    if let soundURL = Bundle.main.url(forResource: "notifica", withExtension: "wav") {
-//                        audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
-//                    }
-//                } catch {
-//                    print("Failed to load sound file")
-//                }
-//            }
+            .onAppear {
+                do {
+                    if let soundURL = Bundle.main.url(forResource: "notifica", withExtension: "mp3") {
+                        audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+                    }
+                } catch {
+                    print("Failed to load sound file")
+                }
+            }
         }}
     
     func animateCircles() {

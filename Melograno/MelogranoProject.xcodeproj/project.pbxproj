@@ -50,7 +50,7 @@
 		13ED4CA22A2489D8009CF732 /* menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 13ED4CA12A2489D8009CF732 /* menu.mp3 */; };
 		C91DC2922A13C65800FA8329 /* ContentViewBallsLevel1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DC2912A13C65800FA8329 /* ContentViewBallsLevel1.swift */; };
 		C91DC2942A13C66C00FA8329 /* BallsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DC2932A13C66C00FA8329 /* BallsView.swift */; };
-		C92CF2E42A1B507000AAF385 /* notifica.wav in Resources */ = {isa = PBXBuildFile; fileRef = C92CF2E32A1B507000AAF385 /* notifica.wav */; };
+		C92CF2E42A1B507000AAF385 /* notifica.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C92CF2E32A1B507000AAF385 /* notifica.mp3 */; };
 		C92CF2E62A1B5B5200AAF385 /* CardsOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92CF2E52A1B5B5200AAF385 /* CardsOrderView.swift */; };
 		C92CF2E82A1B5B8F00AAF385 /* CardViewGame1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92CF2E72A1B5B8F00AAF385 /* CardViewGame1.swift */; };
 		C950A92D2A149FFF005DFE2D /* Game1.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C950A92C2A149FFF005DFE2D /* Game1.geojson */; };
@@ -116,7 +116,7 @@
 		0AEC85752A1290350051DAC4 /* OnBoardingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingManager.swift; sourceTree = "<group>"; };
 		0AEC85772A12904A0051DAC4 /* OnBoardingFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingFirst.swift; sourceTree = "<group>"; };
 		0AEC85792A12990A0051DAC4 /* MenuPageC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPageC.swift; sourceTree = "<group>"; };
-		13ED4CA12A2489D8009CF732 /* menu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = menu.mp3; path = ../../../../../../../Desktop/menu.mp3; sourceTree = "<group>"; };
+		13ED4CA12A2489D8009CF732 /* menu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = menu.mp3; path = ../../Sound/menu.mp3; sourceTree = "<group>"; };
 		13FD072A2A14C22E0023539C /* Game2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game2.geojson; sourceTree = "<group>"; };
 		13FD072B2A14C2550023539C /* Game2.2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game2.2.geojson; sourceTree = "<group>"; };
 		13FD072C2A14C26A0023539C /* Game2.3.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game2.3.geojson; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 		13FD07302A14C2CC0023539C /* Game1.3.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game1.3.geojson; sourceTree = "<group>"; };
 		C91DC2912A13C65800FA8329 /* ContentViewBallsLevel1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewBallsLevel1.swift; sourceTree = "<group>"; };
 		C91DC2932A13C66C00FA8329 /* BallsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallsView.swift; sourceTree = "<group>"; };
-		C92CF2E32A1B507000AAF385 /* notifica.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = notifica.wav; sourceTree = "<group>"; };
+		C92CF2E32A1B507000AAF385 /* notifica.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = notifica.mp3; path = ../../Sound/notifica.mp3; sourceTree = "<group>"; };
 		C92CF2E52A1B5B5200AAF385 /* CardsOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsOrderView.swift; sourceTree = "<group>"; };
 		C92CF2E72A1B5B8F00AAF385 /* CardViewGame1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewGame1.swift; sourceTree = "<group>"; };
 		C950A92C2A149FFF005DFE2D /* Game1.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game1.geojson; sourceTree = "<group>"; };
@@ -284,7 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				13ED4CA12A2489D8009CF732 /* menu.mp3 */,
-				C92CF2E32A1B507000AAF385 /* notifica.wav */,
+				C92CF2E32A1B507000AAF385 /* notifica.mp3 */,
 			);
 			name = Sound;
 			path = "On Boarding/Sound";
@@ -423,7 +423,7 @@
 				0A6732A02A0B830400806FEA /* Preview Assets.xcassets in Resources */,
 				0ADDF0502A1CB852005BDE6A /* Game1.3.geojson in Resources */,
 				13ED4CA22A2489D8009CF732 /* menu.mp3 in Resources */,
-				C92CF2E42A1B507000AAF385 /* notifica.wav in Resources */,
+				C92CF2E42A1B507000AAF385 /* notifica.mp3 in Resources */,
 				0A67329D2A0B830400806FEA /* Assets.xcassets in Resources */,
 				0ADDF04F2A1CB84F005BDE6A /* Game2.3.geojson in Resources */,
 			);
