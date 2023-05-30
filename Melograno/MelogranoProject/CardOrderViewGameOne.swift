@@ -20,8 +20,8 @@ struct CardOrderViewGameOne: View {
             .background(Color.white)
             .cornerRadius(16).overlay(
                 RoundedRectangle(cornerRadius: 16)
-                    .stroke(Color.black, lineWidth: 2)
-            )
+                    .stroke(Color.purple, lineWidth: 2)
+            ).shadow(color: Color.black.opacity(0.4), radius: 4, x: 0, y: 2)
                
                 
 

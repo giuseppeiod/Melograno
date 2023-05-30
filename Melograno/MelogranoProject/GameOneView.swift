@@ -15,7 +15,7 @@ struct GameOneView: View {
     
     var body: some View {
 
-                VStack {
+        VStack(spacing: 20) {
                     if isGameFinishedButton {
                         ContentView()
                     } else {
@@ -67,14 +67,22 @@ struct GameOneView: View {
                                 
                                     .onTapGesture {
  
-                                        if model.blurredCardIndex.contains(model.cards[index].id){
-                                            return
-                                        } else {
+                                        if !model.cards[index].isBlurred{
                                             
-                                            model.blurredCardIndex.removeAll()
+                                            if model.blurredCardIndex.contains(model.cards[index].id){
+                                                return
+                                            } else {
+                                                
+                                                model.blurredCardIndex.removeAll()
+                                                
+                                                model.blurredCardIndex.insert(model.cards[index].id)
+                                            }
                                             
-                                            model.blurredCardIndex.insert(model.cards[index].id)
+                                            
                                         }
+                                        
+                                        
+                                        
                                         
                                         if  model.hiddenCardIDs.contains(model.cards[index].id) {
                                             return

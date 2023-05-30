@@ -92,11 +92,11 @@ class ModelGameOne: ObservableObject {
 
         
                 if blurredCardIndex.contains(cardID) {
-                    blurredCardIndex.remove(cardID)
+                    blurredCardIndex.removeAll()
                 }
-                else {
-                    blurredCardIndex.insert(cardID)
-                }
+//                else {
+//                    blurredCardIndex.insert(cardID)
+//                }
 
         if hiddenCardIDs.contains(cardID) {
             hiddenCardIDs.remove(cardID)
