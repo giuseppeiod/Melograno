@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Game2View: View {
+ struct Game2View: View {
     @ObservedObject var model = ViewModelGame2()
     @State private var isGameFinishedButton = false
     

@@ -7,16 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A5A4CDC2A13873300D7396D /* GameMemoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A4CDB2A13873300D7396D /* GameMemoryModel.swift */; };
-		0A5A4CDE2A13876800D7396D /* CardMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A4CDD2A13876800D7396D /* CardMemoryGameView.swift */; };
-		0A5A4CE12A13881F00D7396D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A4CE02A13881F00D7396D /* CardView.swift */; };
-		0A5A4CE32A13894500D7396D /* CardMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A4CE22A13894500D7396D /* CardMemory.swift */; };
-		0A60CD642A1B69CA00711F77 /* CardView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A60CD632A1B69CA00711F77 /* CardView2.swift */; };
-		0A60CD662A1B6A0500711F77 /* Card2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A60CD652A1B6A0500711F77 /* Card2.swift */; };
-		0A60CD682A1B6A1F00711F77 /* WorldCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A60CD672A1B6A1F00711F77 /* WorldCard.swift */; };
-		0A60CD6A2A1B6A5800711F77 /* ViewModelGame2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A60CD692A1B6A5800711F77 /* ViewModelGame2.swift */; };
-		0A60CD6C2A1B6A8600711F77 /* CardOrderView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A60CD6B2A1B6A8600711F77 /* CardOrderView2.swift */; };
-		0A60CD6E2A1B6AA600711F77 /* Game2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A60CD6D2A1B6AA600711F77 /* Game2View.swift */; };
 		0A6732992A0B830300806FEA /* MelogranoProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6732982A0B830300806FEA /* MelogranoProjectApp.swift */; };
 		0A67329B2A0B830300806FEA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67329A2A0B830300806FEA /* ContentView.swift */; };
 		0A67329D2A0B830400806FEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A67329C2A0B830400806FEA /* Assets.xcassets */; };
@@ -26,9 +16,16 @@
 		0A6732AF2A0B830400806FEA /* MelogranoProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6732AE2A0B830400806FEA /* MelogranoProjectTests.swift */; };
 		0A6732B92A0B830400806FEA /* MelogranoProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6732B82A0B830400806FEA /* MelogranoProjectUITests.swift */; };
 		0A6732BB2A0B830400806FEA /* MelogranoProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6732BA2A0B830400806FEA /* MelogranoProjectUITestsLaunchTests.swift */; };
-		0A7C69572A1240AC004298C0 /* CardGame1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C69562A1240AC004298C0 /* CardGame1.swift */; };
-		0AB896FE2A0E256F0074A56A /* Associa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB896FD2A0E256F0074A56A /* Associa.swift */; };
-		0ADA61832A0B84200022574C /* GameTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA61822A0B84200022574C /* GameTwo.swift */; };
+		0A72FD0C2A27399200073F85 /* CardView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A72FD072A27399200073F85 /* CardView2.swift */; };
+		0A72FD0D2A27399200073F85 /* ViewModelGame2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A72FD0A2A27399200073F85 /* ViewModelGame2.swift */; };
+		0A72FD0E2A27399200073F85 /* WorldCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A72FD0B2A27399200073F85 /* WorldCard.swift */; };
+		0A72FD0F2A27399200073F85 /* Card2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A72FD082A27399200073F85 /* Card2.swift */; };
+		0A72FD102A27399200073F85 /* Game2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A72FD092A27399200073F85 /* Game2View.swift */; };
+		0A72FD112A27399200073F85 /* CardOrderView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A72FD062A27399200073F85 /* CardOrderView2.swift */; };
+		0A72FD232A273AE300073F85 /* GameMemoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A72FD1F2A273AE300073F85 /* GameMemoryModel.swift */; };
+		0A72FD242A273AE300073F85 /* CardMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A72FD222A273AE300073F85 /* CardMemory.swift */; };
+		0A72FD252A273AE300073F85 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A72FD202A273AE300073F85 /* CardView.swift */; };
+		0A72FD262A273AE300073F85 /* CardMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A72FD212A273AE300073F85 /* CardMemoryGameView.swift */; };
 		0ADDF04D2A1CB836005BDE6A /* Game2.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 13FD072A2A14C22E0023539C /* Game2.geojson */; };
 		0ADDF04E2A1CB84D005BDE6A /* Game2.2.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 13FD072B2A14C2550023539C /* Game2.2.geojson */; };
 		0ADDF04F2A1CB84F005BDE6A /* Game2.3.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 13FD072C2A14C26A0023539C /* Game2.3.geojson */; };
@@ -38,7 +35,6 @@
 		0ADDF0532A1CB8A4005BDE6A /* Game3.2.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 0ADDF04B2A1CB5D5005BDE6A /* Game3.2.geojson */; };
 		0ADDF0542A1CB8A6005BDE6A /* Game3.3.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 0ADDF04C2A1CB5E5005BDE6A /* Game3.3.geojson */; };
 		0AEC85612A128BFD0051DAC4 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC85602A128BFD0051DAC4 /* GridView.swift */; };
-		0AEC85652A128CE80051DAC4 /* Game1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC85642A128CE80051DAC4 /* Game1View.swift */; };
 		0AEC85682A128F6B0051DAC4 /* FMProKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0AEC85672A128F6B0051DAC4 /* FMProKit */; };
 		0AEC856E2A128FE60051DAC4 /* OnBoardingSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC856D2A128FE60051DAC4 /* OnBoardingSecond.swift */; };
 		0AEC85702A128FF80051DAC4 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC856F2A128FF80051DAC4 /* PageControl.swift */; };
@@ -52,15 +48,12 @@
 		C91DC2922A13C65800FA8329 /* ContentViewBallsLevel1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DC2912A13C65800FA8329 /* ContentViewBallsLevel1.swift */; };
 		C91DC2942A13C66C00FA8329 /* BallsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DC2932A13C66C00FA8329 /* BallsView.swift */; };
 		C92CF2E42A1B507000AAF385 /* notifica.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C92CF2E32A1B507000AAF385 /* notifica.mp3 */; };
-		C92CF2E62A1B5B5200AAF385 /* CardsOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92CF2E52A1B5B5200AAF385 /* CardsOrderView.swift */; };
-		C92CF2E82A1B5B8F00AAF385 /* CardViewGame1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92CF2E72A1B5B8F00AAF385 /* CardViewGame1.swift */; };
 		C94228002A265E590019A550 /* GameOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94227FF2A265E590019A550 /* GameOneView.swift */; };
 		C94228022A265E810019A550 /* CardGameOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94228012A265E810019A550 /* CardGameOne.swift */; };
 		C94228042A265EB10019A550 /* CardGameOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94228032A265EB10019A550 /* CardGameOneView.swift */; };
 		C94228062A265ED10019A550 /* ModelGameOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94228052A265ED10019A550 /* ModelGameOne.swift */; };
 		C94228082A265EF00019A550 /* CardOrderViewGameOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94228072A265EF00019A550 /* CardOrderViewGameOne.swift */; };
 		C950A92D2A149FFF005DFE2D /* Game1.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C950A92C2A149FFF005DFE2D /* Game1.geojson */; };
-		C950A92F2A14A1B8005DFE2D /* ViewModelGame1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C950A92E2A14A1B8005DFE2D /* ViewModelGame1.swift */; };
 		C950A9312A14A4CD005DFE2D /* MemoryCards.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C950A9302A14A4C8005DFE2D /* MemoryCards.geojson */; };
 		C97DE1532A1D215000BB7298 /* ContentViewBallsLevel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97DE1522A1D215000BB7298 /* ContentViewBallsLevel2.swift */; };
 		C97DE1552A1D217E00BB7298 /* ContentViewBallsLevel3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97DE1542A1D217E00BB7298 /* ContentViewBallsLevel3.swift */; };
@@ -87,16 +80,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A5A4CDB2A13873300D7396D /* GameMemoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMemoryModel.swift; sourceTree = "<group>"; };
-		0A5A4CDD2A13876800D7396D /* CardMemoryGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMemoryGameView.swift; sourceTree = "<group>"; };
-		0A5A4CE02A13881F00D7396D /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		0A5A4CE22A13894500D7396D /* CardMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMemory.swift; sourceTree = "<group>"; };
-		0A60CD632A1B69CA00711F77 /* CardView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView2.swift; sourceTree = "<group>"; };
-		0A60CD652A1B6A0500711F77 /* Card2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card2.swift; sourceTree = "<group>"; };
-		0A60CD672A1B6A1F00711F77 /* WorldCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCard.swift; sourceTree = "<group>"; };
-		0A60CD692A1B6A5800711F77 /* ViewModelGame2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelGame2.swift; sourceTree = "<group>"; };
-		0A60CD6B2A1B6A8600711F77 /* CardOrderView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOrderView2.swift; sourceTree = "<group>"; };
-		0A60CD6D2A1B6AA600711F77 /* Game2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game2View.swift; sourceTree = "<group>"; };
 		0A6732952A0B830300806FEA /* MelogranoProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MelogranoProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6732982A0B830300806FEA /* MelogranoProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelogranoProjectApp.swift; sourceTree = "<group>"; };
 		0A67329A2A0B830300806FEA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,14 +92,20 @@
 		0A6732B42A0B830400806FEA /* MelogranoProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MelogranoProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6732B82A0B830400806FEA /* MelogranoProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelogranoProjectUITests.swift; sourceTree = "<group>"; };
 		0A6732BA2A0B830400806FEA /* MelogranoProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelogranoProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		0A7C69562A1240AC004298C0 /* CardGame1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGame1.swift; sourceTree = "<group>"; };
-		0AB896FD2A0E256F0074A56A /* Associa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Associa.swift; sourceTree = "<group>"; };
-		0ADA61822A0B84200022574C /* GameTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTwo.swift; sourceTree = "<group>"; };
+		0A72FD062A27399200073F85 /* CardOrderView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOrderView2.swift; sourceTree = "<group>"; };
+		0A72FD072A27399200073F85 /* CardView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView2.swift; sourceTree = "<group>"; };
+		0A72FD082A27399200073F85 /* Card2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card2.swift; sourceTree = "<group>"; };
+		0A72FD092A27399200073F85 /* Game2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game2View.swift; sourceTree = "<group>"; };
+		0A72FD0A2A27399200073F85 /* ViewModelGame2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelGame2.swift; sourceTree = "<group>"; };
+		0A72FD0B2A27399200073F85 /* WorldCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCard.swift; sourceTree = "<group>"; };
+		0A72FD1F2A273AE300073F85 /* GameMemoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMemoryModel.swift; sourceTree = "<group>"; };
+		0A72FD202A273AE300073F85 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		0A72FD212A273AE300073F85 /* CardMemoryGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMemoryGameView.swift; sourceTree = "<group>"; };
+		0A72FD222A273AE300073F85 /* CardMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMemory.swift; sourceTree = "<group>"; };
 		0ADDF04A2A1CB5BB005BDE6A /* Game3.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game3.geojson; sourceTree = "<group>"; };
 		0ADDF04B2A1CB5D5005BDE6A /* Game3.2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game3.2.geojson; sourceTree = "<group>"; };
 		0ADDF04C2A1CB5E5005BDE6A /* Game3.3.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game3.3.geojson; sourceTree = "<group>"; };
 		0AEC85602A128BFD0051DAC4 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
-		0AEC85642A128CE80051DAC4 /* Game1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game1View.swift; sourceTree = "<group>"; };
 		0AEC856D2A128FE60051DAC4 /* OnBoardingSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingSecond.swift; sourceTree = "<group>"; };
 		0AEC856F2A128FF80051DAC4 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 		0AEC85712A1290110051DAC4 /* OnBoardingThird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingThird.swift; sourceTree = "<group>"; };
@@ -134,15 +123,12 @@
 		C91DC2912A13C65800FA8329 /* ContentViewBallsLevel1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewBallsLevel1.swift; sourceTree = "<group>"; };
 		C91DC2932A13C66C00FA8329 /* BallsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallsView.swift; sourceTree = "<group>"; };
 		C92CF2E32A1B507000AAF385 /* notifica.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = notifica.mp3; path = ../../Sound/notifica.mp3; sourceTree = "<group>"; };
-		C92CF2E52A1B5B5200AAF385 /* CardsOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsOrderView.swift; sourceTree = "<group>"; };
-		C92CF2E72A1B5B8F00AAF385 /* CardViewGame1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewGame1.swift; sourceTree = "<group>"; };
 		C94227FF2A265E590019A550 /* GameOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOneView.swift; sourceTree = "<group>"; };
 		C94228012A265E810019A550 /* CardGameOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGameOne.swift; sourceTree = "<group>"; };
 		C94228032A265EB10019A550 /* CardGameOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGameOneView.swift; sourceTree = "<group>"; };
 		C94228052A265ED10019A550 /* ModelGameOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelGameOne.swift; sourceTree = "<group>"; };
 		C94228072A265EF00019A550 /* CardOrderViewGameOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOrderViewGameOne.swift; sourceTree = "<group>"; };
 		C950A92C2A149FFF005DFE2D /* Game1.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game1.geojson; sourceTree = "<group>"; };
-		C950A92E2A14A1B8005DFE2D /* ViewModelGame1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelGame1.swift; sourceTree = "<group>"; };
 		C950A9302A14A4C8005DFE2D /* MemoryCards.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MemoryCards.geojson; sourceTree = "<group>"; };
 		C97DE1522A1D215000BB7298 /* ContentViewBallsLevel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewBallsLevel2.swift; sourceTree = "<group>"; };
 		C97DE1542A1D217E00BB7298 /* ContentViewBallsLevel3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewBallsLevel3.swift; sourceTree = "<group>"; };
@@ -181,20 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				0A6732A12A0B830400806FEA /* Persistence.swift */,
-				0A7C69562A1240AC004298C0 /* CardGame1.swift */,
-				C92CF2E72A1B5B8F00AAF385 /* CardViewGame1.swift */,
-				C92CF2E52A1B5B5200AAF385 /* CardsOrderView.swift */,
-				C950A92E2A14A1B8005DFE2D /* ViewModelGame1.swift */,
 				0AEC85602A128BFD0051DAC4 /* GridView.swift */,
-				0A5A4CDB2A13873300D7396D /* GameMemoryModel.swift */,
-				0A5A4CE22A13894500D7396D /* CardMemory.swift */,
-				0A5A4CE02A13881F00D7396D /* CardView.swift */,
 				0AEC856F2A128FF80051DAC4 /* PageControl.swift */,
-				0A60CD6B2A1B6A8600711F77 /* CardOrderView2.swift */,
-				0A60CD692A1B6A5800711F77 /* ViewModelGame2.swift */,
-				0A60CD632A1B69CA00711F77 /* CardView2.swift */,
-				0A60CD652A1B6A0500711F77 /* Card2.swift */,
-				0A60CD672A1B6A1F00711F77 /* WorldCard.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -222,6 +196,8 @@
 		0A6732972A0B830300806FEA /* MelogranoProject */ = {
 			isa = PBXGroup;
 			children = (
+				0A72FD272A273AF800073F85 /* GameMemory */,
+				0A72FD122A2739AE00073F85 /* GameTwo */,
 				0A6732982A0B830300806FEA /* MelogranoProjectApp.swift */,
 				0A67329A2A0B830300806FEA /* ContentView.swift */,
 				0AEC85792A12990A0051DAC4 /* MenuPageC.swift */,
@@ -230,12 +206,6 @@
 				C94227FE2A265E390019A550 /* GameOne */,
 				C97DE1582A1D231D00BB7298 /* BALLS GAME */,
 				13FD071F2A13784F0023539C /* Json */,
-				0AEC85642A128CE80051DAC4 /* Game1View.swift */,
-				0A60CD6D2A1B6AA600711F77 /* Game2View.swift */,
-				0A5A4CDD2A13876800D7396D /* CardMemoryGameView.swift */,
-				0ADA61822A0B84200022574C /* GameTwo.swift */,
-				0AB896FD2A0E256F0074A56A /* Associa.swift */,
-				13ED4CA52A25FC3B009CF732 /* WelcomePage.swift */,
 				0A5A4CDF2A1387A800D7396D /* Model */,
 				0AEC856C2A128FCE0051DAC4 /* On Boarding */,
 				0A67329C2A0B830400806FEA /* Assets.xcassets */,
@@ -271,9 +241,35 @@
 			path = MelogranoProjectUITests;
 			sourceTree = "<group>";
 		};
+		0A72FD122A2739AE00073F85 /* GameTwo */ = {
+			isa = PBXGroup;
+			children = (
+				0A72FD082A27399200073F85 /* Card2.swift */,
+				0A72FD062A27399200073F85 /* CardOrderView2.swift */,
+				0A72FD072A27399200073F85 /* CardView2.swift */,
+				0A72FD092A27399200073F85 /* Game2View.swift */,
+				0A72FD0A2A27399200073F85 /* ViewModelGame2.swift */,
+				0A72FD0B2A27399200073F85 /* WorldCard.swift */,
+			);
+			name = GameTwo;
+			path = MelogranoProject/GameTwo;
+			sourceTree = SOURCE_ROOT;
+		};
+		0A72FD272A273AF800073F85 /* GameMemory */ = {
+			isa = PBXGroup;
+			children = (
+				0A72FD222A273AE300073F85 /* CardMemory.swift */,
+				0A72FD212A273AE300073F85 /* CardMemoryGameView.swift */,
+				0A72FD202A273AE300073F85 /* CardView.swift */,
+				0A72FD1F2A273AE300073F85 /* GameMemoryModel.swift */,
+			);
+			name = GameMemory;
+			sourceTree = "<group>";
+		};
 		0AEC856C2A128FCE0051DAC4 /* On Boarding */ = {
 			isa = PBXGroup;
 			children = (
+				13ED4CA52A25FC3B009CF732 /* WelcomePage.swift */,
 				0AEC85752A1290350051DAC4 /* OnBoardingManager.swift */,
 				0AEC85772A12904A0051DAC4 /* OnBoardingFirst.swift */,
 				0AEC856D2A128FE60051DAC4 /* OnBoardingSecond.swift */,
@@ -482,47 +478,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A72FD112A27399200073F85 /* CardOrderView2.swift in Sources */,
 				C97DE1552A1D217E00BB7298 /* ContentViewBallsLevel3.swift in Sources */,
-				C950A92F2A14A1B8005DFE2D /* ViewModelGame1.swift in Sources */,
 				0AEC856E2A128FE60051DAC4 /* OnBoardingSecond.swift in Sources */,
-				0A60CD6A2A1B6A5800711F77 /* ViewModelGame2.swift in Sources */,
-				0A5A4CDE2A13876800D7396D /* CardMemoryGameView.swift in Sources */,
+				0A72FD0D2A27399200073F85 /* ViewModelGame2.swift in Sources */,
 				0A6732A52A0B830400806FEA /* MelogranoProject.xcdatamodeld in Sources */,
+				0A72FD232A273AE300073F85 /* GameMemoryModel.swift in Sources */,
 				C97DE1532A1D215000BB7298 /* ContentViewBallsLevel2.swift in Sources */,
-				0A7C69572A1240AC004298C0 /* CardGame1.swift in Sources */,
-				0A60CD662A1B6A0500711F77 /* Card2.swift in Sources */,
 				0A6732A22A0B830400806FEA /* Persistence.swift in Sources */,
-				0ADA61832A0B84200022574C /* GameTwo.swift in Sources */,
 				C9ABC23F2A267DAD00D5D6E9 /* ButtonGameModelView.swift in Sources */,
-				0AEC85652A128CE80051DAC4 /* Game1View.swift in Sources */,
 				0AEC85722A1290110051DAC4 /* OnBoardingThird.swift in Sources */,
 				0AEC85702A128FF80051DAC4 /* PageControl.swift in Sources */,
 				0A67329B2A0B830300806FEA /* ContentView.swift in Sources */,
 				0AEC85782A12904A0051DAC4 /* OnBoardingFirst.swift in Sources */,
 				C91DC2922A13C65800FA8329 /* ContentViewBallsLevel1.swift in Sources */,
+				0A72FD252A273AE300073F85 /* CardView.swift in Sources */,
+				0A72FD262A273AE300073F85 /* CardMemoryGameView.swift in Sources */,
+				0A72FD0E2A27399200073F85 /* WorldCard.swift in Sources */,
 				0A6732992A0B830300806FEA /* MelogranoProjectApp.swift in Sources */,
 				0AEC85742A1290210051DAC4 /* OnBoardingFourth.swift in Sources */,
-				0A5A4CE12A13881F00D7396D /* CardView.swift in Sources */,
-				0A60CD6C2A1B6A8600711F77 /* CardOrderView2.swift in Sources */,
 				0AEC85612A128BFD0051DAC4 /* GridView.swift in Sources */,
-				0A60CD642A1B69CA00711F77 /* CardView2.swift in Sources */,
-				0A5A4CDC2A13873300D7396D /* GameMemoryModel.swift in Sources */,
-				0AB896FE2A0E256F0074A56A /* Associa.swift in Sources */,
+				0A72FD102A27399200073F85 /* Game2View.swift in Sources */,
+				0A72FD0F2A27399200073F85 /* Card2.swift in Sources */,
 				13ED4CA62A25FC3B009CF732 /* WelcomePage.swift in Sources */,
 				C91DC2942A13C66C00FA8329 /* BallsView.swift in Sources */,
 				0AEC85762A1290350051DAC4 /* OnBoardingManager.swift in Sources */,
-				0A5A4CE32A13894500D7396D /* CardMemory.swift in Sources */,
-				0A60CD682A1B6A1F00711F77 /* WorldCard.swift in Sources */,
+				0A72FD242A273AE300073F85 /* CardMemory.swift in Sources */,
 				0AEC857A2A12990A0051DAC4 /* MenuPageC.swift in Sources */,
 				C94228062A265ED10019A550 /* ModelGameOne.swift in Sources */,
 				C94228002A265E590019A550 /* GameOneView.swift in Sources */,
 				C94228022A265E810019A550 /* CardGameOne.swift in Sources */,
 				C94228082A265EF00019A550 /* CardOrderViewGameOne.swift in Sources */,
 				C97DE1572A1D21B000BB7298 /* BallsGameMenuLevel.swift in Sources */,
+				0A72FD0C2A27399200073F85 /* CardView2.swift in Sources */,
 				C9ABC2412A267DBE00D5D6E9 /* Game.swift in Sources */,
-				0A60CD6E2A1B6AA600711F77 /* Game2View.swift in Sources */,
-				C92CF2E82A1B5B8F00AAF385 /* CardViewGame1.swift in Sources */,
-				C92CF2E62A1B5B5200AAF385 /* CardsOrderView.swift in Sources */,
 				C94228042A265EB10019A550 /* CardGameOneView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
