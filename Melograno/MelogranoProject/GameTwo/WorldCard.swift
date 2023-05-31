@@ -2,10 +2,9 @@
 //  WorldCard.swift
 //  MelogranoProject
 //
-//  Created by Giuseppe Iodice on 22/05/23.
+//  Created by Giuseppe Iodice on 31/05/23.
 //
-
-import SwiftUI
+import Foundation
 
 import SwiftUI
 

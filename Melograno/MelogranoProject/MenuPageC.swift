@@ -24,7 +24,7 @@ struct ContentView1: View {
         case "Game 1":
             GameOneView()
         case "Game 2":
-            Game2View()
+            GameTwoView()
         case "Game 3":
             CardMemoryGameView()
         case "Game 4":

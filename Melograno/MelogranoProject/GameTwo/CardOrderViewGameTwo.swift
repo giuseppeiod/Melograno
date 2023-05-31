@@ -1,14 +1,15 @@
 //
-//  CardOrderView2.swift
+//  CardOrderViewGameTwo.swift
 //  MelogranoProject
 //
-//  Created by Giuseppe Iodice on 22/05/23.
+//  Created by Giuseppe Iodice on 31/05/23.
 //
 
 import SwiftUI
 
 
-struct CardsOrderView2: View {
+
+struct CardOrderViewGameTwo: View {
     
     @State var card: WorldCard
     
@@ -37,11 +38,10 @@ struct CardsOrderView2: View {
         }
         }
     }
-    
 
-struct CardsOrderView2_Previews: PreviewProvider {
+
+struct CardsOrderViewTwo_Previews: PreviewProvider {
     static var previews: some View {
-        CardsOrderView2(card: WorldCard(id: 1, text: "", imageName: "uno"))
+        CardOrderViewGameTwo(card: WorldCard(id: 1, text: "", imageName: "uno"))
     }
 }
-

@@ -1,23 +1,23 @@
 [
-   [{"id": 0, "imageName": "caneim", "isHidden": false},
-    {"id": 1, "imageName": "melaim", "isHidden": false},
-    {"id": 2, "imageName": "telefono", "isHidden": false},
-    {"id": 3, "imageName": "camiciaim", "isHidden": false},
-    {"id": 4, "imageName": "occhialiim", "isHidden": false}
+   [{"id": 0, "imageName": "caneim", "isHidden": false, "isBlurred": false},
+    {"id": 1, "imageName": "melaim", "isHidden": false, "isBlurred": false},
+    {"id": 2, "imageName": "telefono", "isHidden": false, "isBlurred": false},
+    {"id": 3, "imageName": "camiciaim", "isHidden": false, "isBlurred": false},
+    {"id": 4, "imageName": "occhialiim", "isHidden": false, "isBlurred": false}
     ],
     [
-    {"id": 5, "imageName": "gallinaim", "isHidden": false},
-    {"id": 6, "imageName": "peraim", "isHidden": false},
-    {"id": 7, "imageName": "pantofoleim", "isHidden": false},
-    {"id": 8, "imageName": "aranciaim", "isHidden": false},
-    {"id": 9, "imageName": "pulcinoim", "isHidden": false}
+    {"id": 5, "imageName": "gallinaim", "isHidden": false, "isBlurred": false},
+    {"id": 6, "imageName": "peraim", "isHidden": false, "isBlurred": false},
+    {"id": 7, "imageName": "pantofoleim", "isHidden": false, "isBlurred": false},
+    {"id": 8, "imageName": "aranciaim", "isHidden": false, "isBlurred": false},
+    {"id": 9, "imageName": "pulcinoim", "isHidden": false, "isBlurred": false}
     ],
     [
-    {"id": 10, "imageName": "paperaima", "isHidden": false},
-    {"id": 11, "imageName": "peraim", "isHidden": false},
-    {"id": 12, "imageName": "chitarra", "isHidden": false},
-    {"id": 13, "imageName": "aranciaim", "isHidden": false},
-    {"id": 14, "imageName": "televisore", "isHidden": false}
+    {"id": 10, "imageName": "paperaima", "isHidden": false, "isBlurred": false},
+    {"id": 11, "imageName": "peraim", "isHidden": false, "isBlurred": false},
+    {"id": 12, "imageName": "chitarra", "isHidden": false, "isBlurred": false},
+    {"id": 13, "imageName": "aranciaim", "isHidden": false, "isBlurred": false},
+    {"id": 14, "imageName": "televisore", "isHidden": false, "isBlurred": false}
     ]
 ]
 

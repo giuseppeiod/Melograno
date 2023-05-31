@@ -1,43 +1,31 @@
 //
-//  ViewModelGame2.swift
+//  ModelGameTwo.swift
 //  MelogranoProject
 //
-//  Created by Giuseppe Iodice on 22/05/23.
+//  Created by Giuseppe Iodice on 31/05/23.
 //
 
-import SwiftUI
 import Foundation
+import SwiftUI
 
-class ViewModelGame2: ObservableObject{
+class ModelGameTwo: ObservableObject {
     
-    @Published var cards: [Card2] = []
+    @Published var cards: [CardGameTwo] = []
     @Published var cardsToOrder: [WorldCard] = []
+    
+    @Published var selectedWorldCard: WorldCard?
     @Published var selectedCardIndex: Int?
     @Published var selectedCardToOrderIndex: Int?
-    @Published var selectedWorldCard: WorldCard?
-    
+
     @Published var hiddenCardIDs: Set<Int> = []
-    
+    @Published var blurredCardIndex: Set<Int> = []
+
+
+
     init() {
         loadJson()
-        
-//        // Inizializza i dati
-//        _cards = Published(initialValue: [
-//            Card2(id: 0, imageName: "uno"),
-//            Card2(id: 1, imageName: "due"),
-//            Card2(id: 2, imageName: "tre"),
-//            Card2(id: 3, imageName: "quattro")
-//        ])
-//
-//        _cardsToOrder = Published(initialValue: [
-//            WorldCard(id: 4, text: "Uno", imageName: ""),
-//            WorldCard(id: 5, text: "Due", imageName: ""),
-//            WorldCard(id: 6, text: "Tre", imageName: ""),
-//            WorldCard(id: 7, text: "Quattro", imageName: "")
-//        ])
     }
-    
-    
+
     func loadJson() {
         if let cardDataURL = Bundle.main.url(forResource: "Game2", withExtension: "geojson"),
            let worldCardDataURL = Bundle.main.url(forResource: "Game3", withExtension: "geojson") {
@@ -48,7 +36,7 @@ class ViewModelGame2: ObservableObject{
                 let decoder = JSONDecoder()
 
                 // Modifica qui: decodifica un array di array di oggetti
-                let cardDataDecoded = try decoder.decode([[Card2]].self, from: cardData)
+                let cardDataDecoded = try decoder.decode([[CardGameTwo]].self, from: cardData)
                 let worldCardDataDecoded = try decoder.decode([[WorldCard]].self, from: worldCardData)
 
                 // Seleziona un set casuale
@@ -77,30 +65,26 @@ class ViewModelGame2: ObservableObject{
         }
     }
 
+
     var allCardsPlaced: Bool {
         return cardsToOrder.allSatisfy { $0.imageName != "" }
-        }
+    }
 
-    
     func resetCardToOrderImage(at index: Int) {
         guard index >= 0 && index < cardsToOrder.count else {
             return
         }
-        
+
         let imageName = cardsToOrder[index].imageName
-        
+
         guard let originalCardIndex = cards.firstIndex(where: { $0.imageName == imageName }) else {
             return
         }
-        
+
         let cardID = cards[originalCardIndex].id
-        
-        if hiddenCardIDs.contains(cardID) {
-            hiddenCardIDs.remove(cardID)
-        } else {
-            hiddenCardIDs.insert(cardID)
-        }
-        
+
+        hiddenCardIDs.toggleElement(cardID)
+
         if cardsToOrder[index].imageName != "" {
             cardsToOrder[index].imageName = ""
         }
@@ -111,24 +95,45 @@ class ViewModelGame2: ObservableObject{
               let selectedToOrderIndex = selectedCardToOrderIndex,
               selectedIndex >= 0 && selectedIndex < cards.count,
               selectedToOrderIndex >= 0 && selectedToOrderIndex < cardsToOrder.count,
-              cardsToOrder[selectedToOrderIndex].imageName.isEmpty // Aggiunta la condizione per verificare che la stringa sia vuota
+              cardsToOrder[selectedToOrderIndex].imageName.isEmpty
         else {
             return
         }
 
         let selectedCard = cards[selectedIndex]
-        var updateCards = cards
-        updateCards[selectedIndex].isHidden.toggle()
+        let cardID = cards[selectedIndex].id
 
-        var updatedCardsToOrder = cardsToOrder
-        updatedCardsToOrder[selectedToOrderIndex].imageName = selectedCard.imageName
 
-        cardsToOrder = updatedCardsToOrder
+        
+                if blurredCardIndex.contains(cardID) {
+                    blurredCardIndex.removeAll()
+                }
+//                else {
+//                    blurredCardIndex.insert(cardID)
+//                }
+
+        if hiddenCardIDs.contains(cardID) {
+            hiddenCardIDs.remove(cardID)
+        }
+        else {
+            hiddenCardIDs.insert(cardID)
+        }
+
+        cardsToOrder[selectedToOrderIndex].imageName = selectedCard.imageName
 
         selectedCardIndex = nil
         selectedCardToOrderIndex = nil
     }
     
-    
 
 }
+//
+//extension Set {
+//    mutating func toggleElement(_ element: Element) {
+//        if contains(element) {
+//            remove(element)
+//        } else {
+//            insert(element)
+//        }
+//    }
+//}
