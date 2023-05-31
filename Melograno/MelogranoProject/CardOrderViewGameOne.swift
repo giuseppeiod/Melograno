@@ -28,8 +28,4 @@ struct CardOrderViewGameOne: View {
         }
     }
 
-//struct CardOrderViewGameOne_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CardOrderViewGameOne()
-//    }
-//}
+

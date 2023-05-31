@@ -106,28 +106,6 @@ class ViewModelGame2: ObservableObject{
         }
     }
 
-
-//    func replaceCardImage() {
-//        guard let selectedIndex = selectedCardIndex,
-//              let selectedToOrderIndex = selectedCardToOrderIndex,
-//              selectedIndex >= 0 && selectedIndex < cards.count,
-//              selectedToOrderIndex >= 0 && selectedToOrderIndex < cardsToOrder.count
-//        else {
-//            return
-//        }
-//
-//        let selectedCard = cards[selectedIndex]
-//        var updateCards = cards
-//        updateCards[selectedIndex].isHidden.toggle()
-//
-//        var updatedCardsToOrder = cardsToOrder
-//        updatedCardsToOrder[selectedToOrderIndex].imageName = selectedCard.imageName
-//
-//        cardsToOrder = updatedCardsToOrder
-//
-//        selectedCardIndex = nil
-//        selectedCardToOrderIndex = nil
-//    }
     func replaceCardImage() {
         guard let selectedIndex = selectedCardIndex,
               let selectedToOrderIndex = selectedCardToOrderIndex,
