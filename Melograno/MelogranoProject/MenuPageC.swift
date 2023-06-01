@@ -57,7 +57,9 @@ struct MenuPageC: View {
                 
                 Text("Welcome!")
                     .font(.largeTitle)
+                    .fontWeight(.bold)
                     .padding()
+                    
                 
                 Spacer()
             }.padding()

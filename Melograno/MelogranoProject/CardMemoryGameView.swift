@@ -28,9 +28,10 @@ struct CardMemoryGameView: View {
         if isGameFinishedButton {
             ContentView()
         } else {
+            
             ZStack{
-            VStack() {
-                
+            VStack {
+                Spacer(minLength: 10)
                 HStack {
                     Button(action: {
                         isGameFinishedButton = true
@@ -50,7 +51,7 @@ struct CardMemoryGameView: View {
                 .padding()
                 
                 HStack {
-                    VStack(alignment: .leading) {
+//                    VStack(alignment: .leading) {
                         
                         Text("Match the cards")
                             .font(.largeTitle)
@@ -58,7 +59,7 @@ struct CardMemoryGameView: View {
                             .bold()
                             //.padding(.bottom)
                             .padding()
-                    }
+                    
                    Spacer()
                         
                 }
@@ -91,10 +92,15 @@ struct CardMemoryGameView: View {
                     }
                     
                     
-                }.padding(.bottom, 120)
+                }
+                //.padding(.bottom, 120)
                 
                 
                 
+                
+                
+                Spacer()
+            }
                 if game.isGameFinished {
                     
                     
@@ -112,11 +118,9 @@ struct CardMemoryGameView: View {
                             .cornerRadius(10)
                     })
                 }
-                
-                Spacer()
-            }
             
         }
+            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
             
 //            .onChange(of: shouldResetCards) { shouldReset in
 //                if shouldReset {
