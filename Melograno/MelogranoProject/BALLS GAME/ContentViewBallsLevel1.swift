@@ -48,11 +48,15 @@ struct ContentViewBallsLevel1: View {
                         }
                         .padding()
                     }
+                    if !isAnimating && isPlayerTurn{
+                        Text("Your turn!")
+                            .font(.largeTitle)
+                    }
                 }
                // Spacer()
-                if !isAnimating && isPlayerTurn{
-                    Text("Your turn!")
-                }
+//                if !isAnimating && isPlayerTurn{
+//                    Text("Your turn!")
+//                }
                 VStack{
                     Spacer()
                 HStack(spacing: 60) {
@@ -98,12 +102,16 @@ struct ContentViewBallsLevel1: View {
                                         }
                             }
                         }
-                }
+                    
+                }.onAppear(perform: animateCircles)
+                    Text(gameResult)
+                        .font(.largeTitle)
+                    
                     Spacer()
             }
                 //spostato la scritta
                 
-                Text(gameResult)
+               
                 
                 if !isPlayerTurn && !isAnimating && sequence.count == 6{
                 Button(action: restartGame) {
@@ -112,7 +120,7 @@ struct ContentViewBallsLevel1: View {
             }
                 
             }
-            .onAppear(perform: animateCircles)
+            
             .onAppear {
                 do {
                     if let soundURL = Bundle.main.url(forResource: "notifica", withExtension: "mp3") {
@@ -143,7 +151,7 @@ struct ContentViewBallsLevel1: View {
                 }
             } else {
                 timer.invalidate()
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                     isPlayerTurn = true
                     isAnimating = false
                 }

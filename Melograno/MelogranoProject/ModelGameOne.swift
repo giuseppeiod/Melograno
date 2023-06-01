@@ -113,6 +113,15 @@ class ModelGameOne: ObservableObject {
         selectedCardToOrderIndex = nil
     }
     
+    func restartGame() {
+        selectedCardIndex = nil
+        selectedCardToOrderIndex = nil
+        hiddenCardIDs = []
+        blurredCardIndex = []
+
+        // Ricarica i dati del gioco
+        loadJson()
+    }
 
 }
 

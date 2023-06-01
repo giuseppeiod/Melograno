@@ -42,6 +42,12 @@ struct ContentViewBallsLevel2: View {
                             Spacer()
                         }
                         .padding()
+                        
+                        if !isAnimating && isPlayerTurn{
+                            Text("Your turn!")
+                                .font(.largeTitle)
+                        }
+
                     }
                 }
                 Spacer()
@@ -144,7 +150,7 @@ struct ContentViewBallsLevel2: View {
                 }
             } else {
                 timer.invalidate()
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                     isPlayerTurn = true
                     isAnimating = false
                 }

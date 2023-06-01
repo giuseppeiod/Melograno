@@ -13,19 +13,21 @@ struct StartMenu: View {
     
     var body: some View {
         
-        VStack(alignment: .center){
+        
             
-            HStack(){
-                
-                    
-                    Text("Welcome, Stefania!")
-                        .font(.largeTitle)
-                        .bold()
-                    
-                
-            }
+
             
             NavigationView{
+                
+                
+                VStack(alignment: .center){
+                    
+                        
+                        Text("Welcome, Stefania!")
+                            .font(.largeTitle)
+                            .bold()
+                        
+                    
                 
                 
                 HStack{
@@ -54,9 +56,10 @@ struct StartMenu: View {
                     }
                 }
                 
-            }.navigationViewStyle(StackNavigationViewStyle())
-                .navigationBarBackButtonHidden(false)
-        }
+            }
+        }.navigationViewStyle(StackNavigationViewStyle())
+            .navigationBarBackButtonHidden(false)
+
     }
 }
 struct StartMenu_Previews: PreviewProvider {
