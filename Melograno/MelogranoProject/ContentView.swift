@@ -27,16 +27,19 @@ struct ContentView: View {
     
     var body: some View {
         
-       
         
-        if UserDefaults.standard.onboardingViewShown  {
-            ContentView1()
-        } else {
-            OnBoardingManager()
+            
+            if UserDefaults.standard.onboardingViewShown  {
+                
+                StartMenu()
+            } else {
+                OnBoardingManager()
+            }
         }
-    }
+    
+//        .navigationViewStyle(StackNavigationViewStyle())
+    
 }
-
 
 struct ContentView1_Previews: PreviewProvider {
 

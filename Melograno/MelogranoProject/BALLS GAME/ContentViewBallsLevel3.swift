@@ -27,33 +27,11 @@ struct ContentViewBallsLevel3: View {
     
     var body: some View {
        
-        if isGameFinishedButton{
-            BallsGameMenuLevel()
-        }else{
 
             VStack(alignment: .center, spacing: 70 ){
                 
                 VStack{
                     VStack{
-                        
-                        HStack {
-                            Button(action: {
-                                isGameFinishedButton = true
-                                print("Button pressed")
-                            }) {
-                                HStack {
-                                    Image(systemName: "chevron.left")
-                                        .font(.title)
-                                        .foregroundColor(.gray)
-                                    Text("Back")
-                                        .font(.headline)
-                                        .foregroundColor(.gray)
-                                }
-                                Spacer()
-                            }
-                            
-                        }
-                        .padding()
                         HStack{
                             VStack(alignment: .leading){
                                 Text("Tap the balls sequence after they lit up ")
@@ -161,7 +139,7 @@ struct ContentViewBallsLevel3: View {
                 print("Failed to load sound file")
             }
         }
-        }}
+        }
     
     func animateCircles() {
         print(sequence)

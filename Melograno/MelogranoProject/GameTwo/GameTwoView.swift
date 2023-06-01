@@ -16,31 +16,8 @@ struct GameTwoView: View {
     var body: some View {
 
         VStack(spacing: 20) {
-                    if isGameFinishedButton {
-                        ContentView()
-                    } else {
-                        
-                    
-                        HStack {
-                            Button(action: {
-                                isGameFinishedButton = true
-                                print("Button pressed")
-                            }) {
-                                HStack {
-                                    Image(systemName: "chevron.left")
-                                        .font(.title)
-                                        .foregroundColor(.gray)
-                                    Text("Back")
-                                        .font(.headline)
-                                        .foregroundColor(.gray)
-                                }
-                            }
-                            Spacer()
-                        }
-                        .padding()
-                        
-                        
-                        
+       
+
                         HStack {
                             
                             VStack(alignment: .leading) {
@@ -159,7 +136,7 @@ struct GameTwoView: View {
                             }
                         }
                     }
-                }
+                
             
         
     }

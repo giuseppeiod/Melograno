@@ -15,31 +15,9 @@ struct GameOneView: View {
     
     var body: some View {
 
+        
         VStack(spacing: 20) {
-                    if isGameFinishedButton {
-                        ContentView()
-                    } else {
-                        
-                    
-                        HStack {
-                            Button(action: {
-                                isGameFinishedButton = true
-                                print("Button pressed")
-                            }) {
-                                HStack {
-                                    Image(systemName: "chevron.left")
-                                        .font(.title)
-                                        .foregroundColor(.gray)
-                                    Text("Back")
-                                        .font(.headline)
-                                        .foregroundColor(.gray)
-                                }
-                            }
-                            Spacer()
-                        }
-                        .padding()
-                        
-                        
+                 
                         
                         HStack {
                             
@@ -67,16 +45,25 @@ struct GameOneView: View {
                                 
                                     .onTapGesture {
  
+                                        if  model.hiddenCardIDs.contains(model.cards[index].id) {
+                                            return
+                                        }
+                                        
+                                        
                                         if !model.cards[index].isBlurred{
                                             
-                                            if model.blurredCardIndex.contains(model.cards[index].id){
-                                                return
-                                            } else {
+//                                            if model.blurredCardIndex.contains(model.cards[index].id){
+//                                                return
+//                                            }
+                                          //  else {
+                                            model.cards[index].selected = true
                                                 
-                                                model.blurredCardIndex.removeAll()
+                                                let cardID = model.cards[index].id
                                                 
-                                                model.blurredCardIndex.insert(model.cards[index].id)
-                                            }
+                                                model.blurredCardIndex = Set(model.cards.map { $0.id })
+                                                
+                                                model.blurredCardIndex.remove(cardID)
+                                           // }
                                             
                                             
                                         }
@@ -95,6 +82,9 @@ struct GameOneView: View {
                                         
                                         
                                     }
+                                    
+                                    .scaleEffect(model.selectedCardIndex == index ? 1.2 : 1.0)
+                                        .border(Color.clear, width: model.selectedCardIndex == index ? 2 : 0)
                             }
                         }
                         
@@ -160,10 +150,9 @@ struct GameOneView: View {
                         }
                     }
                 }
-            
-        
+
     }
-}
+
 struct GameOneView_Previews: PreviewProvider {
     static var previews: some View {
        GameOneView()

@@ -14,6 +14,7 @@ struct CardGameOne: Identifiable, Equatable, Decodable {
     var imageName: String
     var isHidden: Bool = false
     var isBlurred: Bool = false
+    var selected: Bool = false
     
     // Equatable conformance
     static func == (lhs: CardGameOne, rhs: CardGameOne) -> Bool {
@@ -22,6 +23,7 @@ struct CardGameOne: Identifiable, Equatable, Decodable {
             && lhs.imageName == rhs.imageName
             && lhs.isHidden == rhs.isHidden
             && lhs.isBlurred == rhs.isBlurred
+        && lhs.selected == rhs.selected
     }
     
     // Decodable conformance
@@ -31,5 +33,6 @@ struct CardGameOne: Identifiable, Equatable, Decodable {
         case imageName
         case isHidden
         case isBlurred
+        case selected
     }
 }

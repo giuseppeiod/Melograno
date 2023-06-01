@@ -68,7 +68,9 @@ class ModelGameOne: ObservableObject {
         }
 
         let cardID = cards[originalCardIndex].id
-
+        
+        cards[index].selected = false
+        
         hiddenCardIDs.toggleElement(cardID)
 
         if cardsToOrder[index].imageName != "" {
@@ -89,11 +91,11 @@ class ModelGameOne: ObservableObject {
         let selectedCard = cards[selectedIndex]
         let cardID = cards[selectedIndex].id
 
-
+        cards[selectedIndex].selected = false
         
-                if blurredCardIndex.contains(cardID) {
+             
                     blurredCardIndex.removeAll()
-                }
+                
 //                else {
 //                    blurredCardIndex.insert(cardID)
 //                }

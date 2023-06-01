@@ -25,34 +25,14 @@ struct CardMemoryGameView: View {
 
     var body: some View {
         
-        if isGameFinishedButton {
-            ContentView()
-        } else {
-            
+
             ZStack{
             VStack {
-                Spacer(minLength: 10)
-                HStack {
-                    Button(action: {
-                        isGameFinishedButton = true
-                        print("Button pressed")
-                    }) {
-                        HStack {
-                            Image(systemName: "chevron.left")
-                                .font(.title)
-                                .foregroundColor(.gray)
-                            Text("Back")
-                                .font(.headline)
-                                .foregroundColor(.gray)
-                        }
-                    }
-                    Spacer()
-                }
-                .padding()
+           
+      
                 
                 HStack {
-//                    VStack(alignment: .leading) {
-                        
+      
                         Text("Match the cards")
                             .font(.largeTitle)
                             .multilineTextAlignment(.center)
@@ -130,7 +110,7 @@ struct CardMemoryGameView: View {
 //                    }
 //                }
 //            }
-        }
+        
     }
 
 

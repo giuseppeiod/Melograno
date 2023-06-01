@@ -27,19 +27,7 @@ struct CardGameOneView: View {
             
             
             
-            if isBlurred && !isHidden {
-                Image(card.imageName)
-                    .resizable()
-                    .frame(width: 210, height: 210)
-                    .background(Color.clear)
-                    .cornerRadius(16)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke(Color.green, lineWidth: 2)
-                    ).opacity(0.5)
-
-
-            }else if !isHidden && !isBlurred {
+            if !isBlurred && !isHidden {
                 Image(card.imageName)
                     .resizable()
                     .frame(width: 200, height: 180)
@@ -49,6 +37,18 @@ struct CardGameOneView: View {
                         RoundedRectangle(cornerRadius: 16)
                             .stroke(Color.black, lineWidth: 2)
                     )
+
+
+            }else if !isHidden && isBlurred {
+                Image(card.imageName)
+                    .resizable()
+                    .frame(width: 200, height: 180)
+                    .background(Color.clear)
+                    .cornerRadius(16)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 16)
+                            .stroke(Color.black, lineWidth: 2)
+                    ).opacity(0.5)
 
             } else {
                 
