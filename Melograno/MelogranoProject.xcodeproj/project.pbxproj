@@ -129,7 +129,6 @@
 		C9ABC2402A267DBE00D5D6E9 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		C9F92ADF2A29DD9900AF53CC /* customCorsivo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = customCorsivo.ttf; sourceTree = "<group>"; };
 		C9F92AE12A29DDA700AF53CC /* customRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = customRegular.ttf; sourceTree = "<group>"; };
-		C9F92AE32A29DF2700AF53CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,7 +188,6 @@
 		0A6732972A0B830300806FEA /* MelogranoProject */ = {
 			isa = PBXGroup;
 			children = (
-				C9F92AE32A29DF2700AF53CC /* Info.plist */,
 				0A6732982A0B830300806FEA /* MelogranoProjectApp.swift */,
 				0A67329A2A0B830300806FEA /* ContentView.swift */,
 				C99C52C82A28AC3B00105656 /* StartMenu.swift */,
