@@ -34,9 +34,7 @@
 		0ADDF0522A1CB85B005BDE6A /* Game3.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 0ADDF04A2A1CB5BB005BDE6A /* Game3.geojson */; };
 		0ADDF0532A1CB8A4005BDE6A /* Game3.2.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 0ADDF04B2A1CB5D5005BDE6A /* Game3.2.geojson */; };
 		0ADDF0542A1CB8A6005BDE6A /* Game3.3.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 0ADDF04C2A1CB5E5005BDE6A /* Game3.3.geojson */; };
-		0AEC85612A128BFD0051DAC4 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC85602A128BFD0051DAC4 /* GridView.swift */; };
 		0AEC85682A128F6B0051DAC4 /* FMProKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0AEC85672A128F6B0051DAC4 /* FMProKit */; };
-		0AEC85702A128FF80051DAC4 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC856F2A128FF80051DAC4 /* PageControl.swift */; };
 		0AEC85742A1290210051DAC4 /* OnBoardingFourth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC85732A1290210051DAC4 /* OnBoardingFourth.swift */; };
 		0AEC85762A1290350051DAC4 /* OnBoardingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC85752A1290350051DAC4 /* OnBoardingManager.swift */; };
 		13ED4CA22A2489D8009CF732 /* menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 13ED4CA12A2489D8009CF732 /* menu.mp3 */; };
@@ -104,8 +102,6 @@
 		0ADDF04A2A1CB5BB005BDE6A /* Game3.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game3.geojson; sourceTree = "<group>"; };
 		0ADDF04B2A1CB5D5005BDE6A /* Game3.2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game3.2.geojson; sourceTree = "<group>"; };
 		0ADDF04C2A1CB5E5005BDE6A /* Game3.3.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game3.3.geojson; sourceTree = "<group>"; };
-		0AEC85602A128BFD0051DAC4 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
-		0AEC856F2A128FF80051DAC4 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 		0AEC85732A1290210051DAC4 /* OnBoardingFourth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingFourth.swift; sourceTree = "<group>"; };
 		0AEC85752A1290350051DAC4 /* OnBoardingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingManager.swift; sourceTree = "<group>"; };
 		13ED4CA12A2489D8009CF732 /* menu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = menu.mp3; path = ../../Sound/menu.mp3; sourceTree = "<group>"; };
@@ -166,8 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				0A6732A12A0B830400806FEA /* Persistence.swift */,
-				0AEC85602A128BFD0051DAC4 /* GridView.swift */,
-				0AEC856F2A128FF80051DAC4 /* PageControl.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -486,7 +480,6 @@
 				0A6732A22A0B830400806FEA /* Persistence.swift in Sources */,
 				0A72FD7A2A27531300073F85 /* WorldCard.swift in Sources */,
 				C9ABC23F2A267DAD00D5D6E9 /* ButtonGameModelView.swift in Sources */,
-				0AEC85702A128FF80051DAC4 /* PageControl.swift in Sources */,
 				0A67329B2A0B830300806FEA /* ContentView.swift in Sources */,
 				0A72FD742A2752DD00073F85 /* GameTwoView.swift in Sources */,
 				0A72FD7E2A27533100073F85 /* ModelGameTwo.swift in Sources */,
@@ -495,7 +488,6 @@
 				0A72FD262A273AE300073F85 /* CardMemoryGameView.swift in Sources */,
 				0A6732992A0B830300806FEA /* MelogranoProjectApp.swift in Sources */,
 				0AEC85742A1290210051DAC4 /* OnBoardingFourth.swift in Sources */,
-				0AEC85612A128BFD0051DAC4 /* GridView.swift in Sources */,
 				13ED4CA62A25FC3B009CF732 /* WelcomePage.swift in Sources */,
 				C91DC2942A13C66C00FA8329 /* BallsView.swift in Sources */,
 				0AEC85762A1290350051DAC4 /* OnBoardingManager.swift in Sources */,

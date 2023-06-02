@@ -36,7 +36,7 @@ struct ContentViewBallsLevel2: View {
                         HStack{
                             VStack(alignment: .leading){
                                 Text("Tap the balls sequence after they lit up ")
-                                    .font(.title)
+                                    .font(.custom("customRegular", size: 46))
                                     .fontWeight(.semibold)
                             }
                             Spacer()
@@ -45,7 +45,7 @@ struct ContentViewBallsLevel2: View {
                         
                         if !isAnimating && isPlayerTurn{
                             Text("Your turn!")
-                                .font(.largeTitle)
+                                .font(.custom("customRegular", size: 46))
                         }
 
                     }
@@ -113,10 +113,12 @@ struct ContentViewBallsLevel2: View {
                 }
                 //spostato la scritta
                 Text(gameResult)
+                    .font(.custom("customCorsivo", size: 46))
                 
                 if !isPlayerTurn && !isAnimating && sequence.count == 6{
                 Button(action: restartGame) {
                     Text("Restart Game")
+                        .font(.custom("customCorsivo", size: 46))
                 }
             }
                 Spacer()
