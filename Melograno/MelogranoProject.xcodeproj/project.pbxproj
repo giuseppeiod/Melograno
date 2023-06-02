@@ -36,12 +36,9 @@
 		0ADDF0542A1CB8A6005BDE6A /* Game3.3.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 0ADDF04C2A1CB5E5005BDE6A /* Game3.3.geojson */; };
 		0AEC85612A128BFD0051DAC4 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC85602A128BFD0051DAC4 /* GridView.swift */; };
 		0AEC85682A128F6B0051DAC4 /* FMProKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0AEC85672A128F6B0051DAC4 /* FMProKit */; };
-		0AEC856E2A128FE60051DAC4 /* OnBoardingSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC856D2A128FE60051DAC4 /* OnBoardingSecond.swift */; };
 		0AEC85702A128FF80051DAC4 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC856F2A128FF80051DAC4 /* PageControl.swift */; };
-		0AEC85722A1290110051DAC4 /* OnBoardingThird.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC85712A1290110051DAC4 /* OnBoardingThird.swift */; };
 		0AEC85742A1290210051DAC4 /* OnBoardingFourth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC85732A1290210051DAC4 /* OnBoardingFourth.swift */; };
 		0AEC85762A1290350051DAC4 /* OnBoardingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC85752A1290350051DAC4 /* OnBoardingManager.swift */; };
-		0AEC85782A12904A0051DAC4 /* OnBoardingFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC85772A12904A0051DAC4 /* OnBoardingFirst.swift */; };
 		13ED4CA22A2489D8009CF732 /* menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 13ED4CA12A2489D8009CF732 /* menu.mp3 */; };
 		13ED4CA62A25FC3B009CF732 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ED4CA52A25FC3B009CF732 /* WelcomePage.swift */; };
 		C91DC2922A13C65800FA8329 /* ContentViewBallsLevel1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DC2912A13C65800FA8329 /* ContentViewBallsLevel1.swift */; };
@@ -60,6 +57,8 @@
 		C99C52C92A28AC3B00105656 /* StartMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99C52C82A28AC3B00105656 /* StartMenu.swift */; };
 		C9ABC23F2A267DAD00D5D6E9 /* ButtonGameModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ABC23E2A267DAD00D5D6E9 /* ButtonGameModelView.swift */; };
 		C9ABC2412A267DBE00D5D6E9 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ABC2402A267DBE00D5D6E9 /* Game.swift */; };
+		C9F92AE02A29DD9900AF53CC /* customCorsivo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9F92ADF2A29DD9900AF53CC /* customCorsivo.ttf */; };
+		C9F92AE22A29DDA700AF53CC /* customRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9F92AE12A29DDA700AF53CC /* customRegular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,12 +105,9 @@
 		0ADDF04B2A1CB5D5005BDE6A /* Game3.2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game3.2.geojson; sourceTree = "<group>"; };
 		0ADDF04C2A1CB5E5005BDE6A /* Game3.3.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game3.3.geojson; sourceTree = "<group>"; };
 		0AEC85602A128BFD0051DAC4 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
-		0AEC856D2A128FE60051DAC4 /* OnBoardingSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingSecond.swift; sourceTree = "<group>"; };
 		0AEC856F2A128FF80051DAC4 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
-		0AEC85712A1290110051DAC4 /* OnBoardingThird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingThird.swift; sourceTree = "<group>"; };
 		0AEC85732A1290210051DAC4 /* OnBoardingFourth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingFourth.swift; sourceTree = "<group>"; };
 		0AEC85752A1290350051DAC4 /* OnBoardingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingManager.swift; sourceTree = "<group>"; };
-		0AEC85772A12904A0051DAC4 /* OnBoardingFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingFirst.swift; sourceTree = "<group>"; };
 		13ED4CA12A2489D8009CF732 /* menu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = menu.mp3; path = ../../Sound/menu.mp3; sourceTree = "<group>"; };
 		13ED4CA52A25FC3B009CF732 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
 		13FD072A2A14C22E0023539C /* Game2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game2.geojson; sourceTree = "<group>"; };
@@ -135,6 +131,9 @@
 		C99C52C82A28AC3B00105656 /* StartMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenu.swift; sourceTree = "<group>"; };
 		C9ABC23E2A267DAD00D5D6E9 /* ButtonGameModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGameModelView.swift; sourceTree = "<group>"; };
 		C9ABC2402A267DBE00D5D6E9 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		C9F92ADF2A29DD9900AF53CC /* customCorsivo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = customCorsivo.ttf; sourceTree = "<group>"; };
+		C9F92AE12A29DDA700AF53CC /* customRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = customRegular.ttf; sourceTree = "<group>"; };
+		C9F92AE32A29DF2700AF53CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +195,7 @@
 		0A6732972A0B830300806FEA /* MelogranoProject */ = {
 			isa = PBXGroup;
 			children = (
+				C9F92AE32A29DF2700AF53CC /* Info.plist */,
 				0A6732982A0B830300806FEA /* MelogranoProjectApp.swift */,
 				0A67329A2A0B830300806FEA /* ContentView.swift */,
 				C99C52C82A28AC3B00105656 /* StartMenu.swift */,
@@ -208,6 +208,8 @@
 				C97DE1582A1D231D00BB7298 /* BALLS GAME */,
 				13FD071F2A13784F0023539C /* Json */,
 				0A5A4CDF2A1387A800D7396D /* Model */,
+				C9F92ADF2A29DD9900AF53CC /* customCorsivo.ttf */,
+				C9F92AE12A29DDA700AF53CC /* customRegular.ttf */,
 				0A67329C2A0B830400806FEA /* Assets.xcassets */,
 				C92CF2E22A1B503B00AAF385 /* Sound */,
 				0A6732A32A0B830400806FEA /* MelogranoProject.xcdatamodeld */,
@@ -271,9 +273,6 @@
 			children = (
 				13ED4CA52A25FC3B009CF732 /* WelcomePage.swift */,
 				0AEC85752A1290350051DAC4 /* OnBoardingManager.swift */,
-				0AEC85772A12904A0051DAC4 /* OnBoardingFirst.swift */,
-				0AEC856D2A128FE60051DAC4 /* OnBoardingSecond.swift */,
-				0AEC85712A1290110051DAC4 /* OnBoardingThird.swift */,
 				0AEC85732A1290210051DAC4 /* OnBoardingFourth.swift */,
 			);
 			path = "On Boarding";
@@ -442,6 +441,7 @@
 			files = (
 				0ADDF0542A1CB8A6005BDE6A /* Game3.3.geojson in Resources */,
 				0ADDF04D2A1CB836005BDE6A /* Game2.geojson in Resources */,
+				C9F92AE22A29DDA700AF53CC /* customRegular.ttf in Resources */,
 				0ADDF0512A1CB855005BDE6A /* Game1.2.geojson in Resources */,
 				0ADDF04E2A1CB84D005BDE6A /* Game2.2.geojson in Resources */,
 				0ADDF0532A1CB8A4005BDE6A /* Game3.2.geojson in Resources */,
@@ -449,6 +449,7 @@
 				C950A9312A14A4CD005DFE2D /* MemoryCards.geojson in Resources */,
 				C950A92D2A149FFF005DFE2D /* Game1.geojson in Resources */,
 				0A6732A02A0B830400806FEA /* Preview Assets.xcassets in Resources */,
+				C9F92AE02A29DD9900AF53CC /* customCorsivo.ttf in Resources */,
 				0ADDF0502A1CB852005BDE6A /* Game1.3.geojson in Resources */,
 				13ED4CA22A2489D8009CF732 /* menu.mp3 in Resources */,
 				C92CF2E42A1B507000AAF385 /* notifica.mp3 in Resources */,
@@ -479,17 +480,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C97DE1552A1D217E00BB7298 /* ContentViewBallsLevel3.swift in Sources */,
-				0AEC856E2A128FE60051DAC4 /* OnBoardingSecond.swift in Sources */,
 				0A6732A52A0B830400806FEA /* MelogranoProject.xcdatamodeld in Sources */,
 				0A72FD232A273AE300073F85 /* GameMemoryModel.swift in Sources */,
 				C97DE1532A1D215000BB7298 /* ContentViewBallsLevel2.swift in Sources */,
 				0A6732A22A0B830400806FEA /* Persistence.swift in Sources */,
 				0A72FD7A2A27531300073F85 /* WorldCard.swift in Sources */,
 				C9ABC23F2A267DAD00D5D6E9 /* ButtonGameModelView.swift in Sources */,
-				0AEC85722A1290110051DAC4 /* OnBoardingThird.swift in Sources */,
 				0AEC85702A128FF80051DAC4 /* PageControl.swift in Sources */,
 				0A67329B2A0B830300806FEA /* ContentView.swift in Sources */,
-				0AEC85782A12904A0051DAC4 /* OnBoardingFirst.swift in Sources */,
 				0A72FD742A2752DD00073F85 /* GameTwoView.swift in Sources */,
 				0A72FD7E2A27533100073F85 /* ModelGameTwo.swift in Sources */,
 				C91DC2922A13C65800FA8329 /* ContentViewBallsLevel1.swift in Sources */,
@@ -671,13 +669,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MelogranoProject/Preview Content\"";
-				DEVELOPMENT_TEAM = 687F7L8Q3K;
+				DEVELOPMENT_TEAM = 7UYK6M3ATF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MelogranoProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeLeft;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationLandscapeLeft;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -692,7 +691,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -704,13 +703,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MelogranoProject/Preview Content\"";
-				DEVELOPMENT_TEAM = 687F7L8Q3K;
+				DEVELOPMENT_TEAM = 7UYK6M3ATF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MelogranoProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeLeft;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationLandscapeLeft;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -725,7 +725,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

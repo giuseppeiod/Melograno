@@ -13,6 +13,7 @@ struct WelcomeView: View {
     var body: some View {
         VStack {
             Spacer()
+            
             Text("Benvenuto")
                 .font(.largeTitle)
                 .fontWeight(.bold)

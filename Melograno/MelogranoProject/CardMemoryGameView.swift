@@ -19,22 +19,20 @@ struct CardMemoryGameView: View {
 
     @StateObject private var game = GameMemoryModel()
 
-    var progress: CGFloat {
-        return game.progress
-    }
+
 
     var body: some View {
         
 
             ZStack{
-            VStack {
+                VStack() {
            
       
                 
                 HStack {
       
                         Text("Match the cards")
-                            .font(.largeTitle)
+                        .font(.custom("customRegular", size: 46))
                             .multilineTextAlignment(.center)
                             .bold()
                             //.padding(.bottom)
@@ -85,13 +83,13 @@ struct CardMemoryGameView: View {
                     
                     
                     Text("Congratulations! You matched all the cards!")
-                        .font(.custom("Arial", size: 30))
+                        .font(.custom("customRegular", size: 46))
                         .foregroundColor(.green)
                     Button(action: {
                         restartGame()
                     }, label: {
                         Text("Restart Game")
-                            .font(.custom("Arial", size: 30))
+                            .font(.custom("customRegular", size: 46))
                             .foregroundColor(.white)
                             .padding(10)
                             .background(Color.blue)

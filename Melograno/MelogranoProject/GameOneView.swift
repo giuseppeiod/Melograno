@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct GameOneView: View {
     
@@ -13,6 +14,7 @@ struct GameOneView: View {
     @State private var isGameFinishedButton = false
     @State private var showingCongrats = false
     
+
     var body: some View {
 
         ZStack{
@@ -23,7 +25,8 @@ struct GameOneView: View {
                     
                     VStack(alignment: .leading) {
                         Text("Rearrange the following cards in order")
-                            .font(.largeTitle)
+                            .font(.custom("customRegular", size: 46))
+
                             .multilineTextAlignment(.center)
                             .bold()
                             .padding(.bottom)
@@ -86,7 +89,7 @@ struct GameOneView: View {
                             .scaleEffect(model.selectedCardIndex == index ? 1.2 : 1.0)
                             .border(Color.clear, width: model.selectedCardIndex == index ? 2 : 0)
                     }
-                }
+                }.id(UUID())
                 
                 
                 HStack(spacing: 10) {
@@ -129,7 +132,7 @@ struct GameOneView: View {
                             }
                         
                     }
-                }
+                }.id(UUID())
                 Spacer()
                 
                 
@@ -149,7 +152,7 @@ struct GameOneView: View {
                                     .cornerRadius(16)
                                 
                                 Text("FINISH")
-                                    .font(.largeTitle)
+                                    .font(.custom("customRegular", size: 26))
                                     .foregroundColor(.white)
                             }
                         }
@@ -175,7 +178,7 @@ struct GameOneView: View {
                             
                         
                         Text("CONGRATS YOU FINISH THE GAME")
-                            .font(.largeTitle)
+                            .font(.custom("customRegular", size: 36))
                             .foregroundColor(.white)
                         
                        
@@ -188,6 +191,8 @@ struct GameOneView: View {
                 }
             
             
+        }.onAppear{
+            model.restartGame()
         }
 }
 

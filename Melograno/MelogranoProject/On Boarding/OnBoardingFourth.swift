@@ -14,52 +14,31 @@ struct OnBoardingFourth: View {
 
     var body: some View {
         VStack(spacing: 50) {
-            Image("Welcome")
-                .resizable()
-                .scaledToFit()
-                .frame(height: 50)
-                .opacity(isAnimating ? 1 : 0)
-                .offset(y: isAnimating ? 0 : -40)
-                .animation(.easeOut(duration: 1), value: isAnimating)
+            
+            Text("WELCOME")
+                .font(.custom("customRegular", size: 46))
+                .bold()
+                .multilineTextAlignment(.center)
+                .padding()
+            
 
-            Text("Insert your key")
-                .font(.title)
+            Text("Insert your name")
+                .font(.custom("customCorsivo", size: 36))
                 .multilineTextAlignment(.center)
                 .padding()
             
-            Text("The once your doctor provided to you")
-                .font(.body)
-                .fontWeight(.light)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal)
-                .padding()
             
-            TextField("Enter key", text: $key)
+            TextField("Enter name", text: $key)
                 .padding()
-                .frame(width: 240, height: 50)
-                .background(Color.gray.opacity(0.1))
+                .frame(width: 290, height: 50)
+                .background(Color.blue.opacity(0.4))
                 .cornerRadius(10)
                 .padding(.bottom, 20)
                 .onChange(of: key) { newValue in
-                    isOnboardingComplete = newValue.count == 8
+                    isOnboardingComplete = newValue.count == 3
                 }
 
-//            Button(action: {
-//                isOnboardingComplete = true
-//            }) {
-//                Text("START")
-//                    .font(.title)
-//                    .foregroundColor(.white)
-//                    .fontWeight(.bold)
-//                    .frame(width: 360, height: 65)
-//            }
-//            .background(
-//                Capsule().fill(Color.green)
-//            )
-//            .cornerRadius(20)
-//            .opacity(isAnimating ? 1 : 0)
-//            .offset(y: isAnimating ? 0 : 40)
-//            .animation(.easeOut(duration: 1), value: isAnimating)
+
             .fullScreenCover(isPresented: $isOnboardingComplete) {
                 ContentView()
             }

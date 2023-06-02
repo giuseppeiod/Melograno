@@ -24,7 +24,7 @@ struct StartMenu: View {
                     
                         
                         Text("Welcome, Stefania!")
-                            .font(.largeTitle)
+                        .font(.custom("customRegular", size: 46))
                             .bold()
                         
                     
