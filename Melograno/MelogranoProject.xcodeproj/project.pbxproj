@@ -34,7 +34,6 @@
 		0ADDF0522A1CB85B005BDE6A /* Game3.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 0ADDF04A2A1CB5BB005BDE6A /* Game3.geojson */; };
 		0ADDF0532A1CB8A4005BDE6A /* Game3.2.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 0ADDF04B2A1CB5D5005BDE6A /* Game3.2.geojson */; };
 		0ADDF0542A1CB8A6005BDE6A /* Game3.3.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 0ADDF04C2A1CB5E5005BDE6A /* Game3.3.geojson */; };
-		0AEC85682A128F6B0051DAC4 /* FMProKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0AEC85672A128F6B0051DAC4 /* FMProKit */; };
 		0AEC85742A1290210051DAC4 /* OnBoardingFourth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC85732A1290210051DAC4 /* OnBoardingFourth.swift */; };
 		0AEC85762A1290350051DAC4 /* OnBoardingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC85752A1290350051DAC4 /* OnBoardingManager.swift */; };
 		13ED4CA22A2489D8009CF732 /* menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 13ED4CA12A2489D8009CF732 /* menu.mp3 */; };
@@ -136,7 +135,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AEC85682A128F6B0051DAC4 /* FMProKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +336,6 @@
 			);
 			name = MelogranoProject;
 			packageProductDependencies = (
-				0AEC85672A128F6B0051DAC4 /* FMProKit */,
 			);
 			productName = MelogranoProject;
 			productReference = 0A6732952A0B830300806FEA /* MelogranoProject.app */;
@@ -659,15 +656,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MelogranoProject/Preview Content\"";
-				DEVELOPMENT_TEAM = 7UYK6M3ATF;
+				DEVELOPMENT_TEAM = 4LS82UK5QS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MelogranoProject/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeLeft;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationLandscapeLeft;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -693,15 +690,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MelogranoProject/Preview Content\"";
-				DEVELOPMENT_TEAM = 7UYK6M3ATF;
+				DEVELOPMENT_TEAM = 4LS82UK5QS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MelogranoProject/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeLeft;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationLandscapeLeft;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -846,14 +843,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		0AEC85672A128F6B0051DAC4 /* FMProKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0AEC85662A128F6B0051DAC4 /* XCRemoteSwiftPackageReference "FMProKit" */;
-			productName = FMProKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		0A6732A32A0B830400806FEA /* MelogranoProject.xcdatamodeld */ = {
