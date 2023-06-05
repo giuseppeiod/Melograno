@@ -38,7 +38,7 @@ struct GameOneView: View {
                 Spacer()
                 
                 
-                HStack(spacing: 20) {
+                HStack(spacing: 25) {
                     ForEach(0..<model.cards.count) { index in
                         
                         
@@ -165,21 +165,18 @@ struct GameOneView: View {
 
                     ZStack {
                         
-                        Rectangle()
-//                            .stroke(Color.white, lineWidth: 3)
-                            .foregroundColor(.purple.opacity(0.9))
+                        Image("congrats")
                             .frame(width: 650, height: 350)
-                        
-                            .cornerRadius(16) .overlay(
-                                RoundedRectangle(cornerRadius: 16)
-                                    .stroke(Color.white, lineWidth: 2)
-                            )
+                            .scaledToFill()
+
                 
                             
                         
-                        Text("CONGRATS YOU FINISH THE GAME")
+                        Text("CONGRATS!\nYOU COMPLETED THE LEVEL!\nSCORE")
                             .font(.custom("customRegular", size: 36))
                             .foregroundColor(.white)
+                            .multilineTextAlignment(.center)
+
                         
                        
                     }.onTapGesture {

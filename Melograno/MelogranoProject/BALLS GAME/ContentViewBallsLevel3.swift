@@ -28,31 +28,34 @@ struct ContentViewBallsLevel3: View {
     var body: some View {
        
 
-            VStack(alignment: .center, spacing: 70 ){
-                
+        VStack(alignment: .center, spacing: 70 ){
+            
+            VStack{
                 VStack{
-                    VStack{
-                        HStack{
-                            VStack(alignment: .leading){
-                                Text("Tap the balls sequence after they lit up ")
-                                    .font(.custom("customRegular", size: 46))
-                                    .fontWeight(.semibold)
-                            }
-                            Spacer()
-                        }
-                        .padding()
-                        
-                        if !isAnimating && isPlayerTurn{
-                            Text("Your turn!")
+                    
+                    HStack{
+                        VStack(alignment: .leading){
+                            Text("Tap the balls sequence after they lit up ")
                                 .font(.custom("customRegular", size: 46))
+                                .fontWeight(.semibold)
                         }
-
+                        Spacer()
                     }
+                    .padding()
                 }
-                Spacer()
-
+                if !isAnimating && isPlayerTurn{
+                    Text("Your turn!")
+                        .font(.custom("customCorsivo", size: 46))
+                }
                 
-                
+                Text(gameResult)
+                    .font(.custom("customCorsivo", size: 46))
+            }
+            
+            Spacer()
+            
+            VStack{
+                VStack(spacing: 40){
                 HStack(spacing: 60){
                     
                     BallsView(isHighlighted: $highlight[3], color: .purple)
@@ -61,9 +64,9 @@ struct ContentViewBallsLevel3: View {
                                 circleTapped("p")
                                 provideHapticFeedback()
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                            audioPlayer?.currentTime = 0
-                                            audioPlayer?.play()
-                                        }
+                                    audioPlayer?.currentTime = 0
+                                    audioPlayer?.play()
+                                }
                             }
                         }
                     
@@ -74,9 +77,9 @@ struct ContentViewBallsLevel3: View {
                                 circleTapped("o")
                                 provideHapticFeedback()
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                            audioPlayer?.currentTime = 0
-                                            audioPlayer?.play()
-                                        }
+                                    audioPlayer?.currentTime = 0
+                                    audioPlayer?.play()
+                                }
                             }
                         }
                     
@@ -97,9 +100,9 @@ struct ContentViewBallsLevel3: View {
                                 circleTapped("r")
                                 provideHapticFeedback()
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                            audioPlayer?.currentTime = 0
-                                            audioPlayer?.play()
-                                        }
+                                    audioPlayer?.currentTime = 0
+                                    audioPlayer?.play()
+                                }
                             }
                         }
                     BallsView(isHighlighted: $highlight[1], color: .green)
@@ -108,9 +111,9 @@ struct ContentViewBallsLevel3: View {
                                 circleTapped("g")
                                 provideHapticFeedback()
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                            audioPlayer?.currentTime = 0
-                                            audioPlayer?.play()
-                                        }
+                                    audioPlayer?.currentTime = 0
+                                    audioPlayer?.play()
+                                }
                             }
                         }
                     BallsView(isHighlighted: $highlight[2], color: .blue)
@@ -119,16 +122,18 @@ struct ContentViewBallsLevel3: View {
                                 circleTapped("b")
                                 provideHapticFeedback()
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                            audioPlayer?.currentTime = 0
-                                            audioPlayer?.play()
-                                        }
+                                    audioPlayer?.currentTime = 0
+                                    audioPlayer?.play()
+                                }
                             }
                         }
                 }
-                //spostato la scritta
-                Text(gameResult)
-                    .font(.custom("customCorsivo", size: 46))
-                
+            } .onAppear(perform: animateCircles)
+            
+            
+          
+            
+        }
                 if !isPlayerTurn && !isAnimating && sequence.count == 6{
                 Button(action: restartGame) {
                     Text("Restart Game")
@@ -137,7 +142,7 @@ struct ContentViewBallsLevel3: View {
             }
                 Spacer()
             }
-            .onAppear(perform: animateCircles)
+          //  .onAppear(perform: animateCircles)
             .onAppear {
             do {
                 if let soundURL = Bundle.main.url(forResource: "notifica", withExtension: "mp3") {

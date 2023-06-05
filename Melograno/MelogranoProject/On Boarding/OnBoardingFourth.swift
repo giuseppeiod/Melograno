@@ -10,9 +10,10 @@ import SwiftUI
 struct OnBoardingFourth: View {
     @State private var isOnboardingComplete = false
     @State private var isAnimating: Bool = false
-    @State private var key: String = ""
+    @State private var name: String = ""
 
     var body: some View {
+        
         VStack(spacing: 50) {
             
             Text("WELCOME")
@@ -28,17 +29,28 @@ struct OnBoardingFourth: View {
                 .padding()
             
             
-            TextField("Enter name", text: $key)
+            TextField("Enter name", text: $name)
                 .padding()
                 .frame(width: 290, height: 50)
-                .background(Color.blue.opacity(0.4))
+                .background(Color.purple.opacity(0.7))
                 .cornerRadius(10)
-                .padding(.bottom, 20)
-                .onChange(of: key) { newValue in
-                    isOnboardingComplete = newValue.count == 3
-                }
+                
+//                .onChange(of: key) { newValue in
+//                    isOnboardingComplete = newValue.count == 3
+//                }
 
 
+            Button {
+                UserDefaults.standard.set(name, forKey: "userName")
+                isOnboardingComplete = true
+            } label: {
+                Text("Start")
+                    .font(.largeTitle)
+                    .foregroundColor(.black)
+            }
+
+            
+            
             .fullScreenCover(isPresented: $isOnboardingComplete) {
                 ContentView()
             }

@@ -14,51 +14,53 @@ struct StartMenu: View {
     var body: some View {
         
         
-            
 
-            
-            NavigationView{
                 
                 
                 VStack(alignment: .center){
                     
                         
-                        Text("Welcome, Stefania!")
+
+                    if let userName = UserDefaults.standard.string(forKey: "userName") {
+                   
+                        
+                        Text("Welcome, \(userName)!")
                         .font(.custom("customRegular", size: 46))
                             .bold()
-                        
+                    } else {
+                        // Nessun nome salvato
+                    }
                     
                 
                 
-                HStack{
+                    HStack(spacing: 15){
                     
                     NavigationLink(destination: GameOneView()){
-                        ButtonGameModelView(game: Game(id: 1, title: "Game 1", image: "brain"))
+                        ButtonGameModelView(game: Game(id: 1, title: "TIME ORDER", image: "cop1"))
                     }
                     
                     
                     
                     
                     NavigationLink(destination: GameTwoView()){
-                        ButtonGameModelView(game: Game(id: 2, title: "Game 2", image: "brain"))
+                        ButtonGameModelView(game: Game(id: 2, title: "IMAGE-WORD", image: "cop2"))
                     }
                     
                     
                     
                     NavigationLink(destination: CardMemoryGameView()){
-                        ButtonGameModelView(game: Game(id: 3, title: "Game 3", image: "brain"))
+                        ButtonGameModelView(game: Game(id: 3, title: "MEMORY", image: "cop3"))
                     }
                     
                     
                     
                     NavigationLink(destination: BallsGameMenuLevel()){
-                        ButtonGameModelView(game: Game(id: 4, title: "Game 4", image: "brain"))
+                        ButtonGameModelView(game: Game(id: 4, title: "BALLSATHLON", image: "cop4"))
                     }
                 }
                 
             }
-        }.navigationViewStyle(StackNavigationViewStyle())
-            .navigationBarBackButtonHidden(false)
+
 
     }
 }

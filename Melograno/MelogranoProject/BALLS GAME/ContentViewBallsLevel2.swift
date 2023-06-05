@@ -30,90 +30,96 @@ struct ContentViewBallsLevel2: View {
 
             VStack(alignment: .center, spacing: 70 ){
               
-                VStack{
-                    VStack{
+              
+                 VStack{
+                        VStack{
 
-                        HStack{
-                            VStack(alignment: .leading){
-                                Text("Tap the balls sequence after they lit up ")
-                                    .font(.custom("customRegular", size: 46))
-                                    .fontWeight(.semibold)
+                            HStack{
+                                VStack(alignment: .leading){
+                                    Text("Tap the balls sequence after they lit up ")
+                                        .font(.custom("customRegular", size: 46))
+                                        .fontWeight(.semibold)
+                                }
+                                Spacer()
                             }
-                            Spacer()
+                            .padding()
                         }
-                        .padding()
-                        
                         if !isAnimating && isPlayerTurn{
                             Text("Your turn!")
-                                .font(.custom("customRegular", size: 46))
+                                .font(.custom("customCorsivo", size: 46))
                         }
-
+                     
+                     Text(gameResult)
+                         .font(.custom("customCorsivo", size: 46))
                     }
-                }
+                
                 Spacer()
 
-                
-                HStack{
-                    
-                    BallsView(isHighlighted: $highlight[3], color: .purple)
-                        .onTapGesture {
-                            if !isAnimating && isPlayerTurn {
-                                circleTapped("p")
-                                provideHapticFeedback()
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                VStack{
+                    VStack(spacing: 40){
+                        HStack{
+                            
+                            BallsView(isHighlighted: $highlight[3], color: .purple)
+                                .onTapGesture {
+                                    if !isAnimating && isPlayerTurn {
+                                        circleTapped("p")
+                                        provideHapticFeedback()
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                                             audioPlayer?.currentTime = 0
                                             audioPlayer?.play()
                                         }
-                            }
+                                    }
+                                }
+                            
                         }
-                
+                        
+                        
+                        
+                        
+                        
+                        HStack(spacing: 60) {
+                            
+                            
+                            
+                            BallsView(isHighlighted: $highlight[0], color: .red)
+                                .onTapGesture {
+                                    if !isAnimating && isPlayerTurn {
+                                        circleTapped("r")
+                                        provideHapticFeedback()
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                            audioPlayer?.currentTime = 0
+                                            audioPlayer?.play()
+                                        }
+                                    }
+                                }
+                            BallsView(isHighlighted: $highlight[1], color: .green)
+                                .onTapGesture {
+                                    if !isAnimating && isPlayerTurn {
+                                        circleTapped("g")
+                                        provideHapticFeedback()
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                            audioPlayer?.currentTime = 0
+                                            audioPlayer?.play()
+                                        }
+                                    }
+                                }
+                            BallsView(isHighlighted: $highlight[2], color: .blue)
+                                .onTapGesture {
+                                    if !isAnimating && isPlayerTurn {
+                                        circleTapped("b")
+                                        provideHapticFeedback()
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                            audioPlayer?.currentTime = 0
+                                            audioPlayer?.play()
+                                        }
+                                    }
+                                }
+                        }
+                    }.onAppear(perform: animateCircles)
+
                 }
                 
-                
-                
-                
-                
-                HStack(spacing: 60) {
-                    
-                    
-                    
-                    BallsView(isHighlighted: $highlight[0], color: .red)
-                        .onTapGesture {
-                            if !isAnimating && isPlayerTurn {
-                                circleTapped("r")
-                                provideHapticFeedback()
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                            audioPlayer?.currentTime = 0
-                                            audioPlayer?.play()
-                                        }
-                            }
-                        }
-                    BallsView(isHighlighted: $highlight[1], color: .green)
-                        .onTapGesture {
-                            if !isAnimating && isPlayerTurn {
-                                circleTapped("g")
-                                provideHapticFeedback()
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                            audioPlayer?.currentTime = 0
-                                            audioPlayer?.play()
-                                        }
-                            }
-                        }
-                    BallsView(isHighlighted: $highlight[2], color: .blue)
-                        .onTapGesture {
-                            if !isAnimating && isPlayerTurn {
-                                circleTapped("b")
-                                provideHapticFeedback()
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                            audioPlayer?.currentTime = 0
-                                            audioPlayer?.play()
-                                        }
-                            }
-                        }
-                }
-                //spostato la scritta
-                Text(gameResult)
-                    .font(.custom("customCorsivo", size: 46))
+
                 
                 if !isPlayerTurn && !isAnimating && sequence.count == 6{
                 Button(action: restartGame) {
@@ -123,7 +129,7 @@ struct ContentViewBallsLevel2: View {
             }
                 Spacer()
             }
-            .onAppear(perform: animateCircles)
+           // .onAppear(perform: animateCircles)
             .onAppear {
                 do {
                     if let soundURL = Bundle.main.url(forResource: "notifica", withExtension: "mp3") {

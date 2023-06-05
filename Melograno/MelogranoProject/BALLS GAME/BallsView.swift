@@ -31,19 +31,30 @@ struct BallsView: View {
     var color: Color
     
     var body: some View {
-        ZStack {
-            Circle()
-                .fill(color.opacity(0.6))
-                .frame(width: 150, height: 150)
-            
-            Circle()
-                .fill(color)
-                .frame(width: 150, height: 150)
-                .offset(y: isHighlighted ? -25 : 0)
-                .animation(.spring())
-        }
         
-        .shadow(radius: isHighlighted ? 25 : 0)
+        ZStack{
+            ZStack {
+                Circle()
+                    .fill(color.opacity(0.6))
+                    .frame(width: 150, height: 150)
+                    .overlay(
+                        Circle()
+                            .stroke(Color.black.opacity(0.1), lineWidth: 1)
+                    )
+                
+                Circle()
+                    .fill(color)
+                    .frame(width: 150, height: 150)
+                    .overlay(
+                        Circle()
+                            .stroke(Color.black.opacity(0.1), lineWidth: 1)
+                    )
+                    .offset(y: isHighlighted ? -25 : 0)
+                    .animation(.spring(), value: isHighlighted)
+            }
+            
+            .shadow(radius: isHighlighted ? 25 : 0)
+        }
     }
 }
 

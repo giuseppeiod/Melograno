@@ -52,11 +52,14 @@ struct ContentViewBallsLevel1: View {
                         Text("Your turn!")
                             .font(.custom("customCorsivo", size: 46))
                     }
+                    
+                    Text(gameResult)
+                        .font(.custom("customCorsivo", size: 46))
                 }
-               // Spacer()
-//                if !isAnimating && isPlayerTurn{
-//                    Text("Your turn!")
-//                }
+               
+                Spacer()
+                
+                
                 VStack{
                     Spacer()
                 HStack(spacing: 60) {
@@ -104,12 +107,12 @@ struct ContentViewBallsLevel1: View {
                         }
                     
                 }.onAppear(perform: animateCircles)
-                    Text(gameResult)
-                        .font(.custom("customCorsivo", size: 46))
+//                    Text(gameResult)
+//                        .font(.custom("customCorsivo", size: 46))
                     
                     Spacer()
             }
-                //spostato la scritta
+                
                 
                
                 

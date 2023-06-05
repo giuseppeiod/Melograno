@@ -30,8 +30,10 @@ struct ContentView: View {
         
             
             if UserDefaults.standard.onboardingViewShown  {
-                
-                StartMenu()
+                NavigationView{
+                    StartMenu()
+                }.navigationViewStyle(StackNavigationViewStyle())
+                    .navigationBarBackButtonHidden(false)
             } else {
                 OnBoardingManager()
             }

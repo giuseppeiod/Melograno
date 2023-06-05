@@ -54,7 +54,7 @@ struct CardView: View {
             } else {
                 RoundedRectangle(cornerRadius: 30)
                     .fill(
-                        ImagePaint(image: Image("retrocarta"))
+                        ImagePaint(image: Image("retrocardmemory").resizable())
                     )
                     .frame(width: larghezza, height: altezza)
                     .onTapGesture(perform: onCardTap)

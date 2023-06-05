@@ -92,34 +92,79 @@ struct BallsGameMenuLevel: View{
     
     var body: some View{
         
-        NavigationView{
+     
+        VStack(spacing: 35){
             
-            
-            HStack{
-                
-                NavigationLink(destination: ContentViewBallsLevel1()){
-                    ButtonGameModelView(game: Game(id: 40, title: "Level 1", image: "brain"))
-                }
+            VStack(spacing: 15){
+                Text("BALLSATHLON")
+                    .font(.custom("customRegular", size: 36))
+                    .foregroundColor(.black)
                 
                 
                 
-                NavigationLink(destination: ContentViewBallsLevel2()){
-                    ButtonGameModelView(game: Game(id: 41, title: "Level 2", image: "brain"))
-                }
-
                 
-                
-                
-                NavigationLink(destination: ContentViewBallsLevel2()){
-                    ButtonGameModelView(game: Game(id: 42, title: "Level 3", image: "brain"))
-                }
-                
-                
- 
+                Text("Repeat the sequence of balls when it is your turn.")
+                    .font(.custom("customCorsivo", size: 36))
+                    .foregroundColor(.black)
             }
+            Spacer()
             
-        }.navigationViewStyle(StackNavigationViewStyle())
-            .navigationBarBackButtonHidden(false)
+            
+            VStack(spacing: 15){
+                NavigationLink(destination: ContentViewBallsLevel1()){
+                    //                    ButtonGameModelView(game: Game(id: 40, title: "Level 1", image: "brain"))
+                    ZStack{
+                        Rectangle()
+                            .foregroundColor(Color("CustomPurple"))
+                            .frame(width: 200, height: 50)
+                            .cornerRadius(36)
+                        
+                        Text("Level 1")
+                            .font(.custom("customRegular", size: 36))
+                            .foregroundColor(.white)
+                    }
+                }
+                
+                
+                
+                NavigationLink(destination: ContentViewBallsLevel2()){
+                    //                    ButtonGameModelView(game: Game(id: 41, title: "Level 2", image: "brain"))
+                    
+                    ZStack{
+                        Rectangle()
+                            .foregroundColor(Color("CustomPurple"))
+                            .frame(width: 200, height: 50)
+                            .cornerRadius(36)
+                        
+                        Text("Level 2")
+                            .font(.custom("customRegular", size: 36))
+                            .foregroundColor(.white)
+                    }
+                }
+                
+                
+                
+                
+                NavigationLink(destination: ContentViewBallsLevel3()){
+                    //                    ButtonGameModelView(game: Game(id: 42, title: "Level 3", image: "brain"))
+                    ZStack{
+                        Rectangle()
+                            .foregroundColor(Color("CustomPurple"))
+                            .frame(width: 200, height: 50)
+                            .cornerRadius(36)
+                        
+                        Text("Level 3")
+                            .font(.custom("customRegular", size: 30))
+                            .foregroundColor(.white)
+                    }
+                }
+                
+                
+                
+            }.navigationBarBackButtonHidden(false)
+            Spacer()
+        }
+        
     }
     
     
