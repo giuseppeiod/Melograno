@@ -35,7 +35,10 @@ struct ContentView: View {
                 }.navigationViewStyle(StackNavigationViewStyle())
                     .navigationBarBackButtonHidden(false)
             } else {
-                OnBoardingManager()
+              
+                    OnBoardingManager()
+                
+               
             }
         }
     
