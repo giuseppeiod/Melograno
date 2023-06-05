@@ -26,6 +26,8 @@
 		0A72FD7A2A27531300073F85 /* WorldCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A72FD792A27531300073F85 /* WorldCard.swift */; };
 		0A72FD7C2A27531E00073F85 /* CardGameTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A72FD7B2A27531E00073F85 /* CardGameTwo.swift */; };
 		0A72FD7E2A27533100073F85 /* ModelGameTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A72FD7D2A27533100073F85 /* ModelGameTwo.swift */; };
+		0A73F62C2A2E29C800959F41 /* Modale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A73F62B2A2E29C800959F41 /* Modale.swift */; };
+		0A73F62E2A2E29D000959F41 /* OnBoardingFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A73F62D2A2E29D000959F41 /* OnBoardingFirst.swift */; };
 		0ADDF04D2A1CB836005BDE6A /* Game2.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 13FD072A2A14C22E0023539C /* Game2.geojson */; };
 		0ADDF04E2A1CB84D005BDE6A /* Game2.2.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 13FD072B2A14C2550023539C /* Game2.2.geojson */; };
 		0ADDF04F2A1CB84F005BDE6A /* Game2.3.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 13FD072C2A14C26A0023539C /* Game2.3.geojson */; };
@@ -36,8 +38,6 @@
 		0ADDF0542A1CB8A6005BDE6A /* Game3.3.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 0ADDF04C2A1CB5E5005BDE6A /* Game3.3.geojson */; };
 		0AEC85742A1290210051DAC4 /* OnBoardingFourth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC85732A1290210051DAC4 /* OnBoardingFourth.swift */; };
 		0AEC85762A1290350051DAC4 /* OnBoardingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC85752A1290350051DAC4 /* OnBoardingManager.swift */; };
-		13AC68642A2DC89F00973F8D /* Modale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AC68622A2DC89F00973F8D /* Modale.swift */; };
-		13AC68652A2DC89F00973F8D /* OnBoardingFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AC68632A2DC89F00973F8D /* OnBoardingFirst.swift */; };
 		13ED4CA22A2489D8009CF732 /* menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 13ED4CA12A2489D8009CF732 /* menu.mp3 */; };
 		C91DC2922A13C65800FA8329 /* ContentViewBallsLevel1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DC2912A13C65800FA8329 /* ContentViewBallsLevel1.swift */; };
 		C91DC2942A13C66C00FA8329 /* BallsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DC2932A13C66C00FA8329 /* BallsView.swift */; };
@@ -99,13 +99,13 @@
 		0A72FD792A27531300073F85 /* WorldCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCard.swift; sourceTree = "<group>"; };
 		0A72FD7B2A27531E00073F85 /* CardGameTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGameTwo.swift; sourceTree = "<group>"; };
 		0A72FD7D2A27533100073F85 /* ModelGameTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelGameTwo.swift; sourceTree = "<group>"; };
+		0A73F62B2A2E29C800959F41 /* Modale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Modale.swift; path = "MelogranoProject/On Boarding/Modale.swift"; sourceTree = SOURCE_ROOT; };
+		0A73F62D2A2E29D000959F41 /* OnBoardingFirst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnBoardingFirst.swift; path = "MelogranoProject/On Boarding/OnBoardingFirst.swift"; sourceTree = SOURCE_ROOT; };
 		0ADDF04A2A1CB5BB005BDE6A /* Game3.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game3.geojson; sourceTree = "<group>"; };
 		0ADDF04B2A1CB5D5005BDE6A /* Game3.2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game3.2.geojson; sourceTree = "<group>"; };
 		0ADDF04C2A1CB5E5005BDE6A /* Game3.3.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game3.3.geojson; sourceTree = "<group>"; };
 		0AEC85732A1290210051DAC4 /* OnBoardingFourth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingFourth.swift; sourceTree = "<group>"; };
 		0AEC85752A1290350051DAC4 /* OnBoardingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingManager.swift; sourceTree = "<group>"; };
-		13AC68622A2DC89F00973F8D /* Modale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Modale.swift; path = "../../../../../Melograno/Melograno/MelogranoProject/On Boarding/Modale.swift"; sourceTree = "<group>"; };
-		13AC68632A2DC89F00973F8D /* OnBoardingFirst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnBoardingFirst.swift; path = "../../../../../Melograno/Melograno/MelogranoProject/On Boarding/OnBoardingFirst.swift"; sourceTree = "<group>"; };
 		13ED4CA12A2489D8009CF732 /* menu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = menu.mp3; path = ../../Sound/menu.mp3; sourceTree = "<group>"; };
 		13FD072A2A14C22E0023539C /* Game2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game2.geojson; sourceTree = "<group>"; };
 		13FD072B2A14C2550023539C /* Game2.2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game2.2.geojson; sourceTree = "<group>"; };
@@ -263,8 +263,8 @@
 		0AEC856C2A128FCE0051DAC4 /* On Boarding */ = {
 			isa = PBXGroup;
 			children = (
-				13AC68622A2DC89F00973F8D /* Modale.swift */,
-				13AC68632A2DC89F00973F8D /* OnBoardingFirst.swift */,
+				0A73F62B2A2E29C800959F41 /* Modale.swift */,
+				0A73F62D2A2E29D000959F41 /* OnBoardingFirst.swift */,
 				0AEC85752A1290350051DAC4 /* OnBoardingManager.swift */,
 				0AEC85732A1290210051DAC4 /* OnBoardingFourth.swift */,
 			);
@@ -477,13 +477,13 @@
 				0A6732A22A0B830400806FEA /* Persistence.swift in Sources */,
 				0A72FD7A2A27531300073F85 /* WorldCard.swift in Sources */,
 				C9ABC23F2A267DAD00D5D6E9 /* ButtonGameModelView.swift in Sources */,
-				13AC68642A2DC89F00973F8D /* Modale.swift in Sources */,
 				0A67329B2A0B830300806FEA /* ContentView.swift in Sources */,
 				0A72FD742A2752DD00073F85 /* GameTwoView.swift in Sources */,
 				0A72FD7E2A27533100073F85 /* ModelGameTwo.swift in Sources */,
 				C91DC2922A13C65800FA8329 /* ContentViewBallsLevel1.swift in Sources */,
 				0A72FD252A273AE300073F85 /* CardView.swift in Sources */,
 				0A72FD262A273AE300073F85 /* CardMemoryGameView.swift in Sources */,
+				0A73F62E2A2E29D000959F41 /* OnBoardingFirst.swift in Sources */,
 				0A6732992A0B830300806FEA /* MelogranoProjectApp.swift in Sources */,
 				0AEC85742A1290210051DAC4 /* OnBoardingFourth.swift in Sources */,
 				C91DC2942A13C66C00FA8329 /* BallsView.swift in Sources */,
@@ -495,8 +495,8 @@
 				C94228002A265E590019A550 /* GameOneView.swift in Sources */,
 				C99C52C92A28AC3B00105656 /* StartMenu.swift in Sources */,
 				C94228022A265E810019A550 /* CardGameOne.swift in Sources */,
+				0A73F62C2A2E29C800959F41 /* Modale.swift in Sources */,
 				C94228082A265EF00019A550 /* CardOrderViewGameOne.swift in Sources */,
-				13AC68652A2DC89F00973F8D /* OnBoardingFirst.swift in Sources */,
 				0A72FD7C2A27531E00073F85 /* CardGameTwo.swift in Sources */,
 				C97DE1572A1D21B000BB7298 /* BallsGameMenuLevel.swift in Sources */,
 				C9ABC2412A267DBE00D5D6E9 /* Game.swift in Sources */,
