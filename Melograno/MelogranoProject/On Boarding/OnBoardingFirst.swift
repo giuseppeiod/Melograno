@@ -8,36 +8,36 @@
 import SwiftUI
 
 struct OnBoardingFirst: View {
-   
+    @State private var isShowingModale = false
+
     var body: some View {
-        
-        VStack (alignment: .center) {
-            
-            Image("w3")
+
+        ZStack{ Image("sfondo1")
                 .resizable()
-                .aspectRatio(contentMode: .fit)
-                .padding()
-            
-            Text("Your care matters!")
-                .font(.title)
-                .multilineTextAlignment(.center)
-                .padding()
-            
-            Text("Stay tuned with your doctor")
-                .font(.body)
-                .fontWeight(.light)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal)
-                .padding()
-            
-        } //: VStack
+                .ignoresSafeArea()
+            Text("GRANDE ICONA")
+                .colorInvert()
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .onAppear {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                                    isShowingModale = true
+                                }
+        }
+        .sheet(isPresented: $isShowingModale) {
+            Modale()
+        }
+
+
     }
 }
 
-struct OnBoardingFrist_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        
-        OnBoardingFirst()
+
+    struct OnBoardingFrist_Previews: PreviewProvider {
+
+        static var previews: some View {
+
+            OnBoardingFirst()
+        }
     }
 }
