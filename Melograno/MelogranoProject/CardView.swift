@@ -25,7 +25,7 @@ struct CardView: View {
             if card.isMatched {
                 Image(card.imageName)
                     .resizable()
-                    .frame(height: altezza*0.7)
+                    
                     .scaledToFit()
                     .overlay(
                         Image(systemName: "checkmark")
@@ -36,26 +36,25 @@ struct CardView: View {
                     .background(
                         Image("sfondo")
                             .resizable() // Rendi l'immagine di sfondo ridimensionabile
-                            .aspectRatio(contentMode: .fill)
+                            .scaledToFit()
                             .frame(width: larghezza, height: altezza) // Imposta le dimensioni dell'immagine di sfondo
                     )
                 
             } else if card.isFaceUp {
                 Image(card.imageName)
                     .resizable()
-                    .frame( height: altezza*0.7)
+                    
                     .scaledToFit()
                     .background(
                         Image("sfondo")
                             .resizable() // Rendi l'immagine di sfondo ridimensionabile
-                            .aspectRatio(contentMode: .fill)
+                            .scaledToFit()
                             .frame(width: larghezza, height: altezza) // Imposta le dimensioni dell'immagine di sfondo
                     )
             } else {
-                RoundedRectangle(cornerRadius: 30)
-                    .fill(
-                        ImagePaint(image: Image("retrocardmemory").resizable())
-                    )
+                Image("retrocardmemory")
+                    .resizable()
+                    .scaledToFit()
                     .frame(width: larghezza, height: altezza)
                     .onTapGesture(perform: onCardTap)
             }
