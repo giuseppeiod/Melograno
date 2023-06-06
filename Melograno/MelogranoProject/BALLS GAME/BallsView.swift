@@ -27,45 +27,83 @@ import SwiftUI
 
 
 struct BallsView: View {
+    
+    
+    @State var transY: CGFloat = 0
+    @State var hrect: CGFloat = 20
+    @State var transRect: CGFloat = 0
+    
     @Binding var isHighlighted: Bool
     var color: Color
     
     var body: some View {
-        
-        ZStack{
-            ZStack {
+        ZStack {
+            VStack {
+                Spacer()
                 Circle()
-                    .fill(color.opacity(0.6))
-                    .frame(width: 150, height: 150)
-                    .overlay(
-                        Circle()
-                            .stroke(Color.black.opacity(0.1), lineWidth: 1)
-                    )
-                
-                Circle()
-                    .fill(color)
-                    .frame(width: 150, height: 150)
-                    .overlay(
-                        Circle()
-                            .stroke(Color.black.opacity(0.1), lineWidth: 1)
-                    )
-                    .offset(y: isHighlighted ? -25 : 0)
-                    .animation(.spring(), value: isHighlighted)
+                    .foregroundColor(.black)
+                    .frame(width: 100)
             }
             
-            .shadow(radius: isHighlighted ? 25 : 0)
+            VStack {
+                Spacer()
+                Rectangle()
+                    .foregroundColor(.black)
+                    .frame(width: 100, height: hrect)
+                    .offset(x: 0, y: transRect)
+                Spacer()
+            }
+            
+            VStack {
+                Circle()
+                    .foregroundColor(isHighlighted ? color : color)
+                    .frame(width: 100)
+                    .offset(x: 0, y: transY)
+            }
+        }
+        .frame(width: 100, height: 120)
+        .onChange(of: isHighlighted) { newValue in
+            if newValue {
+                animate()
+            } else {
+                stopAnimation()
+            }
+        }
+        .onAppear {
+            stopAnimation()
         }
     }
-}
-
-
-
-struct BallsView_Previews: PreviewProvider {
-    @State static var isHighlighted = false
     
-    static var previews: some View {
-        BallsView(isHighlighted: $isHighlighted, color: .blue)
-            .padding()
-            .previewLayout(.sizeThatFits)
+    func animate() {
+        withAnimation {
+            transY = 13
+            hrect = 1
+            transRect = 7
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            withAnimation(.linear(duration: 1.0)) {
+                transY = 0
+                hrect = 20
+                transRect = 0
+            }
+        }
+    }
+    
+    func stopAnimation() {
+        transY = 0
+        hrect = 20
+        transRect = 0
     }
 }
+
+
+//struct BallsView_Previews: PreviewProvider {
+//    @State static var isHighlighted = false
+//    
+//    static var previews: some View {
+//        BallsView(isHighlighted: $isHighlighted, color: .blue)
+//            .padding()
+//            .previewLayout(.sizeThatFits)
+//    }
+//}
