@@ -99,21 +99,8 @@ struct CardMemoryGameView: View {
             
         }
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-            
-//            .onChange(of: shouldResetCards) { shouldReset in
-//                if shouldReset {
-//                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-//                        flippedWrongCards.removeAll()
-//                        shouldResetCards = false
-//                    }
-//                }
-//            }
-        
-    }
-
-
-
-    func flipCard(_ index: Int) {
+            }
+func flipCard(_ index: Int) {
         withAnimation {
             if flippedCards.contains(index) {
                 flippedCards.removeAll { $0 == index }

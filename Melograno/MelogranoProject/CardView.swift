@@ -13,19 +13,17 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 struct CardView: View {
-    
     @ObservedObject var card: CardMemory
     var onCardTap: () -> Void
     
-    var altezza : CGFloat = UIScreen.main.bounds.height * 0.35
-    var larghezza : CGFloat = UIScreen.main.bounds.width * 0.15
+    var altezza: CGFloat = UIScreen.main.bounds.height * 0.35
+    var larghezza: CGFloat = UIScreen.main.bounds.width * 0.15
     
     var body: some View {
         ZStack {
             if card.isMatched {
                 Image(card.imageName)
                     .resizable()
-                    
                     .scaledToFit()
                     .overlay(
                         Image(systemName: "checkmark")
@@ -35,32 +33,33 @@ struct CardView: View {
                     .cornerRadius(30)
                     .background(
                         Image("sfondo")
-                            .resizable() // Rendi l'immagine di sfondo ridimensionabile
+                            .resizable()
                             .scaledToFit()
-                            .frame(width: larghezza, height: altezza) // Imposta le dimensioni dell'immagine di sfondo
+                            .frame(width: larghezza, height: altezza)
                     )
-                
+                    .rotation3DEffect(.degrees(0), axis: (x: 0, y: 1, z: 0))
             } else if card.isFaceUp {
                 Image(card.imageName)
                     .resizable()
-                    
                     .scaledToFit()
                     .background(
                         Image("sfondo")
-                            .resizable() // Rendi l'immagine di sfondo ridimensionabile
+                            .resizable()
                             .scaledToFit()
-                            .frame(width: larghezza, height: altezza) // Imposta le dimensioni dell'immagine di sfondo
+                            .frame(width: larghezza, height: altezza)
                     )
+                    .rotation3DEffect(.degrees(0), axis: (x: 0, y: 1, z: 0))
             } else {
                 Image("retrocardmemory")
                     .resizable()
                     .scaledToFit()
                     .frame(width: larghezza, height: altezza)
+                    .rotation3DEffect(.degrees(0), axis: (x: 0, y: 1, z: 0))
                     .onTapGesture(perform: onCardTap)
             }
         }
         .frame(width: larghezza, height: altezza)
+        .rotation3DEffect(.degrees(card.isFaceUp ? 180 : 0), axis: (x: 0, y: 1, z: 0))
+//        .animation(.easeInOut(duration: 0.5))
     }
 }
-
-
