@@ -43,6 +43,7 @@ struct ContentViewBallsLevel1: View {
                                 Text("Tap the balls sequence after they lit up ")
                                     .font(.custom("customRegular", size: 46))
                                     .fontWeight(.semibold)
+                                    .padding([.top, .leading], 40.0)
                             }
                             Spacer()
                         }

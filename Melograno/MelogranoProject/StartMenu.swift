@@ -6,8 +6,20 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct StartMenu: View {
+    @State private var audioPlayer: AVAudioPlayer?
+    
+    func playSound() {
+        guard let url = Bundle.main.url(forResource: "menu", withExtension: "mp3") else { return }
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.play()
+        } catch {
+            print("Errore nella riproduzione del suono: \(error.localizedDescription)")
+        }
+    }
     
     
     
@@ -38,6 +50,11 @@ struct StartMenu: View {
                     NavigationLink(destination: GameOneView()){
                         ButtonGameModelView(game: Game(id: 1, title: "TIME ORDER", image: "cop1"))
                     }
+                    .simultaneousGesture(
+                        TapGesture().onEnded {
+                            playSound()
+                        }
+                    )
                     
                     
                     
@@ -45,18 +62,31 @@ struct StartMenu: View {
                     NavigationLink(destination: GameTwoView()){
                         ButtonGameModelView(game: Game(id: 2, title: "IMAGE-WORD", image: "cop2"))
                     }
-                    
+                    .simultaneousGesture(
+                        TapGesture().onEnded {
+                            playSound()
+                        }
+                    )
                     
                     
                     NavigationLink(destination: CardMemoryGameView()){
                         ButtonGameModelView(game: Game(id: 3, title: "MEMORY", image: "cop3"))
                     }
-                    
+                    .simultaneousGesture(
+                        TapGesture().onEnded {
+                            playSound()
+                        }
+                    )
                     
                     
                     NavigationLink(destination: BallsGameMenuLevel()){
                         ButtonGameModelView(game: Game(id: 4, title: "BALLSATHLON", image: "cop4"))
                     }
+                    .simultaneousGesture(
+                        TapGesture().onEnded {
+                            playSound()
+                        }
+                    )
                 }
                 
             }
