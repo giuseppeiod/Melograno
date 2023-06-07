@@ -61,7 +61,7 @@ struct ButtonGameModelView: View {
                     .resizable()
                     
 
-                    .frame(width: UIScreen.main.bounds.width*0.19 , height: UIScreen.main.bounds.width*0.20)
+                    .frame(width: UIScreen.main.bounds.width*0.19 , height: UIScreen.main.bounds.width*0.19)
                                     .padding(.bottom, 49)
                                                             
 
@@ -73,7 +73,7 @@ struct ButtonGameModelView: View {
             Text(game.title)
                 .foregroundColor(.white)
                 .font(.title)
-                .padding(.top, 230)
+                .padding(.top, 270)
             
         }
         

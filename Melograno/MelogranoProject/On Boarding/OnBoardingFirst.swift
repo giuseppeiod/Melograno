@@ -12,22 +12,16 @@ struct OnBoardingFirst: View {
 
     var body: some View {
 
-        ZStack{ Image("sfondo1")
+        ZStack{ Image("sfondo1 1")
                 .resizable()
                 .ignoresSafeArea()
             Text("GRANDE ICONA")
                 .colorInvert()
                 .font(.largeTitle)
                 .fontWeight(.bold)
-                .onAppear {
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                                    isShowingModale = true
-                                }
+               
         }
-        .sheet(isPresented: $isShowingModale) {
-            Modale()
-        }
-
+     
 
     }
 }
@@ -40,4 +34,4 @@ struct OnBoardingFirst: View {
             OnBoardingFirst()
         }
     }
-}
+
