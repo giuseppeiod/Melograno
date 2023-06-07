@@ -52,6 +52,20 @@
 		C97DE1532A1D215000BB7298 /* ContentViewBallsLevel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97DE1522A1D215000BB7298 /* ContentViewBallsLevel2.swift */; };
 		C97DE1552A1D217E00BB7298 /* ContentViewBallsLevel3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97DE1542A1D217E00BB7298 /* ContentViewBallsLevel3.swift */; };
 		C97DE1572A1D21B000BB7298 /* BallsGameMenuLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97DE1562A1D21B000BB7298 /* BallsGameMenuLevel.swift */; };
+		C9957EBB2A30700A00A648A5 /* Figtree-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9957EAD2A30700900A648A5 /* Figtree-SemiBold.ttf */; };
+		C9957EBC2A30700A00A648A5 /* Figtree-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9957EAE2A30700900A648A5 /* Figtree-MediumItalic.ttf */; };
+		C9957EBD2A30700A00A648A5 /* Figtree-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9957EAF2A30700900A648A5 /* Figtree-SemiBoldItalic.ttf */; };
+		C9957EBE2A30700A00A648A5 /* Figtree-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9957EB02A30700900A648A5 /* Figtree-BlackItalic.ttf */; };
+		C9957EBF2A30700A00A648A5 /* Figtree-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9957EB12A30700900A648A5 /* Figtree-Bold.ttf */; };
+		C9957EC02A30700A00A648A5 /* Figtree-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9957EB22A30700900A648A5 /* Figtree-Regular.ttf */; };
+		C9957EC12A30700A00A648A5 /* Figtree-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9957EB32A30700900A648A5 /* Figtree-LightItalic.ttf */; };
+		C9957EC22A30700A00A648A5 /* Figtree-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9957EB42A30700900A648A5 /* Figtree-Medium.ttf */; };
+		C9957EC32A30700A00A648A5 /* Figtree-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9957EB52A30700900A648A5 /* Figtree-ExtraBold.ttf */; };
+		C9957EC42A30700A00A648A5 /* Figtree-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9957EB62A30700900A648A5 /* Figtree-Light.ttf */; };
+		C9957EC52A30700A00A648A5 /* Figtree-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9957EB72A30700A00A648A5 /* Figtree-ExtraBoldItalic.ttf */; };
+		C9957EC62A30700A00A648A5 /* Figtree-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9957EB82A30700A00A648A5 /* Figtree-Italic.ttf */; };
+		C9957EC72A30700A00A648A5 /* Figtree-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9957EB92A30700A00A648A5 /* Figtree-BoldItalic.ttf */; };
+		C9957EC82A30700A00A648A5 /* Figtree-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9957EBA2A30700A00A648A5 /* Figtree-Black.ttf */; };
 		C99C52C92A28AC3B00105656 /* StartMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99C52C82A28AC3B00105656 /* StartMenu.swift */; };
 		C9ABC23F2A267DAD00D5D6E9 /* ButtonGameModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ABC23E2A267DAD00D5D6E9 /* ButtonGameModelView.swift */; };
 		C9ABC2412A267DBE00D5D6E9 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ABC2402A267DBE00D5D6E9 /* Game.swift */; };
@@ -125,6 +139,20 @@
 		C97DE1522A1D215000BB7298 /* ContentViewBallsLevel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewBallsLevel2.swift; sourceTree = "<group>"; };
 		C97DE1542A1D217E00BB7298 /* ContentViewBallsLevel3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewBallsLevel3.swift; sourceTree = "<group>"; };
 		C97DE1562A1D21B000BB7298 /* BallsGameMenuLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallsGameMenuLevel.swift; sourceTree = "<group>"; };
+		C9957EAD2A30700900A648A5 /* Figtree-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-SemiBold.ttf"; sourceTree = "<group>"; };
+		C9957EAE2A30700900A648A5 /* Figtree-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-MediumItalic.ttf"; sourceTree = "<group>"; };
+		C9957EAF2A30700900A648A5 /* Figtree-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		C9957EB02A30700900A648A5 /* Figtree-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-BlackItalic.ttf"; sourceTree = "<group>"; };
+		C9957EB12A30700900A648A5 /* Figtree-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-Bold.ttf"; sourceTree = "<group>"; };
+		C9957EB22A30700900A648A5 /* Figtree-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-Regular.ttf"; sourceTree = "<group>"; };
+		C9957EB32A30700900A648A5 /* Figtree-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-LightItalic.ttf"; sourceTree = "<group>"; };
+		C9957EB42A30700900A648A5 /* Figtree-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-Medium.ttf"; sourceTree = "<group>"; };
+		C9957EB52A30700900A648A5 /* Figtree-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-ExtraBold.ttf"; sourceTree = "<group>"; };
+		C9957EB62A30700900A648A5 /* Figtree-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-Light.ttf"; sourceTree = "<group>"; };
+		C9957EB72A30700A00A648A5 /* Figtree-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		C9957EB82A30700A00A648A5 /* Figtree-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-Italic.ttf"; sourceTree = "<group>"; };
+		C9957EB92A30700A00A648A5 /* Figtree-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-BoldItalic.ttf"; sourceTree = "<group>"; };
+		C9957EBA2A30700A00A648A5 /* Figtree-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-Black.ttf"; sourceTree = "<group>"; };
 		C99C52C82A28AC3B00105656 /* StartMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenu.swift; sourceTree = "<group>"; };
 		C9ABC23E2A267DAD00D5D6E9 /* ButtonGameModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGameModelView.swift; sourceTree = "<group>"; };
 		C9ABC2402A267DBE00D5D6E9 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
@@ -202,6 +230,20 @@
 				0A5A4CDF2A1387A800D7396D /* Model */,
 				C9F92ADF2A29DD9900AF53CC /* customCorsivo.ttf */,
 				C9F92AE12A29DDA700AF53CC /* customRegular.ttf */,
+				C9957EBA2A30700A00A648A5 /* Figtree-Black.ttf */,
+				C9957EB02A30700900A648A5 /* Figtree-BlackItalic.ttf */,
+				C9957EB12A30700900A648A5 /* Figtree-Bold.ttf */,
+				C9957EB92A30700A00A648A5 /* Figtree-BoldItalic.ttf */,
+				C9957EB52A30700900A648A5 /* Figtree-ExtraBold.ttf */,
+				C9957EB72A30700A00A648A5 /* Figtree-ExtraBoldItalic.ttf */,
+				C9957EB82A30700A00A648A5 /* Figtree-Italic.ttf */,
+				C9957EB62A30700900A648A5 /* Figtree-Light.ttf */,
+				C9957EB32A30700900A648A5 /* Figtree-LightItalic.ttf */,
+				C9957EB42A30700900A648A5 /* Figtree-Medium.ttf */,
+				C9957EAE2A30700900A648A5 /* Figtree-MediumItalic.ttf */,
+				C9957EB22A30700900A648A5 /* Figtree-Regular.ttf */,
+				C9957EAD2A30700900A648A5 /* Figtree-SemiBold.ttf */,
+				C9957EAF2A30700900A648A5 /* Figtree-SemiBoldItalic.ttf */,
 				0A67329C2A0B830400806FEA /* Assets.xcassets */,
 				C92CF2E22A1B503B00AAF385 /* Sound */,
 				0A6732A32A0B830400806FEA /* MelogranoProject.xcdatamodeld */,
@@ -431,19 +473,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ADDF0542A1CB8A6005BDE6A /* Game3.3.geojson in Resources */,
+				C9957EC12A30700A00A648A5 /* Figtree-LightItalic.ttf in Resources */,
+				C9957EC22A30700A00A648A5 /* Figtree-Medium.ttf in Resources */,
+				C9957EBE2A30700A00A648A5 /* Figtree-BlackItalic.ttf in Resources */,
 				0ADDF04D2A1CB836005BDE6A /* Game2.geojson in Resources */,
 				C9F92AE22A29DDA700AF53CC /* customRegular.ttf in Resources */,
 				0ADDF0512A1CB855005BDE6A /* Game1.2.geojson in Resources */,
+				C9957EC32A30700A00A648A5 /* Figtree-ExtraBold.ttf in Resources */,
 				0ADDF04E2A1CB84D005BDE6A /* Game2.2.geojson in Resources */,
 				0ADDF0532A1CB8A4005BDE6A /* Game3.2.geojson in Resources */,
+				C9957EBD2A30700A00A648A5 /* Figtree-SemiBoldItalic.ttf in Resources */,
+				C9957EBC2A30700A00A648A5 /* Figtree-MediumItalic.ttf in Resources */,
+				C9957EC42A30700A00A648A5 /* Figtree-Light.ttf in Resources */,
+				C9957EBB2A30700A00A648A5 /* Figtree-SemiBold.ttf in Resources */,
+				C9957EC02A30700A00A648A5 /* Figtree-Regular.ttf in Resources */,
+				C9957EC82A30700A00A648A5 /* Figtree-Black.ttf in Resources */,
 				0ADDF0522A1CB85B005BDE6A /* Game3.geojson in Resources */,
 				C950A9312A14A4CD005DFE2D /* MemoryCards.geojson in Resources */,
 				C950A92D2A149FFF005DFE2D /* Game1.geojson in Resources */,
+				C9957EBF2A30700A00A648A5 /* Figtree-Bold.ttf in Resources */,
+				C9957EC62A30700A00A648A5 /* Figtree-Italic.ttf in Resources */,
 				0A6732A02A0B830400806FEA /* Preview Assets.xcassets in Resources */,
 				C9F92AE02A29DD9900AF53CC /* customCorsivo.ttf in Resources */,
+				C9957EC72A30700A00A648A5 /* Figtree-BoldItalic.ttf in Resources */,
 				0ADDF0502A1CB852005BDE6A /* Game1.3.geojson in Resources */,
 				13ED4CA22A2489D8009CF732 /* menu.mp3 in Resources */,
 				C92CF2E42A1B507000AAF385 /* notifica.mp3 in Resources */,
+				C9957EC52A30700A00A648A5 /* Figtree-ExtraBoldItalic.ttf in Resources */,
 				0A67329D2A0B830400806FEA /* Assets.xcassets in Resources */,
 				0ADDF04F2A1CB84F005BDE6A /* Game2.3.geojson in Resources */,
 			);
