@@ -54,7 +54,7 @@ struct CardMemoryGameView: View {
                             
                             CardView(card: card, onCardTap: {
                                 game.choose(card)
-                                flipCard(index)
+//                                flipCard(index)
                             })
                             
                             .padding()
@@ -63,7 +63,7 @@ struct CardMemoryGameView: View {
                             .animation(.easeInOut(duration: 0.5))
                             .onTapGesture {
                                 withAnimation {
-                                    flipCard(index)
+//                                    flipCard(index)
                                 }
                             }
                         }
