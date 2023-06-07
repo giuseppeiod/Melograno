@@ -47,6 +47,7 @@ struct ContentViewBallsLevel3: View {
                 if !isAnimating && isPlayerTurn{
                     Text("Your turn!")
                         .font(.custom("customCorsivo", size: 46))
+                        .padding()
                 }
                 
                 Text(gameResult)

@@ -42,7 +42,7 @@ struct BallsView: View {
                 Spacer()
                 Circle()
                     .foregroundColor(.black)
-                    .frame(width: 100)
+                    .frame(width: 140)
             }
             
             VStack {
@@ -57,11 +57,11 @@ struct BallsView: View {
             VStack {
                 Circle()
                     .foregroundColor(isHighlighted ? color : color)
-                    .frame(width: 100)
+                    .frame(width: 140)
                     .offset(x: 0, y: transY)
             }
         }
-        .frame(width: 100, height: 120)
+        .frame(width: 140, height: 160)
         .onChange(of: isHighlighted) { newValue in
             if newValue {
                 animate()

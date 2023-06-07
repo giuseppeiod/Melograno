@@ -52,7 +52,9 @@ struct ContentViewBallsLevel1: View {
                     if !isAnimating && isPlayerTurn{
                         Text("Your turn!")
                             .font(.custom("customCorsivo", size: 46))
+                            .padding()
                     }
+                       
                     
                     Text(gameResult)
                         .font(.custom("customCorsivo", size: 46))
@@ -97,6 +99,11 @@ struct ContentViewBallsLevel1: View {
                         }
                     BallsView(isHighlighted: $highlight[2], color: .blue)
                         .onTapGesture {
+                            
+                            
+                            
+                            
+                            
                             if !isAnimating && isPlayerTurn {
                                 circleTapped("b")
                                 provideHapticFeedback()
