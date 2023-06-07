@@ -24,7 +24,7 @@ struct StartMenu: View {
     var body: some View {
         ZStack{
             
-                Image("Menu")
+                Image("menu")
                     .resizable()
                     .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
