@@ -1,0 +1,23 @@
+[
+    [{"id": 0, "correctIndex": 1, "imageName": "CAT", "isHidden": false, "isBlurred": false},
+        {"id": 1, "correctIndex": 2, "imageName": "HORSE", "isHidden": false, "isBlurred": false},
+        {"id": 2, "correctIndex": 3, "imageName": "DOG", "isHidden": false, "isBlurred": false},
+        {"id": 3, "correctIndex": 4, "imageName": "TURTLE", "isHidden": false, "isBlurred": false},
+        {"id": 3, "correctIndex": 5, "imageName": "PARROT", "isHidden": false, "isBlurred": false}
+    ],
+    [
+        {"id": 4, "correctIndex": 1, "imageName": "gallinaim", "isHidden": false, "isBlurred": false},
+        {"id": 5, "correctIndex": 2, "imageName": "peraim", "isHidden": false, "isBlurred": false},
+        {"id": 6, "correctIndex": 3, "imageName": "pantofoleim", "isHidden": false, "isBlurred": false},
+        {"id": 7, "correctIndex": 4, "imageName": "aranciaim", "isHidden": false, "isBlurred": false},
+        {"id": 8, "correctIndex": 5, "imageName": "camiciaim", "isHidden": false, "isBlurred": false}
+    ],
+    [
+        {"id": 9, "correctIndex": 1, "imageName": "paperaima", "isHidden": false, "isBlurred": false},
+        {"id": 10, "correctIndex": 2, "imageName": "peraim", "isHidden": false, "isBlurred": false},
+        {"id": 11, "correctIndex": 3, "imageName": "chitarra", "isHidden": false, "isBlurred": false},
+        {"id": 12, "correctIndex": 4, "imageName": "aranciaim", "isHidden": false, "isBlurred": false},
+        {"id": 13, "correctIndex": 5, "imageName": "camiciaim", "isHidden": false, "isBlurred": false}
+    ]
+]
+ 

@@ -1,0 +1,23 @@
+[
+  [
+    {"id": 0, "correctIndex": 1, "imageName": "sveglia", "isHidden": false, "isBlurred": false},
+    {"id": 1, "correctIndex": 2, "imageName": "colazione", "isHidden": false, "isBlurred": false},
+    {"id": 2, "correctIndex": 3, "imageName": "auto", "isHidden": false, "isBlurred": false},
+    {"id": 3, "correctIndex": 4, "imageName": "lavoro", "isHidden": false, "isBlurred": false},
+    {"id": 4, "correctIndex": 5, "imageName": "lavoro", "isHidden": false, "isBlurred": false}
+  ],
+  [
+    {"id": 0, "correctIndex": 1, "imageName": "semi", "isHidden": false, "isBlurred": false},
+    {"id": 1, "correctIndex": 2, "imageName": "germoglio", "isHidden": false, "isBlurred": false},
+    {"id": 2, "correctIndex": 3, "imageName": "piantina", "isHidden": false, "isBlurred": false},
+    {"id": 3, "correctIndex": 4, "imageName": "albero", "isHidden": false, "isBlurred": false},
+    {"id": 4, "correctIndex": 5, "imageName": "lavoro", "isHidden": false, "isBlurred": false}
+  ],
+  [
+    {"id": 0, "correctIndex": 1, "imageName": "5cent", "isHidden": false, "isBlurred": false},
+    {"id": 1, "correctIndex": 2, "imageName": "2cent", "isHidden": false, "isBlurred": false},
+    {"id": 2, "correctIndex": 3, "imageName": "1euro", "isHidden": false, "isBlurred": false},
+    {"id": 3, "correctIndex": 4, "imageName": "2euro", "isHidden": false, "isBlurred": false},
+    {"id": 4, "correctIndex": 5, "imageName": "lavoro", "isHidden": false, "isBlurred": false}
+  ]
+]

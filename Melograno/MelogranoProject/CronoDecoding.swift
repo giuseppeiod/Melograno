@@ -21,7 +21,7 @@ func load<T: Decodable>(type:String) -> T {
 
     let data: Data
 
-    guard let file = Bundle.main.url(forResource: type, withExtension: "json")
+    guard let file = Bundle.main.url(forResource: type, withExtension: "geojson")
         else {
             fatalError("Couldn't find in main bundle.")
 

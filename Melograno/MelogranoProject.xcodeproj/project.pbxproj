@@ -87,6 +87,12 @@
 		C9DFCF9D2A3705350018AA9B /* CronoDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DFCF9C2A3705350018AA9B /* CronoDecoding.swift */; };
 		C9DFCF9F2A3706570018AA9B /* AssociateGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DFCF9E2A3706570018AA9B /* AssociateGameView.swift */; };
 		C9DFCFA12A37067A0018AA9B /* WordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DFCFA02A37067A0018AA9B /* WordView.swift */; };
+		C9DFCFA32A370E220018AA9B /* Ass1.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C9DFCFA22A370E220018AA9B /* Ass1.geojson */; };
+		C9DFCFA52A370E3C0018AA9B /* Ass2.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C9DFCFA42A370E3C0018AA9B /* Ass2.geojson */; };
+		C9DFCFA72A370E620018AA9B /* Ass3.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C9DFCFA62A370E620018AA9B /* Ass3.geojson */; };
+		C9DFCFA92A370E970018AA9B /* Crono1.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C9DFCFA82A370E970018AA9B /* Crono1.geojson */; };
+		C9DFCFAB2A370EB30018AA9B /* Crono2.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C9DFCFAA2A370EB30018AA9B /* Crono2.geojson */; };
+		C9DFCFAD2A370EC80018AA9B /* Crono3.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C9DFCFAC2A370EC80018AA9B /* Crono3.geojson */; };
 		C9E319AF2A346D5000BEF354 /* GameBallsLevel1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E319AE2A346D5000BEF354 /* GameBallsLevel1.swift */; };
 		C9E319B12A34725200BEF354 /* GameBallsLevel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E319B02A34725200BEF354 /* GameBallsLevel2.swift */; };
 		C9E319B32A34949500BEF354 /* GameBallsLevel3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E319B22A34949500BEF354 /* GameBallsLevel3.swift */; };
@@ -195,6 +201,12 @@
 		C9DFCF9C2A3705350018AA9B /* CronoDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CronoDecoding.swift; sourceTree = "<group>"; };
 		C9DFCF9E2A3706570018AA9B /* AssociateGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociateGameView.swift; sourceTree = "<group>"; };
 		C9DFCFA02A37067A0018AA9B /* WordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordView.swift; sourceTree = "<group>"; };
+		C9DFCFA22A370E220018AA9B /* Ass1.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ass1.geojson; sourceTree = "<group>"; };
+		C9DFCFA42A370E3C0018AA9B /* Ass2.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ass2.geojson; sourceTree = "<group>"; };
+		C9DFCFA62A370E620018AA9B /* Ass3.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ass3.geojson; sourceTree = "<group>"; };
+		C9DFCFA82A370E970018AA9B /* Crono1.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Crono1.geojson; sourceTree = "<group>"; };
+		C9DFCFAA2A370EB30018AA9B /* Crono2.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Crono2.geojson; sourceTree = "<group>"; };
+		C9DFCFAC2A370EC80018AA9B /* Crono3.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Crono3.geojson; sourceTree = "<group>"; };
 		C9E319AE2A346D5000BEF354 /* GameBallsLevel1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBallsLevel1.swift; sourceTree = "<group>"; };
 		C9E319B02A34725200BEF354 /* GameBallsLevel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBallsLevel2.swift; sourceTree = "<group>"; };
 		C9E319B22A34949500BEF354 /* GameBallsLevel3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBallsLevel3.swift; sourceTree = "<group>"; };
@@ -382,6 +394,12 @@
 				0ADDF04A2A1CB5BB005BDE6A /* Game3.geojson */,
 				0ADDF04B2A1CB5D5005BDE6A /* Game3.2.geojson */,
 				0ADDF04C2A1CB5E5005BDE6A /* Game3.3.geojson */,
+				C9DFCFA22A370E220018AA9B /* Ass1.geojson */,
+				C9DFCFA42A370E3C0018AA9B /* Ass2.geojson */,
+				C9DFCFAA2A370EB30018AA9B /* Crono2.geojson */,
+				C9DFCFAC2A370EC80018AA9B /* Crono3.geojson */,
+				C9DFCFA62A370E620018AA9B /* Ass3.geojson */,
+				C9DFCFA82A370E970018AA9B /* Crono1.geojson */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -536,10 +554,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C97C27112A33876F00CDEA78 /* c.mp3 in Resources */,
+				C9DFCFA72A370E620018AA9B /* Ass3.geojson in Resources */,
 				0ADDF0542A1CB8A6005BDE6A /* Game3.3.geojson in Resources */,
 				C97C270F2A33876F00CDEA78 /* a.mp3 in Resources */,
+				C9DFCFAB2A370EB30018AA9B /* Crono2.geojson in Resources */,
 				C9957EC12A30700A00A648A5 /* Figtree-LightItalic.ttf in Resources */,
 				C9957EC22A30700A00A648A5 /* Figtree-Medium.ttf in Resources */,
+				C9DFCFA52A370E3C0018AA9B /* Ass2.geojson in Resources */,
 				C9957EBE2A30700A00A648A5 /* Figtree-BlackItalic.ttf in Resources */,
 				0ADDF04D2A1CB836005BDE6A /* Game2.geojson in Resources */,
 				C9F92AE22A29DDA700AF53CC /* customRegular.ttf in Resources */,
@@ -566,7 +587,10 @@
 				C97C27132A33876F00CDEA78 /* f.mp3 in Resources */,
 				C97C27122A33876F00CDEA78 /* e.mp3 in Resources */,
 				13ED4CA22A2489D8009CF732 /* menu.mp3 in Resources */,
+				C9DFCFA32A370E220018AA9B /* Ass1.geojson in Resources */,
 				C92CF2E42A1B507000AAF385 /* notifica.mp3 in Resources */,
+				C9DFCFA92A370E970018AA9B /* Crono1.geojson in Resources */,
+				C9DFCFAD2A370EC80018AA9B /* Crono3.geojson in Resources */,
 				C9957EC52A30700A00A648A5 /* Figtree-ExtraBoldItalic.ttf in Resources */,
 				0A67329D2A0B830400806FEA /* Assets.xcassets in Resources */,
 				0ADDF04F2A1CB84F005BDE6A /* Game2.3.geojson in Resources */,
