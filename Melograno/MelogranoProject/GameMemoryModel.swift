@@ -13,7 +13,6 @@ import AVFoundation
 
 class GameMemoryModel: ObservableObject {
     @Published var model: [CardMemory] = []
-    @Published var progress: CGFloat = 0
     private var audioPlayer: AVAudioPlayer?
 
     var cards: [CardMemory] {
@@ -86,7 +85,7 @@ class GameMemoryModel: ObservableObject {
         if chosenCards[0].imageName == chosenCards[1].imageName {
             cards[firstIndex].isMatched = true
             cards[secondIndex].isMatched = true
-            progress += 0.333
+           
             audioPlayer?.play()
 //non scompaiono più le carte una volta accoppiate ma il suono funziona 
         } else {

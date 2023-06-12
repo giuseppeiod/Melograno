@@ -32,6 +32,5 @@ class CardMemory: Identifiable, ObservableObject{
 }
 
 
-let imagesName = ["uno", "due", "tre", "quattro"]
-    .shuffled()
+
 let faceDownCard = CardMemory(imageName: " ")

@@ -30,25 +30,25 @@ struct BallsView: View {
     
     
     @State var transY: CGFloat = 0
-    @State var hrect: CGFloat = 20
+    @State var hrect: CGFloat = 30
     @State var transRect: CGFloat = 0
     
     @Binding var isHighlighted: Bool
-    var color: Color
-    
+    //var color: Color
+    var color: ColoreBottone
     var body: some View {
         ZStack {
             VStack {
                 Spacer()
                 Circle()
-                    .foregroundColor(.black)
+                    .foregroundColor(color.coloresotto)
                     .frame(width: 140)
             }
             
             VStack {
                 Spacer()
                 Rectangle()
-                    .foregroundColor(.black)
+                    .foregroundColor(color.coloresotto)
                     .frame(width: 100, height: hrect)
                     .offset(x: 0, y: transRect)
                 Spacer()
@@ -56,7 +56,7 @@ struct BallsView: View {
             
             VStack {
                 Circle()
-                    .foregroundColor(isHighlighted ? color : color)
+                    .foregroundColor(isHighlighted ? color.coloreop : color.coloresopra)
                     .frame(width: 140)
                     .offset(x: 0, y: transY)
             }
@@ -64,6 +64,7 @@ struct BallsView: View {
         .frame(width: 140, height: 160)
         .onChange(of: isHighlighted) { newValue in
             if newValue {
+                
                 animate()
             } else {
                 stopAnimation()
@@ -81,10 +82,10 @@ struct BallsView: View {
             transRect = 7
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.1) {
             withAnimation(.linear(duration: 1.0)) {
                 transY = 0
-                hrect = 20
+                hrect = 30
                 transRect = 0
             }
         }
@@ -92,7 +93,7 @@ struct BallsView: View {
     
     func stopAnimation() {
         transY = 0
-        hrect = 20
+        hrect = 30
         transRect = 0
     }
 }

@@ -100,6 +100,7 @@ struct CardMemoryGameView: View {
         }
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
             }
+    
 func flipCard(_ index: Int) {
         withAnimation {
             if flippedCards.contains(index) {

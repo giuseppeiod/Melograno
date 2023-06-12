@@ -204,21 +204,21 @@ import AVFoundation
 struct BallsGameMenuLevel: View {
     @State private var audioPlayer: AVAudioPlayer?
     
-    func playSound() {
-        guard let url = Bundle.main.url(forResource: "menu", withExtension: "mp3") else { return }
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: url)
-            audioPlayer?.play()
-        } catch {
-            print("Errore nella riproduzione del suono: \(error.localizedDescription)")
-        }
-    }
+
     
     var body: some View {
-        VStack(spacing: 35) {
-            VStack(spacing: 15) {
+        
+        ZStack{
+            Image("sfondo istruzioni gioco")
+                .resizable()
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+        VStack() {
+            Spacer()
+            VStack(alignment: .leading, spacing: 15) {
                 Text("BALLSATHLON")
-                    .font(.custom("customRegular", size: 36))
+                    .font(.custom("Figtree-ExtraBold", size: 48))
                     .fontWeight(.bold)
                     .foregroundColor(.black)
                     .padding(.top, 50.0)
@@ -230,66 +230,67 @@ struct BallsGameMenuLevel: View {
             }
             Spacer()
             
-            VStack(spacing: 15) {
-                NavigationLink(destination: ContentViewBallsLevel1()) {
+            HStack(spacing: 15) {
+                NavigationLink(destination: GameBallsLevel1()) {
                     ZStack {
                         Rectangle()
                             .foregroundColor(Color("CustomPurple"))
-                            .frame(width: 200, height: 50)
-                            .cornerRadius(36)
+                            .frame(width: 200, height: 60)
+                            .cornerRadius(16)
                         
                         Text("Level 1")
                             .font(.custom("customRegular", size: 36))
                             .foregroundColor(.white)
                     }
                 }
-                .simultaneousGesture(
-                    TapGesture().onEnded {
-                        playSound()
-                    }
-                )
+//                .simultaneousGesture(
+//                    TapGesture().onEnded {
+//                        
+//                    }
+//                )
                 
-                NavigationLink(destination: ContentViewBallsLevel2()) {
+                NavigationLink(destination: GameBallsLevel2()) {
                     ZStack {
                         Rectangle()
                             .foregroundColor(Color("CustomPurple"))
                             .frame(width: 200, height: 50)
-                            .cornerRadius(36)
+                            .cornerRadius(16)
                         
                         Text("Level 2")
                             .font(.custom("customRegular", size: 36))
                             .foregroundColor(.white)
                     }
                 }
-                .simultaneousGesture(
-                    TapGesture().onEnded {
-                        playSound()
-                    }
-                )
+//                .simultaneousGesture(
+//                    TapGesture().onEnded {
+//
+//                    }
+//                )
                 
-                NavigationLink(destination: ContentViewBallsLevel3()) {
+                NavigationLink(destination: GameBallsLevel3()) {
                     ZStack {
                         Rectangle()
                             .foregroundColor(Color("CustomPurple"))
                             .frame(width: 200, height: 50)
-                            .cornerRadius(36)
+                            .cornerRadius(16)
                         
                         Text("Level 3")
                             .font(.custom("customRegular", size: 30))
                             .foregroundColor(.white)
                     }
                 }
-                .simultaneousGesture(
-                    TapGesture().onEnded {
-                        playSound()
-                    }
-                )
+//                .simultaneousGesture(
+//                    TapGesture().onEnded {
+//                        playSoundF()
+//                    }
+//                )
             }
             .navigationBarBackButtonHidden(false)
             
             Spacer()
         }
     }
+}
 }
 
 struct BallsGameMenuLevel_Previews: PreviewProvider {

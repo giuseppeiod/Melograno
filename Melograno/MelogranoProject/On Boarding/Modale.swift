@@ -41,7 +41,7 @@ struct Modale: View {
                 .padding()
                 HStack {
                     Spacer()
-                    NavigationLink(destination: StartMenu(), isActive: $isStartMenuActive)
+                    NavigationLink(destination: Menu(), isActive: $isStartMenuActive)
                     
                     {
                         Text("Avanti")
