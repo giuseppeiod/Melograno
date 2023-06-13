@@ -27,22 +27,9 @@ struct ContentView: View {
     
     var body: some View {
         
-        
-            
-            if UserDefaults.standard.onboardingViewShown  {
-                NavigationView{
-                    Menu()
-                }.navigationViewStyle(StackNavigationViewStyle())
-                    .navigationBarBackButtonHidden(false)
-            } else {
-              
-                    OnBoardingManager()
-                
-               
-            }
+        Menu()
         }
-    
-//        .navigationViewStyle(StackNavigationViewStyle())
+
     
 }
 

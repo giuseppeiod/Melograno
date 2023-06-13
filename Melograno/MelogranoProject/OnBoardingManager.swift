@@ -13,7 +13,7 @@ struct OnBoardingManager: View {
         var presentationMode
         
         @AppStorage("onboardingViewShown")
-        var onboardingViewShown: Bool = false
+        var onboardingViewShown: Bool = true
         
     var body: some View {
         
@@ -63,7 +63,10 @@ struct OnBoardingManager: View {
                                     .font(.custom("Figtree-Medium", size: 48))
                                     .foregroundColor(.white)
                                     .onTapGesture {
-                                        UserDefaults.standard.onboardingViewShown = true
+                                        print(onboardingViewShown)
+                                        UserDefaults.standard.onboardingViewShown = false
+                                        
+                                        print(onboardingViewShown)
                                         presentationMode.wrappedValue.dismiss() // Dismiss the sheet
                                         // Navigate to the menu here
                                     }
@@ -72,10 +75,7 @@ struct OnBoardingManager: View {
                     }
                 }
         
-//        .onAppear(perform: {
-//            UserDefaults.standard.onboardingViewShown = true
 //
-//        })
     
 
 

@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct OnBoardingFirst: View {
-    
+    @State var aa: Bool = true
     var onboardingViewShown: Bool = false
     var body: some View {
-
+        ZStack{
+            
+        
         ZStack{
             
             VStack{
@@ -63,12 +65,10 @@ struct OnBoardingFirst: View {
         }
        }
 
-     
-
     }
 }
 
-
+}
     struct OnBoardingFrist_Previews: PreviewProvider {
 
         static var previews: some View {
