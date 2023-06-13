@@ -7,7 +7,8 @@
 import SwiftUI
 
 struct CardMemoryGameView: View {
-
+    @Environment(\.presentationMode) var dismiss
+    
     @State private var isGameFinishedButton = false
     @State private var flippedCards: [Int] = []
     @State private var flippedWrongCards: [Int] = []
@@ -25,18 +26,18 @@ struct CardMemoryGameView: View {
         
 
             ZStack{
+                
                 VStack() {
            
       
                 
-                HStack {
-      
+                    HStack() {
+                        Spacer()
                         Text("Match the cards")
                         .font(.custom("customRegular", size: 46))
                             .multilineTextAlignment(.center)
                             .bold()
-                            //.padding(.bottom)
-                            .padding()
+
                     
                    Spacer()
                         
@@ -60,7 +61,7 @@ struct CardMemoryGameView: View {
                             .padding()
                             
                             .rotation3DEffect(.degrees(isFlipped || shouldReset ? 180 : 0), axis: (x: 0, y: 1, z: 0))
-                            .animation(.easeInOut(duration: 0.5))
+                            .animation(.default)
                             .onTapGesture {
                                 withAnimation {
 //                                    flipCard(index)
@@ -71,34 +72,20 @@ struct CardMemoryGameView: View {
                     
                     
                 }
-                //.padding(.bottom, 120)
-                
-                
-                
-                
-                
+
+  
                 Spacer()
             }
                 if game.isGameFinished {
-                    
-                    
-                    Text("Congratulations! You matched all the cards!")
-                        .font(.custom("customRegular", size: 46))
-                        .foregroundColor(.green)
-                    Button(action: {
-                        restartGame()
-                    }, label: {
-                        Text("Restart Game")
-                            .font(.custom("customRegular", size: 46))
-                            .foregroundColor(.white)
-                            .padding(10)
-                            .background(Color.blue)
-                            .cornerRadius(10)
-                    })
-                }
+
+                                    CongratsView(dismiss: {dismiss.wrappedValue.dismiss()}, replay: {
+                                        game.resetGame()
+
+                                    }, points: 0, result:0 )
+                                }
             
         }
-            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+//            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
             }
     
 func flipCard(_ index: Int) {

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GameBallsLevel3: View {
     @StateObject private var model: BallsModel
-    
+    @Environment(\.presentationMode) var dismiss
     
     init() {
         _model = StateObject(wrappedValue: BallsModel.withNumberOfCircles(5)) // Imposta il numero di cerchi desiderato
@@ -20,14 +20,14 @@ struct GameBallsLevel3: View {
         
         ColoreBottone(coloresopra: .red, coloredopo: .blue, coloresotto: .black, coloreop: .red, suono: "a"),
         
-        ColoreBottone(coloresopra: .red, coloredopo: .blue, coloresotto: .black, coloreop: .red, suono: "a"),
+        ColoreBottone(coloresopra: .green, coloredopo: .blue, coloresotto: .black, coloreop: .red, suono: "c"),
         
-        ColoreBottone(coloresopra: .red, coloredopo: .blue, coloresotto: .black, coloreop: .red, suono: "a"),
+        ColoreBottone(coloresopra: .blue, coloredopo: .blue, coloresotto: .black, coloreop: .red, suono: "d"),
         
-        ColoreBottone(coloresopra: .red, coloredopo: .blue, coloresotto: .black, coloreop: .red, suono: "a"),
+        ColoreBottone(coloresopra: .purple, coloredopo: .blue, coloresotto: .black, coloreop: .red, suono: "f"),
         
         
-        ColoreBottone(coloresopra: .red, coloredopo: .blue, coloresotto: .black, coloreop: .red, suono: "a")
+        ColoreBottone(coloresopra: .orange, coloredopo: .blue, coloresotto: .black, coloreop: .red, suono: "e")
     
     
     ]
@@ -81,13 +81,9 @@ struct GameBallsLevel3: View {
                                 if !model.isAnimating && model.isPlayerTurn {
                                     model.circleTapped("p")
                                     model.provideHapticFeedback()
-
-                                }
-                            }                            .simultaneousGesture(
-                                TapGesture().onEnded { _ in
                                     model.playSoundeE()
                                 }
-                            )
+                            }
                         
                         
                         
@@ -96,13 +92,9 @@ struct GameBallsLevel3: View {
                                 if !model.isAnimating && model.isPlayerTurn {
                                     model.circleTapped("o")
                                     model.provideHapticFeedback()
-
-                                }
-                            }                            .simultaneousGesture(
-                                TapGesture().onEnded { _ in
                                     model.playSoundeE()
                                 }
-                            )
+                            }
                     }
                     
                     
@@ -118,41 +110,29 @@ struct GameBallsLevel3: View {
                                 if !model.isAnimating && model.isPlayerTurn {
                                     model.circleTapped("r")
                                     model.provideHapticFeedback()
-
-                                }
-                            }
-                            .simultaneousGesture(
-                                TapGesture().onEnded { _ in
                                     model.playSoundA()
                                 }
-                            )
+                            }
+  
                         
                         BallsView(isHighlighted: $model.highlight[1], color: bottoni[1])
                             .onTapGesture {
                                 if !model.isAnimating && model.isPlayerTurn {
                                     model.circleTapped("g")
                                     model.provideHapticFeedback()
-                                }
-                            }
-                            .simultaneousGesture(
-                                TapGesture().onEnded { _ in
                                     model.playSoundC()
                                 }
-                            )
+                            }
                         
                         BallsView(isHighlighted: $model.highlight[2], color: bottoni[2])
                             .onTapGesture {
                                 if !model.isAnimating && model.isPlayerTurn {
                                     model.circleTapped("b")
                                     model.provideHapticFeedback()
-
-                                }
-                            }
-                            .simultaneousGesture(
-                                TapGesture().onEnded { _ in
                                     model.playSoundD()
                                 }
-                            )
+                            }
+
                     }
                     
                     
@@ -160,8 +140,20 @@ struct GameBallsLevel3: View {
             }.onAppear(perform: model.animateCircles)
             
             
+            if model.showPopCongrats == true {
+                
+                CongratsView(dismiss: {dismiss.wrappedValue.dismiss()}, replay: {
+                    model.restartGame()
+                    
+                }, points: model.currentSequenceIndex, result: model.currentSequenceIndex)
+            }
+        
+        }
+        
+        .onDisappear {
+            model.isPresented = false
             
-            Spacer()
+            
         }
     }
 }

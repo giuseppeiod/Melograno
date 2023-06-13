@@ -9,6 +9,8 @@ import SwiftUI
 
 struct GameBallsLevel1: View {
     
+
+    @Environment(\.presentationMode) var dismiss
     @StateObject private var model: BallsModel
     
     init() {
@@ -19,13 +21,11 @@ struct GameBallsLevel1: View {
         
         ColoreBottone(coloresopra: .red, coloredopo: .blue, coloresotto: .black, coloreop: .red, suono: "a"),
         
-        ColoreBottone(coloresopra: .blue, coloredopo: .blue, coloresotto: .black, coloreop: .red, suono: "a"),
+        ColoreBottone(coloresopra: .blue, coloredopo: .blue, coloresotto: .black, coloreop: .red, suono: "c"),
         
-        ColoreBottone(coloresopra: .green, coloredopo: .blue, coloresotto: .black, coloreop: .red, suono: "a")
-        
-    
-    
+        ColoreBottone(coloresopra: .green, coloredopo: .blue, coloresotto: .black, coloreop: .red, suono: "d")
     ]
+    
     var body: some View {
         
         
@@ -77,18 +77,14 @@ struct GameBallsLevel1: View {
                         BallsView(isHighlighted: $model.highlight[0], color: bottoni[0])
                             .onTapGesture {
                                 if !model.isAnimating && model.isPlayerTurn {
-                                    
+                                  
+                                    model.playSoundA()
                                     model.circleTapped("r")
                                     model.provideHapticFeedback()
                                 }
+                                
                             }
-                            .simultaneousGesture(
-                                TapGesture().onEnded { _ in
-                                    model.playSoundA()
-                                }
-                            )
-                        
-                        
+   
                         
                         BallsView(isHighlighted: $model.highlight[1], color: bottoni[1])
                             .onTapGesture {
@@ -99,14 +95,10 @@ struct GameBallsLevel1: View {
                                     
                                     model.provideHapticFeedback()
                                     
-                                    
-                                }
-                            }
-                            .simultaneousGesture(
-                                TapGesture().onEnded { _ in
                                     model.playSoundC()
                                 }
-                            )
+                            }
+
                         
                         
                         BallsView(isHighlighted: $model.highlight[2], color: bottoni[2])
@@ -115,29 +107,32 @@ struct GameBallsLevel1: View {
                                 if !model.isAnimating && model.isPlayerTurn {
                                     model.circleTapped("b")
                                     model.provideHapticFeedback()
-                                    
+                                    model.playSoundD()
                                 }
-                            }                .simultaneousGesture(
-                                TapGesture().onEnded { _ in
-                                    model.playSoundF()
-                                }
-                            )
+                            }
                         
                     }.onAppear(perform: model.animateCircles)
                     
                 }
             }
             
-//            if !model.isPlayerTurn && !model.isAnimating && model.sequence.count == 6 {
-//                Button(action: model.restartGame) {
-//                    Text("Restart Game")
-//                        .font(.custom("customRegular", size: 46))
-//                    
-//                }
-//            }
+
+            if model.showPopCongrats == true {
+                
+                CongratsView(dismiss: {dismiss.wrappedValue.dismiss()}, replay: {
+                    model.restartGame()
+                    
+                }, points: model.currentSequenceIndex, result: model.currentSequenceIndex)
+            }
+            
+        }
+        
+        .onDisappear {
+            model.isPresented = false
             
             
         }
+
     }
 }
 

@@ -2,13 +2,16 @@
 //  Menu.swift
 //  MelogranoProject
 //
-//  Created by Rita Marrano on 12/06/23.
+//  Created by Tullio Boccardo on 12/06/23.
 //
 
 import SwiftUI
 
 
 struct Menu: View {
+    
+  
+
     let columns = [
             GridItem(.flexible()),
             GridItem(.flexible()),
@@ -60,7 +63,7 @@ struct Menu: View {
                 if aa{
                    Image("onbbackground")
                         .resizable()
-                        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+
                         .scaledToFill()
                 }
             }
@@ -71,10 +74,9 @@ struct Menu: View {
         .preferredColorScheme(.light)
         .navigationViewStyle(.stack)
         .sheet(isPresented: $aa) {
-            VStack{
-                Text("Ciao Tullo!")
-            }
-                }
+           OnBoardingManager()
+
+        }
     }
 }
 

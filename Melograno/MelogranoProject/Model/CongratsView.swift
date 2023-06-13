@@ -36,6 +36,7 @@ struct CongratsView: View {
                     .padding(.horizontal,50)
                     
                     Button(action: {
+                        dismiss()
                         replay()
                     }, label: {
                         FinishButtonView(buttonText: "Replay")

@@ -56,7 +56,6 @@
 		C97C27122A33876F00CDEA78 /* e.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C97C270D2A33876F00CDEA78 /* e.mp3 */; };
 		C97C27132A33876F00CDEA78 /* f.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C97C270E2A33876F00CDEA78 /* f.mp3 */; };
 		C97C27172A338B3D00CDEA78 /* BallsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97C27162A338B3D00CDEA78 /* BallsModel.swift */; };
-		C97DE1572A1D21B000BB7298 /* BallsGameMenuLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97DE1562A1D21B000BB7298 /* BallsGameMenuLevel.swift */; };
 		C9957EBB2A30700A00A648A5 /* Figtree-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9957EAD2A30700900A648A5 /* Figtree-SemiBold.ttf */; };
 		C9957EBC2A30700A00A648A5 /* Figtree-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9957EAE2A30700900A648A5 /* Figtree-MediumItalic.ttf */; };
 		C9957EBD2A30700A00A648A5 /* Figtree-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9957EAF2A30700900A648A5 /* Figtree-SemiBoldItalic.ttf */; };
@@ -71,7 +70,6 @@
 		C9957EC62A30700A00A648A5 /* Figtree-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9957EB82A30700A00A648A5 /* Figtree-Italic.ttf */; };
 		C9957EC72A30700A00A648A5 /* Figtree-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9957EB92A30700A00A648A5 /* Figtree-BoldItalic.ttf */; };
 		C9957EC82A30700A00A648A5 /* Figtree-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9957EBA2A30700A00A648A5 /* Figtree-Black.ttf */; };
-		C99C52C92A28AC3B00105656 /* StartMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99C52C82A28AC3B00105656 /* StartMenu.swift */; };
 		C9ABC23F2A267DAD00D5D6E9 /* ButtonGameModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ABC23E2A267DAD00D5D6E9 /* ButtonGameModelView.swift */; };
 		C9ABC2412A267DBE00D5D6E9 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ABC2402A267DBE00D5D6E9 /* Game.swift */; };
 		C9DFCF892A3701C70018AA9B /* CongratsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DFCF882A3701C70018AA9B /* CongratsView.swift */; };
@@ -170,7 +168,6 @@
 		C97C270D2A33876F00CDEA78 /* e.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = e.mp3; sourceTree = "<group>"; };
 		C97C270E2A33876F00CDEA78 /* f.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = f.mp3; sourceTree = "<group>"; };
 		C97C27162A338B3D00CDEA78 /* BallsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallsModel.swift; sourceTree = "<group>"; };
-		C97DE1562A1D21B000BB7298 /* BallsGameMenuLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallsGameMenuLevel.swift; sourceTree = "<group>"; };
 		C9957EAD2A30700900A648A5 /* Figtree-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-SemiBold.ttf"; sourceTree = "<group>"; };
 		C9957EAE2A30700900A648A5 /* Figtree-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-MediumItalic.ttf"; sourceTree = "<group>"; };
 		C9957EAF2A30700900A648A5 /* Figtree-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
@@ -185,7 +182,6 @@
 		C9957EB82A30700A00A648A5 /* Figtree-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-Italic.ttf"; sourceTree = "<group>"; };
 		C9957EB92A30700A00A648A5 /* Figtree-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-BoldItalic.ttf"; sourceTree = "<group>"; };
 		C9957EBA2A30700A00A648A5 /* Figtree-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-Black.ttf"; sourceTree = "<group>"; };
-		C99C52C82A28AC3B00105656 /* StartMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenu.swift; sourceTree = "<group>"; };
 		C9ABC23E2A267DAD00D5D6E9 /* ButtonGameModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGameModelView.swift; sourceTree = "<group>"; };
 		C9ABC2402A267DBE00D5D6E9 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		C9DFCF882A3701C70018AA9B /* CongratsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsView.swift; sourceTree = "<group>"; };
@@ -283,7 +279,6 @@
 			children = (
 				0A6732982A0B830300806FEA /* MelogranoProjectApp.swift */,
 				0A67329A2A0B830300806FEA /* ContentView.swift */,
-				C99C52C82A28AC3B00105656 /* StartMenu.swift */,
 				C9DFCF8E2A3703370018AA9B /* Menu.swift */,
 				C9DFCF902A3703920018AA9B /* LevelView.swift */,
 				C9DFCF942A3704130018AA9B /* CronoGameView.swift */,
@@ -439,7 +434,6 @@
 				C9E319AE2A346D5000BEF354 /* GameBallsLevel1.swift */,
 				C9E319B02A34725200BEF354 /* GameBallsLevel2.swift */,
 				C9E319B22A34949500BEF354 /* GameBallsLevel3.swift */,
-				C97DE1562A1D21B000BB7298 /* BallsGameMenuLevel.swift */,
 				C97C27162A338B3D00CDEA78 /* BallsModel.swift */,
 			);
 			path = "BALLS GAME";
@@ -652,7 +646,6 @@
 				0A72FD782A27530400073F85 /* CardGameTwoView.swift in Sources */,
 				C94228002A265E590019A550 /* GameOneView.swift in Sources */,
 				C9DFCF952A3704130018AA9B /* CronoGameView.swift in Sources */,
-				C99C52C92A28AC3B00105656 /* StartMenu.swift in Sources */,
 				C94228022A265E810019A550 /* CardGameOne.swift in Sources */,
 				C9DFCF972A3704640018AA9B /* CardActivityView.swift in Sources */,
 				0A73F62C2A2E29C800959F41 /* Modale.swift in Sources */,
@@ -662,7 +655,6 @@
 				C94228082A265EF00019A550 /* CardOrderViewGameOne.swift in Sources */,
 				C9E319B32A34949500BEF354 /* GameBallsLevel3.swift in Sources */,
 				0A72FD7C2A27531E00073F85 /* CardGameTwo.swift in Sources */,
-				C97DE1572A1D21B000BB7298 /* BallsGameMenuLevel.swift in Sources */,
 				C9ABC2412A267DBE00D5D6E9 /* Game.swift in Sources */,
 				C94228042A265EB10019A550 /* CardGameOneView.swift in Sources */,
 			);

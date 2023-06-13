@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct GameBallsLevel2: View {
-    
+    @Environment(\.presentationMode) var dismiss
     @StateObject private var model: BallsModel
     
     
@@ -19,11 +19,11 @@ struct GameBallsLevel2: View {
         
         ColoreBottone(coloresopra: .red, coloredopo: .blue, coloresotto: .black, coloreop: .red, suono: "a"),
         
-        ColoreBottone(coloresopra: .red, coloredopo: .blue, coloresotto: .black, coloreop: .red, suono: "a"),
+        ColoreBottone(coloresopra: .green, coloredopo: .blue, coloresotto: .black, coloreop: .red, suono: "c"),
         
-        ColoreBottone(coloresopra: .red, coloredopo: .blue, coloresotto: .black, coloreop: .red, suono: "a"),
+        ColoreBottone(coloresopra: .blue, coloredopo: .blue, coloresotto: .black, coloreop: .red, suono: "d"),
         
-        ColoreBottone(coloresopra: .red, coloredopo: .blue, coloresotto: .black, coloreop: .red, suono: "a")
+        ColoreBottone(coloresopra: .purple, coloredopo: .blue, coloresotto: .black, coloreop: .red, suono: "f")
         
     
     
@@ -77,20 +77,12 @@ struct GameBallsLevel2: View {
                                 if !model.isAnimating && model.isPlayerTurn {
                                     model.circleTapped("p")
                                     model.provideHapticFeedback()
-
-                                }
-                            }                            .simultaneousGesture(
-                                TapGesture().onEnded { _ in
                                     model.playSoundeE()
+                                    
                                 }
-                            )
+                            }
                         
                     }
-                    
-                    
-                    
-                    
-                    
                     HStack(spacing: 60) {
                         
                         
@@ -100,54 +92,48 @@ struct GameBallsLevel2: View {
                                 if !model.isAnimating && model.isPlayerTurn {
                                     model.circleTapped("r")
                                     model.provideHapticFeedback()
-
-                                }
-                            }
-                            .simultaneousGesture(
-                                TapGesture().onEnded { _ in
                                     model.playSoundA()
                                 }
-                            )
+                            }
+
                         
                         BallsView(isHighlighted: $model.highlight[1], color: bottoni[1])
                             .onTapGesture {
                                 if !model.isAnimating && model.isPlayerTurn {
                                     model.circleTapped("g")
+                                    model.playSoundA()
                                     model.provideHapticFeedback()
                                 }
                             }
-                            .simultaneousGesture(
-                                TapGesture().onEnded { _ in
-                                    model.playSoundC()
-                                }
-                            )
+
                         
                         BallsView(isHighlighted: $model.highlight[2], color: bottoni[2])
                             .onTapGesture {
                                 if !model.isAnimating && model.isPlayerTurn {
                                     model.circleTapped("b")
                                     model.provideHapticFeedback()
-
-                                }
-                            }
-                            .simultaneousGesture(
-                                TapGesture().onEnded { _ in
                                     model.playSoundD()
                                 }
-                            )
+                            }
+ 
                     }
                     
                     
                 }
             }.onAppear(perform: model.animateCircles)
             
-            if !model.isPlayerTurn && !model.isAnimating && model.sequence.count == 6 {
-                Button(action: model.restartGame) {
-                    Text("Restart Game")
-                        .font(.custom("customRegular", size: 46))
+            if model.showPopCongrats == true {
+                
+                CongratsView(dismiss: {dismiss.wrappedValue.dismiss()}, replay: {
+                    model.restartGame()
                     
-                }
+                }, points: model.currentSequenceIndex, result: model.currentSequenceIndex)
             }
+        }
+        .onDisappear {
+            model.isPresented = false
+            
+            
         }
     }
 }

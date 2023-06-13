@@ -2,7 +2,7 @@
 //  WordView.swift
 //  MelogranoProject
 //
-//  Created by Rita Marrano on 12/06/23.
+//  Created by Tullio Boccardo on 12/06/23.
 //
 
 import SwiftUI
