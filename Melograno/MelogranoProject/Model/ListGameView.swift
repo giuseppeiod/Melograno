@@ -37,7 +37,17 @@ struct ListGameView: View {
                 }
             }
             else if game.type == .memory{
-                CardMemoryGameView(numberOfCards: 2)
+                if level == .level1{
+                    CardMemoryGameView(numberOfCards: 2)
+                }
+                else if level == .level2{
+                    CardMemoryGameViewLevel2(numberOfCards: 3)
+                }
+                else if level == .level3{
+                    CardMemoryGameViewLevel3(numberOfCards: 4)
+                }
+                
+                
             }
         }.onAppear{
             if game.type == .cronological{

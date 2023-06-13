@@ -1,22 +1,23 @@
 //
-//  CardMemory.swift
+//  CardMemoryGameViewLevel2.swift
 //  MelogranoProject
 //
-//  Created by Giuseppe Iodice on 16/05/23.
+//  Created by Rita Marrano on 13/06/23.
+//
 
 import SwiftUI
 
-struct CardMemoryGameView: View {
+struct CardMemoryGameViewLevel2: View {
     @Environment(\.presentationMode) var dismiss
 
     var col = [GridItem(.flexible()),
-//                GridItem(.flexible()),
+                GridItem(.flexible()),
                 GridItem(.flexible())]
 
     @StateObject private var game: GameMemoryModel
 
     init(numberOfCards: Int) {
-        _game = StateObject(wrappedValue: GameMemoryModel.withNumberOfCards(2))
+        _game = StateObject(wrappedValue: GameMemoryModel.withNumberOfCards(3))
     }
 
     var body: some View {
@@ -75,7 +76,6 @@ struct CardMemoryGameView: View {
             }
             if game.isGameFinished {
                 
-                
                 CongratsView(dismiss: {dismiss.wrappedValue.dismiss()}, replay: {
                     game.resetGame()
                     
@@ -86,8 +86,8 @@ struct CardMemoryGameView: View {
     }
 }
 
-struct CardMemoryGameView_Previews: PreviewProvider {
+struct CardMemoryGameViewLevel2_Previews: PreviewProvider {
     static var previews: some View {
-        CardMemoryGameView(numberOfCards: 2)
+        CardMemoryGameViewLevel2(numberOfCards: 3)
     }
 }

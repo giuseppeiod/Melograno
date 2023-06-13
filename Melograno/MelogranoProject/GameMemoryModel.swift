@@ -22,11 +22,9 @@ class GameMemoryModel: ObservableObject {
     
     @Published var shouldResetCards = false
     
-    @Published var numberOfCards: Int? 
+    @Published var numberOfCards: Int?
     
-    var cards: [CardMemory] {
-        model
-    }
+    @Published var cards: [CardMemory] = []
     var allCardsMatched: Bool {
         return cards.allSatisfy { $0.isMatched }
     }
@@ -41,21 +39,24 @@ class GameMemoryModel: ObservableObject {
     
     
     init() {
-        if let newCards = loadCardsFromJSON(dim: 2) {
+        if let newCards = loadCardsFromJSON() {
             model = newCards
             if let soundURL = Bundle.main.url(forResource: "notifica", withExtension: "mp3") {
                 audioPlayer = try? AVAudioPlayer(contentsOf: soundURL)
             }
         }
+      
     }
     
     
     static func withNumberOfCards(_ numberOfCards: Int) -> GameMemoryModel {
         let model = GameMemoryModel()
         model.numberOfCards = numberOfCards
-        
+        model.cards = model.loadCardsFromJSON()!
+        model.cards = model.cards.shuffled()
         return model
     }
+
     
     func choose(_ card: CardMemory) {
         guard !isGameFinished else {
@@ -114,10 +115,7 @@ class GameMemoryModel: ObservableObject {
     }
     
     func resetGame() {
-        if let newCards = loadCardsFromJSON(dim: 3) {
-            model = newCards
-            isGameFinished = false
-        }
+        loadCardsFromJSON()
     }
     
     func areAllCardsMatched() -> Bool {
@@ -140,19 +138,21 @@ class GameMemoryModel: ObservableObject {
 //    }
 //
 
-    func loadCardsFromJSON(dim: Int) -> [CardMemory]? {
+    func loadCardsFromJSON() -> [CardMemory]? {
         if let url = Bundle.main.url(forResource: "MemoryCards", withExtension: "geojson"),
            let data = try? Data(contentsOf: url) {
             let decoder = JSONDecoder()
             if let cardData = try? decoder.decode([CardData].self, from: data) {
                 let shuffledCards = cardData.shuffled()
-                let selectedCards = Array(shuffledCards.prefix(dim))
+                let selectedCards = Array(shuffledCards.prefix(numberOfCards ?? 2))
                 let duplicatedCards = selectedCards.flatMap { [$0, $0] }
                 return duplicatedCards.map { CardMemory(imageName: $0.imageName) }
             }
         }
-        return nil
+        return []
     }
+
+    
     func flipCard(_ index: Int) {
             withAnimation {
                 if flippedCards.contains(index) {

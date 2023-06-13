@@ -89,6 +89,8 @@
 		C9E319AF2A346D5000BEF354 /* GameBallsLevel1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E319AE2A346D5000BEF354 /* GameBallsLevel1.swift */; };
 		C9E319B12A34725200BEF354 /* GameBallsLevel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E319B02A34725200BEF354 /* GameBallsLevel2.swift */; };
 		C9E319B32A34949500BEF354 /* GameBallsLevel3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E319B22A34949500BEF354 /* GameBallsLevel3.swift */; };
+		C9EF3EF12A38B0F000AB216F /* CardMemoryGameViewLevel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EF3EF02A38B0F000AB216F /* CardMemoryGameViewLevel2.swift */; };
+		C9EF3EF32A38B1B300AB216F /* CardMemoryGameViewLevel3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EF3EF22A38B1B300AB216F /* CardMemoryGameViewLevel3.swift */; };
 		C9F92AE02A29DD9900AF53CC /* customCorsivo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9F92ADF2A29DD9900AF53CC /* customCorsivo.ttf */; };
 		C9F92AE22A29DDA700AF53CC /* customRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9F92AE12A29DDA700AF53CC /* customRegular.ttf */; };
 /* End PBXBuildFile section */
@@ -196,6 +198,8 @@
 		C9E319AE2A346D5000BEF354 /* GameBallsLevel1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBallsLevel1.swift; sourceTree = "<group>"; };
 		C9E319B02A34725200BEF354 /* GameBallsLevel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBallsLevel2.swift; sourceTree = "<group>"; };
 		C9E319B22A34949500BEF354 /* GameBallsLevel3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBallsLevel3.swift; sourceTree = "<group>"; };
+		C9EF3EF02A38B0F000AB216F /* CardMemoryGameViewLevel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMemoryGameViewLevel2.swift; sourceTree = "<group>"; };
+		C9EF3EF22A38B1B300AB216F /* CardMemoryGameViewLevel3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMemoryGameViewLevel3.swift; sourceTree = "<group>"; };
 		C9F92ADF2A29DD9900AF53CC /* customCorsivo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = customCorsivo.ttf; sourceTree = "<group>"; };
 		C9F92AE12A29DDA700AF53CC /* customRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = customRegular.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -346,6 +350,8 @@
 			children = (
 				0A72FD222A273AE300073F85 /* CardMemory.swift */,
 				0A72FD212A273AE300073F85 /* CardMemoryGameView.swift */,
+				C9EF3EF02A38B0F000AB216F /* CardMemoryGameViewLevel2.swift */,
+				C9EF3EF22A38B1B300AB216F /* CardMemoryGameViewLevel3.swift */,
 				0A72FD202A273AE300073F85 /* CardView.swift */,
 				0A72FD1F2A273AE300073F85 /* GameMemoryModel.swift */,
 			);
@@ -596,6 +602,8 @@
 				0A72FD7A2A27531300073F85 /* WorldCard.swift in Sources */,
 				C9DFCF9D2A3705350018AA9B /* CronoDecoding.swift in Sources */,
 				C9DFCF932A3703E20018AA9B /* ListGameView.swift in Sources */,
+				C9EF3EF12A38B0F000AB216F /* CardMemoryGameViewLevel2.swift in Sources */,
+				C9EF3EF32A38B1B300AB216F /* CardMemoryGameViewLevel3.swift in Sources */,
 				0A67329B2A0B830300806FEA /* ContentView.swift in Sources */,
 				C9DFCF9F2A3706570018AA9B /* AssociateGameView.swift in Sources */,
 				C9DFCF892A3701C70018AA9B /* CongratsView.swift in Sources */,
