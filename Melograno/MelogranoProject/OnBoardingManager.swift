@@ -9,10 +9,12 @@ import SwiftUI
 
 struct OnBoardingManager: View {
 
-    @AppStorage("onboardingViewShown")
-    var onboardingViewShown: Bool = false
-
-
+    @Environment(\.presentationMode)
+        var presentationMode
+        
+        @AppStorage("onboardingViewShown")
+        var onboardingViewShown: Bool = false
+        
     var body: some View {
         
 
@@ -53,28 +55,28 @@ struct OnBoardingManager: View {
                 
                 
                 Rectangle()
-                    .frame(width: 447, height: 65)
-                    .cornerRadius(20)
-                    .foregroundColor(Color("CustomPurple"))
-                    .overlay(
-                        Text("Explore"))
-                    .font(.custom("Figtree-Medium", size: 48))
-                    .foregroundColor(.white)
-                    .onTapGesture {
-                        UserDefaults.standard.onboardingViewShown = true
-                        print("\(onboardingViewShown)")
+                                    .frame(width: 447, height: 65)
+                                    .cornerRadius(20)
+                                    .foregroundColor(Color("CustomPurple"))
+                                    .overlay(
+                                        Text("Explore"))
+                                    .font(.custom("Figtree-Medium", size: 48))
+                                    .foregroundColor(.white)
+                                    .onTapGesture {
+                                        UserDefaults.standard.onboardingViewShown = true
+                                        presentationMode.wrappedValue.dismiss() // Dismiss the sheet
+                                        // Navigate to the menu here
+                                    }
+                            }
+                        }
                     }
-            }
-        }
-        
-    
+                }
         
 //        .onAppear(perform: {
 //            UserDefaults.standard.onboardingViewShown = true
 //
 //        })
-    }
-}
+    
 
 
 struct OnBoardingManager_Previews: PreviewProvider {
