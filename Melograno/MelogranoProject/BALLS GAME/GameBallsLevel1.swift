@@ -65,13 +65,10 @@ struct GameBallsLevel1: View {
                                     
                                     model.circleTapped("r")
                                     model.provideHapticFeedback()
-                                }
-                            }
-                            .simultaneousGesture(
-                                TapGesture().onEnded { _ in
                                     model.playSoundA()
                                 }
-                            )
+                            }
+
                         
                         
                         
@@ -84,14 +81,10 @@ struct GameBallsLevel1: View {
                                     
                                     model.provideHapticFeedback()
                                     
-                                    
-                                }
-                            }
-                            .simultaneousGesture(
-                                TapGesture().onEnded { _ in
                                     model.playSoundC()
                                 }
-                            )
+                            }
+
                         
                         
                         BallsView(isHighlighted: $model.highlight[2], color: bottoni[2])
@@ -100,19 +93,19 @@ struct GameBallsLevel1: View {
                                 if !model.isAnimating && model.isPlayerTurn {
                                     model.circleTapped("b")
                                     model.provideHapticFeedback()
-                                    
-                                }
-                            }                .simultaneousGesture(
-                                TapGesture().onEnded { _ in
                                     model.playSoundF()
                                 }
-                            )
+                            }
                         
                     }.onAppear(perform: model.animateCircles)
                     
                 
             }.padding(.top,dynamicHeight(200))
-        }
+        }        .onAppear(perform: model.animateCircles)
+            .onDisappear {
+                model.audioPlayer?.stop()
+                model.isViewVisible = false
+            }
     }
 }
 

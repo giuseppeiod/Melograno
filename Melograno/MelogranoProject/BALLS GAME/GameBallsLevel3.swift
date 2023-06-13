@@ -70,36 +70,26 @@ struct GameBallsLevel3: View {
                                 if !model.isAnimating && model.isPlayerTurn {
                                     model.circleTapped("p")
                                     model.provideHapticFeedback()
-                                }
-                            }                            .simultaneousGesture(
-                                TapGesture().onEnded { _ in
                                     model.playSoundeE()
                                 }
-                            )
+                            }
                         BallsView(isHighlighted: $model.highlight[4], color: bottoni[4])
                             .onTapGesture {
                                 if !model.isAnimating && model.isPlayerTurn {
                                     model.circleTapped("o")
                                     model.provideHapticFeedback()
-
-                                }
-                            }                            .simultaneousGesture(
-                                TapGesture().onEnded { _ in
                                     model.playSoundeE()
                                 }
-                            )
+                            }
                         BallsView(isHighlighted: $model.highlight[0], color: bottoni[0])
                             .onTapGesture {
                                 if !model.isAnimating && model.isPlayerTurn {
                                     model.circleTapped("r")
                                     model.provideHapticFeedback()
-                                }
-                            }
-                            .simultaneousGesture(
-                                TapGesture().onEnded { _ in
                                     model.playSoundA()
                                 }
-                            )
+                            }
+  
                     }
                     HStack(spacing: 60) {
                         BallsView(isHighlighted: $model.highlight[1], color: bottoni[1])
@@ -107,30 +97,30 @@ struct GameBallsLevel3: View {
                                 if !model.isAnimating && model.isPlayerTurn {
                                     model.circleTapped("g")
                                     model.provideHapticFeedback()
-                                }
-                            }
-                            .simultaneousGesture(
-                                TapGesture().onEnded { _ in
                                     model.playSoundC()
                                 }
-                            )
+                            }
+               
                         BallsView(isHighlighted: $model.highlight[2], color: bottoni[2])
                             .onTapGesture {
                                 if !model.isAnimating && model.isPlayerTurn {
                                     model.circleTapped("b")
                                     model.provideHapticFeedback()
-                                }
-                            }
-                            .simultaneousGesture(
-                                TapGesture().onEnded { _ in
                                     model.playSoundD()
                                 }
-                            )
+                            }
+
                     }
             }
             .padding(.top,dynamicHeight(200))
-            .onAppear(perform: model.animateCircles)
+            
         }
+        .onAppear(perform: model.animateCircles)
+        .onDisappear {
+            model.audioPlayer?.stop()
+            model.isViewVisible = false
+        }
+
     }
 }
 

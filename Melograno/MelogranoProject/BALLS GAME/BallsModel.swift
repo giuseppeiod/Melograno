@@ -11,6 +11,11 @@ import UIKit
 
 class BallsModel: ObservableObject{
     
+    @Published  var isPresented: Bool = true
+    
+    @Published  var isViewVisible: Bool = true
+
+    
     @Published var isGameFinished: Bool = false
 
     @Published var highlight: [Bool] = []
@@ -20,6 +25,7 @@ class BallsModel: ObservableObject{
     @Published var gameResult: String = ""
     @Published var currentSequenceIndex: Int = 0
     @Published var correctSequences: Int = 0
+    
     @Published var audioPlayer: AVAudioPlayer?
     
     
@@ -67,7 +73,7 @@ class BallsModel: ObservableObject{
                                 isPlayerTurn = false
                                 currentSequenceIndex += 1
                                 playerSequence = []
-                                
+                                isGameFinished = true
                                 sequence = generateRandomSequence(dim: currentSequenceIndex, previousSequence: sequence, numberOfCircles: currentSequenceIndex)
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [self] in
                                     animateCircles()
@@ -80,6 +86,7 @@ class BallsModel: ObservableObject{
                     isPlayerTurn = false
                     playerSequence = []
                     currentSequenceIndex = 0
+                    isGameFinished = true
                     sequence = generateRandomSequence(dim: 1, previousSequence: [], numberOfCircles: numberOfCircles ?? 3)
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [self] in
                         animateCircles()
@@ -219,6 +226,10 @@ class BallsModel: ObservableObject{
     
     
     func playSoundA() {
+        
+        guard isViewVisible else {
+            return
+        }
         guard let url = Bundle.main.url(forResource: "a", withExtension: "mp3") else { return }
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
@@ -230,6 +241,9 @@ class BallsModel: ObservableObject{
     }
     
     func playSoundC() {
+        guard isViewVisible else {
+            return
+        }
         guard let url = Bundle.main.url(forResource: "c", withExtension: "mp3") else { return }
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
@@ -241,6 +255,9 @@ class BallsModel: ObservableObject{
     }
     
     func playSoundD() {
+        guard isViewVisible else {
+            return
+        }
         guard let url = Bundle.main.url(forResource: "d", withExtension: "mp3") else { return }
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
@@ -252,6 +269,9 @@ class BallsModel: ObservableObject{
     }
     
     func playSoundF() {
+        guard isViewVisible else {
+            return
+        }
         guard let url = Bundle.main.url(forResource: "f", withExtension: "mp3") else { return }
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
@@ -263,6 +283,9 @@ class BallsModel: ObservableObject{
     }
     
     func playSoundeE() {
+        guard isViewVisible else {
+            return
+        }
         guard let url = Bundle.main.url(forResource: "e", withExtension: "mp3") else { return }
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
