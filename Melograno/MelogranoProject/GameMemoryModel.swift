@@ -8,13 +8,22 @@
 import Foundation
 
 import AVFoundation
-
+import SwiftUI
 
 
 class GameMemoryModel: ObservableObject {
+    
     @Published var model: [CardMemory] = []
-    private var audioPlayer: AVAudioPlayer?
-
+    @Published var audioPlayer: AVAudioPlayer?
+    @Published  var isGameFinishedButton = false
+    
+    @Published var flippedCards: [Int] = []
+    @Published var flippedWrongCards: [Int] = []
+    
+    @Published var shouldResetCards = false
+    
+    @Published var numberOfCards: Int? 
+    
     var cards: [CardMemory] {
         model
     }
@@ -32,7 +41,7 @@ class GameMemoryModel: ObservableObject {
     
     
     init() {
-        if let newCards = loadCardsFromJSON() {
+        if let newCards = loadCardsFromJSON(dim: 2) {
             model = newCards
             if let soundURL = Bundle.main.url(forResource: "notifica", withExtension: "mp3") {
                 audioPlayer = try? AVAudioPlayer(contentsOf: soundURL)
@@ -41,6 +50,12 @@ class GameMemoryModel: ObservableObject {
     }
     
     
+    static func withNumberOfCards(_ numberOfCards: Int) -> GameMemoryModel {
+        let model = GameMemoryModel()
+        model.numberOfCards = numberOfCards
+        
+        return model
+    }
     
     func choose(_ card: CardMemory) {
         guard !isGameFinished else {
@@ -99,7 +114,7 @@ class GameMemoryModel: ObservableObject {
     }
     
     func resetGame() {
-        if let newCards = loadCardsFromJSON() {
+        if let newCards = loadCardsFromJSON(dim: 3) {
             model = newCards
             isGameFinished = false
         }
@@ -111,34 +126,61 @@ class GameMemoryModel: ObservableObject {
     
     //NON SHUFFLED PER PRESENTAZIONE COSì SI VEDONO LE CARD BELLE 
 
-    func loadCardsFromJSON() -> [CardMemory]? {
-        if let url = Bundle.main.url(forResource: "MemoryCards", withExtension: "geojson"),
-           let data = try? Data(contentsOf: url) {
-            let decoder = JSONDecoder()
-            if let cardData = try? decoder.decode([CardData].self, from: data) {
-                let selectedCards = Array(cardData.prefix(3))
-                let duplicatedCards = selectedCards.flatMap { [$0, $0] }
-                return duplicatedCards.map { CardMemory(imageName: $0.imageName) }
-            }
-        }
-        return nil
-    }
-    
-    //SHUFFLED
-//    func loadCardsFromJSON() -> [CardMemory]? {
+//    func loadCardsFromJSON(dim: Int) -> [CardMemory]? {
 //        if let url = Bundle.main.url(forResource: "MemoryCards", withExtension: "geojson"),
 //           let data = try? Data(contentsOf: url) {
 //            let decoder = JSONDecoder()
 //            if let cardData = try? decoder.decode([CardData].self, from: data) {
-//                let shuffledCards = cardData.shuffled()
-//                let selectedCards = Array(shuffledCards.prefix(3))
+//                let selectedCards = Array(cardData.prefix(dim))
 //                let duplicatedCards = selectedCards.flatMap { [$0, $0] }
 //                return duplicatedCards.map { CardMemory(imageName: $0.imageName) }
 //            }
 //        }
 //        return nil
 //    }
+//
 
+    func loadCardsFromJSON(dim: Int) -> [CardMemory]? {
+        if let url = Bundle.main.url(forResource: "MemoryCards", withExtension: "geojson"),
+           let data = try? Data(contentsOf: url) {
+            let decoder = JSONDecoder()
+            if let cardData = try? decoder.decode([CardData].self, from: data) {
+                let shuffledCards = cardData.shuffled()
+                let selectedCards = Array(shuffledCards.prefix(dim))
+                let duplicatedCards = selectedCards.flatMap { [$0, $0] }
+                return duplicatedCards.map { CardMemory(imageName: $0.imageName) }
+            }
+        }
+        return nil
+    }
+    func flipCard(_ index: Int) {
+            withAnimation {
+                if flippedCards.contains(index) {
+                    flippedCards.removeAll { $0 == index }
+                } else {
+                    flippedCards.append(index)
+
+                    // Verifica il match delle carte
+                    if flippedCards.count == 2 {
+                        let firstCardIndex = flippedCards[0]
+                        let secondCardIndex = flippedCards[1]
+
+                        if cards[firstCardIndex].id != cards[secondCardIndex].id {
+                            flippedWrongCards.append(contentsOf: flippedCards)
+                            shouldResetCards = true
+                        }
+
+                        flippedCards.removeAll()
+                    }
+                }
+            }
+        }
+
+        func restartGame() {
+            resetGame()
+            flippedCards.removeAll()
+            flippedWrongCards.removeAll()
+        }
     
 }
 

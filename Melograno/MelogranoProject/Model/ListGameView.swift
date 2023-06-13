@@ -37,7 +37,7 @@ struct ListGameView: View {
                 }
             }
             else if game.type == .memory{
-                CardMemoryGameView()
+                CardMemoryGameView(numberOfCards: 2)
             }
         }.onAppear{
             if game.type == .cronological{
