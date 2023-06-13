@@ -14,9 +14,11 @@ struct OnBoardingManager: View {
 
 
     var body: some View {
+        
 
-
+            
         ZStack{
+            
             VStack{
                 Text("Welcome to B.T. Hub")
                     .font(.largeTitle)
@@ -44,27 +46,33 @@ struct OnBoardingManager: View {
                     Text("If you want a personalized path, ask \n for the support of an expert who will\n be able to structure the one best\n suited for you.")
                 }
                 .padding()
-
-
-          
-            .background(Color.white)
-            .cornerRadius(20)
-            
-            
-         Rectangle()
+                
+                
+                
+                
+                
+                
+                Rectangle()
                     .frame(width: 447, height: 65)
                     .cornerRadius(20)
                     .foregroundColor(Color("CustomPurple"))
                     .overlay(
-                    Text("Explore"))
+                        Text("Explore"))
                     .font(.custom("Figtree-Medium", size: 48))
                     .foregroundColor(.white)
+                    .onTapGesture {
+                        UserDefaults.standard.onboardingViewShown = true
+                        print("\(onboardingViewShown)")
+                    }
+            }
         }
-       }
-        .onAppear(perform: {
-            UserDefaults.standard.onboardingViewShown = true
-
-        })
+        
+    
+        
+//        .onAppear(perform: {
+//            UserDefaults.standard.onboardingViewShown = true
+//
+//        })
     }
 }
 

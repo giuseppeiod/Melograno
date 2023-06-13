@@ -280,6 +280,7 @@
 				0A6732982A0B830300806FEA /* MelogranoProjectApp.swift */,
 				0A67329A2A0B830300806FEA /* ContentView.swift */,
 				C9DFCF8E2A3703370018AA9B /* Menu.swift */,
+				0AEC85752A1290350051DAC4 /* OnBoardingManager.swift */,
 				C9DFCF902A3703920018AA9B /* LevelView.swift */,
 				C9DFCF942A3704130018AA9B /* CronoGameView.swift */,
 				C9DFCF9C2A3705350018AA9B /* CronoDecoding.swift */,
@@ -369,7 +370,6 @@
 			children = (
 				0A73F62B2A2E29C800959F41 /* Modale.swift */,
 				0A73F62D2A2E29D000959F41 /* OnBoardingFirst.swift */,
-				0AEC85752A1290350051DAC4 /* OnBoardingManager.swift */,
 				0AEC85732A1290210051DAC4 /* OnBoardingFourth.swift */,
 				137ABCF02A2F8A99006EF36D /* BoardingSecond.swift */,
 			);

@@ -10,7 +10,8 @@ import SwiftUI
 
 struct Menu: View {
     
-  
+    @AppStorage("onboardingViewShown")
+    var onboardingViewShown: Bool = false
 
     let columns = [
             GridItem(.flexible()),
@@ -60,7 +61,7 @@ struct Menu: View {
                     .scaledToFill())
                 
                 
-                if aa{
+                if  aa{
                    Image("onbbackground")
                         .resizable()
 
@@ -73,7 +74,9 @@ struct Menu: View {
         }
         .preferredColorScheme(.light)
         .navigationViewStyle(.stack)
-        .sheet(isPresented: $aa) {
+        .sheet(isPresented: $aa, onDismiss: {UserDefaults.standard.onboardingViewShown = true}) {
+            
+            
            OnBoardingManager()
 
         }
