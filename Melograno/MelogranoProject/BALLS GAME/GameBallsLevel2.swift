@@ -8,6 +8,7 @@ import SwiftUI
 
 struct GameBallsLevel2: View {
     
+
     @StateObject private var model: BallsModel
     
     
@@ -110,6 +111,15 @@ struct GameBallsLevel2: View {
                 
             }
             .padding(.top,dynamicHeight(200))
+            
+            
+            if model.isGameFinished == true {
+
+                            CongratsView(dismiss: {}, replay: {
+                                model.restartGame()
+                                model.animateCircles()
+                            }, points: model.currentSequenceIndex, result: model.currentSequenceIndex)
+                        }
         }
         .onAppear(perform: model.animateCircles)
         .onDisappear {

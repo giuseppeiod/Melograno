@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GameBallsLevel1: View {
     
+
     @StateObject private var model: BallsModel
     
     init() {
@@ -101,7 +102,21 @@ struct GameBallsLevel1: View {
                     
                 
             }.padding(.top,dynamicHeight(200))
-        }        .onAppear(perform: model.animateCircles)
+            
+   
+            if model.isGameFinished == true {
+
+                            CongratsView(dismiss: {}, replay: {
+                                model.restartGame()
+                                model.animateCircles()
+                            }, points: model.currentSequenceIndex, result: model.currentSequenceIndex)
+                        }
+        }
+        
+        
+        
+        
+        .onAppear(perform: model.animateCircles)
             .onDisappear {
                 model.audioPlayer?.stop()
                 model.isViewVisible = false

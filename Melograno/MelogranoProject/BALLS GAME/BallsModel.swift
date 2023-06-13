@@ -65,15 +65,16 @@ class BallsModel: ObservableObject{
                         }
                         playerSequence.append(color)
                         if playerSequence.count == sequence.count {
-                            if sequence.count == 6 {
+                            if sequence.count == 7 {
                                 gameResult = "You won!"
                                 isPlayerTurn = false
+                                isGameFinished = true
                             } else {
                                 gameResult = "Well done! Keep it going."
                                 isPlayerTurn = false
                                 currentSequenceIndex += 1
                                 playerSequence = []
-                                isGameFinished = true
+                                
                                 sequence = generateRandomSequence(dim: currentSequenceIndex, previousSequence: sequence, numberOfCircles: currentSequenceIndex)
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [self] in
                                     animateCircles()
@@ -82,15 +83,13 @@ class BallsModel: ObservableObject{
                         }
                     }
                 } else {
-                    gameResult = "Game over, try again!"
+                    sequence.removeAll()
                     isPlayerTurn = false
                     playerSequence = []
                     currentSequenceIndex = 0
                     isGameFinished = true
-                    sequence = generateRandomSequence(dim: 1, previousSequence: [], numberOfCircles: numberOfCircles ?? 3)
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [self] in
-                        animateCircles()
-                    }
+                    
+
                 }
             } else {
                 print("Errore: Indice out of range")
@@ -117,10 +116,18 @@ class BallsModel: ObservableObject{
     }
        
        func restartGame() {
+           
+           sequence = []
+           generateNewSequence()
+           sequence = generateRandomSequence(dim: 1, previousSequence: [], numberOfCircles: numberOfCircles ?? 3)
+          
            currentSequenceIndex = 0
            correctSequences = 0
            generateNewSequence()
            isGameFinished = false
+           isAnimating = false
+           
+           
        }
     
     func animateCircles() {
@@ -183,7 +190,7 @@ class BallsModel: ObservableObject{
     
     private func generateNewSequence() {
         highlight = Array(repeating: false, count: numberOfCircles ?? 3)
-        sequence = generateRandomSequence(dim: currentSequenceIndex + 1, previousSequence: sequence, numberOfCircles: numberOfCircles ?? 3 )
+        sequence = generateRandomSequence(dim: currentSequenceIndex + 1, previousSequence: [], numberOfCircles: numberOfCircles ?? 3 )
        print(sequence)
         playerSequence = []
         isPlayerTurn = false

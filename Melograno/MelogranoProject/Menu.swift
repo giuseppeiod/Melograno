@@ -84,7 +84,7 @@ struct Menu: View {
         .sheet(isPresented: Binding(
             get: { onboardingViewShown },
             set: { _ in UserDefaults.standard.setValue(aa , forKey: "onboardingViewShown") }
-        )) {
+        ), onDismiss: {onboardingViewShown = false} ) {
             
         
                   //MARK: onboarding
