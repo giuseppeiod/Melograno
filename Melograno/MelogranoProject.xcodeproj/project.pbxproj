@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A12FAC32A38557E001B0DA1 /* ColorExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A12FAC22A38557E001B0DA1 /* ColorExtention.swift */; };
 		0A6732992A0B830300806FEA /* MelogranoProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6732982A0B830300806FEA /* MelogranoProjectApp.swift */; };
 		0A67329B2A0B830300806FEA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67329A2A0B830300806FEA /* ContentView.swift */; };
 		0A67329D2A0B830400806FEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A67329C2A0B830400806FEA /* Assets.xcassets */; };
@@ -116,6 +117,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A12FAC22A38557E001B0DA1 /* ColorExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtention.swift; sourceTree = "<group>"; };
 		0A6732952A0B830300806FEA /* MelogranoProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MelogranoProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6732982A0B830300806FEA /* MelogranoProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelogranoProjectApp.swift; sourceTree = "<group>"; };
 		0A67329A2A0B830300806FEA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -255,8 +257,6 @@
 		0A67328C2A0B830300806FEA = {
 			isa = PBXGroup;
 			children = (
-				C9DFCF9E2A3706570018AA9B /* AssociateGameView.swift */,
-				C9DFCFA02A37067A0018AA9B /* WordView.swift */,
 				0A6732972A0B830300806FEA /* MelogranoProject */,
 				0A6732AD2A0B830400806FEA /* MelogranoProjectTests */,
 				0A6732B72A0B830400806FEA /* MelogranoProjectUITests */,
@@ -277,6 +277,8 @@
 		0A6732972A0B830300806FEA /* MelogranoProject */ = {
 			isa = PBXGroup;
 			children = (
+				C9DFCF9E2A3706570018AA9B /* AssociateGameView.swift */,
+				C9DFCFA02A37067A0018AA9B /* WordView.swift */,
 				0A6732982A0B830300806FEA /* MelogranoProjectApp.swift */,
 				0A67329A2A0B830300806FEA /* ContentView.swift */,
 				C9DFCF8E2A3703370018AA9B /* Menu.swift */,
@@ -435,6 +437,7 @@
 				C9E319B02A34725200BEF354 /* GameBallsLevel2.swift */,
 				C9E319B22A34949500BEF354 /* GameBallsLevel3.swift */,
 				C97C27162A338B3D00CDEA78 /* BallsModel.swift */,
+				0A12FAC22A38557E001B0DA1 /* ColorExtention.swift */,
 			);
 			path = "BALLS GAME";
 			sourceTree = "<group>";
@@ -644,6 +647,7 @@
 				C9DFCF9B2A3704D30018AA9B /* VuotoView.swift in Sources */,
 				C94228062A265ED10019A550 /* ModelGameOne.swift in Sources */,
 				0A72FD782A27530400073F85 /* CardGameTwoView.swift in Sources */,
+				0A12FAC32A38557E001B0DA1 /* ColorExtention.swift in Sources */,
 				C94228002A265E590019A550 /* GameOneView.swift in Sources */,
 				C9DFCF952A3704130018AA9B /* CronoGameView.swift in Sources */,
 				C94228022A265E810019A550 /* CardGameOne.swift in Sources */,

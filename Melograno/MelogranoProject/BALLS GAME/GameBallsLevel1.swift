@@ -9,8 +9,6 @@ import SwiftUI
 
 struct GameBallsLevel1: View {
     
-
-    @Environment(\.presentationMode) var dismiss
     @StateObject private var model: BallsModel
     
     init() {
@@ -19,13 +17,12 @@ struct GameBallsLevel1: View {
     
     var bottoni: [ColoreBottone] = [
         
-        ColoreBottone(coloresopra: .red, coloredopo: .blue, coloresotto: .black, coloreop: .red, suono: "a"),
+        ColoreBottone(coloresopra: .redOff, coloredopo: .redOff, coloresotto: .redDown, coloreop: .redOn, suono: "a"),
         
-        ColoreBottone(coloresopra: .blue, coloredopo: .blue, coloresotto: .black, coloreop: .red, suono: "c"),
+        ColoreBottone(coloresopra: .blueOff, coloredopo: .blueOff, coloresotto: .blueDown, coloreop: .blueOn, suono: "b"),
         
-        ColoreBottone(coloresopra: .green, coloredopo: .blue, coloresotto: .black, coloreop: .red, suono: "d")
+        ColoreBottone(coloresopra: .greenOff, coloredopo: .greenOff, coloresotto: .greenDown, coloreop: .greenOn, suono: "c")
     ]
-    
     var body: some View {
         
         
@@ -33,58 +30,50 @@ struct GameBallsLevel1: View {
         ZStack(){
             
             VStack(alignment: .leading){
+                Text("BUTTONS")
+                    .font(.custom("Figtree-ExtraBold", size: dynamicWidth(34)))
                 
-                Text("Ballsathlon")
-                    .font(.custom("Figtree-ExtraBold", size: 48))
-                
-                Text("Tap the balls sequence after they lit up ")
-                    .font(.custom("Figtree-Regular", size: 48))
-                
+                Text("Repeat the sequence of the lighted buttons.")
+                    .font(.custom("Figtree-Regular", size: dynamicWidth(32)))
                 Spacer()
-                
             }
-            
-            
-            
-            VStack(){
-                
-                
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.horizontal,dynamicWidth(60))
+            .padding(.top, dynamicHeight(83))
+            .ignoresSafeArea()
+            VStack{
                 if !model.isAnimating && model.isPlayerTurn{
                     Text("Your turn!")
-                        .font(.custom("Figtree-ExtraBold", size: 64))
-                        .foregroundColor(Color("CustomPurple"))
-                    
+                        .font(.custom("Figtree-ExtraBold", size: dynamicWidth(32)))
+                        .foregroundColor(.black)
+                    Spacer()
                 }
                 
                 
                 Text(model.gameResult)
-                    .font(.custom("Figtree-ExtraBold", size: 64))
-                    .foregroundColor(Color("CustomPurple"))
-                
-            }
-            .padding(.bottom, 100)
-            
-            
+                    .font(.custom("Figtree-ExtraBold", size: dynamicWidth(32)))
+                    .foregroundColor(.black)
+                Spacer()
+            }.padding(.top, dynamicHeight(150))
             
             VStack(spacing: 40){
-                Spacer()
                 
-                VStack(spacing: 40){
                     HStack(spacing: 60){
-                        
-                        
-                        
                         BallsView(isHighlighted: $model.highlight[0], color: bottoni[0])
                             .onTapGesture {
                                 if !model.isAnimating && model.isPlayerTurn {
-                                  
-                                    model.playSoundA()
+                                    
                                     model.circleTapped("r")
                                     model.provideHapticFeedback()
                                 }
-                                
                             }
-   
+                            .simultaneousGesture(
+                                TapGesture().onEnded { _ in
+                                    model.playSoundA()
+                                }
+                            )
+                        
+                        
                         
                         BallsView(isHighlighted: $model.highlight[1], color: bottoni[1])
                             .onTapGesture {
@@ -95,10 +84,14 @@ struct GameBallsLevel1: View {
                                     
                                     model.provideHapticFeedback()
                                     
-                                    model.playSoundC()
+                                    
                                 }
                             }
-
+                            .simultaneousGesture(
+                                TapGesture().onEnded { _ in
+                                    model.playSoundC()
+                                }
+                            )
                         
                         
                         BallsView(isHighlighted: $model.highlight[2], color: bottoni[2])
@@ -107,32 +100,19 @@ struct GameBallsLevel1: View {
                                 if !model.isAnimating && model.isPlayerTurn {
                                     model.circleTapped("b")
                                     model.provideHapticFeedback()
-                                    model.playSoundD()
+                                    
                                 }
-                            }
+                            }                .simultaneousGesture(
+                                TapGesture().onEnded { _ in
+                                    model.playSoundF()
+                                }
+                            )
                         
                     }.onAppear(perform: model.animateCircles)
                     
-                }
-            }
-            
-
-            if model.showPopCongrats == true {
                 
-                CongratsView(dismiss: {dismiss.wrappedValue.dismiss()}, replay: {
-                    model.restartGame()
-                    
-                }, points: model.currentSequenceIndex, result: model.currentSequenceIndex)
-            }
-            
+            }.padding(.top,dynamicHeight(200))
         }
-        
-        .onDisappear {
-            model.isPresented = false
-            
-            
-        }
-
     }
 }
 

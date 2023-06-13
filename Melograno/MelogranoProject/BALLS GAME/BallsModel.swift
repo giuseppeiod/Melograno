@@ -4,14 +4,12 @@
 //
 //  Created by Rita Marrano on 09/06/23.
 //
-
+import SwiftUI
 import Foundation
 import AVFoundation
 import UIKit
 
 class BallsModel: ObservableObject{
-    
-    @Published  var isPresented: Bool = true
     
     @Published var isGameFinished: Bool = false
 
@@ -24,15 +22,13 @@ class BallsModel: ObservableObject{
     @Published var correctSequences: Int = 0
     @Published var audioPlayer: AVAudioPlayer?
     
-    @Published var showPopCongrats: Bool = false
+    
     @Published  var sequence: [String] = []
     @Published  var playerSequence: [String] = []
 
     @Published var numberOfCircles: Int?
     
     init() {
-       
-//        highlight = Array(repeating: false, count: numberOfCircles ?? 3)
         generateNewSequence()
     }
     
@@ -53,21 +49,20 @@ class BallsModel: ObservableObject{
                 let expectedColor = sequence[expectedColorIndex]
                 
                 let index = getColorIndex(from: color)
-                highlight[index] = true
-                
+                withAnimation{
+                    highlight[index] = true
+                }
                 if color == expectedColor {
-//                    let index = getColorIndex(from: color)
-//                    highlight[index] = true
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [self] in
-                        highlight[index] = false
+                        withAnimation{
+                            highlight[index] = false
+                        }
                         playerSequence.append(color)
                         if playerSequence.count == sequence.count {
                             if sequence.count == 6 {
                                 gameResult = "You won!"
                                 isPlayerTurn = false
-                                showPopCongrats = true
                             } else {
-                                
                                 gameResult = "Well done! Keep it going."
                                 isPlayerTurn = false
                                 currentSequenceIndex += 1
@@ -81,15 +76,14 @@ class BallsModel: ObservableObject{
                         }
                     }
                 } else {
-                    showPopCongrats = true
                     gameResult = "Game over, try again!"
                     isPlayerTurn = false
                     playerSequence = []
                     currentSequenceIndex = 0
                     sequence = generateRandomSequence(dim: 1, previousSequence: [], numberOfCircles: numberOfCircles ?? 3)
-//                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [self] in
-//                        animateCircles()
-//                    }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [self] in
+                        animateCircles()
+                    }
                 }
             } else {
                 print("Errore: Indice out of range")
@@ -120,12 +114,13 @@ class BallsModel: ObservableObject{
            correctSequences = 0
            generateNewSequence()
            isGameFinished = false
-           showPopCongrats = false
        }
     
     func animateCircles() {
         gameResult = ""
-        isAnimating = true
+        withAnimation{
+            isAnimating = true
+        }
         var index = 0
         
         Timer.scheduledTimer(withTimeInterval: 1.5, repeats: true) { [self] timer in
@@ -150,9 +145,13 @@ class BallsModel: ObservableObject{
 
                 playSound(for: color)
                 let colorIndex = getColorIndex(from: color)
-                highlight[colorIndex] = true
+                withAnimation{
+                    highlight[colorIndex] = true
+                }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
-                    self.highlight[colorIndex] = false
+                    withAnimation{
+                        self.highlight[colorIndex] = false
+                    }
                     index += 1
                 }
             } else {
@@ -185,18 +184,6 @@ class BallsModel: ObservableObject{
         gameResult = ""
     }
 
-
-//    private func generateRandomSequence(dim: Int, previousSequence: [String], numberOfCircles: Int) -> [String] {
-//        var sequence: [String] = previousSequence
-//
-//        if dim >= sequence.count {
-//            let randomIndex = Int.random(in: 0..<numberOfCircles)
-//            let randomColor = getColorFromIndex(randomIndex)
-//            sequence.append(randomColor)
-//        }
-//
-//        return sequence
-//    }
     
     private func generateRandomSequence(dim: Int, previousSequence: [String], numberOfCircles: Int) -> [String] {
         var sequence: [String] = previousSequence
@@ -232,10 +219,6 @@ class BallsModel: ObservableObject{
     
     
     func playSoundA() {
-        
-        guard isPresented else {
-            return
-        }
         guard let url = Bundle.main.url(forResource: "a", withExtension: "mp3") else { return }
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
@@ -247,11 +230,6 @@ class BallsModel: ObservableObject{
     }
     
     func playSoundC() {
-        
-        guard isPresented else {
-            return
-        }
-
         guard let url = Bundle.main.url(forResource: "c", withExtension: "mp3") else { return }
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
@@ -263,10 +241,6 @@ class BallsModel: ObservableObject{
     }
     
     func playSoundD() {
-        guard isPresented else {
-            return
-        }
-
         guard let url = Bundle.main.url(forResource: "d", withExtension: "mp3") else { return }
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
@@ -278,11 +252,6 @@ class BallsModel: ObservableObject{
     }
     
     func playSoundF() {
-        
-        guard isPresented else {
-            return
-        }
-
         guard let url = Bundle.main.url(forResource: "f", withExtension: "mp3") else { return }
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
@@ -294,10 +263,6 @@ class BallsModel: ObservableObject{
     }
     
     func playSoundeE() {
-        guard isPresented else {
-            return
-        }
-
         guard let url = Bundle.main.url(forResource: "e", withExtension: "mp3") else { return }
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
@@ -317,10 +282,13 @@ class BallsModel: ObservableObject{
 }
 
 
-//enum BallType: String {
-//    case red = "r"
-//    case green = "g"
-//    case blue = "b"
-//    case orange = "o"
-//    case purple = "p"
-//}
+enum BallType: String {
+    case red = "r"
+    case green = "g"
+    case blue = "b"
+    case orange = "o"
+    case purple = "p"
+}
+
+
+

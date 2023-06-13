@@ -7,49 +7,29 @@
 
 import SwiftUI
 
-//struct BallsView: View {
-//
-//    @Binding var isHighlighted: Bool
-//    var color: Color
-//
-//
-//
-//    var body: some View {
-//
-//       Circle()
-//            .fill(color)
-//            .frame(width: 150, height: 150)
-//            .opacity(isHighlighted ? 1.0 : 0.2)
-//            .animation(.default)
-//    }
-//}
-
-
-
 struct BallsView: View {
     
-    
-    @State var transY: CGFloat = 0
-    @State var hrect: CGFloat = 30
-    @State var transRect: CGFloat = 0
+    @State var transY: CGFloat = dynamicHeight(0)
+    @State var hrect: CGFloat = dynamicHeight(30)
+    @State var transRect: CGFloat = dynamicHeight(0)
     
     @Binding var isHighlighted: Bool
-    //var color: Color
-    var color: ColoreBottone
+    @State var color: ColoreBottone
+    
     var body: some View {
         ZStack {
             VStack {
                 Spacer()
                 Circle()
                     .foregroundColor(color.coloresotto)
-                    .frame(width: 140)
+                    .frame(width: dynamicHeight(250))
             }
             
             VStack {
                 Spacer()
                 Rectangle()
                     .foregroundColor(color.coloresotto)
-                    .frame(width: 100, height: hrect)
+                    .frame(width: dynamicHeight(250), height: hrect)
                     .offset(x: 0, y: transRect)
                 Spacer()
             }
@@ -57,11 +37,12 @@ struct BallsView: View {
             VStack {
                 Circle()
                     .foregroundColor(isHighlighted ? color.coloreop : color.coloresopra)
-                    .frame(width: 140)
+                    .frame(width: dynamicHeight(250))
                     .offset(x: 0, y: transY)
+                Spacer()
             }
         }
-        .frame(width: 140, height: 160)
+        .frame(width: dynamicWidth(250), height: dynamicHeight(280))
         .onChange(of: isHighlighted) { newValue in
             if newValue {
                 
@@ -75,36 +56,38 @@ struct BallsView: View {
         }
     }
     
-    func animate() {
+        func animate() {
         withAnimation {
-            transY = 13
-            hrect = 1
-            transRect = 7
+            isHighlighted = true
+            transY = dynamicHeight(20)
+            hrect = dynamicHeight(1)
+            transRect = dynamicHeight(7)
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.1) {
             withAnimation(.linear(duration: 1.0)) {
-                transY = 0
-                hrect = 30
-                transRect = 0
+                isHighlighted = false
+                transY = dynamicHeight(0)
+                hrect = dynamicHeight(30)
+                transRect = dynamicHeight(0)
             }
         }
     }
     
     func stopAnimation() {
-        transY = 0
-        hrect = 30
-        transRect = 0
+        transY = dynamicHeight(0)
+        hrect = dynamicHeight(30)
+        transRect = dynamicHeight(0)
     }
 }
 
 
-//struct BallsView_Previews: PreviewProvider {
-//    @State static var isHighlighted = false
-//    
-//    static var previews: some View {
-//        BallsView(isHighlighted: $isHighlighted, color: .blue)
-//            .padding()
-//            .previewLayout(.sizeThatFits)
-//    }
-//}
+struct BallsView_Previews: PreviewProvider {
+    @State static var isHighlighted = false
+    
+    static var previews: some View {
+        BallsView(isHighlighted: $isHighlighted, color:ColoreBottone(coloresopra: .blue, coloredopo: .blue, coloresotto: .red, coloreop: .yellow, suono: "a"))
+            .padding()
+            .previewLayout(.sizeThatFits)
+    }
+}
