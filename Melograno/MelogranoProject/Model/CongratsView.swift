@@ -13,6 +13,7 @@ struct CongratsView: View {
     var replay: () -> Void
     var points: Int
     var result: Int
+    var gameType:Games = .association
     var body: some View {
         ZStack{
             Image("congrats")
@@ -24,7 +25,15 @@ struct CongratsView: View {
                     .foregroundColor(.black)
                     .padding(.top,100)
                 Spacer()
-                Text("hai fatto \(points-result) errori")
+                if gameType == .balls{
+                    Text("aaaaaaaaaaa \(points)")
+                }else if gameType == .memory{
+                    Text("aaaaaaaaaaa")
+                }else if gameType == .association || gameType == .cronological{
+                    Text("hai fatto \(points-result) errori")
+                }else{
+                    Text("aaaaaaaaaaa")
+                }
                 Spacer()
                 HStack{
                     Button(action: {
@@ -36,7 +45,6 @@ struct CongratsView: View {
                     .padding(.horizontal,50)
                     
                     Button(action: {
-                        dismiss()
                         replay()
                     }, label: {
                         FinishButtonView(buttonText: "Replay")

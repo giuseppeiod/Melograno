@@ -16,6 +16,8 @@ struct ListGameView: View {
     @State var bottoms : [GameBoxPosition] = []
     
     @State var tops : [GameBoxPosition] = []
+    @State var gameBalls:[ColoreBottone] = []
+    
     
     var body: some View {
         VStack{
@@ -27,13 +29,13 @@ struct ListGameView: View {
             }
             else if game.type == .balls{
                 if level == .level1{
-                    GameBallsLevel1()
+                    GameBallsLevel1(circlesNumber: 3,bottoni: $gameBalls)
                 }
                 else if level == .level2{
-                    GameBallsLevel2()
+                    GameBallsLevel1(circlesNumber: 4,bottoni: $gameBalls)
                 }
                 else if level == .level3{
-                    GameBallsLevel3()
+                    GameBallsLevel1(circlesNumber: 5,bottoni: $gameBalls)
                 }
             }
             else if game.type == .memory{
@@ -83,7 +85,7 @@ struct ListGameView: View {
                     let selectedGame = gamesLevel.randomElement()
                     let shuffled = selectedGame?.shuffled()
                     fulls = [GameBoxPosition(x:dynamicWidth(343), y:dynamicHeight(334)),GameBoxPosition(x:dynamicWidth(683), y:dynamicHeight(334)),GameBoxPosition(x:dynamicWidth(1023), y:dynamicHeight(334)),GameBoxPosition(x:dynamicWidth(513), y:dynamicHeight(567)),GameBoxPosition(x:dynamicWidth(853),y:dynamicHeight(567))]
-                   
+                    
                     bottoms = [GameBoxPosition(x:dynamicWidth(223), y:dynamicHeight(818)),GameBoxPosition(x:dynamicWidth(453), y:dynamicHeight(818)),GameBoxPosition(x:dynamicWidth(683), y:dynamicHeight(818)),GameBoxPosition(x:dynamicWidth(913), y:dynamicHeight(818)),GameBoxPosition(x:dynamicWidth(1143),y:dynamicHeight(818))]
                     
                     for index in fulls.indices{
@@ -92,7 +94,7 @@ struct ListGameView: View {
                     }
                     
                     let shuffled2 = selectedGame?.shuffled()
-
+                    
                     for index in bottoms.indices{
                         bottoms[index].image = shuffled2![index].imageName
                     }
@@ -113,7 +115,7 @@ struct ListGameView: View {
                         fulls[index].image = shuffled![index].imageName
                     }
                     let shuffled2 = selectedGame?.shuffled()
-
+                    
                     for index in bottoms.indices{
                         bottoms[index].image = shuffled2![index].imageName
                     }
@@ -129,10 +131,10 @@ struct ListGameView: View {
                     bottoms = [GameBoxPosition(x:dynamicWidth(188), y:dynamicHeight(776)),GameBoxPosition(x:dynamicWidth(518), y:dynamicHeight(776)),GameBoxPosition(x:dynamicWidth(848), y:dynamicHeight(776)),GameBoxPosition(x:dynamicWidth(1178), y:dynamicHeight(776))]
                     
                     for index in fulls.indices{
-                        fulls[index].image = shuffled![index].imageName
+                        fulls[index].image = "\(shuffled![index].imageName)extra"
                     }
                     let shuffled2 = selectedGame?.shuffled()
-
+                    
                     for index in bottoms.indices{
                         bottoms[index].image = shuffled2![index].imageName
                     }
@@ -151,12 +153,23 @@ struct ListGameView: View {
                         fulls[index].image = shuffled![index].imageName
                     }
                     let shuffled2 = selectedGame?.shuffled()
-
+                    
                     for index in bottoms.indices{
                         bottoms[index].image = shuffled2![index].imageName
                     }
                     tops = [GameBoxPosition(x:dynamicWidth(343), y:dynamicHeight(334)),GameBoxPosition(x:dynamicWidth(683), y:dynamicHeight(334)),GameBoxPosition(x:dynamicWidth(1023), y:dynamicHeight(334)),GameBoxPosition(x:dynamicWidth(513), y:dynamicHeight(567)),GameBoxPosition(x:dynamicWidth(853),y:dynamicHeight(567))]
                     
+                }
+            }else if game.type == .balls{
+                
+                if level == .level1{
+                    gameBalls = [ColoreBottone(coloresopra: .redOff, coloredopo: .redOff, coloresotto: .redDown, coloreop: .redOn, suono: "a",name: "a"),ColoreBottone(coloresopra: .greenOff, coloredopo: .greenOff, coloresotto: .greenDown, coloreop: .greenOn, suono: "b",name: "b"),  ColoreBottone(coloresopra: .blueOff, coloredopo: .blueOff, coloresotto: .blueDown, coloreop: .blueOn, suono: "c",name: "c")]
+                }
+                else if level == .level2{
+                    gameBalls = [ColoreBottone(coloresopra: .redOff, coloredopo: .redOff, coloresotto: .redDown, coloreop: .redOn, suono: "a",name: "a"), ColoreBottone(coloresopra: .greenOff, coloredopo: .greenOff, coloresotto: .greenDown, coloreop: .greenOn, suono: "b",name: "b"),  ColoreBottone(coloresopra: .blueOff, coloredopo: .blueOff, coloresotto: .blueDown, coloreop: .blueOn, suono: "c",name: "c"), ColoreBottone(coloresopra: .yellowOff, coloredopo: .yellowOff, coloresotto: .yellowDown, coloreop: .yellowOn, suono: "d",name: "d")]
+                }
+                else if level == .level3{
+                    gameBalls = [ColoreBottone(coloresopra: .redOff, coloredopo: .redOff, coloresotto: .redDown, coloreop: .redOn, suono: "a",name: "a"), ColoreBottone(coloresopra: .greenOff, coloredopo: .greenOff, coloresotto: .greenDown, coloreop: .greenOn, suono: "b",name: "b"),  ColoreBottone(coloresopra: .blueOff, coloredopo: .blueOff, coloresotto: .blueDown, coloreop: .blueOn, suono: "c",name: "c"), ColoreBottone(coloresopra: .yellowOff, coloredopo: .yellowOff, coloresotto: .yellowDown, coloreop: .yellowOn, suono: "d",name: "d"), ColoreBottone(coloresopra: .orangeOff, coloredopo: .orangeOff, coloresotto: .orangeDown, coloreop: .orangeOn, suono: "e",name: "e")]
                 }
             }
         }

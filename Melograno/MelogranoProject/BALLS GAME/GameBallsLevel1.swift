@@ -11,19 +11,23 @@ struct GameBallsLevel1: View {
     
 
     @StateObject private var model: BallsModel
+    @State var showOpacity : Bool = false
+    @Environment(\.presentationMode) var presentationMode
     
-    init() {
-        _model = StateObject(wrappedValue: BallsModel.withNumberOfCircles(3)) // Imposta il numero di cerchi desiderato
+    init(circlesNumber:Int, bottoni:Binding<[ColoreBottone]>) {
+        _model = StateObject(wrappedValue: BallsModel.withNumberOfCircles(circlesNumber)) // Imposta il numero di cerchi desiderato
+        self._bottoni = bottoni
     }
     
-    var bottoni: [ColoreBottone] = [
-        
-        ColoreBottone(coloresopra: .redOff, coloredopo: .redOff, coloresotto: .redDown, coloreop: .redOn, suono: "a"),
-        
-        ColoreBottone(coloresopra: .blueOff, coloredopo: .blueOff, coloresotto: .blueDown, coloreop: .blueOn, suono: "b"),
-        
-        ColoreBottone(coloresopra: .greenOff, coloredopo: .greenOff, coloresotto: .greenDown, coloreop: .greenOn, suono: "c")
-    ]
+    
+    
+    let columns = [
+        GridItem(.flexible(), alignment: .center),
+            GridItem(.flexible(), alignment: .center),
+            GridItem(.flexible(), alignment: .center)
+        ]
+    
+    @Binding var bottoni: [ColoreBottone]
     var body: some View {
         
         
@@ -59,74 +63,121 @@ struct GameBallsLevel1: View {
             
             VStack(spacing: 40){
                 
-                    HStack(spacing: 60){
-                        BallsView(isHighlighted: $model.highlight[0], color: bottoni[0])
-                            .onTapGesture {
-                                if !model.isAnimating && model.isPlayerTurn {
-                                    
-                                    model.circleTapped("r")
-                                    model.provideHapticFeedback()
-                                    model.playSoundA()
+                HStack(spacing: 60){
+                    if bottoni.count == 5{
+                        
+                        VStack{
+                            HStack(spacing:50){
+                                ForEach(0..<3) { index in
+                                    BallsView(isHighlighted: $model.highlight[index], color: bottoni[index])
+                                        .onTapGesture {
+                                            if !model.isAnimating && model.isPlayerTurn {
+                                                
+                                                model.circleTapped(bottoni[index].name)
+                                                model.provideHapticFeedback()
+                                            }
+                                        }
+                                        .simultaneousGesture(
+                                            TapGesture().onEnded { _ in
+                                                model.playSound(for: bottoni[index].name)
+                                            }
+                                        )
                                 }
                             }
-
-                        
-                        
-                        
-                        BallsView(isHighlighted: $model.highlight[1], color: bottoni[1])
-                            .onTapGesture {
-                                if !model.isAnimating && model.isPlayerTurn {
-                                    
-                                    
-                                    model.circleTapped("g")
-                                    
-                                    model.provideHapticFeedback()
-                                    
-                                    model.playSoundC()
+                            HStack{
+                                ForEach(3..<5) { index in
+                                    BallsView(isHighlighted: $model.highlight[index], color: bottoni[index])
+                                        .onTapGesture {
+                                            if !model.isAnimating && model.isPlayerTurn {
+                                                
+                                                model.circleTapped(bottoni[index].name)
+                                                model.provideHapticFeedback()
+                                            }
+                                        }
+                                        .simultaneousGesture(
+                                            TapGesture().onEnded { _ in
+                                                model.playSound(for: bottoni[index].name)
+                                            }
+                                        )
                                 }
+                                
                             }
-
-                        
-                        
-                        BallsView(isHighlighted: $model.highlight[2], color: bottoni[2])
-                            .onTapGesture {
-                          
-                                if !model.isAnimating && model.isPlayerTurn {
-                                    model.circleTapped("b")
-                                    model.provideHapticFeedback()
-                                    model.playSoundF()
-                                }
-                            }
-                        
-                    }.onAppear(perform: model.animateCircles)
-                    
-                
-            }.padding(.top,dynamicHeight(200))
-            
-   
-            if model.isGameFinished == true {
-
-                            CongratsView(dismiss: {}, replay: {
-                                model.restartGame()
-                                model.animateCircles()
-                            }, points: model.currentSequenceIndex, result: model.currentSequenceIndex)
                         }
-        }
-        
-        
-        
-        
-        .onAppear(perform: model.animateCircles)
-            .onDisappear {
-                model.audioPlayer?.stop()
-                model.isViewVisible = false
+                        
+//                        LazyVGrid(columns: columns, spacing: 20) {
+//                            ForEach(Array(bottoni.enumerated()), id: \.offset) { index, element in
+//                                BallsView(isHighlighted: $model.highlight[index], color: element)
+//                                    .onTapGesture {
+//                                        if !model.isAnimating && model.isPlayerTurn {
+//
+//                                            model.circleTapped(element.name)
+//                                            model.provideHapticFeedback()
+//                                        }
+//                                    }
+//                                    .simultaneousGesture(
+//                                        TapGesture().onEnded { _ in
+//                                            print(element.name)
+//                                            model.playSound(for: element.name)
+//                                        }
+//                                    )
+//                            }
+//                        }
+                    }
+                    else
+                    {
+                        ForEach(Array(bottoni.enumerated()), id: \.offset) { index, element in
+                            BallsView(isHighlighted: $model.highlight[index], color: element)
+                                .onTapGesture {
+                                    if !model.isAnimating && model.isPlayerTurn {
+                                        
+                                        model.circleTapped(element.name)
+                                        model.provideHapticFeedback()
+                                    }
+                                }
+                                .simultaneousGesture(
+                                    TapGesture().onEnded { _ in
+                                        print(element.name)
+                                        model.playSound(for: element.name)
+                                    }
+                                )
+                        }
+                    }
+                }.onAppear(perform: model.animateCircles)
+                    .onDisappear {
+                        model.audioPlayer?.stop()
+                        model.isViewVisible = false
+                    }
+            }.onChange(of: model.isGameFinished, perform: {_ in
+                if model.isGameFinished{
+                    showOpacity = true
+                }
+            })
+            .padding(.top,dynamicHeight(200))
+            
+            
+            if showOpacity{
+                ZStack{
+                    Color.black.opacity(0.8).ignoresSafeArea()
+                    
+                    if model.isGameFinished == true {
+                        
+                        CongratsView(dismiss: {
+                            presentationMode.wrappedValue.dismiss()
+                        }, replay: {
+                            model.restartGame()
+                            model.animateCircles()
+                            showOpacity = false
+                        }, points: model.currentSequenceIndex, result: model.currentSequenceIndex,gameType: .balls)
+                    }
+                }
             }
+        }
     }
 }
 
 
 struct GameBallsLevel1_Previews: PreviewProvider {
     static var previews: some View {
-        GameBallsLevel1()
+        GameBallsLevel1(circlesNumber: 3, bottoni: .constant([]))
     }
 }

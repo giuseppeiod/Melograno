@@ -56,6 +56,7 @@ class BallsModel: ObservableObject{
                 
                 let index = getColorIndex(from: color)
                 withAnimation{
+                    print(highlight)
                     highlight[index] = true
                 }
                 if color == expectedColor {
@@ -73,6 +74,7 @@ class BallsModel: ObservableObject{
                                 gameResult = "Well done! Keep it going."
                                 isPlayerTurn = false
                                 currentSequenceIndex += 1
+                                
                                 playerSequence = []
                                 
                                 sequence = generateRandomSequence(dim: currentSequenceIndex, previousSequence: sequence, numberOfCircles: currentSequenceIndex)
@@ -100,15 +102,15 @@ class BallsModel: ObservableObject{
     
     func getColorIndex(from char: String) -> Int {
         switch char {
-        case "r":
+        case "a":
             return 0
-        case "g":
-            return 1
         case "b":
+            return 1
+        case "c":
             return 2
-        case "p":
+        case "d":
             return 3
-        case "o":
+        case "e":
             return 4
         default:
             return -1
@@ -143,15 +145,15 @@ class BallsModel: ObservableObject{
                 
                 
                 switch color {
-                    case "r":
+                    case "a":
                         playSoundA()
-                    case "g":
-                        playSoundC()
                     case "b":
+                        playSoundB()
+                    case "c":
+                        playSoundC()
+                    case "d":
                         playSoundD()
-                    case "o":
-                        playSoundF()
-                    case "p":
+                    case "e":
                         playSoundeE()
                     default:
                         break
@@ -215,15 +217,15 @@ class BallsModel: ObservableObject{
     private func getColorFromIndex(_ index: Int) -> String {
         switch index {
         case 0:
-            return "r"
+            return "a"
         case 1:
-            return "g"
-        case 2:
             return "b"
+        case 2:
+            return "c"
         case 3:
-            return "o"
+            return "d"
         case 4:
-            return "p"
+            return "e"
         default:
             return " "
         }
@@ -238,6 +240,20 @@ class BallsModel: ObservableObject{
             return
         }
         guard let url = Bundle.main.url(forResource: "a", withExtension: "mp3") else { return }
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.play()
+            print("dovrei ma non suono")
+        } catch {
+            print("Errore nella riproduzione del suono: \(error.localizedDescription)")
+        }
+    }
+    
+    func playSoundB() {
+        guard isViewVisible else {
+            return
+        }
+        guard let url = Bundle.main.url(forResource: "b", withExtension: "mp3") else { return }
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
             audioPlayer?.play()
@@ -275,20 +291,6 @@ class BallsModel: ObservableObject{
         }
     }
     
-    func playSoundF() {
-        guard isViewVisible else {
-            return
-        }
-        guard let url = Bundle.main.url(forResource: "f", withExtension: "mp3") else { return }
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: url)
-            audioPlayer?.play()
-            print("dovrei ma non suono")
-        } catch {
-            print("Errore nella riproduzione del suono: \(error.localizedDescription)")
-        }
-    }
-    
     func playSoundeE() {
         guard isViewVisible else {
             return
@@ -313,11 +315,11 @@ class BallsModel: ObservableObject{
 
 
 enum BallType: String {
-    case red = "r"
-    case green = "g"
-    case blue = "b"
-    case orange = "o"
-    case purple = "p"
+    case red = "a"
+    case green = "b"
+    case blue = "c"
+    case orange = "d"
+    case purple = "e"
 }
 
 

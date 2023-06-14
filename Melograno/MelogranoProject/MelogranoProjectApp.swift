@@ -8,13 +8,9 @@
 import SwiftUI
 @main
 struct MelogranoProjectApp: App {
-    let persistenceController = PersistenceController.shared
-
     var body: some Scene {
         WindowGroup {
-            
             Menu()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

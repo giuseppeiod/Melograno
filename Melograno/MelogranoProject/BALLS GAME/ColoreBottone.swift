@@ -15,6 +15,7 @@ struct ColoreBottone : Identifiable{
     var coloresotto : Color
     @State var coloreop : Color
     var suono : String
+    var name : String = ""
 
     func cambio() {
         coloresopra = coloreop

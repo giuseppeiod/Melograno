@@ -13,8 +13,7 @@ struct Menu: View {
     @AppStorage("onboardingViewShown")
     var onboardingViewShown: Bool = true
     
-    @Environment(\.presentationMode)
-        var presentationMode
+    @Environment(\.presentationMode) var presentationMode
     
     let columns = [
             GridItem(.flexible()),

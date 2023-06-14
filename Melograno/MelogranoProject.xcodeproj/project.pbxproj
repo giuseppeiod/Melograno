@@ -12,8 +12,6 @@
 		0A67329B2A0B830300806FEA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67329A2A0B830300806FEA /* ContentView.swift */; };
 		0A67329D2A0B830400806FEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A67329C2A0B830400806FEA /* Assets.xcassets */; };
 		0A6732A02A0B830400806FEA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A67329F2A0B830400806FEA /* Preview Assets.xcassets */; };
-		0A6732A22A0B830400806FEA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6732A12A0B830400806FEA /* Persistence.swift */; };
-		0A6732A52A0B830400806FEA /* MelogranoProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0A6732A32A0B830400806FEA /* MelogranoProject.xcdatamodeld */; };
 		0A6732AF2A0B830400806FEA /* MelogranoProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6732AE2A0B830400806FEA /* MelogranoProjectTests.swift */; };
 		0A6732B92A0B830400806FEA /* MelogranoProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6732B82A0B830400806FEA /* MelogranoProjectUITests.swift */; };
 		0A6732BB2A0B830400806FEA /* MelogranoProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6732BA2A0B830400806FEA /* MelogranoProjectUITestsLaunchTests.swift */; };
@@ -47,10 +45,10 @@
 		C950A92D2A149FFF005DFE2D /* Game1.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C950A92C2A149FFF005DFE2D /* Game1.geojson */; };
 		C950A9312A14A4CD005DFE2D /* MemoryCards.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C950A9302A14A4C8005DFE2D /* MemoryCards.geojson */; };
 		C97C270F2A33876F00CDEA78 /* a.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C97C270A2A33876E00CDEA78 /* a.mp3 */; };
-		C97C27102A33876F00CDEA78 /* d.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C97C270B2A33876F00CDEA78 /* d.mp3 */; };
-		C97C27112A33876F00CDEA78 /* c.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C97C270C2A33876F00CDEA78 /* c.mp3 */; };
-		C97C27122A33876F00CDEA78 /* e.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C97C270D2A33876F00CDEA78 /* e.mp3 */; };
-		C97C27132A33876F00CDEA78 /* f.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C97C270E2A33876F00CDEA78 /* f.mp3 */; };
+		C97C27102A33876F00CDEA78 /* c.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C97C270B2A33876F00CDEA78 /* c.mp3 */; };
+		C97C27112A33876F00CDEA78 /* b.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C97C270C2A33876F00CDEA78 /* b.mp3 */; };
+		C97C27122A33876F00CDEA78 /* d.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C97C270D2A33876F00CDEA78 /* d.mp3 */; };
+		C97C27132A33876F00CDEA78 /* e.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C97C270E2A33876F00CDEA78 /* e.mp3 */; };
 		C97C27172A338B3D00CDEA78 /* BallsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97C27162A338B3D00CDEA78 /* BallsModel.swift */; };
 		C9957EBB2A30700A00A648A5 /* Figtree-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9957EAD2A30700900A648A5 /* Figtree-SemiBold.ttf */; };
 		C9957EBC2A30700A00A648A5 /* Figtree-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9957EAE2A30700900A648A5 /* Figtree-MediumItalic.ttf */; };
@@ -119,8 +117,6 @@
 		0A67329A2A0B830300806FEA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0A67329C2A0B830400806FEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A67329F2A0B830400806FEA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0A6732A12A0B830400806FEA /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		0A6732A42A0B830400806FEA /* MelogranoProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MelogranoProject.xcdatamodel; sourceTree = "<group>"; };
 		0A6732AA2A0B830400806FEA /* MelogranoProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MelogranoProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6732AE2A0B830400806FEA /* MelogranoProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelogranoProjectTests.swift; sourceTree = "<group>"; };
 		0A6732B42A0B830400806FEA /* MelogranoProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MelogranoProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,10 +152,10 @@
 		C950A92C2A149FFF005DFE2D /* Game1.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game1.geojson; sourceTree = "<group>"; };
 		C950A9302A14A4C8005DFE2D /* MemoryCards.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MemoryCards.geojson; sourceTree = "<group>"; };
 		C97C270A2A33876E00CDEA78 /* a.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = a.mp3; sourceTree = "<group>"; };
-		C97C270B2A33876F00CDEA78 /* d.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = d.mp3; sourceTree = "<group>"; };
-		C97C270C2A33876F00CDEA78 /* c.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = c.mp3; sourceTree = "<group>"; };
-		C97C270D2A33876F00CDEA78 /* e.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = e.mp3; sourceTree = "<group>"; };
-		C97C270E2A33876F00CDEA78 /* f.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = f.mp3; sourceTree = "<group>"; };
+		C97C270B2A33876F00CDEA78 /* c.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = c.mp3; sourceTree = "<group>"; };
+		C97C270C2A33876F00CDEA78 /* b.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = b.mp3; sourceTree = "<group>"; };
+		C97C270D2A33876F00CDEA78 /* d.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = d.mp3; sourceTree = "<group>"; };
+		C97C270E2A33876F00CDEA78 /* e.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = e.mp3; sourceTree = "<group>"; };
 		C97C27162A338B3D00CDEA78 /* BallsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallsModel.swift; sourceTree = "<group>"; };
 		C9957EAD2A30700900A648A5 /* Figtree-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-SemiBold.ttf"; sourceTree = "<group>"; };
 		C9957EAE2A30700900A648A5 /* Figtree-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-MediumItalic.ttf"; sourceTree = "<group>"; };
@@ -240,7 +236,6 @@
 				C9DFCF8A2A3701E90018AA9B /* FinishButtonView.swift */,
 				C9ABC2402A267DBE00D5D6E9 /* Game.swift */,
 				C9DFCF922A3703E20018AA9B /* ListGameView.swift */,
-				0A6732A12A0B830400806FEA /* Persistence.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,25 +277,9 @@
 				C97DE1582A1D231D00BB7298 /* BALLS GAME */,
 				13FD071F2A13784F0023539C /* Json */,
 				0A5A4CDF2A1387A800D7396D /* Model */,
-				C9F92ADF2A29DD9900AF53CC /* customCorsivo.ttf */,
-				C9F92AE12A29DDA700AF53CC /* customRegular.ttf */,
-				C9957EBA2A30700A00A648A5 /* Figtree-Black.ttf */,
-				C9957EB02A30700900A648A5 /* Figtree-BlackItalic.ttf */,
-				C9957EB12A30700900A648A5 /* Figtree-Bold.ttf */,
-				C9957EB92A30700A00A648A5 /* Figtree-BoldItalic.ttf */,
-				C9957EB52A30700900A648A5 /* Figtree-ExtraBold.ttf */,
-				C9957EB72A30700A00A648A5 /* Figtree-ExtraBoldItalic.ttf */,
-				C9957EB82A30700A00A648A5 /* Figtree-Italic.ttf */,
-				C9957EB62A30700900A648A5 /* Figtree-Light.ttf */,
-				C9957EB32A30700900A648A5 /* Figtree-LightItalic.ttf */,
-				C9957EB42A30700900A648A5 /* Figtree-Medium.ttf */,
-				C9957EAE2A30700900A648A5 /* Figtree-MediumItalic.ttf */,
-				C9957EB22A30700900A648A5 /* Figtree-Regular.ttf */,
-				C9957EAD2A30700900A648A5 /* Figtree-SemiBold.ttf */,
-				C9957EAF2A30700900A648A5 /* Figtree-SemiBoldItalic.ttf */,
+				72B67FE22A38732C00E70731 /* Fonts */,
 				0A67329C2A0B830400806FEA /* Assets.xcassets */,
 				C92CF2E22A1B503B00AAF385 /* Sound */,
-				0A6732A32A0B830400806FEA /* MelogranoProject.xcdatamodeld */,
 				0A67329E2A0B830400806FEA /* Preview Content */,
 			);
 			path = MelogranoProject;
@@ -381,15 +360,38 @@
 			path = Json;
 			sourceTree = "<group>";
 		};
+		72B67FE22A38732C00E70731 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C9F92ADF2A29DD9900AF53CC /* customCorsivo.ttf */,
+				C9F92AE12A29DDA700AF53CC /* customRegular.ttf */,
+				C9957EBA2A30700A00A648A5 /* Figtree-Black.ttf */,
+				C9957EB02A30700900A648A5 /* Figtree-BlackItalic.ttf */,
+				C9957EB12A30700900A648A5 /* Figtree-Bold.ttf */,
+				C9957EB92A30700A00A648A5 /* Figtree-BoldItalic.ttf */,
+				C9957EB52A30700900A648A5 /* Figtree-ExtraBold.ttf */,
+				C9957EB72A30700A00A648A5 /* Figtree-ExtraBoldItalic.ttf */,
+				C9957EB82A30700A00A648A5 /* Figtree-Italic.ttf */,
+				C9957EB62A30700900A648A5 /* Figtree-Light.ttf */,
+				C9957EB32A30700900A648A5 /* Figtree-LightItalic.ttf */,
+				C9957EB42A30700900A648A5 /* Figtree-Medium.ttf */,
+				C9957EAE2A30700900A648A5 /* Figtree-MediumItalic.ttf */,
+				C9957EB22A30700900A648A5 /* Figtree-Regular.ttf */,
+				C9957EAD2A30700900A648A5 /* Figtree-SemiBold.ttf */,
+				C9957EAF2A30700900A648A5 /* Figtree-SemiBoldItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		C92CF2E22A1B503B00AAF385 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
 				13ED4CA12A2489D8009CF732 /* menu.mp3 */,
 				C97C270A2A33876E00CDEA78 /* a.mp3 */,
-				C97C270C2A33876F00CDEA78 /* c.mp3 */,
-				C97C270B2A33876F00CDEA78 /* d.mp3 */,
-				C97C270D2A33876F00CDEA78 /* e.mp3 */,
-				C97C270E2A33876F00CDEA78 /* f.mp3 */,
+				C97C270C2A33876F00CDEA78 /* b.mp3 */,
+				C97C270B2A33876F00CDEA78 /* c.mp3 */,
+				C97C270D2A33876F00CDEA78 /* d.mp3 */,
+				C97C270E2A33876F00CDEA78 /* e.mp3 */,
 				C92CF2E32A1B507000AAF385 /* notifica.mp3 */,
 			);
 			name = Sound;
@@ -530,7 +532,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C97C27112A33876F00CDEA78 /* c.mp3 in Resources */,
+				C97C27112A33876F00CDEA78 /* b.mp3 in Resources */,
 				C9DFCFA72A370E620018AA9B /* Ass3.geojson in Resources */,
 				0ADDF0542A1CB8A6005BDE6A /* Game3.3.geojson in Resources */,
 				C97C270F2A33876F00CDEA78 /* a.mp3 in Resources */,
@@ -541,7 +543,7 @@
 				C9957EBE2A30700A00A648A5 /* Figtree-BlackItalic.ttf in Resources */,
 				0ADDF04D2A1CB836005BDE6A /* Game2.geojson in Resources */,
 				C9F92AE22A29DDA700AF53CC /* customRegular.ttf in Resources */,
-				C97C27102A33876F00CDEA78 /* d.mp3 in Resources */,
+				C97C27102A33876F00CDEA78 /* c.mp3 in Resources */,
 				0ADDF0512A1CB855005BDE6A /* Game1.2.geojson in Resources */,
 				C9957EC32A30700A00A648A5 /* Figtree-ExtraBold.ttf in Resources */,
 				0ADDF04E2A1CB84D005BDE6A /* Game2.2.geojson in Resources */,
@@ -561,8 +563,8 @@
 				C9F92AE02A29DD9900AF53CC /* customCorsivo.ttf in Resources */,
 				C9957EC72A30700A00A648A5 /* Figtree-BoldItalic.ttf in Resources */,
 				0ADDF0502A1CB852005BDE6A /* Game1.3.geojson in Resources */,
-				C97C27132A33876F00CDEA78 /* f.mp3 in Resources */,
-				C97C27122A33876F00CDEA78 /* e.mp3 in Resources */,
+				C97C27132A33876F00CDEA78 /* e.mp3 in Resources */,
+				C97C27122A33876F00CDEA78 /* d.mp3 in Resources */,
 				13ED4CA22A2489D8009CF732 /* menu.mp3 in Resources */,
 				C9DFCFA32A370E220018AA9B /* Ass1.geojson in Resources */,
 				C92CF2E42A1B507000AAF385 /* notifica.mp3 in Resources */,
@@ -595,10 +597,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A6732A52A0B830400806FEA /* MelogranoProject.xcdatamodeld in Sources */,
 				0A72FD232A273AE300073F85 /* GameMemoryModel.swift in Sources */,
 				C9446EDA2A3650D100CA20B1 /* ColoreBottone.swift in Sources */,
-				0A6732A22A0B830400806FEA /* Persistence.swift in Sources */,
 				0A72FD7A2A27531300073F85 /* WorldCard.swift in Sources */,
 				C9DFCF9D2A3705350018AA9B /* CronoDecoding.swift in Sources */,
 				C9DFCF932A3703E20018AA9B /* ListGameView.swift in Sources */,
@@ -975,19 +975,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		0A6732A32A0B830400806FEA /* MelogranoProject.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				0A6732A42A0B830400806FEA /* MelogranoProject.xcdatamodel */,
-			);
-			currentVersion = 0A6732A42A0B830400806FEA /* MelogranoProject.xcdatamodel */;
-			path = MelogranoProject.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 0A67328D2A0B830300806FEA /* Project object */;
 }
