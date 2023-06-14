@@ -27,6 +27,7 @@
 		0ADDF0532A1CB8A4005BDE6A /* Game3.2.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 0ADDF04B2A1CB5D5005BDE6A /* Game3.2.geojson */; };
 		0ADDF0542A1CB8A6005BDE6A /* Game3.3.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 0ADDF04C2A1CB5E5005BDE6A /* Game3.3.geojson */; };
 		13ED4CA22A2489D8009CF732 /* menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 13ED4CA12A2489D8009CF732 /* menu.mp3 */; };
+		72B67FE52A3A065600E70731 /* FMProKit in Frameworks */ = {isa = PBXBuildFile; productRef = 72B67FE42A3A065600E70731 /* FMProKit */; };
 		C91DC2942A13C66C00FA8329 /* BallsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DC2932A13C66C00FA8329 /* BallsView.swift */; };
 		C92CF2E42A1B507000AAF385 /* notifica.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C92CF2E32A1B507000AAF385 /* notifica.mp3 */; };
 		C9446EDA2A3650D100CA20B1 /* ColoreBottone.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9446ED92A3650D100CA20B1 /* ColoreBottone.swift */; };
@@ -175,6 +176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72B67FE52A3A065600E70731 /* FMProKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +397,7 @@
 			);
 			name = MelogranoProject;
 			packageProductDependencies = (
+				72B67FE42A3A065600E70731 /* FMProKit */,
 			);
 			productName = MelogranoProject;
 			productReference = 0A6732952A0B830300806FEA /* MelogranoProject.app */;
@@ -469,6 +472,7 @@
 			);
 			mainGroup = 0A67328C2A0B830300806FEA;
 			packageReferences = (
+				72B67FE32A3A065600E70731 /* XCRemoteSwiftPackageReference "FMProKit" */,
 			);
 			productRefGroup = 0A6732962A0B830300806FEA /* Products */;
 			projectDirPath = "";
@@ -914,6 +918,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		72B67FE32A3A065600E70731 /* XCRemoteSwiftPackageReference "FMProKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CoderlyStudio/FMProKit";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		72B67FE42A3A065600E70731 /* FMProKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72B67FE32A3A065600E70731 /* XCRemoteSwiftPackageReference "FMProKit" */;
+			productName = FMProKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0A67328D2A0B830300806FEA /* Project object */;
 }

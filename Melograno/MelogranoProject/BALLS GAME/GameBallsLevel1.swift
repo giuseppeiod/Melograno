@@ -81,7 +81,7 @@ struct GameBallsLevel1: View {
                                             TapGesture().onEnded { _ in
                                                 model.playSound(for: bottoni[index].name)
                                             }
-                                        )
+                                        ).disabled(!model.isPlayerTurn)
                                 }
                             }
                             HStack{
@@ -98,7 +98,7 @@ struct GameBallsLevel1: View {
                                             TapGesture().onEnded { _ in
                                                 model.playSound(for: bottoni[index].name)
                                             }
-                                        )
+                                        ).disabled(!model.isPlayerTurn)
                                 }
                                 
                             }
@@ -139,7 +139,7 @@ struct GameBallsLevel1: View {
                                         print(element.name)
                                         model.playSound(for: element.name)
                                     }
-                                )
+                                ).disabled(!model.isPlayerTurn)
                         }
                     }
                 }.onAppear(perform: model.animateCircles)
@@ -167,7 +167,7 @@ struct GameBallsLevel1: View {
                             model.restartGame()
                             model.animateCircles()
                             showOpacity = false
-                        }, points: model.currentSequenceIndex, result: model.currentSequenceIndex,gameType: .balls)
+                        }, points: model.points, result: model.currentSequenceIndex,gameType: .balls)
                     }
                 }
             }
