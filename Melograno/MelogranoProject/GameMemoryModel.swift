@@ -195,6 +195,6 @@ extension Array {
 }
 
 struct CardData: Codable {
-    let id: Int
+//    let id: Int
     let imageName: String
 }

@@ -1,39 +1,63 @@
 [
   {
-    "id": 1,
-    "imageName": "microfono"
+    "imageName": "HORSE 1"
   },
   {
-    "id": 2,
-    "imageName": "bottiglia"
+    "imageName": "BUTTERFLY 1"
   },
   {
-    "id": 3,
-    "imageName": "lampada"
+    "imageName": "PARROT 1"
   },
   {
-    "id": 4,
-    "imageName": "quattro"
+    "imageName": "ORANGE 1"
   },
   {
-    "id": 5,
-    "imageName": "gatto"
+    "imageName": "BANANA 1"
   },
   {
-    "id": 6,
-    "imageName": "sedia"
+    "imageName": "KIWI 1"
   },
   {
-    "id": 7,
-    "imageName": "sveglia"
+    "imageName": "APPLE 1"
   },
   {
-    "id": 8,
-    "imageName": "automobile"
+    "imageName": "PEAR 1"
   },
   {
-    "id": 9,
-    "imageName": "girasole"
+    "imageName": "DRUMS 1"
+  },
+  {
+    "imageName": "GUITAR 1"
+  },
+  {
+    "imageName": "DOG"
+  },
+  {
+    "imageName": "AIRPLANE 1"
+  },
+  {
+    "imageName": "CAR 1"
+  },
+  {
+    "imageName": "BUS 1"
+  },
+  {
+    "imageName": "HELICOPTER 1"
+  },
+  {
+    "imageName": "TRUCK 1"
+  },
+  {
+    "imageName": "CAT 1"
+  },
+  {
+    "imageName": "SAXOPHONE 1"
+  },
+  {
+    "imageName": "TRUMPET 1"
+  },
+  {
+    "imageName": "TURTLE 1"
   }
   
 ]
