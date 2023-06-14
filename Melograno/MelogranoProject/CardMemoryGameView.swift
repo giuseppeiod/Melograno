@@ -10,7 +10,6 @@ struct CardMemoryGameView: View {
     @Environment(\.presentationMode) var dismiss
 
     var col = [GridItem(.flexible()),
-//                GridItem(.flexible()),
                 GridItem(.flexible())]
 
     @StateObject private var game: GameMemoryModel
@@ -71,7 +70,7 @@ struct CardMemoryGameView: View {
                 }
                 
                 
-                Spacer()
+                
             }
             if game.isGameFinished {
                 

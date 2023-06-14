@@ -18,6 +18,7 @@ struct ListGameView: View {
     @State var tops : [GameBoxPosition] = []
     @State var gameBalls:[ColoreBottone] = []
     
+  
     
     var body: some View {
         VStack{
@@ -40,18 +41,19 @@ struct ListGameView: View {
             }
             else if game.type == .memory{
                 if level == .level1{
-                    CardMemoryGameView(numberOfCards: 2)
+                    MemoryCardsGameView(numberOfCards: 2)
                 }
                 else if level == .level2{
-                    CardMemoryGameViewLevel2(numberOfCards: 3)
+                    MemoryCardsGameView(numberOfCards: 3)
                 }
                 else if level == .level3{
-                    CardMemoryGameViewLevel3(numberOfCards: 4)
+                    MemoryCardsGameView(numberOfCards: 4)
                 }
                 
                 
             }
-        }.onAppear{
+        }
+        .onAppear{
             if game.type == .cronological{
                 if level == .level1{
                     let gamesLevel : [[CronoDecoding]] = load(type: "Crono1")
@@ -172,6 +174,8 @@ struct ListGameView: View {
                     gameBalls = [ColoreBottone(coloresopra: .redOff, coloredopo: .redOff, coloresotto: .redDown, coloreop: .redOn, suono: "a",name: "a"), ColoreBottone(coloresopra: .greenOff, coloredopo: .greenOff, coloresotto: .greenDown, coloreop: .greenOn, suono: "b",name: "b"),  ColoreBottone(coloresopra: .blueOff, coloredopo: .blueOff, coloresotto: .blueDown, coloreop: .blueOn, suono: "c",name: "c"), ColoreBottone(coloresopra: .yellowOff, coloredopo: .yellowOff, coloresotto: .yellowDown, coloreop: .yellowOn, suono: "d",name: "d"), ColoreBottone(coloresopra: .orangeOff, coloredopo: .orangeOff, coloresotto: .orangeDown, coloreop: .orangeOn, suono: "e",name: "e")]
                 }
             }
+            //MEMORY
+           
         }
     }
 }
