@@ -24,6 +24,7 @@ class BallsModel: ObservableObject{
     @Published var isAnimating: Bool = false
     @Published var gameResult: String = ""
     @Published var currentSequenceIndex: Int = 0
+    @Published var points: Int = 0
     @Published var correctSequences: Int = 0
     
     @Published var audioPlayer: AVAudioPlayer?
@@ -74,7 +75,7 @@ class BallsModel: ObservableObject{
                                 gameResult = "Well done! Keep it going."
                                 isPlayerTurn = false
                                 currentSequenceIndex += 1
-                                
+                                points += 1
                                 playerSequence = []
                                 
                                 sequence = generateRandomSequence(dim: currentSequenceIndex, previousSequence: sequence, numberOfCircles: currentSequenceIndex)
@@ -122,7 +123,7 @@ class BallsModel: ObservableObject{
            sequence = []
            generateNewSequence()
            sequence = generateRandomSequence(dim: 1, previousSequence: [], numberOfCircles: numberOfCircles ?? 3)
-          
+          points = 0
            currentSequenceIndex = 0
            correctSequences = 0
            generateNewSequence()
