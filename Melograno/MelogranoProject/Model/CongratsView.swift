@@ -28,7 +28,7 @@ struct CongratsView: View {
                 if gameType == .balls{
                     Text("You have got a sequence of \(points) !")
                 }else if gameType == .association || gameType == .cronological{
-                    Text("hai fatto \(points-result) errori")
+                    Text("You made \(points-result) errors")
                 }else{
                     Text("")
                 }

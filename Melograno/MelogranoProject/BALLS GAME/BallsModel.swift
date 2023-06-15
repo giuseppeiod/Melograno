@@ -58,12 +58,30 @@ class BallsModel: ObservableObject{
                 let index = getColorIndex(from: color)
                 withAnimation{
                     print(highlight)
-                    highlight[index] = true
+                    if highlight.indices.contains(index) {
+                        // L'indice index è compreso nell'intervallo valido per l'array highlight
+                        // Puoi accedere a highlight[index] in modo sicuro qui
+                        withAnimation {
+                            highlight[index] = true
+                        }
+                    } else {
+                        // L'indice index è fuori dall'intervallo valido per l'array highlight
+                        // Gestisci l'errore o l'operazione non valida qui
+                        print("Errore: Indice out of range")
+                    }
                 }
                 if color == expectedColor {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [self] in
-                        withAnimation{
-                            highlight[index] = false
+                        if highlight.indices.contains(index) {
+                            // L'indice index è compreso nell'intervallo valido per l'array highlight
+                            // Puoi accedere a highlight[index] in modo sicuro qui
+                            withAnimation {
+                                highlight[index] = false
+                            }
+                        } else {
+                            // L'indice index è fuori dall'intervallo valido per l'array highlight
+                            // Gestisci l'errore o l'operazione non valida qui
+                            print("Errore: Indice out of range")
                         }
                         playerSequence.append(color)
                         if playerSequence.count == sequence.count {
@@ -78,7 +96,7 @@ class BallsModel: ObservableObject{
                                 points += 1
                                 playerSequence = []
                                 
-                                sequence = generateRandomSequence(dim: currentSequenceIndex, previousSequence: sequence, numberOfCircles: currentSequenceIndex)
+                                sequence = generateRandomSequence(dim: currentSequenceIndex, previousSequence: sequence, numberOfCircles: numberOfCircles ?? 3)
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [self] in
                                     animateCircles()
                                 }
@@ -119,11 +137,13 @@ class BallsModel: ObservableObject{
     }
        
        func restartGame() {
-           
-           sequence = []
-           generateNewSequence()
+           highlight = Array(repeating: false, count: numberOfCircles ?? 3)
+           sequence.removeAll()
+           playerSequence.removeAll()
+  
+        //   generateNewSequence()
            sequence = generateRandomSequence(dim: 1, previousSequence: [], numberOfCircles: numberOfCircles ?? 3)
-          points = 0
+           points = 0
            currentSequenceIndex = 0
            correctSequences = 0
            generateNewSequence()
@@ -163,11 +183,31 @@ class BallsModel: ObservableObject{
                 playSound(for: color)
                 let colorIndex = getColorIndex(from: color)
                 withAnimation{
-                    highlight[colorIndex] = true
+                    if highlight.indices.contains(colorIndex) {
+                        // L'indice index è compreso nell'intervallo valido per l'array highlight
+                        // Puoi accedere a highlight[index] in modo sicuro qui
+                        withAnimation {
+                            highlight[colorIndex] = true
+                        }
+                    } else {
+                        // L'indice index è fuori dall'intervallo valido per l'array highlight
+                        // Gestisci l'errore o l'operazione non valida qui
+                        print("Errore: Indice out of range")
+                    }
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
                     withAnimation{
-                        self.highlight[colorIndex] = false
+                        if highlight.indices.contains(index) {
+                            // L'indice index è compreso nell'intervallo valido per l'array highlight
+                            // Puoi accedere a highlight[index] in modo sicuro qui
+                            withAnimation {
+                                highlight[colorIndex] = false
+                            }
+                        } else {
+                            // L'indice index è fuori dall'intervallo valido per l'array highlight
+                            // Gestisci l'errore o l'operazione non valida qui
+                            print("Errore: Indice out of range")
+                        }
                     }
                     index += 1
                 }
@@ -210,7 +250,7 @@ class BallsModel: ObservableObject{
             let randomColor = getColorFromIndex(randomIndex)
             sequence.append(randomColor)
         }
-        
+        print(sequence)
         return sequence
     }
 
@@ -322,6 +362,3 @@ enum BallType: String {
     case orange = "d"
     case purple = "e"
 }
-
-
-
