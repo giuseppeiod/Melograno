@@ -1,23 +1,39 @@
 [
-    [{"id": 0, "correctIndex": 1, "imageName": "CAT", "isHidden": false, "isBlurred": false},
-        {"id": 1, "correctIndex": 2, "imageName": "HORSE", "isHidden": false, "isBlurred": false},
-        {"id": 2, "correctIndex": 3, "imageName": "DOG", "isHidden": false, "isBlurred": false},
-        {"id": 3, "correctIndex": 4, "imageName": "TURTLE", "isHidden": false, "isBlurred": false},
-        {"id": 3, "correctIndex": 5, "imageName": "PARROT", "isHidden": false, "isBlurred": false}
+    [{"correctIndex": 1, "imageName": "CAT"},
+        {"correctIndex": 2, "imageName": "HORSE"},
+        {"correctIndex": 3, "imageName": "DOG"},
+        {"correctIndex": 4, "imageName": "TURTLE"},
+        {"correctIndex": 5, "imageName": "PARROT"}
     ],
     [
-        {"id": 4, "correctIndex": 1, "imageName": "gallinaim", "isHidden": false, "isBlurred": false},
-        {"id": 5, "correctIndex": 2, "imageName": "peraim", "isHidden": false, "isBlurred": false},
-        {"id": 6, "correctIndex": 3, "imageName": "pantofoleim", "isHidden": false, "isBlurred": false},
-        {"id": 7, "correctIndex": 4, "imageName": "aranciaim", "isHidden": false, "isBlurred": false},
-        {"id": 8, "correctIndex": 5, "imageName": "camiciaim", "isHidden": false, "isBlurred": false}
+        {"correctIndex": 1, "imageName": "T-SHIRT"},
+        {"correctIndex": 2, "imageName": "TIE"},
+        {"correctIndex": 3, "imageName": "VEST"},
+        {"correctIndex": 4, "imageName": "BELT"},
+        {"correctIndex": 5, "imageName": "SWEATSHIRT"}
     ],
     [
-        {"id": 9, "correctIndex": 1, "imageName": "paperaima", "isHidden": false, "isBlurred": false},
-        {"id": 10, "correctIndex": 2, "imageName": "peraim", "isHidden": false, "isBlurred": false},
-        {"id": 11, "correctIndex": 3, "imageName": "chitarra", "isHidden": false, "isBlurred": false},
-        {"id": 12, "correctIndex": 4, "imageName": "aranciaim", "isHidden": false, "isBlurred": false},
-        {"id": 13, "correctIndex": 5, "imageName": "camiciaim", "isHidden": false, "isBlurred": false}
-    ]
+        {"correctIndex": 1, "imageName": "KIWI"},
+        {"correctIndex": 2, "imageName": "PEAR"},
+        {"correctIndex": 3, "imageName": "APPLE"},
+        {"correctIndex": 4, "imageName": "BANANA"},
+        {"correctIndex": 5, "imageName": "GRAPE"}
+    ],
+    [
+        {"correctIndex": 1, "imageName": "DRUMS"},
+        {"correctIndex": 2, "imageName": "DRUMS"},
+        {"correctIndex": 3, "imageName": "PIANO"},
+        {"correctIndex": 4, "imageName": "SAXOPHONE"},
+        {"correctIndex": 5, "imageName": "VIOLIN"}
+    ],
+    [
+        {"correctIndex": 1, "imageName": "HELICOPTER"},
+        {"correctIndex": 2, "imageName": "AIRPLANE"},
+        {"correctIndex": 3, "imageName": "CAR"},
+        {"correctIndex": 4, "imageName": "MOTORCYCLE"},
+        {"correctIndex": 5, "imageName": "BUS"}
+    ],
+    
+    
 ]
  

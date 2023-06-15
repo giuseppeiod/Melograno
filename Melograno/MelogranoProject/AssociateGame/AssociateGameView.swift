@@ -38,7 +38,7 @@ struct AssociateGameView: View {
         ZStack {
             Color.white
             
-            if fulls.filter{$0.y == tops.first?.y || $0.y == tops.last?.y}.isEmpty{
+            if fulls.filter({$0.y == tops.first?.y || $0.y == tops.last?.y}).isEmpty{
                 Button(action: {
                     withAnimation{
                         showOpacity.toggle()

@@ -1,23 +1,17 @@
 [
-  [
-    {"id": 0, "correctIndex": 1, "imageName": "sveglia", "isHidden": false, "isBlurred": false},
-    {"id": 1, "correctIndex": 2, "imageName": "colazione", "isHidden": false, "isBlurred": false},
-    {"id": 2, "correctIndex": 3, "imageName": "auto", "isHidden": false, "isBlurred": false},
-    {"id": 3, "correctIndex": 4, "imageName": "lavoro", "isHidden": false, "isBlurred": false},
-    {"id": 4, "correctIndex": 5, "imageName": "lavoro", "isHidden": false, "isBlurred": false}
-  ],
-  [
-    {"id": 0, "correctIndex": 1, "imageName": "semi", "isHidden": false, "isBlurred": false},
-    {"id": 1, "correctIndex": 2, "imageName": "germoglio", "isHidden": false, "isBlurred": false},
-    {"id": 2, "correctIndex": 3, "imageName": "piantina", "isHidden": false, "isBlurred": false},
-    {"id": 3, "correctIndex": 4, "imageName": "albero", "isHidden": false, "isBlurred": false},
-    {"id": 4, "correctIndex": 5, "imageName": "lavoro", "isHidden": false, "isBlurred": false}
-  ],
-  [
-    {"id": 0, "correctIndex": 1, "imageName": "5cent", "isHidden": false, "isBlurred": false},
-    {"id": 1, "correctIndex": 2, "imageName": "2cent", "isHidden": false, "isBlurred": false},
-    {"id": 2, "correctIndex": 3, "imageName": "1euro", "isHidden": false, "isBlurred": false},
-    {"id": 3, "correctIndex": 4, "imageName": "2euro", "isHidden": false, "isBlurred": false},
-    {"id": 4, "correctIndex": 5, "imageName": "lavoro", "isHidden": false, "isBlurred": false}
-  ]
+    [
+    {"correctIndex": 1, "imageName": "BABY"},
+    {"correctIndex": 2, "imageName": "CHILD"},
+    {"correctIndex": 3, "imageName": "TEEN"},
+    {"correctIndex": 4, "imageName": "ADULT"},
+    {"correctIndex": 5, "imageName": "OLD"}
+    ],
+    [
+    {"correctIndex": 1, "imageName": "PASTA_1"},
+    {"correctIndex": 2, "imageName": "PASTA_2"},
+    {"correctIndex": 3, "imageName": "PASTA_3"},
+    {"correctIndex": 4, "imageName": "PASTA_4"},
+    {"correctIndex": 5, "imageName": "PASTA_5"},
+    {"correctIndex": 6, "imageName": "PASTA_6"}
+    ]
 ]

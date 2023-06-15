@@ -18,21 +18,17 @@
 		0A72FD232A273AE300073F85 /* GameMemoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A72FD1F2A273AE300073F85 /* GameMemoryModel.swift */; };
 		0A72FD242A273AE300073F85 /* CardMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A72FD222A273AE300073F85 /* CardMemory.swift */; };
 		0A72FD252A273AE300073F85 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A72FD202A273AE300073F85 /* CardView.swift */; };
-		0ADDF04D2A1CB836005BDE6A /* Game2.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 13FD072A2A14C22E0023539C /* Game2.geojson */; };
-		0ADDF04E2A1CB84D005BDE6A /* Game2.2.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 13FD072B2A14C2550023539C /* Game2.2.geojson */; };
-		0ADDF04F2A1CB84F005BDE6A /* Game2.3.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 13FD072C2A14C26A0023539C /* Game2.3.geojson */; };
-		0ADDF0502A1CB852005BDE6A /* Game1.3.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 13FD07302A14C2CC0023539C /* Game1.3.geojson */; };
-		0ADDF0512A1CB855005BDE6A /* Game1.2.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 13FD072F2A14C2BC0023539C /* Game1.2.geojson */; };
-		0ADDF0522A1CB85B005BDE6A /* Game3.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 0ADDF04A2A1CB5BB005BDE6A /* Game3.geojson */; };
-		0ADDF0532A1CB8A4005BDE6A /* Game3.2.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 0ADDF04B2A1CB5D5005BDE6A /* Game3.2.geojson */; };
-		0ADDF0542A1CB8A6005BDE6A /* Game3.3.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 0ADDF04C2A1CB5E5005BDE6A /* Game3.3.geojson */; };
 		13ED4CA22A2489D8009CF732 /* menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 13ED4CA12A2489D8009CF732 /* menu.mp3 */; };
 		72B67FE52A3A065600E70731 /* FMProKit in Frameworks */ = {isa = PBXBuildFile; productRef = 72B67FE42A3A065600E70731 /* FMProKit */; };
 		C91DC2942A13C66C00FA8329 /* BallsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DC2932A13C66C00FA8329 /* BallsView.swift */; };
 		C92CF2E42A1B507000AAF385 /* notifica.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C92CF2E32A1B507000AAF385 /* notifica.mp3 */; };
 		C9446EDA2A3650D100CA20B1 /* ColoreBottone.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9446ED92A3650D100CA20B1 /* ColoreBottone.swift */; };
-		C950A92D2A149FFF005DFE2D /* Game1.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C950A92C2A149FFF005DFE2D /* Game1.geojson */; };
 		C950A9312A14A4CD005DFE2D /* MemoryCards.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C950A9302A14A4C8005DFE2D /* MemoryCards.geojson */; };
+		C9757D782A3AD92B001F84F7 /* ScoreEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9757D742A3AD92B001F84F7 /* ScoreEntity+CoreDataClass.swift */; };
+		C9757D792A3AD92B001F84F7 /* ScoreEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9757D752A3AD92B001F84F7 /* ScoreEntity+CoreDataProperties.swift */; };
+		C9757D7A2A3AD92B001F84F7 /* GameEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9757D762A3AD92B001F84F7 /* GameEntity+CoreDataClass.swift */; };
+		C9757D7B2A3AD92B001F84F7 /* GameEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9757D772A3AD92B001F84F7 /* GameEntity+CoreDataProperties.swift */; };
+		C97B63342A3A5EC1005DEA1C /* Container.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C97B63322A3A5EC1005DEA1C /* Container.xcdatamodeld */; };
 		C97C270F2A33876F00CDEA78 /* a.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C97C270A2A33876E00CDEA78 /* a.mp3 */; };
 		C97C27102A33876F00CDEA78 /* c.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C97C270B2A33876F00CDEA78 /* c.mp3 */; };
 		C97C27112A33876F00CDEA78 /* b.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C97C270C2A33876F00CDEA78 /* b.mp3 */; };
@@ -111,20 +107,16 @@
 		0A72FD1F2A273AE300073F85 /* GameMemoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMemoryModel.swift; sourceTree = "<group>"; };
 		0A72FD202A273AE300073F85 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		0A72FD222A273AE300073F85 /* CardMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMemory.swift; sourceTree = "<group>"; };
-		0ADDF04A2A1CB5BB005BDE6A /* Game3.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game3.geojson; sourceTree = "<group>"; };
-		0ADDF04B2A1CB5D5005BDE6A /* Game3.2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game3.2.geojson; sourceTree = "<group>"; };
-		0ADDF04C2A1CB5E5005BDE6A /* Game3.3.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game3.3.geojson; sourceTree = "<group>"; };
 		13ED4CA12A2489D8009CF732 /* menu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = menu.mp3; path = ../../Sound/menu.mp3; sourceTree = "<group>"; };
-		13FD072A2A14C22E0023539C /* Game2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game2.geojson; sourceTree = "<group>"; };
-		13FD072B2A14C2550023539C /* Game2.2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game2.2.geojson; sourceTree = "<group>"; };
-		13FD072C2A14C26A0023539C /* Game2.3.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game2.3.geojson; sourceTree = "<group>"; };
-		13FD072F2A14C2BC0023539C /* Game1.2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game1.2.geojson; sourceTree = "<group>"; };
-		13FD07302A14C2CC0023539C /* Game1.3.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game1.3.geojson; sourceTree = "<group>"; };
 		C91DC2932A13C66C00FA8329 /* BallsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallsView.swift; sourceTree = "<group>"; };
 		C92CF2E32A1B507000AAF385 /* notifica.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = notifica.mp3; path = ../../Sound/notifica.mp3; sourceTree = "<group>"; };
 		C9446ED92A3650D100CA20B1 /* ColoreBottone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoreBottone.swift; sourceTree = "<group>"; };
-		C950A92C2A149FFF005DFE2D /* Game1.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game1.geojson; sourceTree = "<group>"; };
 		C950A9302A14A4C8005DFE2D /* MemoryCards.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MemoryCards.geojson; sourceTree = "<group>"; };
+		C9757D742A3AD92B001F84F7 /* ScoreEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScoreEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C9757D752A3AD92B001F84F7 /* ScoreEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScoreEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C9757D762A3AD92B001F84F7 /* GameEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C9757D772A3AD92B001F84F7 /* GameEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C97B63332A3A5EC1005DEA1C /* Container.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Container.xcdatamodel; sourceTree = "<group>"; };
 		C97C270A2A33876E00CDEA78 /* a.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = a.mp3; sourceTree = "<group>"; };
 		C97C270B2A33876F00CDEA78 /* c.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = c.mp3; sourceTree = "<group>"; };
 		C97C270C2A33876F00CDEA78 /* b.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = b.mp3; sourceTree = "<group>"; };
@@ -207,6 +199,7 @@
 				C9DFCF882A3701C70018AA9B /* CongratsView.swift */,
 				C9DFCF8A2A3701E90018AA9B /* FinishButtonView.swift */,
 				C9ABC2402A267DBE00D5D6E9 /* Game.swift */,
+				C97B63322A3A5EC1005DEA1C /* Container.xcdatamodeld */,
 				C9DFCF922A3703E20018AA9B /* ListGameView.swift */,
 			);
 			path = Model;
@@ -215,6 +208,10 @@
 		0A67328C2A0B830300806FEA = {
 			isa = PBXGroup;
 			children = (
+				C9757D742A3AD92B001F84F7 /* ScoreEntity+CoreDataClass.swift */,
+				C9757D752A3AD92B001F84F7 /* ScoreEntity+CoreDataProperties.swift */,
+				C9757D762A3AD92B001F84F7 /* GameEntity+CoreDataClass.swift */,
+				C9757D772A3AD92B001F84F7 /* GameEntity+CoreDataProperties.swift */,
 				0A6732972A0B830300806FEA /* MelogranoProject */,
 				0A6732AD2A0B830400806FEA /* MelogranoProjectTests */,
 				0A6732B72A0B830400806FEA /* MelogranoProjectUITests */,
@@ -293,21 +290,12 @@
 			isa = PBXGroup;
 			children = (
 				C950A9302A14A4C8005DFE2D /* MemoryCards.geojson */,
-				C950A92C2A149FFF005DFE2D /* Game1.geojson */,
-				13FD072F2A14C2BC0023539C /* Game1.2.geojson */,
-				13FD07302A14C2CC0023539C /* Game1.3.geojson */,
-				13FD072A2A14C22E0023539C /* Game2.geojson */,
-				13FD072B2A14C2550023539C /* Game2.2.geojson */,
-				13FD072C2A14C26A0023539C /* Game2.3.geojson */,
-				0ADDF04A2A1CB5BB005BDE6A /* Game3.geojson */,
-				0ADDF04B2A1CB5D5005BDE6A /* Game3.2.geojson */,
-				0ADDF04C2A1CB5E5005BDE6A /* Game3.3.geojson */,
 				C9DFCFA22A370E220018AA9B /* Ass1.geojson */,
 				C9DFCFA42A370E3C0018AA9B /* Ass2.geojson */,
-				C9DFCFAA2A370EB30018AA9B /* Crono2.geojson */,
-				C9DFCFAC2A370EC80018AA9B /* Crono3.geojson */,
 				C9DFCFA62A370E620018AA9B /* Ass3.geojson */,
 				C9DFCFA82A370E970018AA9B /* Crono1.geojson */,
+				C9DFCFAA2A370EB30018AA9B /* Crono2.geojson */,
+				C9DFCFAC2A370EC80018AA9B /* Crono3.geojson */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -492,35 +480,27 @@
 			files = (
 				C97C27112A33876F00CDEA78 /* b.mp3 in Resources */,
 				C9DFCFA72A370E620018AA9B /* Ass3.geojson in Resources */,
-				0ADDF0542A1CB8A6005BDE6A /* Game3.3.geojson in Resources */,
 				C97C270F2A33876F00CDEA78 /* a.mp3 in Resources */,
 				C9DFCFAB2A370EB30018AA9B /* Crono2.geojson in Resources */,
 				C9957EC12A30700A00A648A5 /* Figtree-LightItalic.ttf in Resources */,
 				C9957EC22A30700A00A648A5 /* Figtree-Medium.ttf in Resources */,
 				C9DFCFA52A370E3C0018AA9B /* Ass2.geojson in Resources */,
 				C9957EBE2A30700A00A648A5 /* Figtree-BlackItalic.ttf in Resources */,
-				0ADDF04D2A1CB836005BDE6A /* Game2.geojson in Resources */,
 				C9F92AE22A29DDA700AF53CC /* customRegular.ttf in Resources */,
 				C97C27102A33876F00CDEA78 /* c.mp3 in Resources */,
-				0ADDF0512A1CB855005BDE6A /* Game1.2.geojson in Resources */,
 				C9957EC32A30700A00A648A5 /* Figtree-ExtraBold.ttf in Resources */,
-				0ADDF04E2A1CB84D005BDE6A /* Game2.2.geojson in Resources */,
-				0ADDF0532A1CB8A4005BDE6A /* Game3.2.geojson in Resources */,
 				C9957EBD2A30700A00A648A5 /* Figtree-SemiBoldItalic.ttf in Resources */,
 				C9957EBC2A30700A00A648A5 /* Figtree-MediumItalic.ttf in Resources */,
 				C9957EC42A30700A00A648A5 /* Figtree-Light.ttf in Resources */,
 				C9957EBB2A30700A00A648A5 /* Figtree-SemiBold.ttf in Resources */,
 				C9957EC02A30700A00A648A5 /* Figtree-Regular.ttf in Resources */,
 				C9957EC82A30700A00A648A5 /* Figtree-Black.ttf in Resources */,
-				0ADDF0522A1CB85B005BDE6A /* Game3.geojson in Resources */,
 				C950A9312A14A4CD005DFE2D /* MemoryCards.geojson in Resources */,
-				C950A92D2A149FFF005DFE2D /* Game1.geojson in Resources */,
 				C9957EBF2A30700A00A648A5 /* Figtree-Bold.ttf in Resources */,
 				C9957EC62A30700A00A648A5 /* Figtree-Italic.ttf in Resources */,
 				0A6732A02A0B830400806FEA /* Preview Assets.xcassets in Resources */,
 				C9F92AE02A29DD9900AF53CC /* customCorsivo.ttf in Resources */,
 				C9957EC72A30700A00A648A5 /* Figtree-BoldItalic.ttf in Resources */,
-				0ADDF0502A1CB852005BDE6A /* Game1.3.geojson in Resources */,
 				C97C27132A33876F00CDEA78 /* e.mp3 in Resources */,
 				C97C27122A33876F00CDEA78 /* d.mp3 in Resources */,
 				13ED4CA22A2489D8009CF732 /* menu.mp3 in Resources */,
@@ -530,7 +510,6 @@
 				C9DFCFAD2A370EC80018AA9B /* Crono3.geojson in Resources */,
 				C9957EC52A30700A00A648A5 /* Figtree-ExtraBoldItalic.ttf in Resources */,
 				0A67329D2A0B830400806FEA /* Assets.xcassets in Resources */,
-				0ADDF04F2A1CB84F005BDE6A /* Game2.3.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,9 +537,12 @@
 				0A72FD232A273AE300073F85 /* GameMemoryModel.swift in Sources */,
 				C9446EDA2A3650D100CA20B1 /* ColoreBottone.swift in Sources */,
 				C9DFCF9D2A3705350018AA9B /* CronoDecoding.swift in Sources */,
+				C9757D782A3AD92B001F84F7 /* ScoreEntity+CoreDataClass.swift in Sources */,
 				C9DFCF932A3703E20018AA9B /* ListGameView.swift in Sources */,
+				C9757D7A2A3AD92B001F84F7 /* GameEntity+CoreDataClass.swift in Sources */,
 				0A67329B2A0B830300806FEA /* ContentView.swift in Sources */,
 				C9DFCF9F2A3706570018AA9B /* AssociateGameView.swift in Sources */,
+				C9757D792A3AD92B001F84F7 /* ScoreEntity+CoreDataProperties.swift in Sources */,
 				C9DFCF892A3701C70018AA9B /* CongratsView.swift in Sources */,
 				C9E319AF2A346D5000BEF354 /* GameBallsLevel1.swift in Sources */,
 				0A72FD252A273AE300073F85 /* CardView.swift in Sources */,
@@ -572,7 +554,9 @@
 				C91DC2942A13C66C00FA8329 /* BallsView.swift in Sources */,
 				C9DFCF8D2A3702270018AA9B /* DimensionHelper.swift in Sources */,
 				C9DFCF8B2A3701E90018AA9B /* FinishButtonView.swift in Sources */,
+				C97B63342A3A5EC1005DEA1C /* Container.xcdatamodeld in Sources */,
 				0A72FD242A273AE300073F85 /* CardMemory.swift in Sources */,
+				C9757D7B2A3AD92B001F84F7 /* GameEntity+CoreDataProperties.swift in Sources */,
 				C9DFCF9B2A3704D30018AA9B /* VuotoView.swift in Sources */,
 				0A12FAC32A38557E001B0DA1 /* ColorExtention.swift in Sources */,
 				C9DFCF952A3704130018AA9B /* CronoGameView.swift in Sources */,
@@ -937,6 +921,19 @@
 			productName = FMProKit;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		C97B63322A3A5EC1005DEA1C /* Container.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C97B63332A3A5EC1005DEA1C /* Container.xcdatamodel */,
+			);
+			currentVersion = C97B63332A3A5EC1005DEA1C /* Container.xcdatamodel */;
+			path = Container.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0A67328D2A0B830300806FEA /* Project object */;
 }

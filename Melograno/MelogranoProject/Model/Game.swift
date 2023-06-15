@@ -9,12 +9,14 @@ import Foundation
 
 
 
-struct Game:Identifiable {
-    var name:String
-    var description:String
-    var image:String
+struct Game: Identifiable {
     var id:UUID = UUID()
-    var type:Games
+    
+    var gameName:String
+    var gameDescription:String
+    var gameImage:String
+    var gameType:Games
+
 }
 
 enum Games {

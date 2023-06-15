@@ -9,11 +9,11 @@ import Foundation
 
 
 struct CronoDecoding : Codable {
-    var id : Int
+//    var id : Int
     var correctIndex : Int
     var imageName : String
-    var isHidden : Bool
-    var isBlurred : Bool
+//    var isHidden : Bool
+//    var isBlurred : Bool
 }
 
 

@@ -8,6 +8,16 @@
 import SwiftUI
 
 struct ListGameView: View {
+    
+    
+    
+    @Environment(\.managedObjectContext) var moc
+    
+    @FetchRequest(sortDescriptors: [] ) var scores: FetchedResults<ScoreEntity>
+    
+    
+    
+    
     var game : Game
     @State var level : Level
     
@@ -22,13 +32,13 @@ struct ListGameView: View {
     
     var body: some View {
         VStack{
-            if game.type == .cronological{
+            if game.gameType == .cronological{
                 CronoGameView(fulls: $fulls, bottoms: $bottoms, tops: $tops, level: $level)
             }
-            else if game.type == .association{
+            else if game.gameType == .association{
                 AssociateGameView(fulls: $fulls, bottoms: $bottoms, tops: $tops, level: $level)
             }
-            else if game.type == .balls{
+            else if game.gameType == .balls{
                 if level == .level1{
                     GameBallsLevel1(circlesNumber: 3,bottoni: $gameBalls)
                 }
@@ -39,7 +49,7 @@ struct ListGameView: View {
                     GameBallsLevel1(circlesNumber: 5,bottoni: $gameBalls)
                 }
             }
-            else if game.type == .memory{
+            else if game.gameType == .memory{
                 if level == .level1{
                     MemoryCardsGameView(numberOfCards: 2)
                 }
@@ -54,7 +64,7 @@ struct ListGameView: View {
             }
         }
         .onAppear{
-            if game.type == .cronological{
+            if game.gameType == .cronological{
                 if level == .level1{
                     let gamesLevel : [[CronoDecoding]] = load(type: "Crono1")
                     let selectedGame = gamesLevel.randomElement()
@@ -104,7 +114,7 @@ struct ListGameView: View {
                     tops = [GameBoxPosition(x:dynamicWidth(343), y:dynamicHeight(334)),GameBoxPosition(x:dynamicWidth(683), y:dynamicHeight(334)),GameBoxPosition(x:dynamicWidth(1023), y:dynamicHeight(334)),GameBoxPosition(x:dynamicWidth(513), y:dynamicHeight(567)),GameBoxPosition(x:dynamicWidth(853),y:dynamicHeight(567))]
                 }
             }
-            else if game.type == .association{
+            else if game.gameType == .association{
                 if level == .level1{
                     let gamesLevel : [[CronoDecoding]] = load(type: "Ass1")
                     let selectedGame = gamesLevel.randomElement()
@@ -162,7 +172,7 @@ struct ListGameView: View {
                     tops = [GameBoxPosition(x:dynamicWidth(343), y:dynamicHeight(334)),GameBoxPosition(x:dynamicWidth(683), y:dynamicHeight(334)),GameBoxPosition(x:dynamicWidth(1023), y:dynamicHeight(334)),GameBoxPosition(x:dynamicWidth(513), y:dynamicHeight(567)),GameBoxPosition(x:dynamicWidth(853),y:dynamicHeight(567))]
                     
                 }
-            }else if game.type == .balls{
+            }else if game.gameType == .balls{
                 
                 if level == .level1{
                     gameBalls = [ColoreBottone(coloresopra: .redOff, coloredopo: .redOff, coloresotto: .redDown, coloreop: .redOn, suono: "a",name: "a"),ColoreBottone(coloresopra: .greenOff, coloredopo: .greenOff, coloresotto: .greenDown, coloreop: .greenOn, suono: "b",name: "b"),  ColoreBottone(coloresopra: .blueOff, coloredopo: .blueOff, coloresotto: .blueDown, coloreop: .blueOn, suono: "c",name: "c")]
@@ -177,11 +187,12 @@ struct ListGameView: View {
             //MEMORY
            
         }
+
     }
 }
 struct ListGameView_Previews: PreviewProvider {
     static var previews: some View {
-        ListGameView(game:Game(name: "", description: "", image: "", type: .association),level: .level1)
+        ListGameView(game:Game(gameName: "", gameDescription: "", gameImage: "", gameType: .association),level: .level1)
     }
 }
 

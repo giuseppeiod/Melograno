@@ -1,17 +1,32 @@
 [
-    [{"id": 0, "correctIndex": 1, "imageName": "caneim", "isHidden": false, "isBlurred": false},
-        {"id": 1, "correctIndex": 2, "imageName": "melaim", "isHidden": false, "isBlurred": false},
-        {"id": 2, "correctIndex": 3, "imageName": "telefono", "isHidden": false, "isBlurred": false}
+    [{"correctIndex": 1, "imageName": "CAT"},
+        {"correctIndex": 2, "imageName": "HORSE"},
+        {"correctIndex": 3, "imageName": "DOG"}
     ],
     [
-        {"id": 4, "correctIndex": 1, "imageName": "gallinaim", "isHidden": false, "isBlurred": false},
-        {"id": 5, "correctIndex": 2, "imageName": "peraim", "isHidden": false, "isBlurred": false},
-        {"id": 6, "correctIndex": 3, "imageName": "pantofoleim", "isHidden": false, "isBlurred": false}
+        {"correctIndex": 1, "imageName": "ORANGE"},
+        {"correctIndex": 2, "imageName": "BANANA"},
+        {"correctIndex": 3, "imageName": "KIWI"}
     ],
     [
-        {"id": 4, "correctIndex": 1, "imageName": "paperaima", "isHidden": false, "isBlurred": false},
-        {"id": 5, "correctIndex": 2, "imageName": "peraim", "isHidden": false, "isBlurred": false},
-        {"id": 6, "correctIndex": 3, "imageName": "chitarra", "isHidden": false, "isBlurred": false}
+        {"correctIndex": 1, "imageName": "GUITAR"},
+        {"correctIndex": 2, "imageName": "SAXOPHONE"},
+        {"correctIndex": 3, "imageName": "VIOLIN"}
+        
+    ],
+    [
+        {"correctIndex": 1, "imageName": "MOTORCYCLE"},
+        {"correctIndex": 2, "imageName": "TRUCK"},
+        {"correctIndex": 3, "imageName": "AIRPLANE"}
+        
+    ],
+    [
+        {"correctIndex": 1, "imageName": "HAT"},
+        {"correctIndex": 2, "imageName": "BELT"},
+        {"correctIndex": 3, "imageName": "VEST"}
+        
     ]
+    
+    
 ]
  

@@ -15,7 +15,7 @@ class GameMemoryModel: ObservableObject {
     
     @Published var model: [CardMemory] = []
     @Published var audioPlayer: AVAudioPlayer?
-    @Published  var isGameFinishedButton = false
+ 
     
     @Published var flippedCards: [Int] = []
     @Published var flippedWrongCards: [Int] = []
@@ -161,6 +161,7 @@ class GameMemoryModel: ObservableObject {
         }
 
         func restartGame() {
+
             cards.removeAll()
             flippedCards.removeAll()
             flippedWrongCards.removeAll()

@@ -1,16 +1,24 @@
 [
-   [{"id": 0, "correctIndex": 1, "imageName": "caneim", "isHidden": false, "isBlurred": false},
-    {"id": 1, "correctIndex": 2, "imageName": "melaim", "isHidden": false, "isBlurred": false},
-    {"id": 2, "correctIndex": 3, "imageName": "telefono", "isHidden": false, "isBlurred": false}
+   [
+    {"correctIndex": 1, "imageName": "MOKA_1"},
+    {"correctIndex": 2, "imageName": "MOKA_2"},
+    {"correctIndex": 3, "imageName": "MOKA_3"}
     ],
-    [
-    {"id": 4, "correctIndex": 1, "imageName": "gallinaim", "isHidden": false, "isBlurred": false},
-    {"id": 5, "correctIndex": 2, "imageName": "peraim", "isHidden": false, "isBlurred": false},
-    {"id": 6, "correctIndex": 3, "imageName": "pantofoleim", "isHidden": false, "isBlurred": false}
-    ],
-    [
-    {"id": 4, "correctIndex": 1, "imageName": "paperaima", "isHidden": false, "isBlurred": false},
-    {"id": 5, "correctIndex": 2, "imageName": "peraim", "isHidden": false, "isBlurred": false},
-    {"id": 6, "correctIndex": 3, "imageName": "chitarra", "isHidden": false, "isBlurred": false}
-    ]
+   [
+   {"correctIndex": 1, "imageName": "CHILD"},
+   {"correctIndex": 2, "imageName": "ADULT"},
+   {"correctIndex": 3, "imageName": "OLD"}
+   ],
+   [
+   {"correctIndex": 1, "imageName": "WAKE_UP"},
+   {"correctIndex": 2, "imageName": "BREAKFAST"},
+   {"correctIndex": 3, "imageName": "WASH"}
+   ],
+   [
+   {"correctIndex": 1, "imageName": "PLANT_1"},
+   {"correctIndex": 2, "imageName": "PLANT_2"},
+   {"correctIndex": 3, "imageName": "PLANT_4"}
+   ]
+    
+
 ]

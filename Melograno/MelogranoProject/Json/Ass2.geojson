@@ -1,20 +1,34 @@
 [
-    [{"id": 0, "correctIndex": 1, "imageName": "caneim", "isHidden": false, "isBlurred": false},
-        {"id": 1, "correctIndex": 2, "imageName": "melaim", "isHidden": false, "isBlurred": false},
-        {"id": 2, "correctIndex": 3, "imageName": "telefono", "isHidden": false, "isBlurred": false},
-        {"id": 3, "correctIndex": 4, "imageName": "camiciaim", "isHidden": false, "isBlurred": false}
+    [{"correctIndex": 1, "imageName": "BANANA"},
+        {"correctIndex": 2, "imageName": "GRAPE"},
+        {"correctIndex": 3, "imageName": "APPLE"},
+        {"correctIndex": 4, "imageName": "ORANGE"}
     ],
     [
-        {"id": 4, "correctIndex": 1, "imageName": "gallinaim", "isHidden": false, "isBlurred": false},
-        {"id": 5, "correctIndex": 2, "imageName": "peraim", "isHidden": false, "isBlurred": false},
-        {"id": 6, "correctIndex": 3, "imageName": "pantofoleim", "isHidden": false, "isBlurred": false},
-        {"id": 7, "correctIndex": 4, "imageName": "aranciaim", "isHidden": false, "isBlurred": false}
+        {"correctIndex": 1, "imageName": "DRUMS"},
+        {"correctIndex": 2, "imageName": "SAXOPHONE"},
+        {"correctIndex": 3, "imageName": "TRUMPET"},
+        {"correctIndex": 4, "imageName": "TRUCK"}
     ],
     [
-        {"id": 4, "correctIndex": 1, "imageName": "paperaima", "isHidden": false, "isBlurred": false},
-        {"id": 5, "correctIndex": 2, "imageName": "peraim", "isHidden": false, "isBlurred": false},
-        {"id": 6, "correctIndex": 3, "imageName": "chitarra", "isHidden": false, "isBlurred": false},
-        {"id": 7, "correctIndex": 4, "imageName": "aranciaim", "isHidden": false, "isBlurred": false}
+        {"correctIndex": 1, "imageName": "TRUCK"},
+        {"correctIndex": 2, "imageName": "AIRPLANE"},
+        {"correctIndex": 3, "imageName": "BUS"},
+        {"correctIndex": 4, "imageName": "CAR"}
+    ],
+    [
+        {"correctIndex": 1, "imageName": "HAT"},
+        {"correctIndex": 2, "imageName": "VEST"},
+        {"correctIndex": 3, "imageName": "BELT"},
+        {"correctIndex": 4, "imageName": "T-SHIRT"}
+    ],
+    [
+        {"correctIndex": 1, "imageName": "PARROT"},
+        {"correctIndex": 2, "imageName": "TURTLE"},
+        {"correctIndex": 3, "imageName": "PARROT"},
+        {"correctIndex": 4, "imageName": "HORSE"}
     ]
+    
+    
 ]
  

@@ -10,6 +10,10 @@ import SwiftUI
 
 struct Menu: View {
 
+    
+  
+    
+    
     @AppStorage("onboardingViewShown")
     var onboardingViewShown: Bool = true
     
@@ -21,7 +25,7 @@ struct Menu: View {
             GridItem(.flexible()),
             GridItem(.flexible())
         ]
-    let games:[Game] = [Game(name: "ASSOCIATE",description: "Associate the picture with the corresponding word.", image: "associate", type: .association),Game(name: "TIME ORDER", description: "Put the following images in chronological order!", image: "cronological", type: .cronological),Game(name: "MEMORY", description: "", image: "memory", type: .memory),Game(name: "BUTTONS", description: "", image: "balls", type: .balls)]
+    let games:[Game] = [Game(gameName: "ASSOCIATE",gameDescription: "Associate the picture with the corresponding word.", gameImage: "associate", gameType: .association),Game(gameName: "TIME ORDER", gameDescription: "Put the following images in chronological order!", gameImage: "cronological", gameType: .cronological),Game(gameName: "MEMORY", gameDescription: "", gameImage: "memory", gameType: .memory),Game(gameName: "BUTTONS", gameDescription: "", gameImage: "balls", gameType: .balls)]
     
     @State var aa: Bool = true
     

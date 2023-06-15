@@ -18,12 +18,12 @@ struct CardActivityView: View {
                 
             
             VStack(spacing: 0){
-                Image(game.image)
+                Image(game.gameImage)
                     .resizable()
                     .cornerRadius(dynamicWidth(40))
                     .frame(width: dynamicWidth(256), height: dynamicHeight(217))
                 Spacer()
-                Text(game.name)
+                Text(game.gameName)
                     .font(.system(size: 33))
                     .fontWeight(.semibold)
                     .foregroundColor(.white)

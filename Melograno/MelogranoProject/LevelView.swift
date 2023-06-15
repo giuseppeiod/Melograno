@@ -11,14 +11,14 @@ struct LevelView: View {
     var game : Game
     var body: some View {
         VStack(alignment: .center){
-            Text(game.name)
+            Text(game.gameName)
                 .font(.custom("Figtree-ExtraBold", size: dynamicWidth(48)))
                 .padding(.bottom, dynamicWidth(93))
                 .padding(.top, dynamicWidth(222))
             
             
             // .padding(.horizontal, dynamicWidth(.infinity))
-            Text(game.description)
+            Text(game.gameDescription)
                 .font(.custom("Figtree-Regular", size: dynamicWidth(36)))
                 .multilineTextAlignment(.center)
                 .padding(.bottom,dynamicWidth(100))
@@ -48,6 +48,6 @@ struct LevelView: View {
 
 struct LevelView_Previews: PreviewProvider {
     static var previews: some View {
-        LevelView(game:Game(name: "", description: "", image: "", type: .association))
+        LevelView(game:Game(gameName: "", gameDescription: "", gameImage: "", gameType: .association))
     }
 }

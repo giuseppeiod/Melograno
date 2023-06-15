@@ -10,6 +10,8 @@ import SwiftUI
 struct GameBallsLevel1: View {
     
 
+    
+    
     @StateObject private var model: BallsModel
     @State var showOpacity : Bool = false
     @Environment(\.presentationMode) var presentationMode
@@ -163,6 +165,8 @@ struct GameBallsLevel1: View {
                         
                         CongratsView(dismiss: {
                             presentationMode.wrappedValue.dismiss()
+                            
+
                         }, replay: {
                             model.restartGame()
                             model.animateCircles()

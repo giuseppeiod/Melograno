@@ -1,63 +1,93 @@
 [
   {
-    "imageName": "HORSE 1"
+    "imageName": "CAT"
   },
   {
-    "imageName": "BUTTERFLY 1"
+    "imageName": "BUTTERFLY"
   },
   {
-    "imageName": "PARROT 1"
+    "imageName": "PARROT"
   },
   {
-    "imageName": "ORANGE 1"
-  },
-  {
-    "imageName": "BANANA 1"
-  },
-  {
-    "imageName": "KIWI 1"
-  },
-  {
-    "imageName": "APPLE 1"
-  },
-  {
-    "imageName": "PEAR 1"
-  },
-  {
-    "imageName": "DRUMS 1"
-  },
-  {
-    "imageName": "GUITAR 1"
+    "imageName": "TURTLE"
   },
   {
     "imageName": "DOG"
   },
   {
-    "imageName": "AIRPLANE 1"
+    "imageName": "HORSE"
   },
   {
-    "imageName": "CAR 1"
+    "imageName": "APPLE"
   },
   {
-    "imageName": "BUS 1"
+    "imageName": "PEAR"
   },
   {
-    "imageName": "HELICOPTER 1"
+    "imageName": "BANANA"
   },
   {
-    "imageName": "TRUCK 1"
+    "imageName": "KIWI"
   },
   {
-    "imageName": "CAT 1"
+    "imageName": "GRAPE"
   },
   {
-    "imageName": "SAXOPHONE 1"
+    "imageName": "ORANGE"
   },
   {
-    "imageName": "TRUMPET 1"
+    "imageName": "DRUMS"
   },
   {
-    "imageName": "TURTLE 1"
+    "imageName": "GUITAR"
+  },
+  {
+    "imageName": "PIANO"
+  },
+  {
+    "imageName": "SAXOPHONE"
+  },
+  {
+    "imageName": "TRUMPET"
+  },
+  {
+    "imageName": "VIOLIN"
+  },
+  {
+    "imageName": "AIRPLANE"
+  },
+  {
+    "imageName": "BUS"
+  },
+  {
+    "imageName": "CAR"
+  },
+  {
+    "imageName": "HELICOPTER"
+  },
+  {
+    "imageName": "MOTORCYCLE"
+  },
+  {
+    "imageName": "TRUCK"
+  },
+  {
+    "imageName": "BELT"
+  },
+  {
+    "imageName": "HAT"
+  },
+  {
+    "imageName": "SWEATSHIRT"
+  },
+  {
+    "imageName": "T-SHIRT"
+  },
+  {
+    "imageName": "TIE"
+  },
+  {
+    "imageName": "VEST"
   }
   
 ]
