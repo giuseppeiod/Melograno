@@ -13,7 +13,7 @@ struct ListGameView: View {
     
     @Environment(\.managedObjectContext) var moc
     
-    @FetchRequest(sortDescriptors: [] ) var scores: FetchedResults<ScoreEntity>
+//    @FetchRequest(sortDescriptors: [] ) var scores: FetchedResults<ScoreEntity>
     
     
     
@@ -143,7 +143,7 @@ struct ListGameView: View {
                     bottoms = [GameBoxPosition(x:dynamicWidth(188), y:dynamicHeight(776)),GameBoxPosition(x:dynamicWidth(518), y:dynamicHeight(776)),GameBoxPosition(x:dynamicWidth(848), y:dynamicHeight(776)),GameBoxPosition(x:dynamicWidth(1178), y:dynamicHeight(776))]
                     
                     for index in fulls.indices{
-                        fulls[index].image = "\(shuffled![index].imageName)extra"
+                        fulls[index].image = "\(shuffled![index].imageName)"
                     }
                     let shuffled2 = selectedGame?.shuffled()
                     

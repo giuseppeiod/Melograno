@@ -19,16 +19,10 @@
 		0A72FD242A273AE300073F85 /* CardMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A72FD222A273AE300073F85 /* CardMemory.swift */; };
 		0A72FD252A273AE300073F85 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A72FD202A273AE300073F85 /* CardView.swift */; };
 		13ED4CA22A2489D8009CF732 /* menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 13ED4CA12A2489D8009CF732 /* menu.mp3 */; };
-		72B67FE52A3A065600E70731 /* FMProKit in Frameworks */ = {isa = PBXBuildFile; productRef = 72B67FE42A3A065600E70731 /* FMProKit */; };
 		C91DC2942A13C66C00FA8329 /* BallsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DC2932A13C66C00FA8329 /* BallsView.swift */; };
 		C92CF2E42A1B507000AAF385 /* notifica.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C92CF2E32A1B507000AAF385 /* notifica.mp3 */; };
 		C9446EDA2A3650D100CA20B1 /* ColoreBottone.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9446ED92A3650D100CA20B1 /* ColoreBottone.swift */; };
 		C950A9312A14A4CD005DFE2D /* MemoryCards.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C950A9302A14A4C8005DFE2D /* MemoryCards.geojson */; };
-		C9757D782A3AD92B001F84F7 /* ScoreEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9757D742A3AD92B001F84F7 /* ScoreEntity+CoreDataClass.swift */; };
-		C9757D792A3AD92B001F84F7 /* ScoreEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9757D752A3AD92B001F84F7 /* ScoreEntity+CoreDataProperties.swift */; };
-		C9757D7A2A3AD92B001F84F7 /* GameEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9757D762A3AD92B001F84F7 /* GameEntity+CoreDataClass.swift */; };
-		C9757D7B2A3AD92B001F84F7 /* GameEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9757D772A3AD92B001F84F7 /* GameEntity+CoreDataProperties.swift */; };
-		C97B63342A3A5EC1005DEA1C /* Container.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C97B63322A3A5EC1005DEA1C /* Container.xcdatamodeld */; };
 		C97C270F2A33876F00CDEA78 /* a.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C97C270A2A33876E00CDEA78 /* a.mp3 */; };
 		C97C27102A33876F00CDEA78 /* c.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C97C270B2A33876F00CDEA78 /* c.mp3 */; };
 		C97C27112A33876F00CDEA78 /* b.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C97C270C2A33876F00CDEA78 /* b.mp3 */; };
@@ -112,11 +106,6 @@
 		C92CF2E32A1B507000AAF385 /* notifica.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = notifica.mp3; path = ../../Sound/notifica.mp3; sourceTree = "<group>"; };
 		C9446ED92A3650D100CA20B1 /* ColoreBottone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoreBottone.swift; sourceTree = "<group>"; };
 		C950A9302A14A4C8005DFE2D /* MemoryCards.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MemoryCards.geojson; sourceTree = "<group>"; };
-		C9757D742A3AD92B001F84F7 /* ScoreEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScoreEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C9757D752A3AD92B001F84F7 /* ScoreEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScoreEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		C9757D762A3AD92B001F84F7 /* GameEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C9757D772A3AD92B001F84F7 /* GameEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		C97B63332A3A5EC1005DEA1C /* Container.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Container.xcdatamodel; sourceTree = "<group>"; };
 		C97C270A2A33876E00CDEA78 /* a.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = a.mp3; sourceTree = "<group>"; };
 		C97C270B2A33876F00CDEA78 /* c.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = c.mp3; sourceTree = "<group>"; };
 		C97C270C2A33876F00CDEA78 /* b.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = b.mp3; sourceTree = "<group>"; };
@@ -168,7 +157,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72B67FE52A3A065600E70731 /* FMProKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,7 +187,6 @@
 				C9DFCF882A3701C70018AA9B /* CongratsView.swift */,
 				C9DFCF8A2A3701E90018AA9B /* FinishButtonView.swift */,
 				C9ABC2402A267DBE00D5D6E9 /* Game.swift */,
-				C97B63322A3A5EC1005DEA1C /* Container.xcdatamodeld */,
 				C9DFCF922A3703E20018AA9B /* ListGameView.swift */,
 			);
 			path = Model;
@@ -208,10 +195,6 @@
 		0A67328C2A0B830300806FEA = {
 			isa = PBXGroup;
 			children = (
-				C9757D742A3AD92B001F84F7 /* ScoreEntity+CoreDataClass.swift */,
-				C9757D752A3AD92B001F84F7 /* ScoreEntity+CoreDataProperties.swift */,
-				C9757D762A3AD92B001F84F7 /* GameEntity+CoreDataClass.swift */,
-				C9757D772A3AD92B001F84F7 /* GameEntity+CoreDataProperties.swift */,
 				0A6732972A0B830300806FEA /* MelogranoProject */,
 				0A6732AD2A0B830400806FEA /* MelogranoProjectTests */,
 				0A6732B72A0B830400806FEA /* MelogranoProjectUITests */,
@@ -385,7 +368,6 @@
 			);
 			name = MelogranoProject;
 			packageProductDependencies = (
-				72B67FE42A3A065600E70731 /* FMProKit */,
 			);
 			productName = MelogranoProject;
 			productReference = 0A6732952A0B830300806FEA /* MelogranoProject.app */;
@@ -460,7 +442,6 @@
 			);
 			mainGroup = 0A67328C2A0B830300806FEA;
 			packageReferences = (
-				72B67FE32A3A065600E70731 /* XCRemoteSwiftPackageReference "FMProKit" */,
 			);
 			productRefGroup = 0A6732962A0B830300806FEA /* Products */;
 			projectDirPath = "";
@@ -537,12 +518,9 @@
 				0A72FD232A273AE300073F85 /* GameMemoryModel.swift in Sources */,
 				C9446EDA2A3650D100CA20B1 /* ColoreBottone.swift in Sources */,
 				C9DFCF9D2A3705350018AA9B /* CronoDecoding.swift in Sources */,
-				C9757D782A3AD92B001F84F7 /* ScoreEntity+CoreDataClass.swift in Sources */,
 				C9DFCF932A3703E20018AA9B /* ListGameView.swift in Sources */,
-				C9757D7A2A3AD92B001F84F7 /* GameEntity+CoreDataClass.swift in Sources */,
 				0A67329B2A0B830300806FEA /* ContentView.swift in Sources */,
 				C9DFCF9F2A3706570018AA9B /* AssociateGameView.swift in Sources */,
-				C9757D792A3AD92B001F84F7 /* ScoreEntity+CoreDataProperties.swift in Sources */,
 				C9DFCF892A3701C70018AA9B /* CongratsView.swift in Sources */,
 				C9E319AF2A346D5000BEF354 /* GameBallsLevel1.swift in Sources */,
 				0A72FD252A273AE300073F85 /* CardView.swift in Sources */,
@@ -554,9 +532,7 @@
 				C91DC2942A13C66C00FA8329 /* BallsView.swift in Sources */,
 				C9DFCF8D2A3702270018AA9B /* DimensionHelper.swift in Sources */,
 				C9DFCF8B2A3701E90018AA9B /* FinishButtonView.swift in Sources */,
-				C97B63342A3A5EC1005DEA1C /* Container.xcdatamodeld in Sources */,
 				0A72FD242A273AE300073F85 /* CardMemory.swift in Sources */,
-				C9757D7B2A3AD92B001F84F7 /* GameEntity+CoreDataProperties.swift in Sources */,
 				C9DFCF9B2A3704D30018AA9B /* VuotoView.swift in Sources */,
 				0A12FAC32A38557E001B0DA1 /* ColorExtention.swift in Sources */,
 				C9DFCF952A3704130018AA9B /* CronoGameView.swift in Sources */,
@@ -902,38 +878,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		72B67FE32A3A065600E70731 /* XCRemoteSwiftPackageReference "FMProKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/CoderlyStudio/FMProKit";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		72B67FE42A3A065600E70731 /* FMProKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 72B67FE32A3A065600E70731 /* XCRemoteSwiftPackageReference "FMProKit" */;
-			productName = FMProKit;
-		};
-/* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		C97B63322A3A5EC1005DEA1C /* Container.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				C97B63332A3A5EC1005DEA1C /* Container.xcdatamodel */,
-			);
-			currentVersion = C97B63332A3A5EC1005DEA1C /* Container.xcdatamodel */;
-			path = Container.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 0A67328D2A0B830300806FEA /* Project object */;
 }
