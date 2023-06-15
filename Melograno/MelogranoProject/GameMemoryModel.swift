@@ -114,29 +114,13 @@ class GameMemoryModel: ObservableObject {
         chosenCards.removeAll()
     }
     
-    func resetGame() {
-        loadCardsFromJSON()
-    }
+
     
     func areAllCardsMatched() -> Bool {
         return cards.allSatisfy { $0.isMatched }
     }
     
-    //NON SHUFFLED PER PRESENTAZIONE COSì SI VEDONO LE CARD BELLE 
 
-//    func loadCardsFromJSON(dim: Int) -> [CardMemory]? {
-//        if let url = Bundle.main.url(forResource: "MemoryCards", withExtension: "geojson"),
-//           let data = try? Data(contentsOf: url) {
-//            let decoder = JSONDecoder()
-//            if let cardData = try? decoder.decode([CardData].self, from: data) {
-//                let selectedCards = Array(cardData.prefix(dim))
-//                let duplicatedCards = selectedCards.flatMap { [$0, $0] }
-//                return duplicatedCards.map { CardMemory(imageName: $0.imageName) }
-//            }
-//        }
-//        return nil
-//    }
-//
 
     func loadCardsFromJSON() -> [CardMemory]? {
         if let url = Bundle.main.url(forResource: "MemoryCards", withExtension: "geojson"),
@@ -177,9 +161,11 @@ class GameMemoryModel: ObservableObject {
         }
 
         func restartGame() {
-            resetGame()
+            cards.removeAll()
             flippedCards.removeAll()
             flippedWrongCards.removeAll()
+            isGameFinished = false
+            cards = loadCardsFromJSON()!
         }
     
 }

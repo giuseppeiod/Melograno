@@ -155,7 +155,7 @@ struct MemoryCardsGameView: View {
                 
                 
                 CongratsView(dismiss: {dismiss.wrappedValue.dismiss()}, replay: {
-                    game.resetGame()
+                    game.restartGame()
                     
                 }, points: 0, result:0 )
             }

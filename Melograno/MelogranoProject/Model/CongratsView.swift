@@ -26,13 +26,11 @@ struct CongratsView: View {
                     .padding(.top,100)
                 Spacer()
                 if gameType == .balls{
-                    Text("aaaaaaaaaaa \(points)")
-                }else if gameType == .memory{
-                    Text("aaaaaaaaaaa")
+                    Text("You have got a sequence of \(points) !")
                 }else if gameType == .association || gameType == .cronological{
                     Text("hai fatto \(points-result) errori")
                 }else{
-                    Text("aaaaaaaaaaa")
+                    Text("")
                 }
                 Spacer()
                 HStack{

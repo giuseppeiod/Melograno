@@ -16,50 +16,58 @@ struct CardView: View {
     @ObservedObject var card: CardMemory
     var onCardTap: () -> Void
     
-    var altezza: CGFloat = UIScreen.main.bounds.height * 0.35
-    var larghezza: CGFloat = UIScreen.main.bounds.width * 0.15
+    var altezza: CGFloat = dynamicHeight(296)
+    var larghezza: CGFloat = dynamicWidth(206)
     
     var body: some View {
         ZStack {
             if card.isMatched {
-                Image(card.imageName)
-                    .resizable()
-                    .scaledToFit()
-                    .overlay(
-                        Image(systemName: "checkmark")
-                            .font(.system(size: 100))
-                            .foregroundColor(.green)
-                    )
-                    .cornerRadius(30)
-                    .background(
-                        Image("sfondo")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: larghezza, height: altezza)
-                    )
-                    .rotation3DEffect(.degrees(0), axis: (x: 0, y: 1, z: 0))
+                ZStack{
+                    Rectangle()
+                        .foregroundColor(.white)
+                        .frame(width: larghezza, height: altezza)
+                    Image(card.imageName)
+                        .resizable()
+                        .frame(width: larghezza, height: altezza)
+                        .scaledToFit()
+                        .overlay(
+                            Image(systemName: "checkmark")
+                                .font(.system(size: 100))
+                                .foregroundColor(.green)
+                        )
+                        .rotation3DEffect(.degrees(0), axis: (x: 0, y: 1, z: 0))
+                }
+                .frame(width: larghezza, height: altezza)
+                .overlay(
+                    RoundedRectangle(cornerRadius: dynamicWidth(30))
+                        .stroke(Color("violaApp"), lineWidth: 5))
             } else if card.isFaceUp {
-                Image(card.imageName)
-                    .resizable()
-                    .scaledToFit()
-                    .background(
-                        Image("sfondo")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: larghezza, height: altezza)
-                    )
-                    .rotation3DEffect(.degrees(0), axis: (x: 0, y: 1, z: 0))
+                ZStack{
+                    Rectangle()
+                        .foregroundColor(.white)
+                        .frame(width: larghezza, height: altezza)
+                    Image(card.imageName)
+                        .resizable()
+                        .frame(width: larghezza, height: altezza)
+                        .scaledToFit()
+                        .rotation3DEffect(.degrees(0), axis: (x: 0, y: 1, z: 0))
+                }
+                .frame(width: larghezza, height: altezza)
+                .overlay(
+                    RoundedRectangle(cornerRadius: dynamicWidth(30))
+                        .stroke(Color("violaApp"), lineWidth: 5))
             } else {
                 Image("retrocardmemory")
                     .resizable()
-                    .scaledToFit()
                     .frame(width: larghezza, height: altezza)
+                    .scaledToFit()
+                   
                     .rotation3DEffect(.degrees(0), axis: (x: 0, y: 1, z: 0))
                     .onTapGesture(perform: onCardTap)
             }
         }
         .frame(width: larghezza, height: altezza)
         .rotation3DEffect(.degrees(card.isFaceUp ? 180 : 0), axis: (x: 0, y: 1, z: 0))
-//        .animation(.easeInOut(duration: 0.5))
+        .animation(.easeInOut(duration: 0.5))
     }
 }
