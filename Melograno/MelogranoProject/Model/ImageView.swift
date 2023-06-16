@@ -14,11 +14,18 @@ struct ImageView: View {
     var size: CGFloat = dynamicWidth(256)
     
     var body: some View {
-        Image(image)
-            .resizable()
-            .scaledToFit()
-            .cornerRadius(dynamicWidth(40))
-           .frame(width: size, height: size)
+        ZStack{
+            Rectangle()
+                .frame(width: size, height: size)
+                .foregroundColor(.white)
+                .opacity(0.0000000000000001)
+                .cornerRadius(dynamicWidth(40))
+            Image(image)
+                .resizable()
+                .scaledToFit()
+                .cornerRadius(dynamicWidth(40))
+                .frame(width: size, height: size)
+        }
     }
 }
 
