@@ -6,9 +6,9 @@
     ],
     [
         {"correctIndex": 1, "imageName": "DRUMS"},
-        {"correctIndex": 2, "imageName": "SAXOPHONE"},
+        {"correctIndex": 2, "imageName": "FLUTE"},
         {"correctIndex": 3, "imageName": "TRUMPET"},
-        {"correctIndex": 4, "imageName": "TRUCK"}
+        {"correctIndex": 4, "imageName": "VIOLIN"}
     ],
     [
         {"correctIndex": 1, "imageName": "TRUCK"},
@@ -23,7 +23,7 @@
         {"correctIndex": 4, "imageName": "T-SHIRT"}
     ],
     [
-        {"correctIndex": 1, "imageName": "PARROT"},
+        {"correctIndex": 1, "imageName": "DOG"},
         {"correctIndex": 2, "imageName": "TURTLE"},
         {"correctIndex": 3, "imageName": "PARROT"},
         {"correctIndex": 4, "imageName": "HORSE"}

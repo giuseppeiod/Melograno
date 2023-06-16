@@ -10,12 +10,12 @@
     ],
     [
         {"correctIndex": 1, "imageName": "GUITAR"},
-        {"correctIndex": 2, "imageName": "SAXOPHONE"},
+        {"correctIndex": 2, "imageName": "FLUTE"},
         {"correctIndex": 3, "imageName": "VIOLIN"}
         
     ],
     [
-        {"correctIndex": 1, "imageName": "MOTORCYCLE"},
+        {"correctIndex": 1, "imageName": "BIKE"},
         {"correctIndex": 2, "imageName": "TRUCK"},
         {"correctIndex": 3, "imageName": "AIRPLANE"}
         

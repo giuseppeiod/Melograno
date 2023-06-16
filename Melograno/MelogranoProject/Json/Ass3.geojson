@@ -20,17 +20,17 @@
         {"correctIndex": 5, "imageName": "GRAPE"}
     ],
     [
-        {"correctIndex": 1, "imageName": "DRUMS"},
+        {"correctIndex": 1, "imageName": "GUITAR"},
         {"correctIndex": 2, "imageName": "DRUMS"},
         {"correctIndex": 3, "imageName": "PIANO"},
-        {"correctIndex": 4, "imageName": "SAXOPHONE"},
+        {"correctIndex": 4, "imageName": "FLUTE"},
         {"correctIndex": 5, "imageName": "VIOLIN"}
     ],
     [
         {"correctIndex": 1, "imageName": "HELICOPTER"},
         {"correctIndex": 2, "imageName": "AIRPLANE"},
         {"correctIndex": 3, "imageName": "CAR"},
-        {"correctIndex": 4, "imageName": "MOTORCYCLE"},
+        {"correctIndex": 4, "imageName": "BIKE"},
         {"correctIndex": 5, "imageName": "BUS"}
     ],
     
