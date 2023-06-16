@@ -30,17 +30,12 @@ struct CardView: View {
                         .resizable()
                         .frame(width: larghezza, height: altezza)
                         .scaledToFit()
-                        .overlay(
-                            Image(systemName: "checkmark")
-                                .font(.system(size: 100))
-                                .foregroundColor(.green)
-                        )
                         .rotation3DEffect(.degrees(0), axis: (x: 0, y: 1, z: 0))
                 }
                 .frame(width: larghezza, height: altezza)
                 .overlay(
                     RoundedRectangle(cornerRadius: dynamicWidth(30))
-                        .stroke(Color("violaApp"), lineWidth: 5))
+                        .stroke(Color("verdeChek"), lineWidth: 5))
             } else if card.isFaceUp {
                 ZStack{
                     Rectangle()

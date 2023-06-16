@@ -23,7 +23,7 @@ struct CongratsView: View {
                     .multilineTextAlignment(.center)
                     .font(.custom("Figtree-ExtraBold", size: dynamicWidth(48)))
                     .foregroundColor(.black)
-                    .padding(.top,100)
+                    .padding(.top, dynamicHeight(80))
                 Spacer()
                 if gameType == .balls{
                     Text("You have got a sequence of \(points) !")
@@ -41,7 +41,7 @@ struct CongratsView: View {
                     }, label: {
                         FinishButtonView(buttonText: "Levels")
                     })
-                    .padding(.bottom,40)
+                    .padding(.bottom, dynamicHeight(80))
                     .padding(.horizontal,50)
                     
                     Button(action: {
@@ -49,7 +49,7 @@ struct CongratsView: View {
                     }, label: {
                         FinishButtonView(buttonText: "Replay")
                     })
-                    .padding(.bottom,40)
+                    .padding(.bottom, dynamicHeight(80))
                     .padding(.horizontal,50)
                     
                 }
