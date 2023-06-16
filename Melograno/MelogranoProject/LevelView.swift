@@ -23,11 +23,11 @@ struct LevelView: View {
                 .multilineTextAlignment(.center)
                 .padding(.bottom,dynamicWidth(100))
       
-            HStack{
+            HStack(spacing: dynamicWidth(50)){
                 ForEach(Level.allCases, id: \.self){level in
                     
                     NavigationLink(destination: ListGameView(game: game, level: level), label: {
-                        FinishButtonView(buttonText: level.rawValue)
+                        LevelButtonView(buttonText: level.rawValue)
                     })
                 }
             }

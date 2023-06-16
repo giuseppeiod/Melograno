@@ -213,7 +213,7 @@ class BallsModel: ObservableObject{
                 }
             } else {
                 timer.invalidate()
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) { [self] in
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) { [self] in
                     self.isPlayerTurn = true
                     self.isAnimating = false
                 }

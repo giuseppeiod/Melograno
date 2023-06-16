@@ -25,7 +25,7 @@ struct Menu: View {
             GridItem(.flexible()),
             GridItem(.flexible())
         ]
-    let games:[Game] = [Game(gameName: "ASSOCIATE",gameDescription: "Associate the picture with the corresponding word.", gameImage: "associate", gameType: .association),Game(gameName: "TIME ORDER", gameDescription: "Put the following images in chronological order!", gameImage: "cronological", gameType: .cronological),Game(gameName: "MEMORY", gameDescription: "", gameImage: "memory", gameType: .memory),Game(gameName: "BUTTONS", gameDescription: "", gameImage: "balls", gameType: .balls)]
+    let games:[Game] = [Game(gameName: "ASSOCIATE",gameDescription: "Associate the picture with the corresponding word.", gameImage: "associate", gameType: .association),Game(gameName: "TIME ORDER", gameDescription: "Put the following images in chronological order.", gameImage: "cronological", gameType: .cronological),Game(gameName: "MEMORY", gameDescription: "Match the pairs of the same pictures.", gameImage: "memory", gameType: .memory),Game(gameName: "BUTTONS", gameDescription: "Repeat the sequence of the lighted buttons.", gameImage: "balls", gameType: .balls)]
     
     @State var aa: Bool = true
     

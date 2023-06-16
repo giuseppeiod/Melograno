@@ -21,14 +21,16 @@ struct CongratsView: View {
             VStack{
                 Text("CONGRATULATIONS,\nYOU COMPLETED THE LEVEL!")
                     .multilineTextAlignment(.center)
-                    .font(.custom("Figtree-ExtraBold", size: dynamicWidth(40)))
+                    .font(.custom("Figtree-ExtraBold", size: dynamicWidth(48)))
                     .foregroundColor(.black)
                     .padding(.top,100)
                 Spacer()
                 if gameType == .balls{
                     Text("You have got a sequence of \(points) !")
+                        .font(.custom("Figtree-Medium", size: dynamicWidth(40)))
                 }else if gameType == .association || gameType == .cronological{
-                    Text("You made \(points-result) errors")
+                    Text("You have done \(points-result) mistakes.")
+                        .font(.custom("Figtree-Medium", size: dynamicWidth(40)))
                 }else{
                     Text("")
                 }
@@ -37,7 +39,7 @@ struct CongratsView: View {
                     Button(action: {
                         dismiss()
                     }, label: {
-                        FinishButtonView(buttonText: "Menù")
+                        FinishButtonView(buttonText: "Levels")
                     })
                     .padding(.bottom,40)
                     .padding(.horizontal,50)

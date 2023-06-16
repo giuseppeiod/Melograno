@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GameBallsLevel1: View {
     
-
+    @State var showPopup : Bool = false
     
     
     @StateObject private var model: BallsModel
@@ -69,7 +69,7 @@ struct GameBallsLevel1: View {
                     if bottoni.count == 5{
                         
                         VStack{
-                            HStack(spacing:50){
+                            HStack(spacing:dynamicWidth(75)){
                                 ForEach(0..<3) { index in
                                     BallsView(isHighlighted: $model.highlight[index], color: bottoni[index])
                                         .onTapGesture {
@@ -86,7 +86,7 @@ struct GameBallsLevel1: View {
                                         ).disabled(!model.isPlayerTurn)
                                 }
                             }
-                            HStack{
+                            HStack(spacing:dynamicWidth(75)){
                                 ForEach(3..<5) { index in
                                     BallsView(isHighlighted: $model.highlight[index], color: bottoni[index])
                                         .onTapGesture {
@@ -102,28 +102,8 @@ struct GameBallsLevel1: View {
                                             }
                                         ).disabled(!model.isPlayerTurn)
                                 }
-                                
                             }
                         }
-                        
-//                        LazyVGrid(columns: columns, spacing: 20) {
-//                            ForEach(Array(bottoni.enumerated()), id: \.offset) { index, element in
-//                                BallsView(isHighlighted: $model.highlight[index], color: element)
-//                                    .onTapGesture {
-//                                        if !model.isAnimating && model.isPlayerTurn {
-//
-//                                            model.circleTapped(element.name)
-//                                            model.provideHapticFeedback()
-//                                        }
-//                                    }
-//                                    .simultaneousGesture(
-//                                        TapGesture().onEnded { _ in
-//                                            print(element.name)
-//                                            model.playSound(for: element.name)
-//                                        }
-//                                    )
-//                            }
-//                        }
                     }
                     else
                     {
@@ -149,35 +129,41 @@ struct GameBallsLevel1: View {
                         model.audioPlayer?.stop()
                         model.isViewVisible = false
                     }
-            }.onChange(of: model.isGameFinished, perform: {_ in
+            }
+            .padding(.top,dynamicHeight(150))
+            .navigationBarBackButtonHidden(model.isGameFinished)
+            .onChange(of: model.isGameFinished, perform: {_ in
                 if model.isGameFinished{
-                    showOpacity = true
+                    withAnimation{
+                        showOpacity = true
+                    }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                        withAnimation(.linear(duration: 0.3)){
+                            showPopup = true
+                        }
+                    }
                 }
             })
-            .padding(.top,dynamicHeight(200))
+            
             
             
             if showOpacity{
-                ZStack{
                     Color.black.opacity(0.8).ignoresSafeArea()
-                    
                     if model.isGameFinished == true {
-                        
                         CongratsView(dismiss: {
                             presentationMode.wrappedValue.dismiss()
-                            
-
                         }, replay: {
                             model.restartGame()
                             model.animateCircles()
                             showOpacity = false
+                            showPopup = false
                         }, points: model.points, result: model.currentSequenceIndex,gameType: .balls)
                     }
                 }
             }
         }
     }
-}
+
 
 
 struct GameBallsLevel1_Previews: PreviewProvider {
