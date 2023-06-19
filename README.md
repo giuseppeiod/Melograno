@@ -27,3 +27,10 @@ Our app may use cookies or tracking technologies to enhance the user experience.
 6. Changes to the Privacy Policy
 
 This privacy policy may be subject to changes in the future. Any changes will be posted within the app or made available in another way.
+
+Contact Us
+If you have any questions or suggestions about this privacy policy, feel free to contact us at giuseppeiod97@gmail.com
+
+This privacy policy is compliant with relevant laws and regulations. Please check back regularly to stay updated on any changes.
+
+© 2023 Team Melograno. All rights reserved
