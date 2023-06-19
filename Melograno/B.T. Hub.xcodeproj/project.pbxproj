@@ -89,14 +89,14 @@
 
 /* Begin PBXFileReference section */
 		0A12FAC22A38557E001B0DA1 /* ColorExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtention.swift; sourceTree = "<group>"; };
-		0A6732952A0B830300806FEA /* MelogranoProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MelogranoProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A6732952A0B830300806FEA /* B.T. Hub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "B.T. Hub.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6732982A0B830300806FEA /* MelogranoProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelogranoProjectApp.swift; sourceTree = "<group>"; };
 		0A67329A2A0B830300806FEA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0A67329C2A0B830400806FEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A67329F2A0B830400806FEA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0A6732AA2A0B830400806FEA /* MelogranoProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MelogranoProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A6732AA2A0B830400806FEA /* B.T. HubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "B.T. HubTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6732AE2A0B830400806FEA /* MelogranoProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelogranoProjectTests.swift; sourceTree = "<group>"; };
-		0A6732B42A0B830400806FEA /* MelogranoProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MelogranoProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A6732B42A0B830400806FEA /* B.T. HubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "B.T. HubUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6732B82A0B830400806FEA /* MelogranoProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelogranoProjectUITests.swift; sourceTree = "<group>"; };
 		0A6732BA2A0B830400806FEA /* MelogranoProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelogranoProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0A72FD1F2A273AE300073F85 /* GameMemoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMemoryModel.swift; sourceTree = "<group>"; };
@@ -208,9 +208,9 @@
 		0A6732962A0B830300806FEA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0A6732952A0B830300806FEA /* MelogranoProject.app */,
-				0A6732AA2A0B830400806FEA /* MelogranoProjectTests.xctest */,
-				0A6732B42A0B830400806FEA /* MelogranoProjectUITests.xctest */,
+				0A6732952A0B830300806FEA /* B.T. Hub.app */,
+				0A6732AA2A0B830400806FEA /* B.T. HubTests.xctest */,
+				0A6732B42A0B830400806FEA /* B.T. HubUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -357,9 +357,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0A6732942A0B830300806FEA /* MelogranoProject */ = {
+		0A6732942A0B830300806FEA /* B.T. Hub */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0A6732BE2A0B830400806FEA /* Build configuration list for PBXNativeTarget "MelogranoProject" */;
+			buildConfigurationList = 0A6732BE2A0B830400806FEA /* Build configuration list for PBXNativeTarget "B.T. Hub" */;
 			buildPhases = (
 				0A6732912A0B830300806FEA /* Sources */,
 				0A6732922A0B830300806FEA /* Frameworks */,
@@ -369,16 +369,16 @@
 			);
 			dependencies = (
 			);
-			name = MelogranoProject;
+			name = "B.T. Hub";
 			packageProductDependencies = (
 			);
 			productName = MelogranoProject;
-			productReference = 0A6732952A0B830300806FEA /* MelogranoProject.app */;
+			productReference = 0A6732952A0B830300806FEA /* B.T. Hub.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0A6732A92A0B830400806FEA /* MelogranoProjectTests */ = {
+		0A6732A92A0B830400806FEA /* B.T. HubTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0A6732C12A0B830400806FEA /* Build configuration list for PBXNativeTarget "MelogranoProjectTests" */;
+			buildConfigurationList = 0A6732C12A0B830400806FEA /* Build configuration list for PBXNativeTarget "B.T. HubTests" */;
 			buildPhases = (
 				0A6732A62A0B830400806FEA /* Sources */,
 				0A6732A72A0B830400806FEA /* Frameworks */,
@@ -389,14 +389,14 @@
 			dependencies = (
 				0A6732AC2A0B830400806FEA /* PBXTargetDependency */,
 			);
-			name = MelogranoProjectTests;
+			name = "B.T. HubTests";
 			productName = MelogranoProjectTests;
-			productReference = 0A6732AA2A0B830400806FEA /* MelogranoProjectTests.xctest */;
+			productReference = 0A6732AA2A0B830400806FEA /* B.T. HubTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0A6732B32A0B830400806FEA /* MelogranoProjectUITests */ = {
+		0A6732B32A0B830400806FEA /* B.T. HubUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0A6732C42A0B830400806FEA /* Build configuration list for PBXNativeTarget "MelogranoProjectUITests" */;
+			buildConfigurationList = 0A6732C42A0B830400806FEA /* Build configuration list for PBXNativeTarget "B.T. HubUITests" */;
 			buildPhases = (
 				0A6732B02A0B830400806FEA /* Sources */,
 				0A6732B12A0B830400806FEA /* Frameworks */,
@@ -407,9 +407,9 @@
 			dependencies = (
 				0A6732B62A0B830400806FEA /* PBXTargetDependency */,
 			);
-			name = MelogranoProjectUITests;
+			name = "B.T. HubUITests";
 			productName = MelogranoProjectUITests;
-			productReference = 0A6732B42A0B830400806FEA /* MelogranoProjectUITests.xctest */;
+			productReference = 0A6732B42A0B830400806FEA /* B.T. HubUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -435,7 +435,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0A6732902A0B830300806FEA /* Build configuration list for PBXProject "MelogranoProject" */;
+			buildConfigurationList = 0A6732902A0B830300806FEA /* Build configuration list for PBXProject "B.T. Hub" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -450,9 +450,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0A6732942A0B830300806FEA /* MelogranoProject */,
-				0A6732A92A0B830400806FEA /* MelogranoProjectTests */,
-				0A6732B32A0B830400806FEA /* MelogranoProjectUITests */,
+				0A6732942A0B830300806FEA /* B.T. Hub */,
+				0A6732A92A0B830400806FEA /* B.T. HubTests */,
+				0A6732B32A0B830400806FEA /* B.T. HubUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -569,12 +569,12 @@
 /* Begin PBXTargetDependency section */
 		0A6732AC2A0B830400806FEA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0A6732942A0B830300806FEA /* MelogranoProject */;
+			target = 0A6732942A0B830300806FEA /* B.T. Hub */;
 			targetProxy = 0A6732AB2A0B830400806FEA /* PBXContainerItemProxy */;
 		};
 		0A6732B62A0B830400806FEA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0A6732942A0B830300806FEA /* MelogranoProject */;
+			target = 0A6732942A0B830300806FEA /* B.T. Hub */;
 			targetProxy = 0A6732B52A0B830400806FEA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -630,7 +630,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -684,7 +684,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -718,7 +718,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.giuseppeiodice.MelogranoProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -754,7 +754,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.giuseppeiodice.MelogranoProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -782,7 +782,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MelogranoProject.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MelogranoProject";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/B.T. Hub.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/B.T. Hub";
 			};
 			name = Debug;
 		};
@@ -802,7 +802,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MelogranoProject.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MelogranoProject";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/B.T. Hub.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/B.T. Hub";
 			};
 			name = Release;
 		};
@@ -845,7 +845,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0A6732902A0B830300806FEA /* Build configuration list for PBXProject "MelogranoProject" */ = {
+		0A6732902A0B830300806FEA /* Build configuration list for PBXProject "B.T. Hub" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0A6732BC2A0B830400806FEA /* Debug */,
@@ -854,7 +854,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0A6732BE2A0B830400806FEA /* Build configuration list for PBXNativeTarget "MelogranoProject" */ = {
+		0A6732BE2A0B830400806FEA /* Build configuration list for PBXNativeTarget "B.T. Hub" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0A6732BF2A0B830400806FEA /* Debug */,
@@ -863,7 +863,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0A6732C12A0B830400806FEA /* Build configuration list for PBXNativeTarget "MelogranoProjectTests" */ = {
+		0A6732C12A0B830400806FEA /* Build configuration list for PBXNativeTarget "B.T. HubTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0A6732C22A0B830400806FEA /* Debug */,
@@ -872,7 +872,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0A6732C42A0B830400806FEA /* Build configuration list for PBXNativeTarget "MelogranoProjectUITests" */ = {
+		0A6732C42A0B830400806FEA /* Build configuration list for PBXNativeTarget "B.T. HubUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0A6732C52A0B830400806FEA /* Debug */,
