@@ -1,5 +1,5 @@
 [
-    [{"correctIndex": 1, "imageName": "CAT"},
+       [{"correctIndex": 1, "imageName": "CAT"},
         {"correctIndex": 2, "imageName": "HORSE"},
         {"correctIndex": 3, "imageName": "DOG"},
         {"correctIndex": 4, "imageName": "TURTLE"},

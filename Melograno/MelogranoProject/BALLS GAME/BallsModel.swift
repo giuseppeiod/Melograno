@@ -222,6 +222,9 @@ class BallsModel: ObservableObject{
     }
     
     func playSound(for color: String) {
+        guard isViewVisible else {
+            return
+        }
         guard let url = Bundle.main.url(forResource: color, withExtension: "mp3") else { return }
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
